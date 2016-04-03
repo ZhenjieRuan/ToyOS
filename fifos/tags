@@ -1,0 +1,1603 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AT_BASE	memos-2/elf.h	857;"	d
+AT_CLKTCK	memos-2/elf.h	865;"	d
+AT_DCACHEBSIZE	memos-2/elf.h	877;"	d
+AT_EGID	memos-2/elf.h	864;"	d
+AT_ENTRY	memos-2/elf.h	859;"	d
+AT_EUID	memos-2/elf.h	862;"	d
+AT_EXECFD	memos-2/elf.h	852;"	d
+AT_FLAGS	memos-2/elf.h	858;"	d
+AT_FPUCW	memos-2/elf.h	874;"	d
+AT_GID	memos-2/elf.h	863;"	d
+AT_HWCAP	memos-2/elf.h	869;"	d
+AT_ICACHEBSIZE	memos-2/elf.h	878;"	d
+AT_IGNORE	memos-2/elf.h	851;"	d
+AT_IGNOREPPC	memos-2/elf.h	883;"	d
+AT_NOTELF	memos-2/elf.h	860;"	d
+AT_NULL	memos-2/elf.h	850;"	d
+AT_PAGESZ	memos-2/elf.h	856;"	d
+AT_PHDR	memos-2/elf.h	853;"	d
+AT_PHENT	memos-2/elf.h	854;"	d
+AT_PHNUM	memos-2/elf.h	855;"	d
+AT_PLATFORM	memos-2/elf.h	868;"	d
+AT_UCACHEBSIZE	memos-2/elf.h	879;"	d
+AT_UID	memos-2/elf.h	861;"	d
+CC	fifos-1/Makefile	/^CC = gcc$/;"	m
+CC	memos-2/Makefile	/^CC = gcc$/;"	m
+CFLAGS	fifos-1/Makefile	/^CFLAGS = -m32 -fno-builtin -fno-stack-protector -fno-strict-aliasing$/;"	m
+CFLAGS	memos-2/Makefile	/^CFLAGS = -m32 -fno-builtin -fno-stack-protector -fno-strict-aliasing -fno-delete-null-pointer-checks -nostdinc -I. -g -Wall -std=c99$/;"	m
+COLOR_BLACK	memos-2/init.c	/^  COLOR_BLACK = 0,$/;"	e	enum:vga_color	file:
+COLOR_BLUE	memos-2/init.c	/^  COLOR_BLUE = 1,$/;"	e	enum:vga_color	file:
+COLOR_BROWN	memos-2/init.c	/^  COLOR_BROWN = 6,$/;"	e	enum:vga_color	file:
+COLOR_CYAN	memos-2/init.c	/^  COLOR_CYAN = 3,$/;"	e	enum:vga_color	file:
+COLOR_DARK_GREY	memos-2/init.c	/^  COLOR_DARK_GREY = 8,$/;"	e	enum:vga_color	file:
+COLOR_GREEN	memos-2/init.c	/^  COLOR_GREEN = 2,$/;"	e	enum:vga_color	file:
+COLOR_LIGHT_BLUE	memos-2/init.c	/^  COLOR_LIGHT_BLUE = 9,$/;"	e	enum:vga_color	file:
+COLOR_LIGHT_BROWN	memos-2/init.c	/^  COLOR_LIGHT_BROWN = 14,$/;"	e	enum:vga_color	file:
+COLOR_LIGHT_CYAN	memos-2/init.c	/^  COLOR_LIGHT_CYAN = 11,$/;"	e	enum:vga_color	file:
+COLOR_LIGHT_GREEN	memos-2/init.c	/^  COLOR_LIGHT_GREEN = 10,$/;"	e	enum:vga_color	file:
+COLOR_LIGHT_GREY	memos-2/init.c	/^  COLOR_LIGHT_GREY = 7,$/;"	e	enum:vga_color	file:
+COLOR_LIGHT_MAGENTA	memos-2/init.c	/^  COLOR_LIGHT_MAGENTA = 13,$/;"	e	enum:vga_color	file:
+COLOR_LIGHT_RED	memos-2/init.c	/^  COLOR_LIGHT_RED = 12,$/;"	e	enum:vga_color	file:
+COLOR_MAGENTA	memos-2/init.c	/^  COLOR_MAGENTA = 5,$/;"	e	enum:vga_color	file:
+COLOR_RED	memos-2/init.c	/^  COLOR_RED = 4,$/;"	e	enum:vga_color	file:
+COLOR_WHITE	memos-2/init.c	/^  COLOR_WHITE = 15,$/;"	e	enum:vga_color	file:
+CPPFLAGS	fifos-1/Makefile	/^CPPFLAGS = -Wa -32 -MMD$/;"	m
+CPPFLAGS	memos-2/Makefile	/^CPPFLAGS = -Wa,--32 -MMD$/;"	m
+DF_1_CONFALT	memos-2/elf.h	695;"	d
+DF_1_DIRECT	memos-2/elf.h	690;"	d
+DF_1_ENDFILTEE	memos-2/elf.h	696;"	d
+DF_1_GLOBAL	memos-2/elf.h	683;"	d
+DF_1_GROUP	memos-2/elf.h	684;"	d
+DF_1_INITFIRST	memos-2/elf.h	687;"	d
+DF_1_INTERPOSE	memos-2/elf.h	692;"	d
+DF_1_LOADFLTR	memos-2/elf.h	686;"	d
+DF_1_NODEFLIB	memos-2/elf.h	693;"	d
+DF_1_NODELETE	memos-2/elf.h	685;"	d
+DF_1_NODUMP	memos-2/elf.h	694;"	d
+DF_1_NOOPEN	memos-2/elf.h	688;"	d
+DF_1_NOW	memos-2/elf.h	682;"	d
+DF_1_ORIGIN	memos-2/elf.h	689;"	d
+DF_1_TRANS	memos-2/elf.h	691;"	d
+DF_BIND_NOW	memos-2/elf.h	678;"	d
+DF_ORIGIN	memos-2/elf.h	675;"	d
+DF_P1_GROUPPERM	memos-2/elf.h	704;"	d
+DF_P1_LAZYLOAD	memos-2/elf.h	703;"	d
+DF_SYMBOLIC	memos-2/elf.h	676;"	d
+DF_TEXTREL	memos-2/elf.h	677;"	d
+DTF_1_CONFEXP	memos-2/elf.h	700;"	d
+DTF_1_PARINIT	memos-2/elf.h	699;"	d
+DT_ADDRRNGHI	memos-2/elf.h	647;"	d
+DT_ADDRRNGLO	memos-2/elf.h	645;"	d
+DT_AUXILIARY	memos-2/elf.h	669;"	d
+DT_BIND_NOW	memos-2/elf.h	608;"	d
+DT_CHECKSUM	memos-2/elf.h	629;"	d
+DT_DEBUG	memos-2/elf.h	605;"	d
+DT_ENCODING	memos-2/elf.h	615;"	d
+DT_EXTRANUM	memos-2/elf.h	672;"	d
+DT_EXTRATAGIDX	memos-2/elf.h	671;"	d
+DT_FEATURE_1	memos-2/elf.h	633;"	d
+DT_FILTER	memos-2/elf.h	670;"	d
+DT_FINI	memos-2/elf.h	597;"	d
+DT_FINI_ARRAY	memos-2/elf.h	610;"	d
+DT_FINI_ARRAYSZ	memos-2/elf.h	612;"	d
+DT_FLAGS	memos-2/elf.h	614;"	d
+DT_FLAGS_1	memos-2/elf.h	657;"	d
+DT_HASH	memos-2/elf.h	588;"	d
+DT_HIOS	memos-2/elf.h	620;"	d
+DT_HIPROC	memos-2/elf.h	622;"	d
+DT_IA_64_NUM	memos-2/elf.h	1883;"	d
+DT_IA_64_PLT_RESERVE	memos-2/elf.h	1882;"	d
+DT_INIT	memos-2/elf.h	596;"	d
+DT_INIT_ARRAY	memos-2/elf.h	609;"	d
+DT_INIT_ARRAYSZ	memos-2/elf.h	611;"	d
+DT_JMPREL	memos-2/elf.h	607;"	d
+DT_LOOS	memos-2/elf.h	619;"	d
+DT_LOPROC	memos-2/elf.h	621;"	d
+DT_MIPS_AUX_DYNAMIC	memos-2/elf.h	1411;"	d
+DT_MIPS_BASE_ADDRESS	memos-2/elf.h	1365;"	d
+DT_MIPS_COMPACT_SIZE	memos-2/elf.h	1409;"	d
+DT_MIPS_CONFLICT	memos-2/elf.h	1367;"	d
+DT_MIPS_CONFLICTNO	memos-2/elf.h	1370;"	d
+DT_MIPS_CXX_FLAGS	memos-2/elf.h	1394;"	d
+DT_MIPS_DELTA_CLASS	memos-2/elf.h	1377;"	d
+DT_MIPS_DELTA_CLASSSYM	memos-2/elf.h	1390;"	d
+DT_MIPS_DELTA_CLASSSYM_NO	memos-2/elf.h	1392;"	d
+DT_MIPS_DELTA_CLASS_NO	memos-2/elf.h	1378;"	d
+DT_MIPS_DELTA_INSTANCE	memos-2/elf.h	1380;"	d
+DT_MIPS_DELTA_INSTANCE_NO	memos-2/elf.h	1381;"	d
+DT_MIPS_DELTA_RELOC	memos-2/elf.h	1383;"	d
+DT_MIPS_DELTA_RELOC_NO	memos-2/elf.h	1384;"	d
+DT_MIPS_DELTA_SYM	memos-2/elf.h	1386;"	d
+DT_MIPS_DELTA_SYM_NO	memos-2/elf.h	1388;"	d
+DT_MIPS_DYNSTR_ALIGN	memos-2/elf.h	1403;"	d
+DT_MIPS_FLAGS	memos-2/elf.h	1364;"	d
+DT_MIPS_GOTSYM	memos-2/elf.h	1374;"	d
+DT_MIPS_GP_VALUE	memos-2/elf.h	1410;"	d
+DT_MIPS_HIDDEN_GOTIDX	memos-2/elf.h	1399;"	d
+DT_MIPS_HIPAGENO	memos-2/elf.h	1375;"	d
+DT_MIPS_ICHECKSUM	memos-2/elf.h	1362;"	d
+DT_MIPS_INTERFACE	memos-2/elf.h	1402;"	d
+DT_MIPS_INTERFACE_SIZE	memos-2/elf.h	1404;"	d
+DT_MIPS_IVERSION	memos-2/elf.h	1363;"	d
+DT_MIPS_LIBLIST	memos-2/elf.h	1368;"	d
+DT_MIPS_LIBLISTNO	memos-2/elf.h	1371;"	d
+DT_MIPS_LOCALPAGE_GOTIDX	memos-2/elf.h	1397;"	d
+DT_MIPS_LOCAL_GOTIDX	memos-2/elf.h	1398;"	d
+DT_MIPS_LOCAL_GOTNO	memos-2/elf.h	1369;"	d
+DT_MIPS_MSYM	memos-2/elf.h	1366;"	d
+DT_MIPS_NUM	memos-2/elf.h	1412;"	d
+DT_MIPS_OPTIONS	memos-2/elf.h	1401;"	d
+DT_MIPS_PERF_SUFFIX	memos-2/elf.h	1407;"	d
+DT_MIPS_PIXIE_INIT	memos-2/elf.h	1395;"	d
+DT_MIPS_PROTECTED_GOTIDX	memos-2/elf.h	1400;"	d
+DT_MIPS_RLD_MAP	memos-2/elf.h	1376;"	d
+DT_MIPS_RLD_TEXT_RESOLVE_ADDR	memos-2/elf.h	1405;"	d
+DT_MIPS_RLD_VERSION	memos-2/elf.h	1360;"	d
+DT_MIPS_SYMBOL_LIB	memos-2/elf.h	1396;"	d
+DT_MIPS_SYMTABNO	memos-2/elf.h	1372;"	d
+DT_MIPS_TIME_STAMP	memos-2/elf.h	1361;"	d
+DT_MIPS_UNREFEXTNO	memos-2/elf.h	1373;"	d
+DT_MOVEENT	memos-2/elf.h	631;"	d
+DT_MOVESZ	memos-2/elf.h	632;"	d
+DT_NEEDED	memos-2/elf.h	585;"	d
+DT_NULL	memos-2/elf.h	584;"	d
+DT_NUM	memos-2/elf.h	618;"	d
+DT_PLTGOT	memos-2/elf.h	587;"	d
+DT_PLTPADSZ	memos-2/elf.h	630;"	d
+DT_PLTREL	memos-2/elf.h	604;"	d
+DT_PLTRELSZ	memos-2/elf.h	586;"	d
+DT_POSFLAG_1	memos-2/elf.h	634;"	d
+DT_PREINIT_ARRAY	memos-2/elf.h	616;"	d
+DT_PREINIT_ARRAYSZ	memos-2/elf.h	617;"	d
+DT_PROCNUM	memos-2/elf.h	623;"	d
+DT_REL	memos-2/elf.h	601;"	d
+DT_RELA	memos-2/elf.h	591;"	d
+DT_RELACOUNT	memos-2/elf.h	653;"	d
+DT_RELAENT	memos-2/elf.h	593;"	d
+DT_RELASZ	memos-2/elf.h	592;"	d
+DT_RELCOUNT	memos-2/elf.h	654;"	d
+DT_RELENT	memos-2/elf.h	603;"	d
+DT_RELSZ	memos-2/elf.h	602;"	d
+DT_RPATH	memos-2/elf.h	599;"	d
+DT_RUNPATH	memos-2/elf.h	613;"	d
+DT_SONAME	memos-2/elf.h	598;"	d
+DT_SPARC_NUM	memos-2/elf.h	1100;"	d
+DT_SPARC_REGISTER	memos-2/elf.h	1099;"	d
+DT_STRSZ	memos-2/elf.h	594;"	d
+DT_STRTAB	memos-2/elf.h	589;"	d
+DT_SYMBOLIC	memos-2/elf.h	600;"	d
+DT_SYMENT	memos-2/elf.h	595;"	d
+DT_SYMINENT	memos-2/elf.h	637;"	d
+DT_SYMINFO	memos-2/elf.h	646;"	d
+DT_SYMINSZ	memos-2/elf.h	636;"	d
+DT_SYMTAB	memos-2/elf.h	590;"	d
+DT_TEXTREL	memos-2/elf.h	606;"	d
+DT_VALRNGHI	memos-2/elf.h	638;"	d
+DT_VALRNGLO	memos-2/elf.h	628;"	d
+DT_VERDEF	memos-2/elf.h	658;"	d
+DT_VERDEFNUM	memos-2/elf.h	660;"	d
+DT_VERNEED	memos-2/elf.h	661;"	d
+DT_VERNEEDNUM	memos-2/elf.h	663;"	d
+DT_VERSIONTAGIDX	memos-2/elf.h	664;"	d
+DT_VERSIONTAGNUM	memos-2/elf.h	665;"	d
+DT_VERSYM	memos-2/elf.h	651;"	d
+Done	memos-2/init.c	/^int Done() {$/;"	f
+EFA_PARISC_1_0	memos-2/elf.h	1484;"	d
+EFA_PARISC_1_1	memos-2/elf.h	1485;"	d
+EFA_PARISC_2_0	memos-2/elf.h	1486;"	d
+EF_ALPHA_32BIT	memos-2/elf.h	1642;"	d
+EF_ALPHA_CANRELAX	memos-2/elf.h	1643;"	d
+EF_ARM_ALIGN8	memos-2/elf.h	1785;"	d
+EF_ARM_APCS_26	memos-2/elf.h	1782;"	d
+EF_ARM_APCS_FLOAT	memos-2/elf.h	1783;"	d
+EF_ARM_DYNSYMSUSESEGIDX	memos-2/elf.h	1792;"	d
+EF_ARM_EABIMASK	memos-2/elf.h	1794;"	d
+EF_ARM_EABI_UNKNOWN	memos-2/elf.h	1797;"	d
+EF_ARM_EABI_VER1	memos-2/elf.h	1798;"	d
+EF_ARM_EABI_VER2	memos-2/elf.h	1799;"	d
+EF_ARM_EABI_VERSION	memos-2/elf.h	1796;"	d
+EF_ARM_HASENTRY	memos-2/elf.h	1780;"	d
+EF_ARM_INTERWORK	memos-2/elf.h	1781;"	d
+EF_ARM_MAPSYMSFIRST	memos-2/elf.h	1793;"	d
+EF_ARM_NEW_ABI	memos-2/elf.h	1786;"	d
+EF_ARM_OLD_ABI	memos-2/elf.h	1787;"	d
+EF_ARM_PIC	memos-2/elf.h	1784;"	d
+EF_ARM_RELEXEC	memos-2/elf.h	1779;"	d
+EF_ARM_SYMSARESORTED	memos-2/elf.h	1791;"	d
+EF_CPU32	memos-2/elf.h	967;"	d
+EF_IA_64_ABI64	memos-2/elf.h	1863;"	d
+EF_IA_64_ARCH	memos-2/elf.h	1864;"	d
+EF_IA_64_MASKOS	memos-2/elf.h	1862;"	d
+EF_MIPS_64BIT_WHIRL	memos-2/elf.h	1119;"	d
+EF_MIPS_ABI2	memos-2/elf.h	1120;"	d
+EF_MIPS_ABI_ON32	memos-2/elf.h	1121;"	d
+EF_MIPS_ARCH	memos-2/elf.h	1122;"	d
+EF_MIPS_ARCH_1	memos-2/elf.h	1126;"	d
+EF_MIPS_ARCH_2	memos-2/elf.h	1127;"	d
+EF_MIPS_ARCH_3	memos-2/elf.h	1128;"	d
+EF_MIPS_ARCH_32	memos-2/elf.h	1131;"	d
+EF_MIPS_ARCH_4	memos-2/elf.h	1129;"	d
+EF_MIPS_ARCH_5	memos-2/elf.h	1130;"	d
+EF_MIPS_ARCH_64	memos-2/elf.h	1132;"	d
+EF_MIPS_CPIC	memos-2/elf.h	1117;"	d
+EF_MIPS_NOREORDER	memos-2/elf.h	1115;"	d
+EF_MIPS_PIC	memos-2/elf.h	1116;"	d
+EF_MIPS_XGOT	memos-2/elf.h	1118;"	d
+EF_PARISC_ARCH	memos-2/elf.h	1480;"	d
+EF_PARISC_EXT	memos-2/elf.h	1474;"	d
+EF_PARISC_LAZYSWAP	memos-2/elf.h	1479;"	d
+EF_PARISC_LSB	memos-2/elf.h	1475;"	d
+EF_PARISC_NO_KABP	memos-2/elf.h	1477;"	d
+EF_PARISC_TRAPNIL	memos-2/elf.h	1473;"	d
+EF_PARISC_WIDE	memos-2/elf.h	1476;"	d
+EF_PPC_EMB	memos-2/elf.h	1696;"	d
+EF_PPC_RELOCATABLE	memos-2/elf.h	1699;"	d
+EF_PPC_RELOCATABLE_LIB	memos-2/elf.h	1700;"	d
+EF_SPARCV9_MM	memos-2/elf.h	1023;"	d
+EF_SPARCV9_PSO	memos-2/elf.h	1025;"	d
+EF_SPARCV9_RMO	memos-2/elf.h	1026;"	d
+EF_SPARCV9_TSO	memos-2/elf.h	1024;"	d
+EF_SPARC_32PLUS	memos-2/elf.h	1029;"	d
+EF_SPARC_EXT_MASK	memos-2/elf.h	1028;"	d
+EF_SPARC_HAL_R1	memos-2/elf.h	1031;"	d
+EF_SPARC_LEDATA	memos-2/elf.h	1027;"	d
+EF_SPARC_SUN_US1	memos-2/elf.h	1030;"	d
+EF_SPARC_SUN_US3	memos-2/elf.h	1032;"	d
+EI_ABIVERSION	memos-2/elf.h	125;"	d
+EI_CLASS	memos-2/elf.h	104;"	d
+EI_DATA	memos-2/elf.h	110;"	d
+EI_MAG0	memos-2/elf.h	88;"	d
+EI_MAG1	memos-2/elf.h	91;"	d
+EI_MAG2	memos-2/elf.h	94;"	d
+EI_MAG3	memos-2/elf.h	97;"	d
+EI_NIDENT	memos-2/elf.h	46;"	d
+EI_OSABI	memos-2/elf.h	119;"	d
+EI_PAD	memos-2/elf.h	127;"	d
+EI_VERSION	memos-2/elf.h	116;"	d
+ELF32_M_INFO	memos-2/elf.h	957;"	d
+ELF32_M_SIZE	memos-2/elf.h	956;"	d
+ELF32_M_SYM	memos-2/elf.h	955;"	d
+ELF32_R_INFO	memos-2/elf.h	483;"	d
+ELF32_R_SYM	memos-2/elf.h	481;"	d
+ELF32_R_TYPE	memos-2/elf.h	482;"	d
+ELF32_ST_BIND	memos-2/elf.h	388;"	d
+ELF32_ST_INFO	memos-2/elf.h	390;"	d
+ELF32_ST_TYPE	memos-2/elf.h	389;"	d
+ELF32_ST_VISIBILITY	memos-2/elf.h	432;"	d
+ELF64_M_INFO	memos-2/elf.h	961;"	d
+ELF64_M_SIZE	memos-2/elf.h	960;"	d
+ELF64_M_SYM	memos-2/elf.h	959;"	d
+ELF64_R_INFO	memos-2/elf.h	487;"	d
+ELF64_R_SYM	memos-2/elf.h	485;"	d
+ELF64_R_TYPE	memos-2/elf.h	486;"	d
+ELF64_ST_BIND	memos-2/elf.h	393;"	d
+ELF64_ST_INFO	memos-2/elf.h	395;"	d
+ELF64_ST_TYPE	memos-2/elf.h	394;"	d
+ELF64_ST_VISIBILITY	memos-2/elf.h	435;"	d
+ELFCLASS32	memos-2/elf.h	106;"	d
+ELFCLASS64	memos-2/elf.h	107;"	d
+ELFCLASSNONE	memos-2/elf.h	105;"	d
+ELFCLASSNUM	memos-2/elf.h	108;"	d
+ELFDATA2LSB	memos-2/elf.h	112;"	d
+ELFDATA2MSB	memos-2/elf.h	113;"	d
+ELFDATANONE	memos-2/elf.h	111;"	d
+ELFDATANUM	memos-2/elf.h	114;"	d
+ELFMAG	memos-2/elf.h	101;"	d
+ELFMAG0	memos-2/elf.h	89;"	d
+ELFMAG1	memos-2/elf.h	92;"	d
+ELFMAG2	memos-2/elf.h	95;"	d
+ELFMAG3	memos-2/elf.h	98;"	d
+ELFOSABI_ARM	memos-2/elf.h	122;"	d
+ELFOSABI_HPUX	memos-2/elf.h	121;"	d
+ELFOSABI_STANDALONE	memos-2/elf.h	123;"	d
+ELFOSABI_SYSV	memos-2/elf.h	120;"	d
+ELF_NOTE_ABI	memos-2/elf.h	926;"	d
+ELF_NOTE_GNU	memos-2/elf.h	909;"	d
+ELF_NOTE_OS_GNU	memos-2/elf.h	931;"	d
+ELF_NOTE_OS_LINUX	memos-2/elf.h	930;"	d
+ELF_NOTE_OS_SOLARIS2	memos-2/elf.h	932;"	d
+ELF_NOTE_PAGESIZE_HINT	memos-2/elf.h	915;"	d
+ELF_NOTE_SOLARIS	memos-2/elf.h	906;"	d
+EM_386	memos-2/elf.h	147;"	d
+EM_68HC05	memos-2/elf.h	198;"	d
+EM_68HC08	memos-2/elf.h	197;"	d
+EM_68HC11	memos-2/elf.h	196;"	d
+EM_68HC12	memos-2/elf.h	180;"	d
+EM_68HC16	memos-2/elf.h	195;"	d
+EM_68K	memos-2/elf.h	148;"	d
+EM_860	memos-2/elf.h	150;"	d
+EM_88K	memos-2/elf.h	149;"	d
+EM_960	memos-2/elf.h	158;"	d
+EM_ALPHA	memos-2/elf.h	224;"	d
+EM_ARC	memos-2/elf.h	172;"	d
+EM_ARM	memos-2/elf.h	167;"	d
+EM_AT19	memos-2/elf.h	200;"	d
+EM_AVR	memos-2/elf.h	209;"	d
+EM_COLDFIRE	memos-2/elf.h	179;"	d
+EM_CRIS	memos-2/elf.h	202;"	d
+EM_D10V	memos-2/elf.h	211;"	d
+EM_D30V	memos-2/elf.h	212;"	d
+EM_FAKE_ALPHA	memos-2/elf.h	168;"	d
+EM_FIREPATH	memos-2/elf.h	204;"	d
+EM_FR20	memos-2/elf.h	164;"	d
+EM_FR30	memos-2/elf.h	210;"	d
+EM_FX66	memos-2/elf.h	192;"	d
+EM_H8S	memos-2/elf.h	175;"	d
+EM_H8_300	memos-2/elf.h	173;"	d
+EM_H8_300H	memos-2/elf.h	174;"	d
+EM_H8_500	memos-2/elf.h	176;"	d
+EM_HUANY	memos-2/elf.h	207;"	d
+EM_IA_64	memos-2/elf.h	177;"	d
+EM_JAVELIN	memos-2/elf.h	203;"	d
+EM_M32	memos-2/elf.h	145;"	d
+EM_M32R	memos-2/elf.h	214;"	d
+EM_ME16	memos-2/elf.h	186;"	d
+EM_MIPS	memos-2/elf.h	151;"	d
+EM_MIPS_RS3_LE	memos-2/elf.h	153;"	d
+EM_MIPS_X	memos-2/elf.h	178;"	d
+EM_MMA	memos-2/elf.h	181;"	d
+EM_MMIX	memos-2/elf.h	206;"	d
+EM_MN10200	memos-2/elf.h	216;"	d
+EM_MN10300	memos-2/elf.h	215;"	d
+EM_NCPU	memos-2/elf.h	183;"	d
+EM_NDR1	memos-2/elf.h	184;"	d
+EM_NONE	memos-2/elf.h	144;"	d
+EM_NUM	memos-2/elf.h	218;"	d
+EM_PARISC	memos-2/elf.h	155;"	d
+EM_PCP	memos-2/elf.h	182;"	d
+EM_PDSP	memos-2/elf.h	190;"	d
+EM_PJ	memos-2/elf.h	217;"	d
+EM_PPC	memos-2/elf.h	159;"	d
+EM_PPC64	memos-2/elf.h	160;"	d
+EM_PRISM	memos-2/elf.h	208;"	d
+EM_RCE	memos-2/elf.h	166;"	d
+EM_RH32	memos-2/elf.h	165;"	d
+EM_S370	memos-2/elf.h	152;"	d
+EM_S390	memos-2/elf.h	161;"	d
+EM_SH	memos-2/elf.h	169;"	d
+EM_SPARC	memos-2/elf.h	146;"	d
+EM_SPARC32PLUS	memos-2/elf.h	157;"	d
+EM_SPARCV9	memos-2/elf.h	170;"	d
+EM_ST100	memos-2/elf.h	187;"	d
+EM_ST7	memos-2/elf.h	194;"	d
+EM_ST9PLUS	memos-2/elf.h	193;"	d
+EM_STARCORE	memos-2/elf.h	185;"	d
+EM_SVX	memos-2/elf.h	199;"	d
+EM_TINYJ	memos-2/elf.h	188;"	d
+EM_TRICORE	memos-2/elf.h	171;"	d
+EM_V800	memos-2/elf.h	163;"	d
+EM_V850	memos-2/elf.h	213;"	d
+EM_VAX	memos-2/elf.h	201;"	d
+EM_VPP500	memos-2/elf.h	156;"	d
+EM_X86_64	memos-2/elf.h	189;"	d
+EM_ZSP	memos-2/elf.h	205;"	d
+ET_CORE	memos-2/elf.h	135;"	d
+ET_DYN	memos-2/elf.h	134;"	d
+ET_EXEC	memos-2/elf.h	133;"	d
+ET_HIOS	memos-2/elf.h	138;"	d
+ET_HIPROC	memos-2/elf.h	140;"	d
+ET_LOOS	memos-2/elf.h	137;"	d
+ET_LOPROC	memos-2/elf.h	139;"	d
+ET_NONE	memos-2/elf.h	131;"	d
+ET_NUM	memos-2/elf.h	136;"	d
+ET_REL	memos-2/elf.h	132;"	d
+EV_CURRENT	memos-2/elf.h	229;"	d
+EV_NONE	memos-2/elf.h	228;"	d
+EV_NUM	memos-2/elf.h	230;"	d
+E_MIPS_ARCH_1	memos-2/elf.h	1136;"	d
+E_MIPS_ARCH_2	memos-2/elf.h	1137;"	d
+E_MIPS_ARCH_3	memos-2/elf.h	1138;"	d
+E_MIPS_ARCH_32	memos-2/elf.h	1141;"	d
+E_MIPS_ARCH_4	memos-2/elf.h	1139;"	d
+E_MIPS_ARCH_5	memos-2/elf.h	1140;"	d
+E_MIPS_ARCH_64	memos-2/elf.h	1142;"	d
+Elf32_Addr	memos-2/elf.h	/^typedef unsigned long Elf32_Addr;$/;"	t
+Elf32_Conflict	memos-2/elf.h	/^typedef Elf32_Addr Elf32_Conflict;$/;"	t
+Elf32_Dyn	memos-2/elf.h	/^} Elf32_Dyn;$/;"	t	typeref:struct:__anon16
+Elf32_Ehdr	memos-2/elf.h	/^} Elf32_Ehdr;$/;"	t	typeref:struct:__anon2
+Elf32_Half	memos-2/elf.h	/^typedef unsigned short Elf32_Half;$/;"	t
+Elf32_Lib	memos-2/elf.h	/^} Elf32_Lib;$/;"	t	typeref:struct:__anon42
+Elf32_Move	memos-2/elf.h	/^} Elf32_Move;$/;"	t	typeref:struct:__anon34
+Elf32_Nhdr	memos-2/elf.h	/^} Elf32_Nhdr;$/;"	t	typeref:struct:__anon32
+Elf32_Off	memos-2/elf.h	/^typedef unsigned long Elf32_Off;$/;"	t
+Elf32_Phdr	memos-2/elf.h	/^} Elf32_Phdr;$/;"	t	typeref:struct:__anon14
+Elf32_RegInfo	memos-2/elf.h	/^} Elf32_RegInfo;$/;"	t	typeref:struct:__anon39
+Elf32_Rel	memos-2/elf.h	/^} Elf32_Rel;$/;"	t	typeref:struct:__anon10
+Elf32_Rela	memos-2/elf.h	/^} Elf32_Rela;$/;"	t	typeref:struct:__anon12
+Elf32_Section	memos-2/elf.h	/^typedef unsigned short Elf32_Section;$/;"	t
+Elf32_Shdr	memos-2/elf.h	/^} Elf32_Shdr;$/;"	t	typeref:struct:__anon4
+Elf32_Sword	memos-2/elf.h	/^typedef	long Elf32_Sword;$/;"	t
+Elf32_Sxword	memos-2/elf.h	/^typedef	long long Elf32_Sxword;$/;"	t
+Elf32_Sym	memos-2/elf.h	/^} Elf32_Sym;$/;"	t	typeref:struct:__anon6
+Elf32_Syminfo	memos-2/elf.h	/^} Elf32_Syminfo;$/;"	t	typeref:struct:__anon8
+Elf32_Verdaux	memos-2/elf.h	/^} Elf32_Verdaux;$/;"	t	typeref:struct:__anon22
+Elf32_Verdef	memos-2/elf.h	/^} Elf32_Verdef;$/;"	t	typeref:struct:__anon20
+Elf32_Vernaux	memos-2/elf.h	/^} Elf32_Vernaux;$/;"	t	typeref:struct:__anon26
+Elf32_Verneed	memos-2/elf.h	/^} Elf32_Verneed;$/;"	t	typeref:struct:__anon24
+Elf32_Versym	memos-2/elf.h	/^typedef Elf32_Half Elf32_Versym;$/;"	t
+Elf32_Word	memos-2/elf.h	/^typedef unsigned long Elf32_Word;$/;"	t
+Elf32_Xword	memos-2/elf.h	/^typedef unsigned long long Elf32_Xword;$/;"	t
+Elf32_auxv_t	memos-2/elf.h	/^} Elf32_auxv_t;$/;"	t	typeref:struct:__anon28
+Elf32_gptab	memos-2/elf.h	/^} Elf32_gptab;$/;"	t	typeref:union:__anon36
+Elf64_Addr	memos-2/elf.h	/^typedef unsigned long long Elf64_Addr;$/;"	t
+Elf64_Dyn	memos-2/elf.h	/^} Elf64_Dyn;$/;"	t	typeref:struct:__anon18
+Elf64_Ehdr	memos-2/elf.h	/^} Elf64_Ehdr;$/;"	t	typeref:struct:__anon3
+Elf64_Half	memos-2/elf.h	/^typedef unsigned short Elf64_Half;$/;"	t
+Elf64_Lib	memos-2/elf.h	/^} Elf64_Lib;$/;"	t	typeref:struct:__anon43
+Elf64_Move	memos-2/elf.h	/^} Elf64_Move;$/;"	t	typeref:struct:__anon35
+Elf64_Nhdr	memos-2/elf.h	/^} Elf64_Nhdr;$/;"	t	typeref:struct:__anon33
+Elf64_Off	memos-2/elf.h	/^typedef unsigned long long Elf64_Off;$/;"	t
+Elf64_Phdr	memos-2/elf.h	/^} Elf64_Phdr;$/;"	t	typeref:struct:__anon15
+Elf64_Rel	memos-2/elf.h	/^} Elf64_Rel;$/;"	t	typeref:struct:__anon11
+Elf64_Rela	memos-2/elf.h	/^} Elf64_Rela;$/;"	t	typeref:struct:__anon13
+Elf64_Section	memos-2/elf.h	/^typedef unsigned short Elf64_Section;$/;"	t
+Elf64_Shdr	memos-2/elf.h	/^} Elf64_Shdr;$/;"	t	typeref:struct:__anon5
+Elf64_Sword	memos-2/elf.h	/^typedef	long Elf64_Sword;$/;"	t
+Elf64_Sxword	memos-2/elf.h	/^typedef	long long Elf64_Sxword;$/;"	t
+Elf64_Sym	memos-2/elf.h	/^} Elf64_Sym;$/;"	t	typeref:struct:__anon7
+Elf64_Syminfo	memos-2/elf.h	/^} Elf64_Syminfo;$/;"	t	typeref:struct:__anon9
+Elf64_Verdaux	memos-2/elf.h	/^} Elf64_Verdaux;$/;"	t	typeref:struct:__anon23
+Elf64_Verdef	memos-2/elf.h	/^} Elf64_Verdef;$/;"	t	typeref:struct:__anon21
+Elf64_Vernaux	memos-2/elf.h	/^} Elf64_Vernaux;$/;"	t	typeref:struct:__anon27
+Elf64_Verneed	memos-2/elf.h	/^} Elf64_Verneed;$/;"	t	typeref:struct:__anon25
+Elf64_Versym	memos-2/elf.h	/^typedef Elf64_Half Elf64_Versym;$/;"	t
+Elf64_Word	memos-2/elf.h	/^typedef unsigned long Elf64_Word;$/;"	t
+Elf64_Xword	memos-2/elf.h	/^typedef unsigned long long Elf64_Xword;$/;"	t
+Elf64_auxv_t	memos-2/elf.h	/^} Elf64_auxv_t;$/;"	t	typeref:struct:__anon30
+Elf_Options	memos-2/elf.h	/^} Elf_Options;$/;"	t	typeref:struct:__anon40
+Elf_Options_Hw	memos-2/elf.h	/^} Elf_Options_Hw;$/;"	t	typeref:struct:__anon41
+FALSE	fifos-1/coroutine.c	/^  FALSE,$/;"	e	enum:__anon44	file:
+FALSE	memos-2/init.c	/^	FALSE,$/;"	e	enum:__anon1	file:
+FALSE	memos-2/types.h	1;"	d
+GRP_COMDAT	memos-2/elf.h	326;"	d
+HWCAP_SPARC_FLUSH	memos-2/elf.h	1104;"	d
+HWCAP_SPARC_MULDIV	memos-2/elf.h	1107;"	d
+HWCAP_SPARC_STBAR	memos-2/elf.h	1105;"	d
+HWCAP_SPARC_SWAP	memos-2/elf.h	1106;"	d
+HWCAP_SPARC_ULTRA3	memos-2/elf.h	1109;"	d
+HWCAP_SPARC_V9	memos-2/elf.h	1108;"	d
+LL_DELAY_LOAD	memos-2/elf.h	1461;"	d
+LL_DELTA	memos-2/elf.h	1462;"	d
+LL_EXACT_MATCH	memos-2/elf.h	1457;"	d
+LL_EXPORTS	memos-2/elf.h	1460;"	d
+LL_IGNORE_INT_VER	memos-2/elf.h	1458;"	d
+LL_NONE	memos-2/elf.h	1456;"	d
+LL_REQUIRE_MINOR	memos-2/elf.h	1459;"	d
+MAX_THREADS	fifos-1/coroutine.c	20;"	d	file:
+MAX_THREADS	memos-2/init.c	31;"	d	file:
+MNT_POINT	fifos-1/Makefile	/^MNT_POINT=\/mnt\/$/;"	m
+MNT_POINT	memos-2/Makefile	/^MNT_POINT=\/mnt\/$/;"	m
+NT_AUXV	memos-2/elf.h	545;"	d
+NT_FPREGSET	memos-2/elf.h	541;"	d
+NT_GWINDOWS	memos-2/elf.h	546;"	d
+NT_LWPSINFO	memos-2/elf.h	552;"	d
+NT_LWPSTATUS	memos-2/elf.h	551;"	d
+NT_PLATFORM	memos-2/elf.h	544;"	d
+NT_PRCRED	memos-2/elf.h	549;"	d
+NT_PRFPXREG	memos-2/elf.h	553;"	d
+NT_PRPSINFO	memos-2/elf.h	542;"	d
+NT_PRSTATUS	memos-2/elf.h	540;"	d
+NT_PRXREG	memos-2/elf.h	543;"	d
+NT_PSINFO	memos-2/elf.h	548;"	d
+NT_PSTATUS	memos-2/elf.h	547;"	d
+NT_UTSNAME	memos-2/elf.h	550;"	d
+NT_VERSION	memos-2/elf.h	557;"	d
+OBJS	fifos-1/Makefile	/^OBJS = boot.o init.o print.o thread.o switch.o interrupt.o interrupt_handler.o app.o$/;"	m
+OBJS	memos-2/Makefile	/^OBJS = boot.o init.o $/;"	m
+ODK_EXCEPTIONS	memos-2/elf.h	1259;"	d
+ODK_FILL	memos-2/elf.h	1262;"	d
+ODK_HWAND	memos-2/elf.h	1264;"	d
+ODK_HWOR	memos-2/elf.h	1265;"	d
+ODK_HWPATCH	memos-2/elf.h	1261;"	d
+ODK_NULL	memos-2/elf.h	1257;"	d
+ODK_PAD	memos-2/elf.h	1260;"	d
+ODK_REGINFO	memos-2/elf.h	1258;"	d
+ODK_TAGS	memos-2/elf.h	1263;"	d
+OEX_DISMISS	memos-2/elf.h	1275;"	d
+OEX_FPDBUG	memos-2/elf.h	1273;"	d
+OEX_FPU_DIV0	memos-2/elf.h	1278;"	d
+OEX_FPU_INEX	memos-2/elf.h	1281;"	d
+OEX_FPU_INVAL	memos-2/elf.h	1277;"	d
+OEX_FPU_MAX	memos-2/elf.h	1270;"	d
+OEX_FPU_MIN	memos-2/elf.h	1269;"	d
+OEX_FPU_OFLO	memos-2/elf.h	1279;"	d
+OEX_FPU_UFLO	memos-2/elf.h	1280;"	d
+OEX_PAGE0	memos-2/elf.h	1271;"	d
+OEX_PRECISEFP	memos-2/elf.h	1274;"	d
+OEX_SMM	memos-2/elf.h	1272;"	d
+OHWA0_R4KEOP_CHECKED	memos-2/elf.h	1304;"	d
+OHWA1_R4KEOP_CLEAN	memos-2/elf.h	1305;"	d
+OHW_R4KEOP	memos-2/elf.h	1285;"	d
+OHW_R5KCVTL	memos-2/elf.h	1288;"	d
+OHW_R5KEOP	memos-2/elf.h	1287;"	d
+OHW_R8KPFETCH	memos-2/elf.h	1286;"	d
+OPAD_POSTFIX	memos-2/elf.h	1291;"	d
+OPAD_PREFIX	memos-2/elf.h	1290;"	d
+OPAD_SYMBOL	memos-2/elf.h	1292;"	d
+PCB	fifos-1/thread.c	/^} __attribute__((packed)) PCB;$/;"	t	typeref:struct:_PCB	file:
+PF_ARM_SB	memos-2/elf.h	1810;"	d
+PF_HP_CODE	memos-2/elf.h	1632;"	d
+PF_HP_FAR_SHARED	memos-2/elf.h	1630;"	d
+PF_HP_LAZYSWAP	memos-2/elf.h	1634;"	d
+PF_HP_MODIFY	memos-2/elf.h	1633;"	d
+PF_HP_NEAR_SHARED	memos-2/elf.h	1631;"	d
+PF_HP_PAGE_SIZE	memos-2/elf.h	1629;"	d
+PF_HP_SBP	memos-2/elf.h	1635;"	d
+PF_IA_64_NORECOV	memos-2/elf.h	1871;"	d
+PF_MASKOS	memos-2/elf.h	535;"	d
+PF_MASKPROC	memos-2/elf.h	536;"	d
+PF_MIPS_LOCAL	memos-2/elf.h	1356;"	d
+PF_PARISC_SBP	memos-2/elf.h	1627;"	d
+PF_R	memos-2/elf.h	534;"	d
+PF_W	memos-2/elf.h	533;"	d
+PF_X	memos-2/elf.h	532;"	d
+PROGS	fifos-1/Makefile	/^PROGS= fifos$/;"	m
+PROGS	memos-2/Makefile	/^PROGS = memos-2$/;"	m
+PT_DYNAMIC	memos-2/elf.h	519;"	d
+PT_HIOS	memos-2/elf.h	526;"	d
+PT_HIPROC	memos-2/elf.h	528;"	d
+PT_HP_CORE_COMM	memos-2/elf.h	1610;"	d
+PT_HP_CORE_KERNEL	memos-2/elf.h	1609;"	d
+PT_HP_CORE_LOADABLE	memos-2/elf.h	1612;"	d
+PT_HP_CORE_MMF	memos-2/elf.h	1615;"	d
+PT_HP_CORE_NONE	memos-2/elf.h	1607;"	d
+PT_HP_CORE_PROC	memos-2/elf.h	1611;"	d
+PT_HP_CORE_SHM	memos-2/elf.h	1614;"	d
+PT_HP_CORE_STACK	memos-2/elf.h	1613;"	d
+PT_HP_CORE_VERSION	memos-2/elf.h	1608;"	d
+PT_HP_FASTBIND	memos-2/elf.h	1617;"	d
+PT_HP_HSL_ANNOT	memos-2/elf.h	1619;"	d
+PT_HP_OPT_ANNOT	memos-2/elf.h	1618;"	d
+PT_HP_PARALLEL	memos-2/elf.h	1616;"	d
+PT_HP_STACK	memos-2/elf.h	1620;"	d
+PT_HP_TLS	memos-2/elf.h	1606;"	d
+PT_IA_64_ARCHEXT	memos-2/elf.h	1867;"	d
+PT_IA_64_UNWIND	memos-2/elf.h	1868;"	d
+PT_INTERP	memos-2/elf.h	520;"	d
+PT_LOAD	memos-2/elf.h	518;"	d
+PT_LOOS	memos-2/elf.h	525;"	d
+PT_LOPROC	memos-2/elf.h	527;"	d
+PT_MIPS_OPTIONS	memos-2/elf.h	1352;"	d
+PT_MIPS_REGINFO	memos-2/elf.h	1350;"	d
+PT_MIPS_RTPROC	memos-2/elf.h	1351;"	d
+PT_NOTE	memos-2/elf.h	521;"	d
+PT_NULL	memos-2/elf.h	517;"	d
+PT_NUM	memos-2/elf.h	524;"	d
+PT_PARISC_ARCHEXT	memos-2/elf.h	1622;"	d
+PT_PARISC_UNWIND	memos-2/elf.h	1623;"	d
+PT_PHDR	memos-2/elf.h	523;"	d
+PT_SHLIB	memos-2/elf.h	522;"	d
+RHF_CORD	memos-2/elf.h	1429;"	d
+RHF_DEFAULT_DELAY_LOAD	memos-2/elf.h	1426;"	d
+RHF_DELTA_C_PLUS_PLUS	memos-2/elf.h	1423;"	d
+RHF_GUARANTEE_INIT	memos-2/elf.h	1422;"	d
+RHF_GUARANTEE_START_INIT	memos-2/elf.h	1424;"	d
+RHF_NONE	memos-2/elf.h	1416;"	d
+RHF_NOTPOT	memos-2/elf.h	1418;"	d
+RHF_NO_LIBRARY_REPLACEMENT	memos-2/elf.h	1419;"	d
+RHF_NO_MOVE	memos-2/elf.h	1420;"	d
+RHF_NO_UNRES_UNDEF	memos-2/elf.h	1430;"	d
+RHF_PIXIE	memos-2/elf.h	1425;"	d
+RHF_QUICKSTART	memos-2/elf.h	1417;"	d
+RHF_REQUICKSTART	memos-2/elf.h	1427;"	d
+RHF_REQUICKSTARTED	memos-2/elf.h	1428;"	d
+RHF_RLD_ORDER_SAFE	memos-2/elf.h	1431;"	d
+RHF_SGI_ONLY	memos-2/elf.h	1421;"	d
+R_386_32	memos-2/elf.h	1002;"	d
+R_386_COPY	memos-2/elf.h	1006;"	d
+R_386_GLOB_DAT	memos-2/elf.h	1007;"	d
+R_386_GOT32	memos-2/elf.h	1004;"	d
+R_386_GOTOFF	memos-2/elf.h	1010;"	d
+R_386_GOTPC	memos-2/elf.h	1011;"	d
+R_386_JMP_SLOT	memos-2/elf.h	1008;"	d
+R_386_NONE	memos-2/elf.h	1001;"	d
+R_386_NUM	memos-2/elf.h	1013;"	d
+R_386_PC32	memos-2/elf.h	1003;"	d
+R_386_PLT32	memos-2/elf.h	1005;"	d
+R_386_RELATIVE	memos-2/elf.h	1009;"	d
+R_390_12	memos-2/elf.h	2007;"	d
+R_390_16	memos-2/elf.h	2008;"	d
+R_390_32	memos-2/elf.h	2009;"	d
+R_390_64	memos-2/elf.h	2027;"	d
+R_390_8	memos-2/elf.h	2006;"	d
+R_390_COPY	memos-2/elf.h	2014;"	d
+R_390_GLOB_DAT	memos-2/elf.h	2015;"	d
+R_390_GOT12	memos-2/elf.h	2011;"	d
+R_390_GOT16	memos-2/elf.h	2020;"	d
+R_390_GOT32	memos-2/elf.h	2012;"	d
+R_390_GOT64	memos-2/elf.h	2029;"	d
+R_390_GOTENT	memos-2/elf.h	2031;"	d
+R_390_GOTOFF	memos-2/elf.h	2018;"	d
+R_390_GOTPC	memos-2/elf.h	2019;"	d
+R_390_GOTPCDBL	memos-2/elf.h	2026;"	d
+R_390_JMP_SLOT	memos-2/elf.h	2016;"	d
+R_390_NONE	memos-2/elf.h	2005;"	d
+R_390_NUM	memos-2/elf.h	2034;"	d
+R_390_PC16	memos-2/elf.h	2021;"	d
+R_390_PC16DBL	memos-2/elf.h	2022;"	d
+R_390_PC32	memos-2/elf.h	2010;"	d
+R_390_PC32DBL	memos-2/elf.h	2024;"	d
+R_390_PC64	memos-2/elf.h	2028;"	d
+R_390_PLT16DBL	memos-2/elf.h	2023;"	d
+R_390_PLT32	memos-2/elf.h	2013;"	d
+R_390_PLT32DBL	memos-2/elf.h	2025;"	d
+R_390_PLT64	memos-2/elf.h	2030;"	d
+R_390_RELATIVE	memos-2/elf.h	2017;"	d
+R_68K_16	memos-2/elf.h	973;"	d
+R_68K_32	memos-2/elf.h	972;"	d
+R_68K_8	memos-2/elf.h	974;"	d
+R_68K_COPY	memos-2/elf.h	990;"	d
+R_68K_GLOB_DAT	memos-2/elf.h	991;"	d
+R_68K_GOT16	memos-2/elf.h	979;"	d
+R_68K_GOT16O	memos-2/elf.h	982;"	d
+R_68K_GOT32	memos-2/elf.h	978;"	d
+R_68K_GOT32O	memos-2/elf.h	981;"	d
+R_68K_GOT8	memos-2/elf.h	980;"	d
+R_68K_GOT8O	memos-2/elf.h	983;"	d
+R_68K_JMP_SLOT	memos-2/elf.h	992;"	d
+R_68K_NONE	memos-2/elf.h	971;"	d
+R_68K_NUM	memos-2/elf.h	995;"	d
+R_68K_PC16	memos-2/elf.h	976;"	d
+R_68K_PC32	memos-2/elf.h	975;"	d
+R_68K_PC8	memos-2/elf.h	977;"	d
+R_68K_PLT16	memos-2/elf.h	985;"	d
+R_68K_PLT16O	memos-2/elf.h	988;"	d
+R_68K_PLT32	memos-2/elf.h	984;"	d
+R_68K_PLT32O	memos-2/elf.h	987;"	d
+R_68K_PLT8	memos-2/elf.h	986;"	d
+R_68K_PLT8O	memos-2/elf.h	989;"	d
+R_68K_RELATIVE	memos-2/elf.h	993;"	d
+R_ALPHA_BRADDR	memos-2/elf.h	1668;"	d
+R_ALPHA_COPY	memos-2/elf.h	1685;"	d
+R_ALPHA_GLOB_DAT	memos-2/elf.h	1686;"	d
+R_ALPHA_GPDISP	memos-2/elf.h	1667;"	d
+R_ALPHA_GPREL32	memos-2/elf.h	1664;"	d
+R_ALPHA_GPRELHIGH	memos-2/elf.h	1678;"	d
+R_ALPHA_GPRELLOW	memos-2/elf.h	1679;"	d
+R_ALPHA_GPVALUE	memos-2/elf.h	1677;"	d
+R_ALPHA_HINT	memos-2/elf.h	1669;"	d
+R_ALPHA_IMMED_BR_HI32	memos-2/elf.h	1683;"	d
+R_ALPHA_IMMED_GP_16	memos-2/elf.h	1680;"	d
+R_ALPHA_IMMED_GP_HI32	memos-2/elf.h	1681;"	d
+R_ALPHA_IMMED_LO32	memos-2/elf.h	1684;"	d
+R_ALPHA_IMMED_SCN_HI32	memos-2/elf.h	1682;"	d
+R_ALPHA_JMP_SLOT	memos-2/elf.h	1687;"	d
+R_ALPHA_LITERAL	memos-2/elf.h	1665;"	d
+R_ALPHA_LITUSE	memos-2/elf.h	1666;"	d
+R_ALPHA_NONE	memos-2/elf.h	1661;"	d
+R_ALPHA_NUM	memos-2/elf.h	1690;"	d
+R_ALPHA_OP_PRSHIFT	memos-2/elf.h	1676;"	d
+R_ALPHA_OP_PSUB	memos-2/elf.h	1675;"	d
+R_ALPHA_OP_PUSH	memos-2/elf.h	1673;"	d
+R_ALPHA_OP_STORE	memos-2/elf.h	1674;"	d
+R_ALPHA_REFLONG	memos-2/elf.h	1662;"	d
+R_ALPHA_REFQUAD	memos-2/elf.h	1663;"	d
+R_ALPHA_RELATIVE	memos-2/elf.h	1688;"	d
+R_ALPHA_SREL16	memos-2/elf.h	1670;"	d
+R_ALPHA_SREL32	memos-2/elf.h	1671;"	d
+R_ALPHA_SREL64	memos-2/elf.h	1672;"	d
+R_ARM_ABS12	memos-2/elf.h	1820;"	d
+R_ARM_ABS16	memos-2/elf.h	1819;"	d
+R_ARM_ABS32	memos-2/elf.h	1816;"	d
+R_ARM_ABS8	memos-2/elf.h	1822;"	d
+R_ARM_ALU_PCREL_15_8	memos-2/elf.h	1840;"	d
+R_ARM_ALU_PCREL_23_15	memos-2/elf.h	1841;"	d
+R_ARM_ALU_PCREL_7_0	memos-2/elf.h	1839;"	d
+R_ARM_ALU_SBREL_19_12	memos-2/elf.h	1843;"	d
+R_ARM_ALU_SBREL_27_20	memos-2/elf.h	1844;"	d
+R_ARM_AMP_VCALL9	memos-2/elf.h	1826;"	d
+R_ARM_COPY	memos-2/elf.h	1831;"	d
+R_ARM_GLOB_DAT	memos-2/elf.h	1832;"	d
+R_ARM_GNU_VTENTRY	memos-2/elf.h	1845;"	d
+R_ARM_GNU_VTINHERIT	memos-2/elf.h	1846;"	d
+R_ARM_GOT32	memos-2/elf.h	1837;"	d
+R_ARM_GOTOFF	memos-2/elf.h	1835;"	d
+R_ARM_GOTPC	memos-2/elf.h	1836;"	d
+R_ARM_JUMP_SLOT	memos-2/elf.h	1833;"	d
+R_ARM_LDR_SBREL_11_0	memos-2/elf.h	1842;"	d
+R_ARM_NONE	memos-2/elf.h	1814;"	d
+R_ARM_NUM	memos-2/elf.h	1857;"	d
+R_ARM_PC13	memos-2/elf.h	1818;"	d
+R_ARM_PC24	memos-2/elf.h	1815;"	d
+R_ARM_PLT32	memos-2/elf.h	1838;"	d
+R_ARM_RABS22	memos-2/elf.h	1853;"	d
+R_ARM_RBASE	memos-2/elf.h	1855;"	d
+R_ARM_REL32	memos-2/elf.h	1817;"	d
+R_ARM_RELATIVE	memos-2/elf.h	1834;"	d
+R_ARM_RPC24	memos-2/elf.h	1854;"	d
+R_ARM_RREL32	memos-2/elf.h	1852;"	d
+R_ARM_RSBREL32	memos-2/elf.h	1850;"	d
+R_ARM_RXPC25	memos-2/elf.h	1849;"	d
+R_ARM_SBREL32	memos-2/elf.h	1823;"	d
+R_ARM_SWI24	memos-2/elf.h	1827;"	d
+R_ARM_THM_ABS5	memos-2/elf.h	1821;"	d
+R_ARM_THM_PC11	memos-2/elf.h	1847;"	d
+R_ARM_THM_PC22	memos-2/elf.h	1824;"	d
+R_ARM_THM_PC8	memos-2/elf.h	1825;"	d
+R_ARM_THM_PC9	memos-2/elf.h	1848;"	d
+R_ARM_THM_RPC22	memos-2/elf.h	1851;"	d
+R_ARM_THM_SWI8	memos-2/elf.h	1828;"	d
+R_ARM_THM_XPC22	memos-2/elf.h	1830;"	d
+R_ARM_XPC25	memos-2/elf.h	1829;"	d
+R_CRIS_16	memos-2/elf.h	2039;"	d
+R_CRIS_16_GOT	memos-2/elf.h	2050;"	d
+R_CRIS_16_GOTPLT	memos-2/elf.h	2052;"	d
+R_CRIS_16_PCREL	memos-2/elf.h	2042;"	d
+R_CRIS_32	memos-2/elf.h	2040;"	d
+R_CRIS_32_GOT	memos-2/elf.h	2051;"	d
+R_CRIS_32_GOTPLT	memos-2/elf.h	2053;"	d
+R_CRIS_32_GOTREL	memos-2/elf.h	2054;"	d
+R_CRIS_32_PCREL	memos-2/elf.h	2043;"	d
+R_CRIS_32_PLT_GOTREL	memos-2/elf.h	2055;"	d
+R_CRIS_32_PLT_PCREL	memos-2/elf.h	2056;"	d
+R_CRIS_8	memos-2/elf.h	2038;"	d
+R_CRIS_8_PCREL	memos-2/elf.h	2041;"	d
+R_CRIS_COPY	memos-2/elf.h	2046;"	d
+R_CRIS_GLOB_DAT	memos-2/elf.h	2047;"	d
+R_CRIS_GNU_VTENTRY	memos-2/elf.h	2045;"	d
+R_CRIS_GNU_VTINHERIT	memos-2/elf.h	2044;"	d
+R_CRIS_JUMP_SLOT	memos-2/elf.h	2048;"	d
+R_CRIS_NONE	memos-2/elf.h	2037;"	d
+R_CRIS_NUM	memos-2/elf.h	2058;"	d
+R_CRIS_RELATIVE	memos-2/elf.h	2049;"	d
+R_IA64_COPY	memos-2/elf.h	1946;"	d
+R_IA64_DIR32LSB	memos-2/elf.h	1891;"	d
+R_IA64_DIR32MSB	memos-2/elf.h	1890;"	d
+R_IA64_DIR64LSB	memos-2/elf.h	1893;"	d
+R_IA64_DIR64MSB	memos-2/elf.h	1892;"	d
+R_IA64_DTPMOD64LSB	memos-2/elf.h	1957;"	d
+R_IA64_DTPMOD64MSB	memos-2/elf.h	1956;"	d
+R_IA64_DTPREL14	memos-2/elf.h	1959;"	d
+R_IA64_DTPREL22	memos-2/elf.h	1960;"	d
+R_IA64_DTPREL32LSB	memos-2/elf.h	1963;"	d
+R_IA64_DTPREL32MSB	memos-2/elf.h	1962;"	d
+R_IA64_DTPREL64I	memos-2/elf.h	1961;"	d
+R_IA64_DTPREL64LSB	memos-2/elf.h	1965;"	d
+R_IA64_DTPREL64MSB	memos-2/elf.h	1964;"	d
+R_IA64_FPTR32LSB	memos-2/elf.h	1908;"	d
+R_IA64_FPTR32MSB	memos-2/elf.h	1907;"	d
+R_IA64_FPTR64I	memos-2/elf.h	1906;"	d
+R_IA64_FPTR64LSB	memos-2/elf.h	1910;"	d
+R_IA64_FPTR64MSB	memos-2/elf.h	1909;"	d
+R_IA64_GPREL22	memos-2/elf.h	1894;"	d
+R_IA64_GPREL32LSB	memos-2/elf.h	1897;"	d
+R_IA64_GPREL32MSB	memos-2/elf.h	1896;"	d
+R_IA64_GPREL64I	memos-2/elf.h	1895;"	d
+R_IA64_GPREL64LSB	memos-2/elf.h	1899;"	d
+R_IA64_GPREL64MSB	memos-2/elf.h	1898;"	d
+R_IA64_IMM14	memos-2/elf.h	1887;"	d
+R_IA64_IMM22	memos-2/elf.h	1888;"	d
+R_IA64_IMM64	memos-2/elf.h	1889;"	d
+R_IA64_IPLTLSB	memos-2/elf.h	1945;"	d
+R_IA64_IPLTMSB	memos-2/elf.h	1944;"	d
+R_IA64_LDXMOV	memos-2/elf.h	1949;"	d
+R_IA64_LTOFF22	memos-2/elf.h	1900;"	d
+R_IA64_LTOFF22X	memos-2/elf.h	1948;"	d
+R_IA64_LTOFF64I	memos-2/elf.h	1901;"	d
+R_IA64_LTOFF_DTPMOD22	memos-2/elf.h	1958;"	d
+R_IA64_LTOFF_DTPREL22	memos-2/elf.h	1966;"	d
+R_IA64_LTOFF_FPTR22	memos-2/elf.h	1919;"	d
+R_IA64_LTOFF_FPTR32LSB	memos-2/elf.h	1922;"	d
+R_IA64_LTOFF_FPTR32MSB	memos-2/elf.h	1921;"	d
+R_IA64_LTOFF_FPTR64I	memos-2/elf.h	1920;"	d
+R_IA64_LTOFF_FPTR64LSB	memos-2/elf.h	1924;"	d
+R_IA64_LTOFF_FPTR64MSB	memos-2/elf.h	1923;"	d
+R_IA64_LTOFF_TPREL22	memos-2/elf.h	1955;"	d
+R_IA64_LTV32LSB	memos-2/elf.h	1938;"	d
+R_IA64_LTV32MSB	memos-2/elf.h	1937;"	d
+R_IA64_LTV64LSB	memos-2/elf.h	1940;"	d
+R_IA64_LTV64MSB	memos-2/elf.h	1939;"	d
+R_IA64_NONE	memos-2/elf.h	1886;"	d
+R_IA64_PCREL21B	memos-2/elf.h	1912;"	d
+R_IA64_PCREL21BI	memos-2/elf.h	1941;"	d
+R_IA64_PCREL21F	memos-2/elf.h	1914;"	d
+R_IA64_PCREL21M	memos-2/elf.h	1913;"	d
+R_IA64_PCREL22	memos-2/elf.h	1942;"	d
+R_IA64_PCREL32LSB	memos-2/elf.h	1916;"	d
+R_IA64_PCREL32MSB	memos-2/elf.h	1915;"	d
+R_IA64_PCREL60B	memos-2/elf.h	1911;"	d
+R_IA64_PCREL64I	memos-2/elf.h	1943;"	d
+R_IA64_PCREL64LSB	memos-2/elf.h	1918;"	d
+R_IA64_PCREL64MSB	memos-2/elf.h	1917;"	d
+R_IA64_PLTOFF22	memos-2/elf.h	1902;"	d
+R_IA64_PLTOFF64I	memos-2/elf.h	1903;"	d
+R_IA64_PLTOFF64LSB	memos-2/elf.h	1905;"	d
+R_IA64_PLTOFF64MSB	memos-2/elf.h	1904;"	d
+R_IA64_REL32LSB	memos-2/elf.h	1934;"	d
+R_IA64_REL32MSB	memos-2/elf.h	1933;"	d
+R_IA64_REL64LSB	memos-2/elf.h	1936;"	d
+R_IA64_REL64MSB	memos-2/elf.h	1935;"	d
+R_IA64_SECREL32LSB	memos-2/elf.h	1930;"	d
+R_IA64_SECREL32MSB	memos-2/elf.h	1929;"	d
+R_IA64_SECREL64LSB	memos-2/elf.h	1932;"	d
+R_IA64_SECREL64MSB	memos-2/elf.h	1931;"	d
+R_IA64_SEGREL32LSB	memos-2/elf.h	1926;"	d
+R_IA64_SEGREL32MSB	memos-2/elf.h	1925;"	d
+R_IA64_SEGREL64LSB	memos-2/elf.h	1928;"	d
+R_IA64_SEGREL64MSB	memos-2/elf.h	1927;"	d
+R_IA64_SUB	memos-2/elf.h	1947;"	d
+R_IA64_TPREL14	memos-2/elf.h	1950;"	d
+R_IA64_TPREL22	memos-2/elf.h	1951;"	d
+R_IA64_TPREL64I	memos-2/elf.h	1952;"	d
+R_IA64_TPREL64LSB	memos-2/elf.h	1954;"	d
+R_IA64_TPREL64MSB	memos-2/elf.h	1953;"	d
+R_MIPS_16	memos-2/elf.h	1310;"	d
+R_MIPS_26	memos-2/elf.h	1313;"	d
+R_MIPS_32	memos-2/elf.h	1311;"	d
+R_MIPS_64	memos-2/elf.h	1325;"	d
+R_MIPS_ADD_IMMEDIATE	memos-2/elf.h	1341;"	d
+R_MIPS_CALL16	memos-2/elf.h	1320;"	d
+R_MIPS_CALL_HI16	memos-2/elf.h	1337;"	d
+R_MIPS_CALL_LO16	memos-2/elf.h	1338;"	d
+R_MIPS_DELETE	memos-2/elf.h	1334;"	d
+R_MIPS_GOT16	memos-2/elf.h	1318;"	d
+R_MIPS_GOT_DISP	memos-2/elf.h	1326;"	d
+R_MIPS_GOT_HI16	memos-2/elf.h	1329;"	d
+R_MIPS_GOT_LO16	memos-2/elf.h	1330;"	d
+R_MIPS_GOT_OFST	memos-2/elf.h	1328;"	d
+R_MIPS_GOT_PAGE	memos-2/elf.h	1327;"	d
+R_MIPS_GPREL16	memos-2/elf.h	1316;"	d
+R_MIPS_GPREL32	memos-2/elf.h	1321;"	d
+R_MIPS_HI16	memos-2/elf.h	1314;"	d
+R_MIPS_HIGHER	memos-2/elf.h	1335;"	d
+R_MIPS_HIGHEST	memos-2/elf.h	1336;"	d
+R_MIPS_INSERT_A	memos-2/elf.h	1332;"	d
+R_MIPS_INSERT_B	memos-2/elf.h	1333;"	d
+R_MIPS_JALR	memos-2/elf.h	1344;"	d
+R_MIPS_LITERAL	memos-2/elf.h	1317;"	d
+R_MIPS_LO16	memos-2/elf.h	1315;"	d
+R_MIPS_NONE	memos-2/elf.h	1309;"	d
+R_MIPS_NUM	memos-2/elf.h	1346;"	d
+R_MIPS_PC16	memos-2/elf.h	1319;"	d
+R_MIPS_PJUMP	memos-2/elf.h	1342;"	d
+R_MIPS_REL16	memos-2/elf.h	1340;"	d
+R_MIPS_REL32	memos-2/elf.h	1312;"	d
+R_MIPS_RELGOT	memos-2/elf.h	1343;"	d
+R_MIPS_SCN_DISP	memos-2/elf.h	1339;"	d
+R_MIPS_SHIFT5	memos-2/elf.h	1323;"	d
+R_MIPS_SHIFT6	memos-2/elf.h	1324;"	d
+R_MIPS_SUB	memos-2/elf.h	1331;"	d
+R_PARISC_COPY	memos-2/elf.h	1581;"	d
+R_PARISC_DIR14DR	memos-2/elf.h	1551;"	d
+R_PARISC_DIR14R	memos-2/elf.h	1520;"	d
+R_PARISC_DIR14WR	memos-2/elf.h	1550;"	d
+R_PARISC_DIR16DF	memos-2/elf.h	1554;"	d
+R_PARISC_DIR16F	memos-2/elf.h	1552;"	d
+R_PARISC_DIR16WF	memos-2/elf.h	1553;"	d
+R_PARISC_DIR17F	memos-2/elf.h	1519;"	d
+R_PARISC_DIR17R	memos-2/elf.h	1518;"	d
+R_PARISC_DIR21L	memos-2/elf.h	1517;"	d
+R_PARISC_DIR32	memos-2/elf.h	1516;"	d
+R_PARISC_DIR64	memos-2/elf.h	1549;"	d
+R_PARISC_DPREL14R	memos-2/elf.h	1527;"	d
+R_PARISC_DPREL21L	memos-2/elf.h	1526;"	d
+R_PARISC_EPLT	memos-2/elf.h	1583;"	d
+R_PARISC_FPTR64	memos-2/elf.h	1540;"	d
+R_PARISC_GPREL14DR	memos-2/elf.h	1557;"	d
+R_PARISC_GPREL14R	memos-2/elf.h	1529;"	d
+R_PARISC_GPREL14WR	memos-2/elf.h	1556;"	d
+R_PARISC_GPREL16DF	memos-2/elf.h	1560;"	d
+R_PARISC_GPREL16F	memos-2/elf.h	1558;"	d
+R_PARISC_GPREL16WF	memos-2/elf.h	1559;"	d
+R_PARISC_GPREL21L	memos-2/elf.h	1528;"	d
+R_PARISC_GPREL64	memos-2/elf.h	1555;"	d
+R_PARISC_HIRESERVE	memos-2/elf.h	1602;"	d
+R_PARISC_IPLT	memos-2/elf.h	1582;"	d
+R_PARISC_LORESERVE	memos-2/elf.h	1580;"	d
+R_PARISC_LTOFF14DR	memos-2/elf.h	1563;"	d
+R_PARISC_LTOFF14R	memos-2/elf.h	1531;"	d
+R_PARISC_LTOFF14WR	memos-2/elf.h	1562;"	d
+R_PARISC_LTOFF16DF	memos-2/elf.h	1566;"	d
+R_PARISC_LTOFF16F	memos-2/elf.h	1564;"	d
+R_PARISC_LTOFF16WF	memos-2/elf.h	1565;"	d
+R_PARISC_LTOFF21L	memos-2/elf.h	1530;"	d
+R_PARISC_LTOFF64	memos-2/elf.h	1561;"	d
+R_PARISC_LTOFF_FPTR14DR	memos-2/elf.h	1576;"	d
+R_PARISC_LTOFF_FPTR14R	memos-2/elf.h	1539;"	d
+R_PARISC_LTOFF_FPTR14WR	memos-2/elf.h	1575;"	d
+R_PARISC_LTOFF_FPTR16DF	memos-2/elf.h	1579;"	d
+R_PARISC_LTOFF_FPTR16F	memos-2/elf.h	1577;"	d
+R_PARISC_LTOFF_FPTR16WF	memos-2/elf.h	1578;"	d
+R_PARISC_LTOFF_FPTR21L	memos-2/elf.h	1538;"	d
+R_PARISC_LTOFF_FPTR32	memos-2/elf.h	1537;"	d
+R_PARISC_LTOFF_FPTR64	memos-2/elf.h	1574;"	d
+R_PARISC_LTOFF_TP14DR	memos-2/elf.h	1598;"	d
+R_PARISC_LTOFF_TP14F	memos-2/elf.h	1589;"	d
+R_PARISC_LTOFF_TP14R	memos-2/elf.h	1588;"	d
+R_PARISC_LTOFF_TP14WR	memos-2/elf.h	1597;"	d
+R_PARISC_LTOFF_TP16DF	memos-2/elf.h	1601;"	d
+R_PARISC_LTOFF_TP16F	memos-2/elf.h	1599;"	d
+R_PARISC_LTOFF_TP16WF	memos-2/elf.h	1600;"	d
+R_PARISC_LTOFF_TP21L	memos-2/elf.h	1587;"	d
+R_PARISC_LTOFF_TP64	memos-2/elf.h	1596;"	d
+R_PARISC_NONE	memos-2/elf.h	1515;"	d
+R_PARISC_PCREL14DR	memos-2/elf.h	1545;"	d
+R_PARISC_PCREL14R	memos-2/elf.h	1525;"	d
+R_PARISC_PCREL14WR	memos-2/elf.h	1544;"	d
+R_PARISC_PCREL16DF	memos-2/elf.h	1548;"	d
+R_PARISC_PCREL16F	memos-2/elf.h	1546;"	d
+R_PARISC_PCREL16WF	memos-2/elf.h	1547;"	d
+R_PARISC_PCREL17F	memos-2/elf.h	1524;"	d
+R_PARISC_PCREL17R	memos-2/elf.h	1523;"	d
+R_PARISC_PCREL21L	memos-2/elf.h	1522;"	d
+R_PARISC_PCREL22F	memos-2/elf.h	1543;"	d
+R_PARISC_PCREL32	memos-2/elf.h	1521;"	d
+R_PARISC_PCREL64	memos-2/elf.h	1542;"	d
+R_PARISC_PLABEL32	memos-2/elf.h	1541;"	d
+R_PARISC_PLTOFF14DR	memos-2/elf.h	1570;"	d
+R_PARISC_PLTOFF14R	memos-2/elf.h	1536;"	d
+R_PARISC_PLTOFF14WR	memos-2/elf.h	1569;"	d
+R_PARISC_PLTOFF16DF	memos-2/elf.h	1573;"	d
+R_PARISC_PLTOFF16F	memos-2/elf.h	1571;"	d
+R_PARISC_PLTOFF16WF	memos-2/elf.h	1572;"	d
+R_PARISC_PLTOFF21L	memos-2/elf.h	1535;"	d
+R_PARISC_SECREL32	memos-2/elf.h	1532;"	d
+R_PARISC_SECREL64	memos-2/elf.h	1567;"	d
+R_PARISC_SEGBASE	memos-2/elf.h	1533;"	d
+R_PARISC_SEGREL32	memos-2/elf.h	1534;"	d
+R_PARISC_SEGREL64	memos-2/elf.h	1568;"	d
+R_PARISC_TPREL14DR	memos-2/elf.h	1592;"	d
+R_PARISC_TPREL14R	memos-2/elf.h	1586;"	d
+R_PARISC_TPREL14WR	memos-2/elf.h	1591;"	d
+R_PARISC_TPREL16DF	memos-2/elf.h	1595;"	d
+R_PARISC_TPREL16F	memos-2/elf.h	1593;"	d
+R_PARISC_TPREL16WF	memos-2/elf.h	1594;"	d
+R_PARISC_TPREL21L	memos-2/elf.h	1585;"	d
+R_PARISC_TPREL32	memos-2/elf.h	1584;"	d
+R_PARISC_TPREL64	memos-2/elf.h	1590;"	d
+R_PPC_ADDR14	memos-2/elf.h	1711;"	d
+R_PPC_ADDR14_BRNTAKEN	memos-2/elf.h	1713;"	d
+R_PPC_ADDR14_BRTAKEN	memos-2/elf.h	1712;"	d
+R_PPC_ADDR16	memos-2/elf.h	1707;"	d
+R_PPC_ADDR16_HA	memos-2/elf.h	1710;"	d
+R_PPC_ADDR16_HI	memos-2/elf.h	1709;"	d
+R_PPC_ADDR16_LO	memos-2/elf.h	1708;"	d
+R_PPC_ADDR24	memos-2/elf.h	1706;"	d
+R_PPC_ADDR32	memos-2/elf.h	1705;"	d
+R_PPC_COPY	memos-2/elf.h	1723;"	d
+R_PPC_DIAB_RELSDA_HA	memos-2/elf.h	1769;"	d
+R_PPC_DIAB_RELSDA_HI	memos-2/elf.h	1768;"	d
+R_PPC_DIAB_RELSDA_LO	memos-2/elf.h	1767;"	d
+R_PPC_DIAB_SDA21_HA	memos-2/elf.h	1766;"	d
+R_PPC_DIAB_SDA21_HI	memos-2/elf.h	1765;"	d
+R_PPC_DIAB_SDA21_LO	memos-2/elf.h	1764;"	d
+R_PPC_EMB_BIT_FLD	memos-2/elf.h	1760;"	d
+R_PPC_EMB_MRKREF	memos-2/elf.h	1755;"	d
+R_PPC_EMB_NADDR16	memos-2/elf.h	1747;"	d
+R_PPC_EMB_NADDR16_HA	memos-2/elf.h	1750;"	d
+R_PPC_EMB_NADDR16_HI	memos-2/elf.h	1749;"	d
+R_PPC_EMB_NADDR16_LO	memos-2/elf.h	1748;"	d
+R_PPC_EMB_NADDR32	memos-2/elf.h	1746;"	d
+R_PPC_EMB_RELSDA	memos-2/elf.h	1761;"	d
+R_PPC_EMB_RELSEC16	memos-2/elf.h	1756;"	d
+R_PPC_EMB_RELST_HA	memos-2/elf.h	1759;"	d
+R_PPC_EMB_RELST_HI	memos-2/elf.h	1758;"	d
+R_PPC_EMB_RELST_LO	memos-2/elf.h	1757;"	d
+R_PPC_EMB_SDA21	memos-2/elf.h	1754;"	d
+R_PPC_EMB_SDA2I16	memos-2/elf.h	1752;"	d
+R_PPC_EMB_SDA2REL	memos-2/elf.h	1753;"	d
+R_PPC_EMB_SDAI16	memos-2/elf.h	1751;"	d
+R_PPC_GLOB_DAT	memos-2/elf.h	1724;"	d
+R_PPC_GOT16	memos-2/elf.h	1718;"	d
+R_PPC_GOT16_HA	memos-2/elf.h	1721;"	d
+R_PPC_GOT16_HI	memos-2/elf.h	1720;"	d
+R_PPC_GOT16_LO	memos-2/elf.h	1719;"	d
+R_PPC_JMP_SLOT	memos-2/elf.h	1725;"	d
+R_PPC_LOCAL24PC	memos-2/elf.h	1727;"	d
+R_PPC_NONE	memos-2/elf.h	1704;"	d
+R_PPC_NUM	memos-2/elf.h	1742;"	d
+R_PPC_PLT16_HA	memos-2/elf.h	1735;"	d
+R_PPC_PLT16_HI	memos-2/elf.h	1734;"	d
+R_PPC_PLT16_LO	memos-2/elf.h	1733;"	d
+R_PPC_PLT32	memos-2/elf.h	1731;"	d
+R_PPC_PLTREL24	memos-2/elf.h	1722;"	d
+R_PPC_PLTREL32	memos-2/elf.h	1732;"	d
+R_PPC_REL14	memos-2/elf.h	1715;"	d
+R_PPC_REL14_BRNTAKEN	memos-2/elf.h	1717;"	d
+R_PPC_REL14_BRTAKEN	memos-2/elf.h	1716;"	d
+R_PPC_REL24	memos-2/elf.h	1714;"	d
+R_PPC_REL32	memos-2/elf.h	1730;"	d
+R_PPC_RELATIVE	memos-2/elf.h	1726;"	d
+R_PPC_SDAREL16	memos-2/elf.h	1736;"	d
+R_PPC_SECTOFF	memos-2/elf.h	1737;"	d
+R_PPC_SECTOFF_HA	memos-2/elf.h	1740;"	d
+R_PPC_SECTOFF_HI	memos-2/elf.h	1739;"	d
+R_PPC_SECTOFF_LO	memos-2/elf.h	1738;"	d
+R_PPC_TOC16	memos-2/elf.h	1773;"	d
+R_PPC_UADDR16	memos-2/elf.h	1729;"	d
+R_PPC_UADDR32	memos-2/elf.h	1728;"	d
+R_SH_ALIGN	memos-2/elf.h	1985;"	d
+R_SH_CODE	memos-2/elf.h	1986;"	d
+R_SH_COPY	memos-2/elf.h	1994;"	d
+R_SH_COUNT	memos-2/elf.h	1984;"	d
+R_SH_DATA	memos-2/elf.h	1987;"	d
+R_SH_DIR32	memos-2/elf.h	1972;"	d
+R_SH_DIR8BP	memos-2/elf.h	1978;"	d
+R_SH_DIR8L	memos-2/elf.h	1980;"	d
+R_SH_DIR8W	memos-2/elf.h	1979;"	d
+R_SH_DIR8WPL	memos-2/elf.h	1976;"	d
+R_SH_DIR8WPN	memos-2/elf.h	1974;"	d
+R_SH_DIR8WPZ	memos-2/elf.h	1977;"	d
+R_SH_GLOB_DAT	memos-2/elf.h	1995;"	d
+R_SH_GNU_VTENTRY	memos-2/elf.h	1991;"	d
+R_SH_GNU_VTINHERIT	memos-2/elf.h	1990;"	d
+R_SH_GOT32	memos-2/elf.h	1992;"	d
+R_SH_GOTOFF	memos-2/elf.h	1998;"	d
+R_SH_GOTPC	memos-2/elf.h	1999;"	d
+R_SH_IND12W	memos-2/elf.h	1975;"	d
+R_SH_JMP_SLOT	memos-2/elf.h	1996;"	d
+R_SH_LABEL	memos-2/elf.h	1988;"	d
+R_SH_NONE	memos-2/elf.h	1971;"	d
+R_SH_NUM	memos-2/elf.h	2001;"	d
+R_SH_PLT32	memos-2/elf.h	1993;"	d
+R_SH_REL32	memos-2/elf.h	1973;"	d
+R_SH_RELATIVE	memos-2/elf.h	1997;"	d
+R_SH_SWITCH16	memos-2/elf.h	1981;"	d
+R_SH_SWITCH32	memos-2/elf.h	1982;"	d
+R_SH_SWITCH8	memos-2/elf.h	1989;"	d
+R_SH_USES	memos-2/elf.h	1983;"	d
+R_SPARC_10	memos-2/elf.h	1069;"	d
+R_SPARC_11	memos-2/elf.h	1070;"	d
+R_SPARC_13	memos-2/elf.h	1047;"	d
+R_SPARC_16	memos-2/elf.h	1038;"	d
+R_SPARC_22	memos-2/elf.h	1046;"	d
+R_SPARC_32	memos-2/elf.h	1039;"	d
+R_SPARC_5	memos-2/elf.h	1082;"	d
+R_SPARC_6	memos-2/elf.h	1083;"	d
+R_SPARC_64	memos-2/elf.h	1071;"	d
+R_SPARC_7	memos-2/elf.h	1081;"	d
+R_SPARC_8	memos-2/elf.h	1037;"	d
+R_SPARC_COPY	memos-2/elf.h	1055;"	d
+R_SPARC_DISP16	memos-2/elf.h	1041;"	d
+R_SPARC_DISP32	memos-2/elf.h	1042;"	d
+R_SPARC_DISP64	memos-2/elf.h	1084;"	d
+R_SPARC_DISP8	memos-2/elf.h	1040;"	d
+R_SPARC_GLOB_DAT	memos-2/elf.h	1056;"	d
+R_SPARC_GOT10	memos-2/elf.h	1049;"	d
+R_SPARC_GOT13	memos-2/elf.h	1050;"	d
+R_SPARC_GOT22	memos-2/elf.h	1051;"	d
+R_SPARC_H44	memos-2/elf.h	1088;"	d
+R_SPARC_HH22	memos-2/elf.h	1073;"	d
+R_SPARC_HI22	memos-2/elf.h	1045;"	d
+R_SPARC_HIPLT22	memos-2/elf.h	1064;"	d
+R_SPARC_HIX22	memos-2/elf.h	1086;"	d
+R_SPARC_HM10	memos-2/elf.h	1074;"	d
+R_SPARC_JMP_SLOT	memos-2/elf.h	1057;"	d
+R_SPARC_L44	memos-2/elf.h	1090;"	d
+R_SPARC_LM22	memos-2/elf.h	1075;"	d
+R_SPARC_LO10	memos-2/elf.h	1048;"	d
+R_SPARC_LOPLT10	memos-2/elf.h	1065;"	d
+R_SPARC_LOX10	memos-2/elf.h	1087;"	d
+R_SPARC_M44	memos-2/elf.h	1089;"	d
+R_SPARC_NONE	memos-2/elf.h	1036;"	d
+R_SPARC_NUM	memos-2/elf.h	1095;"	d
+R_SPARC_OLO10	memos-2/elf.h	1072;"	d
+R_SPARC_PC10	memos-2/elf.h	1052;"	d
+R_SPARC_PC22	memos-2/elf.h	1053;"	d
+R_SPARC_PCPLT10	memos-2/elf.h	1068;"	d
+R_SPARC_PCPLT22	memos-2/elf.h	1067;"	d
+R_SPARC_PCPLT32	memos-2/elf.h	1066;"	d
+R_SPARC_PC_HH22	memos-2/elf.h	1076;"	d
+R_SPARC_PC_HM10	memos-2/elf.h	1077;"	d
+R_SPARC_PC_LM22	memos-2/elf.h	1078;"	d
+R_SPARC_PLT32	memos-2/elf.h	1063;"	d
+R_SPARC_PLT64	memos-2/elf.h	1085;"	d
+R_SPARC_REGISTER	memos-2/elf.h	1091;"	d
+R_SPARC_RELATIVE	memos-2/elf.h	1058;"	d
+R_SPARC_UA16	memos-2/elf.h	1093;"	d
+R_SPARC_UA32	memos-2/elf.h	1059;"	d
+R_SPARC_UA64	memos-2/elf.h	1092;"	d
+R_SPARC_WDISP16	memos-2/elf.h	1079;"	d
+R_SPARC_WDISP19	memos-2/elf.h	1080;"	d
+R_SPARC_WDISP22	memos-2/elf.h	1044;"	d
+R_SPARC_WDISP30	memos-2/elf.h	1043;"	d
+R_SPARC_WPLT30	memos-2/elf.h	1054;"	d
+SELFMAG	memos-2/elf.h	102;"	d
+SHF_ALLOC	memos-2/elf.h	314;"	d
+SHF_ALPHA_GPREL	memos-2/elf.h	1653;"	d
+SHF_ARM_COMDEF	memos-2/elf.h	1806;"	d
+SHF_ARM_ENTRYSECT	memos-2/elf.h	1805;"	d
+SHF_EXECINSTR	memos-2/elf.h	315;"	d
+SHF_IA_64_NORECOV	memos-2/elf.h	1879;"	d
+SHF_IA_64_SHORT	memos-2/elf.h	1878;"	d
+SHF_INFO_LINK	memos-2/elf.h	318;"	d
+SHF_LINK_ORDER	memos-2/elf.h	319;"	d
+SHF_MASKOS	memos-2/elf.h	322;"	d
+SHF_MASKPROC	memos-2/elf.h	323;"	d
+SHF_MERGE	memos-2/elf.h	316;"	d
+SHF_MIPS_ADDR	memos-2/elf.h	1198;"	d
+SHF_MIPS_GPREL	memos-2/elf.h	1196;"	d
+SHF_MIPS_LOCAL	memos-2/elf.h	1201;"	d
+SHF_MIPS_MERGE	memos-2/elf.h	1197;"	d
+SHF_MIPS_NAMES	memos-2/elf.h	1202;"	d
+SHF_MIPS_NODUPE	memos-2/elf.h	1203;"	d
+SHF_MIPS_NOSTRIP	memos-2/elf.h	1200;"	d
+SHF_MIPS_STRINGS	memos-2/elf.h	1199;"	d
+SHF_OS_NONCONFORMING	memos-2/elf.h	320;"	d
+SHF_PARISC_HUGE	memos-2/elf.h	1503;"	d
+SHF_PARISC_SBP	memos-2/elf.h	1504;"	d
+SHF_PARISC_SHORT	memos-2/elf.h	1502;"	d
+SHF_STRINGS	memos-2/elf.h	317;"	d
+SHF_WRITE	memos-2/elf.h	313;"	d
+SHN_ABS	memos-2/elf.h	270;"	d
+SHN_COMMON	memos-2/elf.h	271;"	d
+SHN_HIOS	memos-2/elf.h	269;"	d
+SHN_HIPROC	memos-2/elf.h	267;"	d
+SHN_HIRESERVE	memos-2/elf.h	273;"	d
+SHN_LOOS	memos-2/elf.h	268;"	d
+SHN_LOPROC	memos-2/elf.h	266;"	d
+SHN_LORESERVE	memos-2/elf.h	265;"	d
+SHN_MIPS_ACOMMON	memos-2/elf.h	1146;"	d
+SHN_MIPS_DATA	memos-2/elf.h	1148;"	d
+SHN_MIPS_SCOMMON	memos-2/elf.h	1149;"	d
+SHN_MIPS_SUNDEFINED	memos-2/elf.h	1150;"	d
+SHN_MIPS_TEXT	memos-2/elf.h	1147;"	d
+SHN_PARISC_ANSI_COMMON	memos-2/elf.h	1490;"	d
+SHN_PARISC_HUGE_COMMON	memos-2/elf.h	1492;"	d
+SHN_UNDEF	memos-2/elf.h	264;"	d
+SHN_UNDEF	memos-2/elf.h	384;"	d
+SHN_XINDEX	memos-2/elf.h	272;"	d
+SHT_ALPHA_DEBUG	memos-2/elf.h	1648;"	d
+SHT_ALPHA_REGINFO	memos-2/elf.h	1649;"	d
+SHT_CHECKSUM	memos-2/elf.h	296;"	d
+SHT_DYNAMIC	memos-2/elf.h	283;"	d
+SHT_DYNSYM	memos-2/elf.h	288;"	d
+SHT_FINI_ARRAY	memos-2/elf.h	290;"	d
+SHT_GNU_verdef	memos-2/elf.h	301;"	d
+SHT_GNU_verneed	memos-2/elf.h	302;"	d
+SHT_GNU_versym	memos-2/elf.h	303;"	d
+SHT_GROUP	memos-2/elf.h	292;"	d
+SHT_HASH	memos-2/elf.h	282;"	d
+SHT_HIOS	memos-2/elf.h	305;"	d
+SHT_HIPROC	memos-2/elf.h	307;"	d
+SHT_HISUNW	memos-2/elf.h	304;"	d
+SHT_HIUSER	memos-2/elf.h	309;"	d
+SHT_IA_64_EXT	memos-2/elf.h	1874;"	d
+SHT_IA_64_UNWIND	memos-2/elf.h	1875;"	d
+SHT_INIT_ARRAY	memos-2/elf.h	289;"	d
+SHT_LOOS	memos-2/elf.h	295;"	d
+SHT_LOPROC	memos-2/elf.h	306;"	d
+SHT_LOSUNW	memos-2/elf.h	297;"	d
+SHT_LOUSER	memos-2/elf.h	308;"	d
+SHT_MIPS_AUXSYM	memos-2/elf.h	1173;"	d
+SHT_MIPS_CONFLICT	memos-2/elf.h	1156;"	d
+SHT_MIPS_CONTENT	memos-2/elf.h	1165;"	d
+SHT_MIPS_DEBUG	memos-2/elf.h	1159;"	d
+SHT_MIPS_DELTACLASS	memos-2/elf.h	1180;"	d
+SHT_MIPS_DELTADECL	memos-2/elf.h	1182;"	d
+SHT_MIPS_DELTAINST	memos-2/elf.h	1179;"	d
+SHT_MIPS_DELTASYM	memos-2/elf.h	1178;"	d
+SHT_MIPS_DENSE	memos-2/elf.h	1170;"	d
+SHT_MIPS_DWARF	memos-2/elf.h	1181;"	d
+SHT_MIPS_EH_REGION	memos-2/elf.h	1190;"	d
+SHT_MIPS_EVENTS	memos-2/elf.h	1184;"	d
+SHT_MIPS_EXTSYM	memos-2/elf.h	1169;"	d
+SHT_MIPS_FDESC	memos-2/elf.h	1168;"	d
+SHT_MIPS_GPTAB	memos-2/elf.h	1157;"	d
+SHT_MIPS_IFACE	memos-2/elf.h	1164;"	d
+SHT_MIPS_LIBLIST	memos-2/elf.h	1154;"	d
+SHT_MIPS_LINE	memos-2/elf.h	1176;"	d
+SHT_MIPS_LOCSTR	memos-2/elf.h	1175;"	d
+SHT_MIPS_LOCSYM	memos-2/elf.h	1172;"	d
+SHT_MIPS_MSYM	memos-2/elf.h	1155;"	d
+SHT_MIPS_OPTIONS	memos-2/elf.h	1166;"	d
+SHT_MIPS_OPTSYM	memos-2/elf.h	1174;"	d
+SHT_MIPS_PACKAGE	memos-2/elf.h	1161;"	d
+SHT_MIPS_PACKSYM	memos-2/elf.h	1162;"	d
+SHT_MIPS_PDESC	memos-2/elf.h	1171;"	d
+SHT_MIPS_PDR_EXCEPTION	memos-2/elf.h	1192;"	d
+SHT_MIPS_PIXIE	memos-2/elf.h	1186;"	d
+SHT_MIPS_REGINFO	memos-2/elf.h	1160;"	d
+SHT_MIPS_RELD	memos-2/elf.h	1163;"	d
+SHT_MIPS_RFDESC	memos-2/elf.h	1177;"	d
+SHT_MIPS_SHDR	memos-2/elf.h	1167;"	d
+SHT_MIPS_SYMBOL_LIB	memos-2/elf.h	1183;"	d
+SHT_MIPS_TRANSLATE	memos-2/elf.h	1185;"	d
+SHT_MIPS_UCODE	memos-2/elf.h	1158;"	d
+SHT_MIPS_WHIRL	memos-2/elf.h	1189;"	d
+SHT_MIPS_XLATE	memos-2/elf.h	1187;"	d
+SHT_MIPS_XLATE_DEBUG	memos-2/elf.h	1188;"	d
+SHT_MIPS_XLATE_OLD	memos-2/elf.h	1191;"	d
+SHT_NOBITS	memos-2/elf.h	285;"	d
+SHT_NOTE	memos-2/elf.h	284;"	d
+SHT_NULL	memos-2/elf.h	277;"	d
+SHT_NUM	memos-2/elf.h	294;"	d
+SHT_PARISC_DOC	memos-2/elf.h	1498;"	d
+SHT_PARISC_EXT	memos-2/elf.h	1496;"	d
+SHT_PARISC_UNWIND	memos-2/elf.h	1497;"	d
+SHT_PREINIT_ARRAY	memos-2/elf.h	291;"	d
+SHT_PROGBITS	memos-2/elf.h	278;"	d
+SHT_REL	memos-2/elf.h	286;"	d
+SHT_RELA	memos-2/elf.h	281;"	d
+SHT_SHLIB	memos-2/elf.h	287;"	d
+SHT_STRTAB	memos-2/elf.h	280;"	d
+SHT_SUNW_COMDAT	memos-2/elf.h	299;"	d
+SHT_SUNW_move	memos-2/elf.h	298;"	d
+SHT_SUNW_syminfo	memos-2/elf.h	300;"	d
+SHT_SYMTAB	memos-2/elf.h	279;"	d
+SHT_SYMTAB_SHNDX	memos-2/elf.h	293;"	d
+STB_GLOBAL	memos-2/elf.h	400;"	d
+STB_HIOS	memos-2/elf.h	404;"	d
+STB_HIPROC	memos-2/elf.h	406;"	d
+STB_LOCAL	memos-2/elf.h	399;"	d
+STB_LOOS	memos-2/elf.h	403;"	d
+STB_LOPROC	memos-2/elf.h	405;"	d
+STB_MIPS_SPLIT_COMMON	memos-2/elf.h	1216;"	d
+STB_NUM	memos-2/elf.h	402;"	d
+STB_WEAK	memos-2/elf.h	401;"	d
+STN_UNDEF	memos-2/elf.h	427;"	d
+STO_ALPHA_NOPV	memos-2/elf.h	1656;"	d
+STO_ALPHA_STD_GPLOAD	memos-2/elf.h	1657;"	d
+STO_MIPS_DEFAULT	memos-2/elf.h	1209;"	d
+STO_MIPS_HIDDEN	memos-2/elf.h	1211;"	d
+STO_MIPS_INTERNAL	memos-2/elf.h	1210;"	d
+STO_MIPS_PROTECTED	memos-2/elf.h	1212;"	d
+STO_MIPS_SC_ALIGN_UNUSED	memos-2/elf.h	1213;"	d
+STT_ARM_TFUNC	memos-2/elf.h	1802;"	d
+STT_COMMON	memos-2/elf.h	415;"	d
+STT_FILE	memos-2/elf.h	414;"	d
+STT_FUNC	memos-2/elf.h	412;"	d
+STT_HIOS	memos-2/elf.h	418;"	d
+STT_HIPROC	memos-2/elf.h	420;"	d
+STT_HP_OPAQUE	memos-2/elf.h	1510;"	d
+STT_HP_STUB	memos-2/elf.h	1511;"	d
+STT_LOOS	memos-2/elf.h	417;"	d
+STT_LOPROC	memos-2/elf.h	419;"	d
+STT_NOTYPE	memos-2/elf.h	410;"	d
+STT_NUM	memos-2/elf.h	416;"	d
+STT_OBJECT	memos-2/elf.h	411;"	d
+STT_PARISC_MILLICODE	memos-2/elf.h	1508;"	d
+STT_REGISTER	memos-2/elf.h	1019;"	d
+STT_SECTION	memos-2/elf.h	413;"	d
+STV_DEFAULT	memos-2/elf.h	438;"	d
+STV_HIDDEN	memos-2/elf.h	440;"	d
+STV_INTERNAL	memos-2/elf.h	439;"	d
+STV_PROTECTED	memos-2/elf.h	441;"	d
+SYMINFO_BT_LOWRESERVE	memos-2/elf.h	368;"	d
+SYMINFO_BT_PARENT	memos-2/elf.h	367;"	d
+SYMINFO_BT_SELF	memos-2/elf.h	366;"	d
+SYMINFO_CURRENT	memos-2/elf.h	378;"	d
+SYMINFO_FLG_COPY	memos-2/elf.h	373;"	d
+SYMINFO_FLG_DIRECT	memos-2/elf.h	371;"	d
+SYMINFO_FLG_LAZYLOAD	memos-2/elf.h	374;"	d
+SYMINFO_FLG_PASSTHRU	memos-2/elf.h	372;"	d
+SYMINFO_NONE	memos-2/elf.h	377;"	d
+SYMINFO_NUM	memos-2/elf.h	379;"	d
+TRUE	fifos-1/coroutine.c	/^  TRUE$/;"	e	enum:__anon44	file:
+TRUE	memos-2/init.c	/^	TRUE$/;"	e	enum:__anon1	file:
+TRUE	memos-2/types.h	2;"	d
+VER_DEF_CURRENT	memos-2/elf.h	736;"	d
+VER_DEF_NONE	memos-2/elf.h	735;"	d
+VER_DEF_NUM	memos-2/elf.h	737;"	d
+VER_FLG_BASE	memos-2/elf.h	740;"	d
+VER_FLG_WEAK	memos-2/elf.h	741;"	d
+VER_FLG_WEAK	memos-2/elf.h	814;"	d
+VER_NEED_CURRENT	memos-2/elf.h	787;"	d
+VER_NEED_NONE	memos-2/elf.h	786;"	d
+VER_NEED_NUM	memos-2/elf.h	788;"	d
+VGA_HEIGHT	memos-2/init.c	/^static const size_t VGA_HEIGHT = 24;$/;"	v	file:
+VGA_WIDTH	memos-2/init.c	/^static const size_t VGA_WIDTH = 80;$/;"	v	file:
+_ELF_H_	memos-2/elf.h	9;"	d
+_MULTIBOOT_H_	memos-2/multiboot.h	7;"	d
+_PCB	fifos-1/thread.c	/^typedef struct _PCB {$/;"	s	file:
+_SIZE_T	memos-2/types.h	16;"	d
+_STDINT_	memos-2/types.h	25;"	d
+_multiboot	memos-2/multiboot.h	/^typedef struct _multiboot {$/;"	s
+_multiboot_module	memos-2/multiboot.h	/^typedef struct _multiboot_module {$/;"	s
+_start	fifos-1/boot.s	/^_start:$/;"	l
+_start	memos-2/boot.S	/^_start:$/;"	l
+a_fcn	memos-2/elf.h	/^      void (*a_fcn) (void);	\/* Function pointer value *\/$/;"	m	union:__anon28::__anon29
+a_fcn	memos-2/elf.h	/^      void (*a_fcn) (void);	\/* Function pointer value *\/$/;"	m	union:__anon30::__anon31
+a_ptr	memos-2/elf.h	/^      void *a_ptr;		\/* Pointer value *\/$/;"	m	union:__anon28::__anon29
+a_ptr	memos-2/elf.h	/^      void *a_ptr;		\/* Pointer value *\/$/;"	m	union:__anon30::__anon31
+a_type	memos-2/elf.h	/^  int a_type;			\/* Entry type *\/$/;"	m	struct:__anon28
+a_type	memos-2/elf.h	/^  long int a_type;		\/* Entry type *\/$/;"	m	struct:__anon30
+a_un	memos-2/elf.h	/^    } a_un;$/;"	m	struct:__anon28	typeref:union:__anon28::__anon29
+a_un	memos-2/elf.h	/^    } a_un;$/;"	m	struct:__anon30	typeref:union:__anon30::__anon31
+a_val	memos-2/elf.h	/^      long int a_val;		\/* Integer value *\/$/;"	m	union:__anon28::__anon29
+a_val	memos-2/elf.h	/^      long int a_val;		\/* Integer value *\/$/;"	m	union:__anon30::__anon31
+base_addr_high	memos-2/multiboot.h	/^    unsigned long base_addr_high;$/;"	m	struct:memory_map
+base_addr_low	memos-2/multiboot.h	/^    unsigned long base_addr_low;$/;"	m	struct:memory_map
+bool	fifos-1/coroutine.c	/^} bool;$/;"	t	typeref:enum:__anon44	file:
+bool	memos-2/init.c	/^} bool;$/;"	t	typeref:enum:__anon1	file:
+bool	memos-2/types.h	/^typedef signed char bool;$/;"	t
+boot_device	memos-2/multiboot.h	/^    unsigned long boot_device;$/;"	m	struct:_multiboot
+boot_loader_name	memos-2/multiboot.h	/^    char *boot_loader_name;$/;"	m	struct:_multiboot
+bp	fifos-1/thread.c	/^	uint32_t bp; \/\/ base pointer$/;"	m	struct:_PCB	file:
+bp	memos-2/init.c	/^	void *bp;$/;"	m	struct:tcb	file:
+cmdline	memos-2/multiboot.h	/^    char *cmdline;$/;"	m	struct:_multiboot
+config_table	memos-2/multiboot.h	/^    void *config_table;$/;"	m	struct:_multiboot
+crBegin	fifos-1/coroutine.c	10;"	d	file:
+crBegin	memos-2/init.c	13;"	d	file:
+crFinish	fifos-1/coroutine.c	18;"	d	file:
+crFinish	memos-2/init.c	21;"	d	file:
+crReturn	fifos-1/coroutine.c	16;"	d	file:
+crReturn	memos-2/init.c	19;"	d	file:
+current_tid	memos-2/init.c	/^static int current_tid;$/;"	v	file:
+d_ptr	memos-2/elf.h	/^      Elf32_Addr d_ptr;			\/* Address value *\/$/;"	m	union:__anon16::__anon17
+d_ptr	memos-2/elf.h	/^      Elf64_Addr d_ptr;			\/* Address value *\/$/;"	m	union:__anon18::__anon19
+d_tag	memos-2/elf.h	/^  Elf32_Sword	d_tag;			\/* Dynamic entry type *\/$/;"	m	struct:__anon16
+d_tag	memos-2/elf.h	/^  Elf64_Sxword	d_tag;			\/* Dynamic entry type *\/$/;"	m	struct:__anon18
+d_un	memos-2/elf.h	/^    } d_un;$/;"	m	struct:__anon16	typeref:union:__anon16::__anon17
+d_un	memos-2/elf.h	/^    } d_un;$/;"	m	struct:__anon18	typeref:union:__anon18::__anon19
+d_val	memos-2/elf.h	/^      Elf32_Word d_val;			\/* Integer value *\/$/;"	m	union:__anon16::__anon17
+d_val	memos-2/elf.h	/^      Elf64_Xword d_val;		\/* Integer value *\/$/;"	m	union:__anon18::__anon19
+done	fifos-1/coroutine.c	/^static bool done[MAX_THREADS];$/;"	v	file:
+done	memos-2/init.c	/^static bool done[MAX_THREADS];$/;"	v	file:
+drives_addr	memos-2/multiboot.h	/^    void *drives_addr;$/;"	m	struct:_multiboot
+drives_length	memos-2/multiboot.h	/^    unsigned long drives_length;$/;"	m	struct:_multiboot
+e_ehsize	memos-2/elf.h	/^  Elf32_Half	e_ehsize;		\/* ELF header size in bytes *\/$/;"	m	struct:__anon2
+e_ehsize	memos-2/elf.h	/^  Elf64_Half	e_ehsize;		\/* ELF header size in bytes *\/$/;"	m	struct:__anon3
+e_entry	memos-2/elf.h	/^  Elf32_Addr	e_entry;		\/* Entry point virtual address *\/$/;"	m	struct:__anon2
+e_entry	memos-2/elf.h	/^  Elf64_Addr	e_entry;		\/* Entry point virtual address *\/$/;"	m	struct:__anon3
+e_flags	memos-2/elf.h	/^  Elf32_Word	e_flags;		\/* Processor-specific flags *\/$/;"	m	struct:__anon2
+e_flags	memos-2/elf.h	/^  Elf64_Word	e_flags;		\/* Processor-specific flags *\/$/;"	m	struct:__anon3
+e_ident	memos-2/elf.h	/^  unsigned char	e_ident[EI_NIDENT];	\/* Magic number and other info *\/$/;"	m	struct:__anon2
+e_ident	memos-2/elf.h	/^  unsigned char	e_ident[EI_NIDENT];	\/* Magic number and other info *\/$/;"	m	struct:__anon3
+e_machine	memos-2/elf.h	/^  Elf32_Half	e_machine;		\/* Architecture *\/$/;"	m	struct:__anon2
+e_machine	memos-2/elf.h	/^  Elf64_Half	e_machine;		\/* Architecture *\/$/;"	m	struct:__anon3
+e_phentsize	memos-2/elf.h	/^  Elf32_Half	e_phentsize;		\/* Program header table entry size *\/$/;"	m	struct:__anon2
+e_phentsize	memos-2/elf.h	/^  Elf64_Half	e_phentsize;		\/* Program header table entry size *\/$/;"	m	struct:__anon3
+e_phnum	memos-2/elf.h	/^  Elf32_Half	e_phnum;		\/* Program header table entry count *\/$/;"	m	struct:__anon2
+e_phnum	memos-2/elf.h	/^  Elf64_Half	e_phnum;		\/* Program header table entry count *\/$/;"	m	struct:__anon3
+e_phoff	memos-2/elf.h	/^  Elf32_Off	e_phoff;		\/* Program header table file offset *\/$/;"	m	struct:__anon2
+e_phoff	memos-2/elf.h	/^  Elf64_Off	e_phoff;		\/* Program header table file offset *\/$/;"	m	struct:__anon3
+e_shentsize	memos-2/elf.h	/^  Elf32_Half	e_shentsize;		\/* Section header table entry size *\/$/;"	m	struct:__anon2
+e_shentsize	memos-2/elf.h	/^  Elf64_Half	e_shentsize;		\/* Section header table entry size *\/$/;"	m	struct:__anon3
+e_shnum	memos-2/elf.h	/^  Elf32_Half	e_shnum;		\/* Section header table entry count *\/$/;"	m	struct:__anon2
+e_shnum	memos-2/elf.h	/^  Elf64_Half	e_shnum;		\/* Section header table entry count *\/$/;"	m	struct:__anon3
+e_shoff	memos-2/elf.h	/^  Elf32_Off	e_shoff;		\/* Section header table file offset *\/$/;"	m	struct:__anon2
+e_shoff	memos-2/elf.h	/^  Elf64_Off	e_shoff;		\/* Section header table file offset *\/$/;"	m	struct:__anon3
+e_shstrndx	memos-2/elf.h	/^  Elf32_Half	e_shstrndx;		\/* Section header string table index *\/$/;"	m	struct:__anon2
+e_shstrndx	memos-2/elf.h	/^  Elf64_Half	e_shstrndx;		\/* Section header string table index *\/$/;"	m	struct:__anon3
+e_type	memos-2/elf.h	/^  Elf32_Half	e_type;			\/* Object file type *\/$/;"	m	struct:__anon2
+e_type	memos-2/elf.h	/^  Elf64_Half	e_type;			\/* Object file type *\/$/;"	m	struct:__anon3
+e_version	memos-2/elf.h	/^  Elf32_Word	e_version;		\/* Object file version *\/$/;"	m	struct:__anon2
+e_version	memos-2/elf.h	/^  Elf64_Word	e_version;		\/* Object file version *\/$/;"	m	struct:__anon3
+elf_addr	memos-2/multiboot.h	/^    void *elf_addr;$/;"	m	struct:_multiboot
+elf_num	memos-2/multiboot.h	/^    unsigned long elf_num;$/;"	m	struct:_multiboot
+elf_shndx	memos-2/multiboot.h	/^    void *elf_shndx;$/;"	m	struct:_multiboot
+elf_size	memos-2/multiboot.h	/^    unsigned long elf_size;$/;"	m	struct:_multiboot
+entry	fifos-1/thread.c	/^	uint32_t entry; \/\/ entry point (func)$/;"	m	struct:_PCB	file:
+entry	memos-2/init.c	/^	int (*entry)();$/;"	m	struct:tcb	file:
+f	fifos-1/coroutine.c	/^int (*f[MAX_THREADS])(void);$/;"	v
+f	memos-2/init.c	/^int (*f[MAX_THREADS])(void);$/;"	v
+flag	fifos-1/thread.c	/^	uint32_t flag; \/\/ no use here$/;"	m	struct:_PCB	file:
+flags	memos-2/multiboot.h	/^    unsigned long flags;$/;"	m	struct:_multiboot
+gdt_ptr	fifos-1/boot.s	/^gdt_ptr:$/;"	l
+gt_bytes	memos-2/elf.h	/^      Elf32_Word gt_bytes;		\/* This many bytes would be used *\/$/;"	m	struct:__anon36::__anon38
+gt_current_g_value	memos-2/elf.h	/^      Elf32_Word gt_current_g_value;	\/* -G value used for compilation *\/$/;"	m	struct:__anon36::__anon37
+gt_entry	memos-2/elf.h	/^    } gt_entry;				\/* Subsequent entries in section *\/$/;"	m	union:__anon36	typeref:struct:__anon36::__anon38
+gt_g_value	memos-2/elf.h	/^      Elf32_Word gt_g_value;		\/* If this value were used for -G *\/$/;"	m	struct:__anon36::__anon38
+gt_header	memos-2/elf.h	/^    } gt_header;			\/* First entry in section *\/$/;"	m	union:__anon36	typeref:struct:__anon36::__anon37
+gt_unused	memos-2/elf.h	/^      Elf32_Word gt_unused;		\/* Not used *\/$/;"	m	struct:__anon36::__anon37
+head	fifos-1/coroutine.c	/^static rq head;$/;"	v	file:
+hwp_flags1	memos-2/elf.h	/^  Elf32_Word hwp_flags1;	\/* Extra flags.  *\/$/;"	m	struct:__anon41
+hwp_flags2	memos-2/elf.h	/^  Elf32_Word hwp_flags2;	\/* Extra flags.  *\/$/;"	m	struct:__anon41
+idt_ptr	fifos-1/boot.s	/^idt_ptr:$/;"	l
+info	memos-2/elf.h	/^  Elf32_Word info;		\/* Kind-specific information.  *\/$/;"	m	struct:__anon40
+info	memos-2/init.c	/^	tcb info;$/;"	m	struct:thread	file:
+init	memos-2/init.c	/^void init( multiboot* pmb ) {$/;"	f
+init_pcb	fifos-1/thread.c	/^void init_pcb(void) {$/;"	f
+init_tcb	memos-2/init.c	/^void init_tcb () {$/;"	f
+itoa	memos-2/init.c	/^void itoa (char *buf, int base, int d)$/;"	f
+kind	memos-2/elf.h	/^  unsigned char kind;		\/* Determines interpretation of the$/;"	m	struct:__anon40
+l_checksum	memos-2/elf.h	/^  Elf32_Word l_checksum;	\/* Checksum *\/$/;"	m	struct:__anon42
+l_checksum	memos-2/elf.h	/^  Elf64_Word l_checksum;	\/* Checksum *\/$/;"	m	struct:__anon43
+l_flags	memos-2/elf.h	/^  Elf32_Word l_flags;		\/* Flags *\/$/;"	m	struct:__anon42
+l_flags	memos-2/elf.h	/^  Elf64_Word l_flags;		\/* Flags *\/$/;"	m	struct:__anon43
+l_name	memos-2/elf.h	/^  Elf32_Word l_name;		\/* Name (string table index) *\/$/;"	m	struct:__anon42
+l_name	memos-2/elf.h	/^  Elf64_Word l_name;		\/* Name (string table index) *\/$/;"	m	struct:__anon43
+l_time_stamp	memos-2/elf.h	/^  Elf32_Word l_time_stamp;	\/* Timestamp *\/$/;"	m	struct:__anon42
+l_time_stamp	memos-2/elf.h	/^  Elf64_Word l_time_stamp;	\/* Timestamp *\/$/;"	m	struct:__anon43
+l_version	memos-2/elf.h	/^  Elf32_Word l_version;		\/* Interface version *\/$/;"	m	struct:__anon42
+l_version	memos-2/elf.h	/^  Elf64_Word l_version;		\/* Interface version *\/$/;"	m	struct:__anon43
+length_high	memos-2/multiboot.h	/^    unsigned long length_high;$/;"	m	struct:memory_map
+length_low	memos-2/multiboot.h	/^    unsigned long length_low;$/;"	m	struct:memory_map
+loop	fifos-1/boot.s	/^loop:$/;"	l
+loop	memos-2/boot.S	/^loop:$/;"	l
+m_info	memos-2/elf.h	/^  Elf32_Word m_info;		\/* Size and index.  *\/$/;"	m	struct:__anon34
+m_info	memos-2/elf.h	/^  Elf64_Xword m_info;		\/* Size and index.  *\/$/;"	m	struct:__anon35
+m_poffset	memos-2/elf.h	/^  Elf32_Word m_poffset;		\/* Symbol offset.  *\/$/;"	m	struct:__anon34
+m_poffset	memos-2/elf.h	/^  Elf64_Xword m_poffset;	\/* Symbol offset.  *\/$/;"	m	struct:__anon35
+m_repeat	memos-2/elf.h	/^  Elf32_Half m_repeat;		\/* Repeat count.  *\/$/;"	m	struct:__anon34
+m_repeat	memos-2/elf.h	/^  Elf64_Half m_repeat;		\/* Repeat count.  *\/$/;"	m	struct:__anon35
+m_stride	memos-2/elf.h	/^  Elf32_Half m_stride;		\/* Stride info.  *\/$/;"	m	struct:__anon34
+m_stride	memos-2/elf.h	/^  Elf64_Half m_stride;		\/* Stride info.  *\/$/;"	m	struct:__anon35
+m_value	memos-2/elf.h	/^  Elf32_Xword m_value;		\/* Symbol value.  *\/$/;"	m	struct:__anon34
+m_value	memos-2/elf.h	/^  Elf64_Xword m_value;		\/* Symbol value.  *\/$/;"	m	struct:__anon35
+main	fifos-1/coroutine.c	/^int main (int argc, char *argv[]) {$/;"	f
+make_color	memos-2/init.c	/^uint8_t make_color(enum vga_color fg, enum vga_color bg)$/;"	f
+make_vgaentry	memos-2/init.c	/^uint16_t make_vgaentry(char c, uint8_t color)$/;"	f
+mem_lower	memos-2/multiboot.h	/^    unsigned long mem_lower;$/;"	m	struct:_multiboot
+mem_upper	memos-2/multiboot.h	/^    unsigned long mem_upper;$/;"	m	struct:_multiboot
+memory_map	memos-2/multiboot.h	/^typedef struct memory_map {$/;"	s
+memory_map_t	memos-2/multiboot.h	/^} memory_map_t;$/;"	t	typeref:struct:memory_map
+mmap_addr	memos-2/multiboot.h	/^    unsigned long mmap_addr;$/;"	m	struct:_multiboot
+mmap_length	memos-2/multiboot.h	/^    unsigned long mmap_length;$/;"	m	struct:_multiboot
+mod_end	memos-2/multiboot.h	/^    void *mod_end;$/;"	m	struct:_multiboot_module
+mods_addr	memos-2/multiboot.h	/^    multiboot_module *mods_addr;$/;"	m	struct:_multiboot
+mods_count	memos-2/multiboot.h	/^    unsigned long mods_count;$/;"	m	struct:_multiboot
+multiboot	memos-2/multiboot.h	/^} multiboot;$/;"	t	typeref:struct:_multiboot
+multiboot_module	memos-2/multiboot.h	/^} multiboot_module;$/;"	t	typeref:struct:_multiboot_module
+n_descsz	memos-2/elf.h	/^  Elf32_Word n_descsz;			\/* Length of the note's descriptor.  *\/$/;"	m	struct:__anon32
+n_descsz	memos-2/elf.h	/^  Elf64_Word n_descsz;			\/* Length of the note's descriptor.  *\/$/;"	m	struct:__anon33
+n_namesz	memos-2/elf.h	/^  Elf32_Word n_namesz;			\/* Length of the note's name.  *\/$/;"	m	struct:__anon32
+n_namesz	memos-2/elf.h	/^  Elf64_Word n_namesz;			\/* Length of the note's name.  *\/$/;"	m	struct:__anon33
+n_type	memos-2/elf.h	/^  Elf32_Word n_type;			\/* Type of the note.  *\/$/;"	m	struct:__anon32
+n_type	memos-2/elf.h	/^  Elf64_Word n_type;			\/* Type of the note.  *\/$/;"	m	struct:__anon33
+next	fifos-1/coroutine.c	/^  struct runqueue *next;$/;"	m	struct:runqueue	typeref:struct:runqueue::runqueue	file:
+next	fifos-1/thread.c	/^	struct PCB * next; \/\/ pointer to next process control block$/;"	m	struct:_PCB	typeref:struct:_PCB::PCB	file:
+p_align	memos-2/elf.h	/^  Elf32_Word	p_align;		\/* Segment alignment *\/$/;"	m	struct:__anon14
+p_align	memos-2/elf.h	/^  Elf64_Xword	p_align;		\/* Segment alignment *\/$/;"	m	struct:__anon15
+p_filesz	memos-2/elf.h	/^  Elf32_Word	p_filesz;		\/* Segment size in file *\/$/;"	m	struct:__anon14
+p_filesz	memos-2/elf.h	/^  Elf64_Xword	p_filesz;		\/* Segment size in file *\/$/;"	m	struct:__anon15
+p_flags	memos-2/elf.h	/^  Elf32_Word	p_flags;		\/* Segment flags *\/$/;"	m	struct:__anon14
+p_flags	memos-2/elf.h	/^  Elf64_Word	p_flags;		\/* Segment flags *\/$/;"	m	struct:__anon15
+p_memsz	memos-2/elf.h	/^  Elf32_Word	p_memsz;		\/* Segment size in memory *\/$/;"	m	struct:__anon14
+p_memsz	memos-2/elf.h	/^  Elf64_Xword	p_memsz;		\/* Segment size in memory *\/$/;"	m	struct:__anon15
+p_offset	memos-2/elf.h	/^  Elf32_Off	p_offset;		\/* Segment file offset *\/$/;"	m	struct:__anon14
+p_offset	memos-2/elf.h	/^  Elf64_Off	p_offset;		\/* Segment file offset *\/$/;"	m	struct:__anon15
+p_paddr	memos-2/elf.h	/^  Elf32_Addr	p_paddr;		\/* Segment physical address *\/$/;"	m	struct:__anon14
+p_paddr	memos-2/elf.h	/^  Elf64_Addr	p_paddr;		\/* Segment physical address *\/$/;"	m	struct:__anon15
+p_type	memos-2/elf.h	/^  Elf32_Word	p_type;			\/* Segment type *\/$/;"	m	struct:__anon14
+p_type	memos-2/elf.h	/^  Elf64_Word	p_type;			\/* Segment type *\/$/;"	m	struct:__anon15
+p_vaddr	memos-2/elf.h	/^  Elf32_Addr	p_vaddr;		\/* Segment virtual address *\/$/;"	m	struct:__anon14
+p_vaddr	memos-2/elf.h	/^  Elf64_Addr	p_vaddr;		\/* Segment virtual address *\/$/;"	m	struct:__anon15
+pe	memos-2/multiboot.h	/^    Elf32_Ehdr *pe;$/;"	m	struct:_multiboot_module
+prev	fifos-1/coroutine.c	/^  struct runqueue *prev;$/;"	m	struct:runqueue	typeref:struct:runqueue::runqueue	file:
+r_addend	memos-2/elf.h	/^  Elf32_Sword	r_addend;		\/* Addend *\/$/;"	m	struct:__anon12
+r_addend	memos-2/elf.h	/^  Elf64_Sxword	r_addend;		\/* Addend *\/$/;"	m	struct:__anon13
+r_info	memos-2/elf.h	/^  Elf32_Word	r_info;			\/* Relocation type and symbol index *\/$/;"	m	struct:__anon10
+r_info	memos-2/elf.h	/^  Elf32_Word	r_info;			\/* Relocation type and symbol index *\/$/;"	m	struct:__anon12
+r_info	memos-2/elf.h	/^  Elf64_Xword	r_info;			\/* Relocation type and symbol index *\/$/;"	m	struct:__anon11
+r_info	memos-2/elf.h	/^  Elf64_Xword	r_info;			\/* Relocation type and symbol index *\/$/;"	m	struct:__anon13
+r_offset	memos-2/elf.h	/^  Elf32_Addr	r_offset;		\/* Address *\/$/;"	m	struct:__anon10
+r_offset	memos-2/elf.h	/^  Elf32_Addr	r_offset;		\/* Address *\/$/;"	m	struct:__anon12
+r_offset	memos-2/elf.h	/^  Elf64_Addr	r_offset;		\/* Address *\/$/;"	m	struct:__anon11
+r_offset	memos-2/elf.h	/^  Elf64_Addr	r_offset;		\/* Address *\/$/;"	m	struct:__anon13
+real_start	fifos-1/boot.s	/^real_start:$/;"	l
+real_start	memos-2/boot.S	/^real_start:$/;"	l
+reserved	memos-2/multiboot.h	/^    unsigned long reserved;$/;"	m	struct:_multiboot_module
+ri_cprmask	memos-2/elf.h	/^  Elf32_Word	ri_cprmask[4];		\/* Coprocessor registers used *\/$/;"	m	struct:__anon39
+ri_gp_value	memos-2/elf.h	/^  Elf32_Sword	ri_gp_value;		\/* $gp register value *\/$/;"	m	struct:__anon39
+ri_gprmask	memos-2/elf.h	/^  Elf32_Word	ri_gprmask;		\/* General registers used *\/$/;"	m	struct:__anon39
+rq	fifos-1/coroutine.c	/^} rq;$/;"	t	typeref:struct:runqueue	file:
+runqueue	fifos-1/coroutine.c	/^typedef struct runqueue {$/;"	s	file:
+s16	memos-2/types.h	/^typedef signed short int sint16, s16;$/;"	t
+s32	memos-2/types.h	/^typedef signed long int sint32, s32;$/;"	t
+s64	memos-2/types.h	/^typedef signed long long int sint64, s64;$/;"	t
+s8	memos-2/types.h	/^typedef signed char sint8, s8;$/;"	t
+schedule	fifos-1/coroutine.c	/^void schedule (void) {$/;"	f
+schedule	memos-2/init.c	/^void schedule(void) {$/;"	f
+section	memos-2/elf.h	/^  Elf32_Section section;	\/* Section header index of section affected,$/;"	m	struct:__anon40
+sh_addr	memos-2/elf.h	/^  Elf32_Addr	sh_addr;		\/* Section virtual addr at execution *\/$/;"	m	struct:__anon4
+sh_addr	memos-2/elf.h	/^  Elf64_Addr	sh_addr;		\/* Section virtual addr at execution *\/$/;"	m	struct:__anon5
+sh_addralign	memos-2/elf.h	/^  Elf32_Word	sh_addralign;		\/* Section alignment *\/$/;"	m	struct:__anon4
+sh_addralign	memos-2/elf.h	/^  Elf64_Xword	sh_addralign;		\/* Section alignment *\/$/;"	m	struct:__anon5
+sh_entsize	memos-2/elf.h	/^  Elf32_Word	sh_entsize;		\/* Entry size if section holds table *\/$/;"	m	struct:__anon4
+sh_entsize	memos-2/elf.h	/^  Elf64_Xword	sh_entsize;		\/* Entry size if section holds table *\/$/;"	m	struct:__anon5
+sh_flags	memos-2/elf.h	/^  Elf32_Word	sh_flags;		\/* Section flags *\/$/;"	m	struct:__anon4
+sh_flags	memos-2/elf.h	/^  Elf64_Xword	sh_flags;		\/* Section flags *\/$/;"	m	struct:__anon5
+sh_info	memos-2/elf.h	/^  Elf32_Word	sh_info;		\/* Additional section information *\/$/;"	m	struct:__anon4
+sh_info	memos-2/elf.h	/^  Elf64_Word	sh_info;		\/* Additional section information *\/$/;"	m	struct:__anon5
+sh_link	memos-2/elf.h	/^  Elf32_Word	sh_link;		\/* Link to another section *\/$/;"	m	struct:__anon4
+sh_link	memos-2/elf.h	/^  Elf64_Word	sh_link;		\/* Link to another section *\/$/;"	m	struct:__anon5
+sh_name	memos-2/elf.h	/^  Elf32_Word	sh_name;		\/* Section name (string tbl index) *\/$/;"	m	struct:__anon4
+sh_name	memos-2/elf.h	/^  Elf64_Word	sh_name;		\/* Section name (string tbl index) *\/$/;"	m	struct:__anon5
+sh_offset	memos-2/elf.h	/^  Elf32_Off	sh_offset;		\/* Section file offset *\/$/;"	m	struct:__anon4
+sh_offset	memos-2/elf.h	/^  Elf64_Off	sh_offset;		\/* Section file offset *\/$/;"	m	struct:__anon5
+sh_size	memos-2/elf.h	/^  Elf32_Word	sh_size;		\/* Section size in bytes *\/$/;"	m	struct:__anon4
+sh_size	memos-2/elf.h	/^  Elf64_Xword	sh_size;		\/* Section size in bytes *\/$/;"	m	struct:__anon5
+sh_type	memos-2/elf.h	/^  Elf32_Word	sh_type;		\/* Section type *\/$/;"	m	struct:__anon4
+sh_type	memos-2/elf.h	/^  Elf64_Word	sh_type;		\/* Section type *\/$/;"	m	struct:__anon5
+si_boundto	memos-2/elf.h	/^  Elf32_Half si_boundto;		\/* Direct bindings, symbol bound to *\/$/;"	m	struct:__anon8
+si_boundto	memos-2/elf.h	/^  Elf64_Half si_boundto;		\/* Direct bindings, symbol bound to *\/$/;"	m	struct:__anon9
+si_flags	memos-2/elf.h	/^  Elf32_Half si_flags;			\/* Per symbol flags *\/$/;"	m	struct:__anon8
+si_flags	memos-2/elf.h	/^  Elf64_Half si_flags;			\/* Per symbol flags *\/$/;"	m	struct:__anon9
+sint	memos-2/types.h	/^typedef signed long sint;$/;"	t
+sint16	memos-2/types.h	/^typedef signed short int sint16, s16;$/;"	t
+sint32	memos-2/types.h	/^typedef signed long int sint32, s32;$/;"	t
+sint64	memos-2/types.h	/^typedef signed long long int sint64, s64;$/;"	t
+sint8	memos-2/types.h	/^typedef signed char sint8, s8;$/;"	t
+size	memos-2/elf.h	/^  unsigned char size;		\/* Size of descriptor, including header.  *\/$/;"	m	struct:__anon40
+size	memos-2/multiboot.h	/^    unsigned long size;$/;"	m	struct:memory_map
+size_t	memos-2/types.h	/^typedef int size_t;$/;"	t
+sp	fifos-1/thread.c	/^	uint32_t sp; \/\/ stack pointer $/;"	m	struct:_PCB	file:
+sp	memos-2/init.c	/^	void *sp;$/;"	m	struct:tcb	file:
+st_info	memos-2/elf.h	/^  unsigned char	st_info;		\/* Symbol type and binding *\/$/;"	m	struct:__anon6
+st_info	memos-2/elf.h	/^  unsigned char	st_info;		\/* Symbol type and binding *\/$/;"	m	struct:__anon7
+st_name	memos-2/elf.h	/^  Elf32_Word	st_name;		\/* Symbol name (string tbl index) *\/$/;"	m	struct:__anon6
+st_name	memos-2/elf.h	/^  Elf64_Word	st_name;		\/* Symbol name (string tbl index) *\/$/;"	m	struct:__anon7
+st_other	memos-2/elf.h	/^  unsigned char	st_other;		\/* Symbol visibility *\/$/;"	m	struct:__anon6
+st_other	memos-2/elf.h	/^  unsigned char st_other;		\/* Symbol visibility *\/$/;"	m	struct:__anon7
+st_shndx	memos-2/elf.h	/^  Elf32_Section	st_shndx;		\/* Section index *\/$/;"	m	struct:__anon6
+st_shndx	memos-2/elf.h	/^  Elf64_Section	st_shndx;		\/* Section index *\/$/;"	m	struct:__anon7
+st_size	memos-2/elf.h	/^  Elf32_Word	st_size;		\/* Symbol size *\/$/;"	m	struct:__anon6
+st_size	memos-2/elf.h	/^  Elf64_Xword	st_size;		\/* Symbol size *\/$/;"	m	struct:__anon7
+st_value	memos-2/elf.h	/^  Elf32_Addr	st_value;		\/* Symbol value *\/$/;"	m	struct:__anon6
+st_value	memos-2/elf.h	/^  Elf64_Addr	st_value;		\/* Symbol value *\/$/;"	m	struct:__anon7
+state	memos-2/init.c	/^	int state;$/;"	m	struct:thread	file:
+string	memos-2/multiboot.h	/^    char *string;$/;"	m	struct:_multiboot_module
+strlen	memos-2/init.c	/^size_t strlen(const char* str)$/;"	f
+task	fifos-1/coroutine.c	/^  int (*task)();$/;"	m	struct:runqueue	file:
+tcb	memos-2/init.c	/^typedef struct tcb {$/;"	s	file:
+tcb	memos-2/init.c	/^} tcb;$/;"	t	typeref:struct:tcb	file:
+terminal_buffer	memos-2/init.c	/^uint16_t* terminal_buffer;$/;"	v
+terminal_color	memos-2/init.c	/^uint8_t terminal_color;$/;"	v
+terminal_column	memos-2/init.c	/^size_t terminal_column;$/;"	v
+terminal_initialize	memos-2/init.c	/^void terminal_initialize()$/;"	f
+terminal_putchar	memos-2/init.c	/^void terminal_putchar(char c)$/;"	f
+terminal_putentryat	memos-2/init.c	/^void terminal_putentryat(char c, uint8_t color, size_t x, size_t y)$/;"	f
+terminal_row	memos-2/init.c	/^size_t terminal_row;$/;"	v
+terminal_setcolor	memos-2/init.c	/^void terminal_setcolor(uint8_t color)$/;"	f
+terminal_writestring	memos-2/init.c	/^void terminal_writestring(const char* data)$/;"	f
+thread	memos-2/init.c	/^typedef struct thread {$/;"	s	file:
+thread	memos-2/init.c	/^} thread;$/;"	t	typeref:struct:thread	file:
+thread1	fifos-1/coroutine.c	/^int thread1 (void) {$/;"	f
+thread1	memos-2/init.c	/^int thread1 (void) {$/;"	f
+thread2	fifos-1/coroutine.c	/^int thread2 (void) {$/;"	f
+thread2	memos-2/init.c	/^int thread2 (void) {$/;"	f
+thread3	memos-2/init.c	/^int thread3 (void) {$/;"	f
+threadDone	memos-2/init.c	27;"	d	file:
+threadPrint	memos-2/init.c	23;"	d	file:
+thread_create	memos-2/init.c	/^int thread_create() {$/;"	f
+threads	memos-2/init.c	/^static thread threads[MAX_THREADS];$/;"	v	file:
+tid	fifos-1/coroutine.c	/^  int tid; \/\/ thread ID$/;"	m	struct:runqueue	file:
+tid	fifos-1/thread.c	/^	uint32_t tid; \/\/ thread id$/;"	m	struct:_PCB	file:
+tid	memos-2/init.c	/^	int tid;$/;"	m	struct:tcb	file:
+type	memos-2/multiboot.h	/^    unsigned long type;$/;"	m	struct:memory_map
+uint	memos-2/types.h	/^typedef unsigned long uint;$/;"	t
+uint16	memos-2/types.h	/^typedef unsigned short int uint16;$/;"	t
+uint16_t	memos-2/types.h	/^typedef uint16 uint16_t;$/;"	t
+uint32	memos-2/types.h	/^typedef unsigned long int uint32;$/;"	t
+uint32_t	memos-2/types.h	/^typedef uint32 uint32_t;$/;"	t
+uint64	memos-2/types.h	/^typedef unsigned long long int uint64;$/;"	t
+uint64_t	memos-2/types.h	/^typedef uint64 uint64_t;$/;"	t
+uint8	memos-2/types.h	/^typedef unsigned char uint8;$/;"	t
+uint8_t	memos-2/types.h	/^typedef uint8 uint8_t;$/;"	t
+vd_aux	memos-2/elf.h	/^  Elf32_Word	vd_aux;			\/* Offset in bytes to verdaux array *\/$/;"	m	struct:__anon20
+vd_aux	memos-2/elf.h	/^  Elf64_Word	vd_aux;			\/* Offset in bytes to verdaux array *\/$/;"	m	struct:__anon21
+vd_cnt	memos-2/elf.h	/^  Elf32_Half	vd_cnt;			\/* Number of associated aux entries *\/$/;"	m	struct:__anon20
+vd_cnt	memos-2/elf.h	/^  Elf64_Half	vd_cnt;			\/* Number of associated aux entries *\/$/;"	m	struct:__anon21
+vd_flags	memos-2/elf.h	/^  Elf32_Half	vd_flags;		\/* Version information *\/$/;"	m	struct:__anon20
+vd_flags	memos-2/elf.h	/^  Elf64_Half	vd_flags;		\/* Version information *\/$/;"	m	struct:__anon21
+vd_hash	memos-2/elf.h	/^  Elf32_Word	vd_hash;		\/* Version name hash value *\/$/;"	m	struct:__anon20
+vd_hash	memos-2/elf.h	/^  Elf64_Word	vd_hash;		\/* Version name hash value *\/$/;"	m	struct:__anon21
+vd_ndx	memos-2/elf.h	/^  Elf32_Half	vd_ndx;			\/* Version Index *\/$/;"	m	struct:__anon20
+vd_ndx	memos-2/elf.h	/^  Elf64_Half	vd_ndx;			\/* Version Index *\/$/;"	m	struct:__anon21
+vd_next	memos-2/elf.h	/^  Elf32_Word	vd_next;		\/* Offset in bytes to next verdef$/;"	m	struct:__anon20
+vd_next	memos-2/elf.h	/^  Elf64_Word	vd_next;		\/* Offset in bytes to next verdef$/;"	m	struct:__anon21
+vd_version	memos-2/elf.h	/^  Elf32_Half	vd_version;		\/* Version revision *\/$/;"	m	struct:__anon20
+vd_version	memos-2/elf.h	/^  Elf64_Half	vd_version;		\/* Version revision *\/$/;"	m	struct:__anon21
+vda_name	memos-2/elf.h	/^  Elf32_Word	vda_name;		\/* Version or dependency names *\/$/;"	m	struct:__anon22
+vda_name	memos-2/elf.h	/^  Elf64_Word	vda_name;		\/* Version or dependency names *\/$/;"	m	struct:__anon23
+vda_next	memos-2/elf.h	/^  Elf32_Word	vda_next;		\/* Offset in bytes to next verdaux$/;"	m	struct:__anon22
+vda_next	memos-2/elf.h	/^  Elf64_Word	vda_next;		\/* Offset in bytes to next verdaux$/;"	m	struct:__anon23
+vga_color	memos-2/init.c	/^enum vga_color$/;"	g	file:
+vn_aux	memos-2/elf.h	/^  Elf32_Word	vn_aux;			\/* Offset in bytes to vernaux array *\/$/;"	m	struct:__anon24
+vn_aux	memos-2/elf.h	/^  Elf64_Word	vn_aux;			\/* Offset in bytes to vernaux array *\/$/;"	m	struct:__anon25
+vn_cnt	memos-2/elf.h	/^  Elf32_Half	vn_cnt;			\/* Number of associated aux entries *\/$/;"	m	struct:__anon24
+vn_cnt	memos-2/elf.h	/^  Elf64_Half	vn_cnt;			\/* Number of associated aux entries *\/$/;"	m	struct:__anon25
+vn_file	memos-2/elf.h	/^  Elf32_Word	vn_file;		\/* Offset of filename for this$/;"	m	struct:__anon24
+vn_file	memos-2/elf.h	/^  Elf64_Word	vn_file;		\/* Offset of filename for this$/;"	m	struct:__anon25
+vn_next	memos-2/elf.h	/^  Elf32_Word	vn_next;		\/* Offset in bytes to next verneed$/;"	m	struct:__anon24
+vn_next	memos-2/elf.h	/^  Elf64_Word	vn_next;		\/* Offset in bytes to next verneed$/;"	m	struct:__anon25
+vn_version	memos-2/elf.h	/^  Elf32_Half	vn_version;		\/* Version of structure *\/$/;"	m	struct:__anon24
+vn_version	memos-2/elf.h	/^  Elf64_Half	vn_version;		\/* Version of structure *\/$/;"	m	struct:__anon25
+vna_flags	memos-2/elf.h	/^  Elf32_Half	vna_flags;		\/* Dependency specific information *\/$/;"	m	struct:__anon26
+vna_flags	memos-2/elf.h	/^  Elf64_Half	vna_flags;		\/* Dependency specific information *\/$/;"	m	struct:__anon27
+vna_hash	memos-2/elf.h	/^  Elf32_Word	vna_hash;		\/* Hash value of dependency name *\/$/;"	m	struct:__anon26
+vna_hash	memos-2/elf.h	/^  Elf64_Word	vna_hash;		\/* Hash value of dependency name *\/$/;"	m	struct:__anon27
+vna_name	memos-2/elf.h	/^  Elf32_Word	vna_name;		\/* Dependency name string offset *\/$/;"	m	struct:__anon26
+vna_name	memos-2/elf.h	/^  Elf64_Word	vna_name;		\/* Dependency name string offset *\/$/;"	m	struct:__anon27
+vna_next	memos-2/elf.h	/^  Elf32_Word	vna_next;		\/* Offset in bytes to next vernaux$/;"	m	struct:__anon26
+vna_next	memos-2/elf.h	/^  Elf64_Word	vna_next;		\/* Offset in bytes to next vernaux$/;"	m	struct:__anon27
+vna_other	memos-2/elf.h	/^  Elf32_Half	vna_other;		\/* Unused *\/$/;"	m	struct:__anon26
+vna_other	memos-2/elf.h	/^  Elf64_Half	vna_other;		\/* Unused *\/$/;"	m	struct:__anon27

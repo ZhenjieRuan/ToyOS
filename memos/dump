@@ -1,0 +1,38 @@
+
+memos1:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	b8 00 7c 8e d0       	mov    $0xd08e7c00,%eax
+   5:	31 e4                	xor    %esp,%esp
+   7:	8e d8                	mov    %eax,%ds
+   9:	8d 36                	lea    (%esi),%esi
+   b:	1c 00                	sbb    $0x0,%al
+   d:	e8 00 00 b4 0e       	call   eb40012 <msg+0xeb3fff6>
+
+00000010 <print>:
+  10:	b4 0e                	mov    $0xe,%ah
+
+00000012 <.repeat>:
+  12:	ac                   	lods   %ds:(%esi),%al
+  13:	3c 00                	cmp    $0x0,%al
+  15:	74 04                	je     1b <.done>
+  17:	cd 10                	int    $0x10
+  19:	eb f7                	jmp    12 <.repeat>
+
+0000001b <.done>:
+  1b:	c3                   	ret    
+
+0000001c <msg>:
+  1c:	48                   	dec    %eax
+  1d:	65                   	gs
+  1e:	6c                   	insb   (%dx),%es:(%edi)
+  1f:	6c                   	insb   (%dx),%es:(%edi)
+  20:	6f                   	outsl  %ds:(%esi),(%dx)
+  21:	20 57 6f             	and    %dl,0x6f(%edi)
+  24:	72 6c                	jb     92 <msg+0x76>
+  26:	64 00 00             	add    %al,%fs:(%eax)
+	...
+ 1fd:	00 55 aa             	add    %dl,-0x56(%ebp)
