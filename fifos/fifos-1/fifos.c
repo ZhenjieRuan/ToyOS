@@ -11,11 +11,11 @@
 /*init_pit();*/
 
 #define threadPrint(x) terminal_writestring("<");\
-											 terminal_putchar(x);\
-											 terminal_writestring(">\n");
+											 terminal_writestring(x);\
+											 terminal_writestring(">");
 
 #define threadDone(x)  terminal_writestring("Done <");\
-											 terminal_putchar(x);\
+											 terminal_writestring(x);\
 											 terminal_writestring(">\n");
 
 #define MAX_THREADS 3
@@ -192,11 +192,14 @@ void itoa (char *buf, int base, int d)
 }
 
 void thread_func(int tid) {
+	char buf[2];
+	char *id = &buf[0];
+	itoa(id, 10, tid);
 	int i = 0;
 	for (i = 0; i < 5; ++i) {
-		threadPrint(tid);
+		threadPrint(id);
 	}
-	threadDone(tid);
+	threadDone(id);
 	pool[tid]->busy = 0;
 }
 
@@ -213,7 +216,6 @@ int thread_create(void *stack, void *func) {
 	pool[i]->busy = 1;
 	pool[i]->func = func;
 	return pool[i]->tid;
-	/* all threads in pool are busy */
 }
 
 int allDone() {
@@ -237,6 +239,20 @@ void thread_init() {
 	}
 	head = pool[0];
 	tail = pool[i];
+	current = head;
+	terminal_writestring("head thread <");
+	terminal_putchar(current->tid + 48);
+	terminal_writestring(">\n");
+	current->tid = 3;
+	current = current->next;
+	terminal_writestring("head->next thread <");
+	terminal_putchar(current->tid + 48);
+	terminal_writestring(">\n");
+	current = current->next;
+	terminal_writestring("head->next->next thread <");
+	terminal_putchar(current->tid + 48);
+	terminal_writestring(">\n");
+	current = head;
 }
 
 void thread_schedule() {
@@ -245,10 +261,9 @@ void thread_schedule() {
 			(current->func)(current->tid);
 		} else if (current->next){
 			current = current->next;
-		} else {
-			terminal_writestring("All Done\n");
 		}
 	}
+	terminal_writestring("All Done\n");
 }
 
 
