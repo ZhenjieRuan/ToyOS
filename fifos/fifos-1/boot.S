@@ -1,99 +1,114 @@
-			.global stack
-			.global idt
+		.global stack
+		.global idt
+		.global switch_to
+		.global timer
 
-			.bss
-			.align 0x1000
-			.comm stack, 0x1000
-			.comm idt /* interrupt descriptor table */, 0x800
+		.bss
+		.align 0x1000
+		.comm stack, 0x1000
+		.comm idt /* interrupt descriptor table */, 0x800
 
-			.data
-			.align 0x4
+		.data
+		.align 0x4
       
  gdt:/* global descriptor table (find more in intel dev manual vol 3) */
-			/* null decriptor -- 1st (Zeroth) entry not used used to catch seg fault */
-			.long 0
-			.long 0
+		/* null decriptor -- 1st (Zeroth) entry not used used to catch seg fault */
+		.long 0
+		.long 0
 
-			/* kernel CS */
-			/* data decriptor - base 0, limit 0xFFFFFFFF, 32-bit, readable, ring 0 */
-			.long 0x0000FFFF
-			.long 0x00CF9A00
+		/* kernel CS */
+		/* data decriptor - base 0, limit 0xFFFFFFFF, 32-bit, readable, ring 0 */
+		.long 0x0000FFFF
+		.long 0x00CF9A00
 
-			/* Kernel DS */
-			/* data desciptor - base 0, limit 0xFFFFFFFF, 32-bit, writable, ring 0 */
-			.long 0x0000FFFF
-			.long 0x00CF9200
+		/* Kernel DS */
+		/* data desciptor - base 0, limit 0xFFFFFFFF, 32-bit, writable, ring 0 */
+		.long 0x0000FFFF
+		.long 0x00CF9200
 
 gdt_ptr:
-			.short 0x18 /* only need space for 3 descriptors, don't need 256 only need 24 */
-			.long gdt
+		.short 0x7FF /* only need space for 3 descriptors, don't need 256 only need 24 */
+		.long gdt
 
 idt_ptr:
-			.short 0x7FF
-			.long idt
+		.short 0x7FF
+		.long idt
 
-			.text
+		.text
 
-			.global _start
+		.global _start
 
 _start:
-			jmp real_start
+		jmp real_start
 
-			/* Multiboot header -- Safe to place this header in 1st page for GRUB */
-			.align 4
-			.long 0x1BADB002 /* Multiboot magic number */
-			.long 0x00000003 /* Align modules to 4KB, req. mem size */
-					 /* See 'info multiboot' for further info */
-			.long 0xE4524FFB /* Checksum */
+		/* Multiboot header -- Safe to place this header in 1st page for GRUB */
+		.align 4
+		.long 0x1BADB002 /* Multiboot magic number */
+		.long 0x00000003 /* Align modules to 4KB, req. mem size */
+				 /* See 'info multiboot' for further info */
+		.long 0xE4524FFB /* Checksum */
 
 real_start:
-			/* switch to our own GDT */
-			lgdt gdt_ptr
-			ljmp $0x08, $1f
+		/* switch to our own GDT */
+		lgdt gdt_ptr
+		ljmp $0x08, $1f
 1:
-			movw $0x10, %ax /* used to setup second descriptor selector for gdt */
-			movw %ax, %ss /* 2nd decriptor in GDT references kernel data segment */
-			movw %ax, %ds
-			movw %ax, %es
-			movw %ax, %fs
-			movw %ax, %gs
+		movw $0x10, %ax /* used to setup second descriptor selector for gdt */
+		movw %ax, %ss /* 2nd decriptor in GDT references kernel data segment */
+		movw %ax, %ds
+		movw %ax, %es
+		movw %ax, %fs
+		movw %ax, %gs
 
-			/* set up stack */
-			movl $stack+0x1000, %esp /* setup 4Kb stack */
+		/* set up stack */
+		movl $stack+0x1000, %esp /* setup 4Kb stack */
 
-			/* save multiboot parameter, for evetual call to C code */
-			pushl %ebx
+		/* save multiboot parameter, for evetual call to C code */
+		pushl %ebx
 
-			/* set up IDT by construction 64-bit iterrupt desciptors 
-			 Look at Ch.6 in the manual */ 
-			movl $idt, %edi
-			movl $0x30, %ecx  /* set counter for 48 IDT entries used */
-			movl $0x080000, %edx /* Used to index kernel CS */
-			movl $int_table, %esi
+		/* set up IDT by construction 64-bit iterrupt desciptors 
+		 Look at Ch.6 in the manual */ 
+		movl $idt, %edi
+		movl $0x30, %ecx  /* set counter for 48 IDT entries used possibly 21 */
+		movl $0x080000, %edx /* Used to index kernel CS */
+		movl $int_table, %esi
 
-			/*
-			 * For now populate int_table with interrupt gate descriptors
-			 * These clear the IF flag when invoked
-			 */
+		/*
+		 * For now populate int_table with interrupt gate descriptors
+		 * These clear the IF flag when invoked
+		 */
 1:
-			lodsl // value at address DS:ESI --> EAX
-			movw %ax, %dx // lower 16-bits  of int_table address (See: Fig 6.2)
-			movw $0xEE00, %ax // DPL = (ring) 3
-			movl %edx, (%edi) // store bottom 32-bits of descriptor in EDX to IDT 
-			addl $4, %edi
-			stosl // store top 32-bits of descriptor held in EAX into IDT EAX --> ES:EDI
+		lodsl // value at address DS:ESI --> EAX
+		movw %ax, %dx // lower 16-bits  of int_table address (See: Fig 6.2)
+		movw $0x8E00, %ax // DPL = (ring) 0
+		movl %edx, (%edi) // store bottom 32-bits of descriptor in EDX to IDT 
+		addl $4, %edi
+		stosl // store top 32-bits of descriptor held in EAX into IDT EAX --> ES:EDI
 
-			loop 1b
-			
-			lidt idt_ptr
-			
-			call init // call c code
+		loop 1b
+		
+		lidt idt_ptr
+		
+		call init // call c code
 
-			cli
-			hlt
+		cli
+		hlt
 
 loop:
-			jmp loop
+		jmp loop
+
+switch_to:
+		test %esi, %esi
+		jz 1f
+		pushfl
+		/* saved eax,ecx,edx,ebx,original esp,ebp,esi,edi */
+		pushal
+		movl %esp, (%esi)
+1:
+		movl (%edi), %esp
+		popal
+		popfl
+		ret
 
 int_table:
     .long 0
@@ -131,4 +146,8 @@ int_table:
     .long timer
 
 timer:
+		pushal
+		cld
 		call timer_handler
+		popal
+		iret
