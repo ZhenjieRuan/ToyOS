@@ -15,7 +15,7 @@ static TCB * head;
 static TCB * tail;
 static TCB * curr_tcb; // the thread that's currently running
 
-static int limit = 0;
+/* static int limit = 0; */
 
 /*===================thread====================*/
 void interrupt_handler(void) {
@@ -168,7 +168,6 @@ int allDone(void) {
 }
 /*===================runqueue====================*/
 void runqueue_add(TCB* thread) {
-	int i = 0;
 	if (!head) {
 		head = thread;
 		tail = thread;
