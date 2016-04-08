@@ -10,8 +10,8 @@
 
 		.data
 		.align 0x4
-      
- gdt:/* global descriptor table (find more in intel dev manual vol 3) */
+
+gdt:/* global descriptor table (find more in intel dev manual vol 3) */
 		/* null decriptor -- 1st (Zeroth) entry not used used to catch seg fault */
 		.long 0
 		.long 0
@@ -27,7 +27,7 @@
 		.long 0x00CF9200
 
 gdt_ptr:
-		.short 0x7FF /* only need space for 3 descriptors, don't need 256 only need 24 */
+		.short 0x18 /* only need space for 3 descriptors, don't need 256 only need 24 */
 		.long gdt
 
 idt_ptr:
@@ -60,13 +60,13 @@ real_start:
 		movw %ax, %fs
 		movw %ax, %gs
 
-		/* set up stack */
+		/* set up stack (global stack) */
 		movl $stack+0x1000, %esp /* setup 4Kb stack */
 
 		/* save multiboot parameter, for evetual call to C code */
 		pushl %ebx
 
-		/* set up IDT by construction 64-bit iterrupt desciptors 
+		/* set up IDT by construction 64-bit interrupt desciptors 
 		 Look at Ch.6 in the manual */ 
 		movl $idt, %edi
 		movl $0x30, %ecx  /* set counter for 48 IDT entries used possibly 21 */
@@ -103,11 +103,14 @@ switch_to:
 		pushfl
 		/* saved eax,ecx,edx,ebx,original esp,ebp,esi,edi */
 		pushal
+		/* save current esp to src_tcb->sp */
 		movl %esp, (%esi)
 1:
+		/* set esp to des_tcb->sp */
 		movl (%edi), %esp
 		popal
 		popfl
+		sti
 		ret
 
 int_table:
@@ -148,6 +151,6 @@ int_table:
 timer:
 		pushal
 		cld
-		call timer_handler
+		call interrupt_handler
 		popal
 		iret

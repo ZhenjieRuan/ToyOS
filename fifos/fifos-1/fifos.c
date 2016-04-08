@@ -15,51 +15,61 @@ static TCB * head;
 static TCB * tail;
 static TCB * curr_tcb; // the thread that's currently running
 
+static int limit = 0;
+
 /*===================thread====================*/
+void interrupt_handler(void) {
+	/*terminal_writestring("Got interrupt\n");*/
+	send_eoi();
+	thread_schedule();
+	/*terminal_writestring("Here");*/
+}
+
 void yield(void) {
+	thread_schedule();
 }
 
 void thread1(void) {
+	/*STI;*/
 	int i = 0;
-	int j = 0;
-	while (1) {
-		for (i = 0; i < 5; ++i) {
-			threadPrint("1");
-		}
-		if (++j > 2)
-			break;
+	int wait = 1000000;
+	for (i = 0; i < 10; ++i) {
+		threadPrint("1");
+		while (wait--);
+		wait = 1000000;
+		/*yield();*/
 	}
-	thread_pool[0].status = FINISHED;
-	thread_exit();
+	threadDone("1");
+	curr_tcb->status = IDLE;
 }
 
 void thread2(void) {
+	/*STI;*/
 	int i = 0;
-	int j = 0;
-	while (1) {
-		for (i = 0; i < 5; ++i) {
-			threadPrint("2");
-		}
-		if (++j > 2)
-			break;
+	int wait = 1000000;
+	for (i = 0; i < 10; ++i) {
+		threadPrint("2");
+		while (wait--);
+		wait = 1000000;
+		/*yield();*/
 	}
-	thread_pool[1].status = FINISHED;
-	thread_exit();
+	threadDone("2");
+	curr_tcb->status = IDLE;
 }
 
 
 void thread3(void) {
+	/*STI;*/
 	int i = 0;
-	int j = 0;
-	while (1) {
-		for (i = 0; i < 5; ++i) {
-			threadPrint("3");
-		}
-		if (++j > 2)
-			break;
+	int wait = 1000000;
+	for (i = 0; i < 10; ++i) {
+		threadPrint("3");
+		while (wait--);
+		wait = 1000000;
+		/*yield();*/
 	}
-	thread_pool[2].status = FINISHED;
-	thread_exit();
+	threadDone("3");
+	curr_tcb->status = IDLE;
 }
 
 int get_tid(void) {
@@ -68,31 +78,59 @@ int get_tid(void) {
 	return counter++;
 }
 
-/*void *memset(void *s, int c, size_t n) {*/
-	/*unsigned char *p = s;*/
-	/*while (n--) {*/
-		/**p++ = (unsigned char) c;*/
+void thread_schedule(void) {
+	CLI;
+	if (allDone()) {
+		while(1){}
+	}
+	TCB * src_tcb;
+	TCB * des_tcb;
+
+	des_tcb = runqueue_pop();
+	if (curr_tcb && curr_tcb->status == BUSY) {
+		runqueue_add(curr_tcb);
+	}
+	if (!des_tcb) return; // no more thread in queue to run
+
+	src_tcb = curr_tcb;
+
+	curr_tcb = des_tcb;
+
+	/*if (src_tcb == 0) {*/
+		/*terminal_writestring("Entering thread 1 sp:");*/
+		/*terminal_writehex(*((uint32_t *)des_tcb));*/
 	/*}*/
-	/*return s;*/
-/*}*/
+
+	/*while(1) {}*/
+	/*terminal_writestring("In schedule\n");*/
+
+	/*if (src_tcb != 0) {*/
+		/*terminal_writestring("Switching from ");*/
+		/*terminal_writeint(src_tcb->tid);*/
+		/*terminal_writestring(" to ");*/
+		/*terminal_writeint(des_tcb->tid);*/
+		/*terminal_writestring(" ");*/
+	/*}*/
+	__asm__ volatile ("call switch_to"::"S" (src_tcb), "D" (des_tcb));
+}
 
 int thread_create(void *stack, void *func) {
 	int new_tid = -1;
-	/*uint16_t ds=0x10,es=0x10,fs=0x10,gs=0x10;*/
 	new_tid = get_tid();
 
-	*(((uint32_t *)stack) - 0) = (uint32_t) thread_exit;
+	*(((uint32_t *)stack) - 0) = (uint32_t) thread_schedule;
+	/**(((uint32_t *)stack) - 0) = (uint32_t) thread_exit;*/
 	stack = (void *)(((uint32_t *)stack) - 1);
 	thread_pool[new_tid].tid = new_tid;
 	thread_pool[new_tid].sp = (uint32_t)(((uint32_t *)stack) - 9);
 	thread_pool[new_tid].bp = (uint32_t)stack;
 	thread_pool[new_tid].func = (uint32_t)func;
-	thread_pool[new_tid].status = IDLE;
+	thread_pool[new_tid].status = BUSY;
 	thread_pool[new_tid].next = 0;
 
 	/* setting up stack */
 	*(((uint32_t *)stack) - 0) = (uint32_t)func;
-	*(((uint32_t *)stack) - 1) = 2; /* EFLAGS */
+	*(((uint32_t *)stack) - 1) = 0; /* EFLAGS */
 	*(((uint32_t *)stack) - 2) = 0; /* EAX */
 	*(((uint32_t *)stack) - 3) = 0; /* ECX */
 	*(((uint32_t *)stack) - 4) = 0; /* EDX */
@@ -101,10 +139,6 @@ int thread_create(void *stack, void *func) {
 	*(((uint32_t *)stack) - 7) = 0; /* EBP */
 	*(((uint32_t *)stack) - 8) = 0; /* ESI */
 	*(((uint32_t *)stack) - 9) = 0; /* EDI */
-	/**(((uint16_t *)stack) - 19) = (uint16_t)ds;*/
-	/**(((uint16_t *)stack) - 20) = (uint16_t)es;*/
-	/**(((uint16_t *)stack) - 21) = (uint16_t)fs;*/
-	/**(((uint16_t *)stack) - 22) = (uint16_t)gs;*/
 
 	return new_tid;
 }
@@ -127,33 +161,11 @@ void thread_exit(void) {
 int allDone(void) {
 	int i = 0;
 	for (i = 0; i < MAX_THREADS; ++i) {
-		if (thread_pool[i].status != FINISHED)
+		if (thread_pool[i].status == BUSY)
 			return 0;
 	}
 	return 1;
 }
-
-void thread_schedule(void) {
-	if (allDone()) {
-		return;
-	}
-	TCB * src_tcb;
-	TCB * des_tcb;
-
-	des_tcb = runqueue_pop();
-	if (curr_tcb != 0) {
-		runqueue_add(curr_tcb);
-	}
-	if (!des_tcb) return; // no more thread in queue to run
-
-	src_tcb = curr_tcb;
-
-	curr_tcb = des_tcb;
-
-	__asm__ volatile ("call switch_to":
-								:"S" (src_tcb), "D" (des_tcb));
-}
-
 /*===================runqueue====================*/
 void runqueue_add(TCB* thread) {
 	int i = 0;
@@ -177,29 +189,6 @@ TCB* runqueue_pop(void) {
 		return 0;
 	}
 }
-
-/*void runqueue_remove(TCB* target) {*/
-	/*TCB* curr;*/
-	/*TCB* prev;*/
-	/*curr = head;*/
-	/*while (curr) {*/
-		/*if (curr->tid == target->tid) {*/
-			/*if (prev) {*/
-				/*prev->next = curr->next;*/
-				/*curr->next = 0;*/
-			/*} else {*/
-				/*prev = curr->next;*/
-				/*curr->next = 0;*/
-				/*curr = prev;*/
-			/*}*/
-			/*break;*/
-		/*}*/
-		/*prev = curr;*/
-		/*curr = curr->next;*/
-	/*}*/
-/*}*/
-
-
 
 void init( multiboot* pmb ) {
 
@@ -231,15 +220,15 @@ void init( multiboot* pmb ) {
 
   terminal_initialize();
 
-  terminal_writestring("MemOS: Welcome *** System memory is: ");
+  terminal_writestring("FIFOS: Welcome *** System memory is: ");
   terminal_writestring(memstr);
   terminal_writestring("MB\n");
 	/* enable interrupt */
-	/*init_pic();*/
-	/*init_pit();*/
-	/*STI;*/
+	init_pic();
+	init_pit();
 	thread_init();
-	thread_schedule();
+	STI;
+	/*thread_schedule();*/
 
 	while(1){}
 }

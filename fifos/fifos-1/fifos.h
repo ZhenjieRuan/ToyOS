@@ -6,22 +6,13 @@
 #include "multiboot.h"
 #include "types.h"
 
- /*ini*/
-/*init_pcb();*/
-
- /*initialize 8254 PIC*/
-/*init_pic();*/
-
-/*init 8254 pit, use mode 2*/
-/*init_pit();*/
-
 #define threadPrint(x) terminal_writestring("<");\
 											 terminal_writestring(x);\
 											 terminal_writestring(">");
 
 #define threadDone(x)  terminal_writestring("Done <");\
 											 terminal_writestring(x);\
-											 terminal_writestring(">\n");
+											 terminal_writestring(">");
 
 #define MAX_THREADS 3
 #define STACK_SIZE  4096
@@ -31,7 +22,7 @@
 
 #define PIC1_BASE_IRQ 0x20
 #define PIT_FREQ 1193181        /* in Hz */
-#define HZ 500
+#define HZ 50000
 #define STI __asm__ volatile ("sti")
 #define CLI __asm__ volatile ("cli")
 
@@ -68,6 +59,7 @@ void thread_init(void);
 void thread_schedule(void);
 void thread_exit(void);
 int thread_create(void *stack, void *func);
+int allDone(void);
 int get_tid(void);
 
 /* interrupt handling */
