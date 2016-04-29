@@ -1,0 +1,3239 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+AT_BASE	fifos/fifos-1/elf.h	857;"	d
+AT_BASE	fifos/memos-2/elf.h	857;"	d
+AT_CLKTCK	fifos/fifos-1/elf.h	865;"	d
+AT_CLKTCK	fifos/memos-2/elf.h	865;"	d
+AT_DCACHEBSIZE	fifos/fifos-1/elf.h	877;"	d
+AT_DCACHEBSIZE	fifos/memos-2/elf.h	877;"	d
+AT_EGID	fifos/fifos-1/elf.h	864;"	d
+AT_EGID	fifos/memos-2/elf.h	864;"	d
+AT_ENTRY	fifos/fifos-1/elf.h	859;"	d
+AT_ENTRY	fifos/memos-2/elf.h	859;"	d
+AT_EUID	fifos/fifos-1/elf.h	862;"	d
+AT_EUID	fifos/memos-2/elf.h	862;"	d
+AT_EXECFD	fifos/fifos-1/elf.h	852;"	d
+AT_EXECFD	fifos/memos-2/elf.h	852;"	d
+AT_FLAGS	fifos/fifos-1/elf.h	858;"	d
+AT_FLAGS	fifos/memos-2/elf.h	858;"	d
+AT_FPUCW	fifos/fifos-1/elf.h	874;"	d
+AT_FPUCW	fifos/memos-2/elf.h	874;"	d
+AT_GID	fifos/fifos-1/elf.h	863;"	d
+AT_GID	fifos/memos-2/elf.h	863;"	d
+AT_HWCAP	fifos/fifos-1/elf.h	869;"	d
+AT_HWCAP	fifos/memos-2/elf.h	869;"	d
+AT_ICACHEBSIZE	fifos/fifos-1/elf.h	878;"	d
+AT_ICACHEBSIZE	fifos/memos-2/elf.h	878;"	d
+AT_IGNORE	fifos/fifos-1/elf.h	851;"	d
+AT_IGNORE	fifos/memos-2/elf.h	851;"	d
+AT_IGNOREPPC	fifos/fifos-1/elf.h	883;"	d
+AT_IGNOREPPC	fifos/memos-2/elf.h	883;"	d
+AT_NOTELF	fifos/fifos-1/elf.h	860;"	d
+AT_NOTELF	fifos/memos-2/elf.h	860;"	d
+AT_NULL	fifos/fifos-1/elf.h	850;"	d
+AT_NULL	fifos/memos-2/elf.h	850;"	d
+AT_PAGESZ	fifos/fifos-1/elf.h	856;"	d
+AT_PAGESZ	fifos/memos-2/elf.h	856;"	d
+AT_PHDR	fifos/fifos-1/elf.h	853;"	d
+AT_PHDR	fifos/memos-2/elf.h	853;"	d
+AT_PHENT	fifos/fifos-1/elf.h	854;"	d
+AT_PHENT	fifos/memos-2/elf.h	854;"	d
+AT_PHNUM	fifos/fifos-1/elf.h	855;"	d
+AT_PHNUM	fifos/memos-2/elf.h	855;"	d
+AT_PLATFORM	fifos/fifos-1/elf.h	868;"	d
+AT_PLATFORM	fifos/memos-2/elf.h	868;"	d
+AT_UCACHEBSIZE	fifos/fifos-1/elf.h	879;"	d
+AT_UCACHEBSIZE	fifos/memos-2/elf.h	879;"	d
+AT_UID	fifos/fifos-1/elf.h	861;"	d
+AT_UID	fifos/memos-2/elf.h	861;"	d
+CC	fifos/fifos-1/Makefile	/^CC = gcc$/;"	m
+CC	fifos/memos-2/Makefile	/^CC = gcc$/;"	m
+CFLAGS	fifos/fifos-1/Makefile	/^CFLAGS = -m32 -fno-builtin -fno-stack-protector -fno-strict-aliasing -fno-delete-null-pointer-checks -nostdinc -I. -g -Wall -std=c99$/;"	m
+CFLAGS	fifos/memos-2/Makefile	/^CFLAGS = -m32 -fno-builtin -fno-stack-protector -fno-strict-aliasing -fno-delete-null-pointer-checks -nostdinc -I. -g -Wall -std=c99$/;"	m
+COLOR_BLACK	fifos/fifos-1/fifos.c	/^  COLOR_BLACK = 0,$/;"	e	enum:vga_color	file:
+COLOR_BLACK	fifos/fifos-1/init.c	/^  COLOR_BLACK = 0,$/;"	e	enum:vga_color	file:
+COLOR_BLACK	fifos/memos-2/init.c	/^  COLOR_BLACK = 0,$/;"	e	enum:vga_color	file:
+COLOR_BLUE	fifos/fifos-1/fifos.c	/^  COLOR_BLUE = 1,$/;"	e	enum:vga_color	file:
+COLOR_BLUE	fifos/fifos-1/init.c	/^  COLOR_BLUE = 1,$/;"	e	enum:vga_color	file:
+COLOR_BLUE	fifos/memos-2/init.c	/^  COLOR_BLUE = 1,$/;"	e	enum:vga_color	file:
+COLOR_BROWN	fifos/fifos-1/fifos.c	/^  COLOR_BROWN = 6,$/;"	e	enum:vga_color	file:
+COLOR_BROWN	fifos/fifos-1/init.c	/^  COLOR_BROWN = 6,$/;"	e	enum:vga_color	file:
+COLOR_BROWN	fifos/memos-2/init.c	/^  COLOR_BROWN = 6,$/;"	e	enum:vga_color	file:
+COLOR_CYAN	fifos/fifos-1/fifos.c	/^  COLOR_CYAN = 3,$/;"	e	enum:vga_color	file:
+COLOR_CYAN	fifos/fifos-1/init.c	/^  COLOR_CYAN = 3,$/;"	e	enum:vga_color	file:
+COLOR_CYAN	fifos/memos-2/init.c	/^  COLOR_CYAN = 3,$/;"	e	enum:vga_color	file:
+COLOR_DARK_GREY	fifos/fifos-1/fifos.c	/^  COLOR_DARK_GREY = 8,$/;"	e	enum:vga_color	file:
+COLOR_DARK_GREY	fifos/fifos-1/init.c	/^  COLOR_DARK_GREY = 8,$/;"	e	enum:vga_color	file:
+COLOR_DARK_GREY	fifos/memos-2/init.c	/^  COLOR_DARK_GREY = 8,$/;"	e	enum:vga_color	file:
+COLOR_GREEN	fifos/fifos-1/fifos.c	/^  COLOR_GREEN = 2,$/;"	e	enum:vga_color	file:
+COLOR_GREEN	fifos/fifos-1/init.c	/^  COLOR_GREEN = 2,$/;"	e	enum:vga_color	file:
+COLOR_GREEN	fifos/memos-2/init.c	/^  COLOR_GREEN = 2,$/;"	e	enum:vga_color	file:
+COLOR_LIGHT_BLUE	fifos/fifos-1/fifos.c	/^  COLOR_LIGHT_BLUE = 9,$/;"	e	enum:vga_color	file:
+COLOR_LIGHT_BLUE	fifos/fifos-1/init.c	/^  COLOR_LIGHT_BLUE = 9,$/;"	e	enum:vga_color	file:
+COLOR_LIGHT_BLUE	fifos/memos-2/init.c	/^  COLOR_LIGHT_BLUE = 9,$/;"	e	enum:vga_color	file:
+COLOR_LIGHT_BROWN	fifos/fifos-1/fifos.c	/^  COLOR_LIGHT_BROWN = 14,$/;"	e	enum:vga_color	file:
+COLOR_LIGHT_BROWN	fifos/fifos-1/init.c	/^  COLOR_LIGHT_BROWN = 14,$/;"	e	enum:vga_color	file:
+COLOR_LIGHT_BROWN	fifos/memos-2/init.c	/^  COLOR_LIGHT_BROWN = 14,$/;"	e	enum:vga_color	file:
+COLOR_LIGHT_CYAN	fifos/fifos-1/fifos.c	/^  COLOR_LIGHT_CYAN = 11,$/;"	e	enum:vga_color	file:
+COLOR_LIGHT_CYAN	fifos/fifos-1/init.c	/^  COLOR_LIGHT_CYAN = 11,$/;"	e	enum:vga_color	file:
+COLOR_LIGHT_CYAN	fifos/memos-2/init.c	/^  COLOR_LIGHT_CYAN = 11,$/;"	e	enum:vga_color	file:
+COLOR_LIGHT_GREEN	fifos/fifos-1/fifos.c	/^  COLOR_LIGHT_GREEN = 10,$/;"	e	enum:vga_color	file:
+COLOR_LIGHT_GREEN	fifos/fifos-1/init.c	/^  COLOR_LIGHT_GREEN = 10,$/;"	e	enum:vga_color	file:
+COLOR_LIGHT_GREEN	fifos/memos-2/init.c	/^  COLOR_LIGHT_GREEN = 10,$/;"	e	enum:vga_color	file:
+COLOR_LIGHT_GREY	fifos/fifos-1/fifos.c	/^  COLOR_LIGHT_GREY = 7,$/;"	e	enum:vga_color	file:
+COLOR_LIGHT_GREY	fifos/fifos-1/init.c	/^  COLOR_LIGHT_GREY = 7,$/;"	e	enum:vga_color	file:
+COLOR_LIGHT_GREY	fifos/memos-2/init.c	/^  COLOR_LIGHT_GREY = 7,$/;"	e	enum:vga_color	file:
+COLOR_LIGHT_MAGENTA	fifos/fifos-1/fifos.c	/^  COLOR_LIGHT_MAGENTA = 13,$/;"	e	enum:vga_color	file:
+COLOR_LIGHT_MAGENTA	fifos/fifos-1/init.c	/^  COLOR_LIGHT_MAGENTA = 13,$/;"	e	enum:vga_color	file:
+COLOR_LIGHT_MAGENTA	fifos/memos-2/init.c	/^  COLOR_LIGHT_MAGENTA = 13,$/;"	e	enum:vga_color	file:
+COLOR_LIGHT_RED	fifos/fifos-1/fifos.c	/^  COLOR_LIGHT_RED = 12,$/;"	e	enum:vga_color	file:
+COLOR_LIGHT_RED	fifos/fifos-1/init.c	/^  COLOR_LIGHT_RED = 12,$/;"	e	enum:vga_color	file:
+COLOR_LIGHT_RED	fifos/memos-2/init.c	/^  COLOR_LIGHT_RED = 12,$/;"	e	enum:vga_color	file:
+COLOR_MAGENTA	fifos/fifos-1/fifos.c	/^  COLOR_MAGENTA = 5,$/;"	e	enum:vga_color	file:
+COLOR_MAGENTA	fifos/fifos-1/init.c	/^  COLOR_MAGENTA = 5,$/;"	e	enum:vga_color	file:
+COLOR_MAGENTA	fifos/memos-2/init.c	/^  COLOR_MAGENTA = 5,$/;"	e	enum:vga_color	file:
+COLOR_RED	fifos/fifos-1/fifos.c	/^  COLOR_RED = 4,$/;"	e	enum:vga_color	file:
+COLOR_RED	fifos/fifos-1/init.c	/^  COLOR_RED = 4,$/;"	e	enum:vga_color	file:
+COLOR_RED	fifos/memos-2/init.c	/^  COLOR_RED = 4,$/;"	e	enum:vga_color	file:
+COLOR_WHITE	fifos/fifos-1/fifos.c	/^  COLOR_WHITE = 15,$/;"	e	enum:vga_color	file:
+COLOR_WHITE	fifos/fifos-1/init.c	/^  COLOR_WHITE = 15,$/;"	e	enum:vga_color	file:
+COLOR_WHITE	fifos/memos-2/init.c	/^  COLOR_WHITE = 15,$/;"	e	enum:vga_color	file:
+CPPFLAGS	fifos/fifos-1/Makefile	/^CPPFLAGS = -Wa,--32 -MMD$/;"	m
+CPPFLAGS	fifos/memos-2/Makefile	/^CPPFLAGS = -Wa,--32 -MMD$/;"	m
+DF_1_CONFALT	fifos/fifos-1/elf.h	695;"	d
+DF_1_CONFALT	fifos/memos-2/elf.h	695;"	d
+DF_1_DIRECT	fifos/fifos-1/elf.h	690;"	d
+DF_1_DIRECT	fifos/memos-2/elf.h	690;"	d
+DF_1_ENDFILTEE	fifos/fifos-1/elf.h	696;"	d
+DF_1_ENDFILTEE	fifos/memos-2/elf.h	696;"	d
+DF_1_GLOBAL	fifos/fifos-1/elf.h	683;"	d
+DF_1_GLOBAL	fifos/memos-2/elf.h	683;"	d
+DF_1_GROUP	fifos/fifos-1/elf.h	684;"	d
+DF_1_GROUP	fifos/memos-2/elf.h	684;"	d
+DF_1_INITFIRST	fifos/fifos-1/elf.h	687;"	d
+DF_1_INITFIRST	fifos/memos-2/elf.h	687;"	d
+DF_1_INTERPOSE	fifos/fifos-1/elf.h	692;"	d
+DF_1_INTERPOSE	fifos/memos-2/elf.h	692;"	d
+DF_1_LOADFLTR	fifos/fifos-1/elf.h	686;"	d
+DF_1_LOADFLTR	fifos/memos-2/elf.h	686;"	d
+DF_1_NODEFLIB	fifos/fifos-1/elf.h	693;"	d
+DF_1_NODEFLIB	fifos/memos-2/elf.h	693;"	d
+DF_1_NODELETE	fifos/fifos-1/elf.h	685;"	d
+DF_1_NODELETE	fifos/memos-2/elf.h	685;"	d
+DF_1_NODUMP	fifos/fifos-1/elf.h	694;"	d
+DF_1_NODUMP	fifos/memos-2/elf.h	694;"	d
+DF_1_NOOPEN	fifos/fifos-1/elf.h	688;"	d
+DF_1_NOOPEN	fifos/memos-2/elf.h	688;"	d
+DF_1_NOW	fifos/fifos-1/elf.h	682;"	d
+DF_1_NOW	fifos/memos-2/elf.h	682;"	d
+DF_1_ORIGIN	fifos/fifos-1/elf.h	689;"	d
+DF_1_ORIGIN	fifos/memos-2/elf.h	689;"	d
+DF_1_TRANS	fifos/fifos-1/elf.h	691;"	d
+DF_1_TRANS	fifos/memos-2/elf.h	691;"	d
+DF_BIND_NOW	fifos/fifos-1/elf.h	678;"	d
+DF_BIND_NOW	fifos/memos-2/elf.h	678;"	d
+DF_ORIGIN	fifos/fifos-1/elf.h	675;"	d
+DF_ORIGIN	fifos/memos-2/elf.h	675;"	d
+DF_P1_GROUPPERM	fifos/fifos-1/elf.h	704;"	d
+DF_P1_GROUPPERM	fifos/memos-2/elf.h	704;"	d
+DF_P1_LAZYLOAD	fifos/fifos-1/elf.h	703;"	d
+DF_P1_LAZYLOAD	fifos/memos-2/elf.h	703;"	d
+DF_SYMBOLIC	fifos/fifos-1/elf.h	676;"	d
+DF_SYMBOLIC	fifos/memos-2/elf.h	676;"	d
+DF_TEXTREL	fifos/fifos-1/elf.h	677;"	d
+DF_TEXTREL	fifos/memos-2/elf.h	677;"	d
+DTF_1_CONFEXP	fifos/fifos-1/elf.h	700;"	d
+DTF_1_CONFEXP	fifos/memos-2/elf.h	700;"	d
+DTF_1_PARINIT	fifos/fifos-1/elf.h	699;"	d
+DTF_1_PARINIT	fifos/memos-2/elf.h	699;"	d
+DT_ADDRRNGHI	fifos/fifos-1/elf.h	647;"	d
+DT_ADDRRNGHI	fifos/memos-2/elf.h	647;"	d
+DT_ADDRRNGLO	fifos/fifos-1/elf.h	645;"	d
+DT_ADDRRNGLO	fifos/memos-2/elf.h	645;"	d
+DT_AUXILIARY	fifos/fifos-1/elf.h	669;"	d
+DT_AUXILIARY	fifos/memos-2/elf.h	669;"	d
+DT_BIND_NOW	fifos/fifos-1/elf.h	608;"	d
+DT_BIND_NOW	fifos/memos-2/elf.h	608;"	d
+DT_CHECKSUM	fifos/fifos-1/elf.h	629;"	d
+DT_CHECKSUM	fifos/memos-2/elf.h	629;"	d
+DT_DEBUG	fifos/fifos-1/elf.h	605;"	d
+DT_DEBUG	fifos/memos-2/elf.h	605;"	d
+DT_ENCODING	fifos/fifos-1/elf.h	615;"	d
+DT_ENCODING	fifos/memos-2/elf.h	615;"	d
+DT_EXTRANUM	fifos/fifos-1/elf.h	672;"	d
+DT_EXTRANUM	fifos/memos-2/elf.h	672;"	d
+DT_EXTRATAGIDX	fifos/fifos-1/elf.h	671;"	d
+DT_EXTRATAGIDX	fifos/memos-2/elf.h	671;"	d
+DT_FEATURE_1	fifos/fifos-1/elf.h	633;"	d
+DT_FEATURE_1	fifos/memos-2/elf.h	633;"	d
+DT_FILTER	fifos/fifos-1/elf.h	670;"	d
+DT_FILTER	fifos/memos-2/elf.h	670;"	d
+DT_FINI	fifos/fifos-1/elf.h	597;"	d
+DT_FINI	fifos/memos-2/elf.h	597;"	d
+DT_FINI_ARRAY	fifos/fifos-1/elf.h	610;"	d
+DT_FINI_ARRAY	fifos/memos-2/elf.h	610;"	d
+DT_FINI_ARRAYSZ	fifos/fifos-1/elf.h	612;"	d
+DT_FINI_ARRAYSZ	fifos/memos-2/elf.h	612;"	d
+DT_FLAGS	fifos/fifos-1/elf.h	614;"	d
+DT_FLAGS	fifos/memos-2/elf.h	614;"	d
+DT_FLAGS_1	fifos/fifos-1/elf.h	657;"	d
+DT_FLAGS_1	fifos/memos-2/elf.h	657;"	d
+DT_HASH	fifos/fifos-1/elf.h	588;"	d
+DT_HASH	fifos/memos-2/elf.h	588;"	d
+DT_HIOS	fifos/fifos-1/elf.h	620;"	d
+DT_HIOS	fifos/memos-2/elf.h	620;"	d
+DT_HIPROC	fifos/fifos-1/elf.h	622;"	d
+DT_HIPROC	fifos/memos-2/elf.h	622;"	d
+DT_IA_64_NUM	fifos/fifos-1/elf.h	1883;"	d
+DT_IA_64_NUM	fifos/memos-2/elf.h	1883;"	d
+DT_IA_64_PLT_RESERVE	fifos/fifos-1/elf.h	1882;"	d
+DT_IA_64_PLT_RESERVE	fifos/memos-2/elf.h	1882;"	d
+DT_INIT	fifos/fifos-1/elf.h	596;"	d
+DT_INIT	fifos/memos-2/elf.h	596;"	d
+DT_INIT_ARRAY	fifos/fifos-1/elf.h	609;"	d
+DT_INIT_ARRAY	fifos/memos-2/elf.h	609;"	d
+DT_INIT_ARRAYSZ	fifos/fifos-1/elf.h	611;"	d
+DT_INIT_ARRAYSZ	fifos/memos-2/elf.h	611;"	d
+DT_JMPREL	fifos/fifos-1/elf.h	607;"	d
+DT_JMPREL	fifos/memos-2/elf.h	607;"	d
+DT_LOOS	fifos/fifos-1/elf.h	619;"	d
+DT_LOOS	fifos/memos-2/elf.h	619;"	d
+DT_LOPROC	fifos/fifos-1/elf.h	621;"	d
+DT_LOPROC	fifos/memos-2/elf.h	621;"	d
+DT_MIPS_AUX_DYNAMIC	fifos/fifos-1/elf.h	1411;"	d
+DT_MIPS_AUX_DYNAMIC	fifos/memos-2/elf.h	1411;"	d
+DT_MIPS_BASE_ADDRESS	fifos/fifos-1/elf.h	1365;"	d
+DT_MIPS_BASE_ADDRESS	fifos/memos-2/elf.h	1365;"	d
+DT_MIPS_COMPACT_SIZE	fifos/fifos-1/elf.h	1409;"	d
+DT_MIPS_COMPACT_SIZE	fifos/memos-2/elf.h	1409;"	d
+DT_MIPS_CONFLICT	fifos/fifos-1/elf.h	1367;"	d
+DT_MIPS_CONFLICT	fifos/memos-2/elf.h	1367;"	d
+DT_MIPS_CONFLICTNO	fifos/fifos-1/elf.h	1370;"	d
+DT_MIPS_CONFLICTNO	fifos/memos-2/elf.h	1370;"	d
+DT_MIPS_CXX_FLAGS	fifos/fifos-1/elf.h	1394;"	d
+DT_MIPS_CXX_FLAGS	fifos/memos-2/elf.h	1394;"	d
+DT_MIPS_DELTA_CLASS	fifos/fifos-1/elf.h	1377;"	d
+DT_MIPS_DELTA_CLASS	fifos/memos-2/elf.h	1377;"	d
+DT_MIPS_DELTA_CLASSSYM	fifos/fifos-1/elf.h	1390;"	d
+DT_MIPS_DELTA_CLASSSYM	fifos/memos-2/elf.h	1390;"	d
+DT_MIPS_DELTA_CLASSSYM_NO	fifos/fifos-1/elf.h	1392;"	d
+DT_MIPS_DELTA_CLASSSYM_NO	fifos/memos-2/elf.h	1392;"	d
+DT_MIPS_DELTA_CLASS_NO	fifos/fifos-1/elf.h	1378;"	d
+DT_MIPS_DELTA_CLASS_NO	fifos/memos-2/elf.h	1378;"	d
+DT_MIPS_DELTA_INSTANCE	fifos/fifos-1/elf.h	1380;"	d
+DT_MIPS_DELTA_INSTANCE	fifos/memos-2/elf.h	1380;"	d
+DT_MIPS_DELTA_INSTANCE_NO	fifos/fifos-1/elf.h	1381;"	d
+DT_MIPS_DELTA_INSTANCE_NO	fifos/memos-2/elf.h	1381;"	d
+DT_MIPS_DELTA_RELOC	fifos/fifos-1/elf.h	1383;"	d
+DT_MIPS_DELTA_RELOC	fifos/memos-2/elf.h	1383;"	d
+DT_MIPS_DELTA_RELOC_NO	fifos/fifos-1/elf.h	1384;"	d
+DT_MIPS_DELTA_RELOC_NO	fifos/memos-2/elf.h	1384;"	d
+DT_MIPS_DELTA_SYM	fifos/fifos-1/elf.h	1386;"	d
+DT_MIPS_DELTA_SYM	fifos/memos-2/elf.h	1386;"	d
+DT_MIPS_DELTA_SYM_NO	fifos/fifos-1/elf.h	1388;"	d
+DT_MIPS_DELTA_SYM_NO	fifos/memos-2/elf.h	1388;"	d
+DT_MIPS_DYNSTR_ALIGN	fifos/fifos-1/elf.h	1403;"	d
+DT_MIPS_DYNSTR_ALIGN	fifos/memos-2/elf.h	1403;"	d
+DT_MIPS_FLAGS	fifos/fifos-1/elf.h	1364;"	d
+DT_MIPS_FLAGS	fifos/memos-2/elf.h	1364;"	d
+DT_MIPS_GOTSYM	fifos/fifos-1/elf.h	1374;"	d
+DT_MIPS_GOTSYM	fifos/memos-2/elf.h	1374;"	d
+DT_MIPS_GP_VALUE	fifos/fifos-1/elf.h	1410;"	d
+DT_MIPS_GP_VALUE	fifos/memos-2/elf.h	1410;"	d
+DT_MIPS_HIDDEN_GOTIDX	fifos/fifos-1/elf.h	1399;"	d
+DT_MIPS_HIDDEN_GOTIDX	fifos/memos-2/elf.h	1399;"	d
+DT_MIPS_HIPAGENO	fifos/fifos-1/elf.h	1375;"	d
+DT_MIPS_HIPAGENO	fifos/memos-2/elf.h	1375;"	d
+DT_MIPS_ICHECKSUM	fifos/fifos-1/elf.h	1362;"	d
+DT_MIPS_ICHECKSUM	fifos/memos-2/elf.h	1362;"	d
+DT_MIPS_INTERFACE	fifos/fifos-1/elf.h	1402;"	d
+DT_MIPS_INTERFACE	fifos/memos-2/elf.h	1402;"	d
+DT_MIPS_INTERFACE_SIZE	fifos/fifos-1/elf.h	1404;"	d
+DT_MIPS_INTERFACE_SIZE	fifos/memos-2/elf.h	1404;"	d
+DT_MIPS_IVERSION	fifos/fifos-1/elf.h	1363;"	d
+DT_MIPS_IVERSION	fifos/memos-2/elf.h	1363;"	d
+DT_MIPS_LIBLIST	fifos/fifos-1/elf.h	1368;"	d
+DT_MIPS_LIBLIST	fifos/memos-2/elf.h	1368;"	d
+DT_MIPS_LIBLISTNO	fifos/fifos-1/elf.h	1371;"	d
+DT_MIPS_LIBLISTNO	fifos/memos-2/elf.h	1371;"	d
+DT_MIPS_LOCALPAGE_GOTIDX	fifos/fifos-1/elf.h	1397;"	d
+DT_MIPS_LOCALPAGE_GOTIDX	fifos/memos-2/elf.h	1397;"	d
+DT_MIPS_LOCAL_GOTIDX	fifos/fifos-1/elf.h	1398;"	d
+DT_MIPS_LOCAL_GOTIDX	fifos/memos-2/elf.h	1398;"	d
+DT_MIPS_LOCAL_GOTNO	fifos/fifos-1/elf.h	1369;"	d
+DT_MIPS_LOCAL_GOTNO	fifos/memos-2/elf.h	1369;"	d
+DT_MIPS_MSYM	fifos/fifos-1/elf.h	1366;"	d
+DT_MIPS_MSYM	fifos/memos-2/elf.h	1366;"	d
+DT_MIPS_NUM	fifos/fifos-1/elf.h	1412;"	d
+DT_MIPS_NUM	fifos/memos-2/elf.h	1412;"	d
+DT_MIPS_OPTIONS	fifos/fifos-1/elf.h	1401;"	d
+DT_MIPS_OPTIONS	fifos/memos-2/elf.h	1401;"	d
+DT_MIPS_PERF_SUFFIX	fifos/fifos-1/elf.h	1407;"	d
+DT_MIPS_PERF_SUFFIX	fifos/memos-2/elf.h	1407;"	d
+DT_MIPS_PIXIE_INIT	fifos/fifos-1/elf.h	1395;"	d
+DT_MIPS_PIXIE_INIT	fifos/memos-2/elf.h	1395;"	d
+DT_MIPS_PROTECTED_GOTIDX	fifos/fifos-1/elf.h	1400;"	d
+DT_MIPS_PROTECTED_GOTIDX	fifos/memos-2/elf.h	1400;"	d
+DT_MIPS_RLD_MAP	fifos/fifos-1/elf.h	1376;"	d
+DT_MIPS_RLD_MAP	fifos/memos-2/elf.h	1376;"	d
+DT_MIPS_RLD_TEXT_RESOLVE_ADDR	fifos/fifos-1/elf.h	1405;"	d
+DT_MIPS_RLD_TEXT_RESOLVE_ADDR	fifos/memos-2/elf.h	1405;"	d
+DT_MIPS_RLD_VERSION	fifos/fifos-1/elf.h	1360;"	d
+DT_MIPS_RLD_VERSION	fifos/memos-2/elf.h	1360;"	d
+DT_MIPS_SYMBOL_LIB	fifos/fifos-1/elf.h	1396;"	d
+DT_MIPS_SYMBOL_LIB	fifos/memos-2/elf.h	1396;"	d
+DT_MIPS_SYMTABNO	fifos/fifos-1/elf.h	1372;"	d
+DT_MIPS_SYMTABNO	fifos/memos-2/elf.h	1372;"	d
+DT_MIPS_TIME_STAMP	fifos/fifos-1/elf.h	1361;"	d
+DT_MIPS_TIME_STAMP	fifos/memos-2/elf.h	1361;"	d
+DT_MIPS_UNREFEXTNO	fifos/fifos-1/elf.h	1373;"	d
+DT_MIPS_UNREFEXTNO	fifos/memos-2/elf.h	1373;"	d
+DT_MOVEENT	fifos/fifos-1/elf.h	631;"	d
+DT_MOVEENT	fifos/memos-2/elf.h	631;"	d
+DT_MOVESZ	fifos/fifos-1/elf.h	632;"	d
+DT_MOVESZ	fifos/memos-2/elf.h	632;"	d
+DT_NEEDED	fifos/fifos-1/elf.h	585;"	d
+DT_NEEDED	fifos/memos-2/elf.h	585;"	d
+DT_NULL	fifos/fifos-1/elf.h	584;"	d
+DT_NULL	fifos/memos-2/elf.h	584;"	d
+DT_NUM	fifos/fifos-1/elf.h	618;"	d
+DT_NUM	fifos/memos-2/elf.h	618;"	d
+DT_PLTGOT	fifos/fifos-1/elf.h	587;"	d
+DT_PLTGOT	fifos/memos-2/elf.h	587;"	d
+DT_PLTPADSZ	fifos/fifos-1/elf.h	630;"	d
+DT_PLTPADSZ	fifos/memos-2/elf.h	630;"	d
+DT_PLTREL	fifos/fifos-1/elf.h	604;"	d
+DT_PLTREL	fifos/memos-2/elf.h	604;"	d
+DT_PLTRELSZ	fifos/fifos-1/elf.h	586;"	d
+DT_PLTRELSZ	fifos/memos-2/elf.h	586;"	d
+DT_POSFLAG_1	fifos/fifos-1/elf.h	634;"	d
+DT_POSFLAG_1	fifos/memos-2/elf.h	634;"	d
+DT_PREINIT_ARRAY	fifos/fifos-1/elf.h	616;"	d
+DT_PREINIT_ARRAY	fifos/memos-2/elf.h	616;"	d
+DT_PREINIT_ARRAYSZ	fifos/fifos-1/elf.h	617;"	d
+DT_PREINIT_ARRAYSZ	fifos/memos-2/elf.h	617;"	d
+DT_PROCNUM	fifos/fifos-1/elf.h	623;"	d
+DT_PROCNUM	fifos/memos-2/elf.h	623;"	d
+DT_REL	fifos/fifos-1/elf.h	601;"	d
+DT_REL	fifos/memos-2/elf.h	601;"	d
+DT_RELA	fifos/fifos-1/elf.h	591;"	d
+DT_RELA	fifos/memos-2/elf.h	591;"	d
+DT_RELACOUNT	fifos/fifos-1/elf.h	653;"	d
+DT_RELACOUNT	fifos/memos-2/elf.h	653;"	d
+DT_RELAENT	fifos/fifos-1/elf.h	593;"	d
+DT_RELAENT	fifos/memos-2/elf.h	593;"	d
+DT_RELASZ	fifos/fifos-1/elf.h	592;"	d
+DT_RELASZ	fifos/memos-2/elf.h	592;"	d
+DT_RELCOUNT	fifos/fifos-1/elf.h	654;"	d
+DT_RELCOUNT	fifos/memos-2/elf.h	654;"	d
+DT_RELENT	fifos/fifos-1/elf.h	603;"	d
+DT_RELENT	fifos/memos-2/elf.h	603;"	d
+DT_RELSZ	fifos/fifos-1/elf.h	602;"	d
+DT_RELSZ	fifos/memos-2/elf.h	602;"	d
+DT_RPATH	fifos/fifos-1/elf.h	599;"	d
+DT_RPATH	fifos/memos-2/elf.h	599;"	d
+DT_RUNPATH	fifos/fifos-1/elf.h	613;"	d
+DT_RUNPATH	fifos/memos-2/elf.h	613;"	d
+DT_SONAME	fifos/fifos-1/elf.h	598;"	d
+DT_SONAME	fifos/memos-2/elf.h	598;"	d
+DT_SPARC_NUM	fifos/fifos-1/elf.h	1100;"	d
+DT_SPARC_NUM	fifos/memos-2/elf.h	1100;"	d
+DT_SPARC_REGISTER	fifos/fifos-1/elf.h	1099;"	d
+DT_SPARC_REGISTER	fifos/memos-2/elf.h	1099;"	d
+DT_STRSZ	fifos/fifos-1/elf.h	594;"	d
+DT_STRSZ	fifos/memos-2/elf.h	594;"	d
+DT_STRTAB	fifos/fifos-1/elf.h	589;"	d
+DT_STRTAB	fifos/memos-2/elf.h	589;"	d
+DT_SYMBOLIC	fifos/fifos-1/elf.h	600;"	d
+DT_SYMBOLIC	fifos/memos-2/elf.h	600;"	d
+DT_SYMENT	fifos/fifos-1/elf.h	595;"	d
+DT_SYMENT	fifos/memos-2/elf.h	595;"	d
+DT_SYMINENT	fifos/fifos-1/elf.h	637;"	d
+DT_SYMINENT	fifos/memos-2/elf.h	637;"	d
+DT_SYMINFO	fifos/fifos-1/elf.h	646;"	d
+DT_SYMINFO	fifos/memos-2/elf.h	646;"	d
+DT_SYMINSZ	fifos/fifos-1/elf.h	636;"	d
+DT_SYMINSZ	fifos/memos-2/elf.h	636;"	d
+DT_SYMTAB	fifos/fifos-1/elf.h	590;"	d
+DT_SYMTAB	fifos/memos-2/elf.h	590;"	d
+DT_TEXTREL	fifos/fifos-1/elf.h	606;"	d
+DT_TEXTREL	fifos/memos-2/elf.h	606;"	d
+DT_VALRNGHI	fifos/fifos-1/elf.h	638;"	d
+DT_VALRNGHI	fifos/memos-2/elf.h	638;"	d
+DT_VALRNGLO	fifos/fifos-1/elf.h	628;"	d
+DT_VALRNGLO	fifos/memos-2/elf.h	628;"	d
+DT_VERDEF	fifos/fifos-1/elf.h	658;"	d
+DT_VERDEF	fifos/memos-2/elf.h	658;"	d
+DT_VERDEFNUM	fifos/fifos-1/elf.h	660;"	d
+DT_VERDEFNUM	fifos/memos-2/elf.h	660;"	d
+DT_VERNEED	fifos/fifos-1/elf.h	661;"	d
+DT_VERNEED	fifos/memos-2/elf.h	661;"	d
+DT_VERNEEDNUM	fifos/fifos-1/elf.h	663;"	d
+DT_VERNEEDNUM	fifos/memos-2/elf.h	663;"	d
+DT_VERSIONTAGIDX	fifos/fifos-1/elf.h	664;"	d
+DT_VERSIONTAGIDX	fifos/memos-2/elf.h	664;"	d
+DT_VERSIONTAGNUM	fifos/fifos-1/elf.h	665;"	d
+DT_VERSIONTAGNUM	fifos/memos-2/elf.h	665;"	d
+DT_VERSYM	fifos/fifos-1/elf.h	651;"	d
+DT_VERSYM	fifos/memos-2/elf.h	651;"	d
+Done	fifos/fifos-1/init.c	/^int Done() {$/;"	f
+Done	fifos/memos-2/init.c	/^int Done() {$/;"	f
+EFA_PARISC_1_0	fifos/fifos-1/elf.h	1484;"	d
+EFA_PARISC_1_0	fifos/memos-2/elf.h	1484;"	d
+EFA_PARISC_1_1	fifos/fifos-1/elf.h	1485;"	d
+EFA_PARISC_1_1	fifos/memos-2/elf.h	1485;"	d
+EFA_PARISC_2_0	fifos/fifos-1/elf.h	1486;"	d
+EFA_PARISC_2_0	fifos/memos-2/elf.h	1486;"	d
+EF_ALPHA_32BIT	fifos/fifos-1/elf.h	1642;"	d
+EF_ALPHA_32BIT	fifos/memos-2/elf.h	1642;"	d
+EF_ALPHA_CANRELAX	fifos/fifos-1/elf.h	1643;"	d
+EF_ALPHA_CANRELAX	fifos/memos-2/elf.h	1643;"	d
+EF_ARM_ALIGN8	fifos/fifos-1/elf.h	1785;"	d
+EF_ARM_ALIGN8	fifos/memos-2/elf.h	1785;"	d
+EF_ARM_APCS_26	fifos/fifos-1/elf.h	1782;"	d
+EF_ARM_APCS_26	fifos/memos-2/elf.h	1782;"	d
+EF_ARM_APCS_FLOAT	fifos/fifos-1/elf.h	1783;"	d
+EF_ARM_APCS_FLOAT	fifos/memos-2/elf.h	1783;"	d
+EF_ARM_DYNSYMSUSESEGIDX	fifos/fifos-1/elf.h	1792;"	d
+EF_ARM_DYNSYMSUSESEGIDX	fifos/memos-2/elf.h	1792;"	d
+EF_ARM_EABIMASK	fifos/fifos-1/elf.h	1794;"	d
+EF_ARM_EABIMASK	fifos/memos-2/elf.h	1794;"	d
+EF_ARM_EABI_UNKNOWN	fifos/fifos-1/elf.h	1797;"	d
+EF_ARM_EABI_UNKNOWN	fifos/memos-2/elf.h	1797;"	d
+EF_ARM_EABI_VER1	fifos/fifos-1/elf.h	1798;"	d
+EF_ARM_EABI_VER1	fifos/memos-2/elf.h	1798;"	d
+EF_ARM_EABI_VER2	fifos/fifos-1/elf.h	1799;"	d
+EF_ARM_EABI_VER2	fifos/memos-2/elf.h	1799;"	d
+EF_ARM_EABI_VERSION	fifos/fifos-1/elf.h	1796;"	d
+EF_ARM_EABI_VERSION	fifos/memos-2/elf.h	1796;"	d
+EF_ARM_HASENTRY	fifos/fifos-1/elf.h	1780;"	d
+EF_ARM_HASENTRY	fifos/memos-2/elf.h	1780;"	d
+EF_ARM_INTERWORK	fifos/fifos-1/elf.h	1781;"	d
+EF_ARM_INTERWORK	fifos/memos-2/elf.h	1781;"	d
+EF_ARM_MAPSYMSFIRST	fifos/fifos-1/elf.h	1793;"	d
+EF_ARM_MAPSYMSFIRST	fifos/memos-2/elf.h	1793;"	d
+EF_ARM_NEW_ABI	fifos/fifos-1/elf.h	1786;"	d
+EF_ARM_NEW_ABI	fifos/memos-2/elf.h	1786;"	d
+EF_ARM_OLD_ABI	fifos/fifos-1/elf.h	1787;"	d
+EF_ARM_OLD_ABI	fifos/memos-2/elf.h	1787;"	d
+EF_ARM_PIC	fifos/fifos-1/elf.h	1784;"	d
+EF_ARM_PIC	fifos/memos-2/elf.h	1784;"	d
+EF_ARM_RELEXEC	fifos/fifos-1/elf.h	1779;"	d
+EF_ARM_RELEXEC	fifos/memos-2/elf.h	1779;"	d
+EF_ARM_SYMSARESORTED	fifos/fifos-1/elf.h	1791;"	d
+EF_ARM_SYMSARESORTED	fifos/memos-2/elf.h	1791;"	d
+EF_CPU32	fifos/fifos-1/elf.h	967;"	d
+EF_CPU32	fifos/memos-2/elf.h	967;"	d
+EF_IA_64_ABI64	fifos/fifos-1/elf.h	1863;"	d
+EF_IA_64_ABI64	fifos/memos-2/elf.h	1863;"	d
+EF_IA_64_ARCH	fifos/fifos-1/elf.h	1864;"	d
+EF_IA_64_ARCH	fifos/memos-2/elf.h	1864;"	d
+EF_IA_64_MASKOS	fifos/fifos-1/elf.h	1862;"	d
+EF_IA_64_MASKOS	fifos/memos-2/elf.h	1862;"	d
+EF_MIPS_64BIT_WHIRL	fifos/fifos-1/elf.h	1119;"	d
+EF_MIPS_64BIT_WHIRL	fifos/memos-2/elf.h	1119;"	d
+EF_MIPS_ABI2	fifos/fifos-1/elf.h	1120;"	d
+EF_MIPS_ABI2	fifos/memos-2/elf.h	1120;"	d
+EF_MIPS_ABI_ON32	fifos/fifos-1/elf.h	1121;"	d
+EF_MIPS_ABI_ON32	fifos/memos-2/elf.h	1121;"	d
+EF_MIPS_ARCH	fifos/fifos-1/elf.h	1122;"	d
+EF_MIPS_ARCH	fifos/memos-2/elf.h	1122;"	d
+EF_MIPS_ARCH_1	fifos/fifos-1/elf.h	1126;"	d
+EF_MIPS_ARCH_1	fifos/memos-2/elf.h	1126;"	d
+EF_MIPS_ARCH_2	fifos/fifos-1/elf.h	1127;"	d
+EF_MIPS_ARCH_2	fifos/memos-2/elf.h	1127;"	d
+EF_MIPS_ARCH_3	fifos/fifos-1/elf.h	1128;"	d
+EF_MIPS_ARCH_3	fifos/memos-2/elf.h	1128;"	d
+EF_MIPS_ARCH_32	fifos/fifos-1/elf.h	1131;"	d
+EF_MIPS_ARCH_32	fifos/memos-2/elf.h	1131;"	d
+EF_MIPS_ARCH_4	fifos/fifos-1/elf.h	1129;"	d
+EF_MIPS_ARCH_4	fifos/memos-2/elf.h	1129;"	d
+EF_MIPS_ARCH_5	fifos/fifos-1/elf.h	1130;"	d
+EF_MIPS_ARCH_5	fifos/memos-2/elf.h	1130;"	d
+EF_MIPS_ARCH_64	fifos/fifos-1/elf.h	1132;"	d
+EF_MIPS_ARCH_64	fifos/memos-2/elf.h	1132;"	d
+EF_MIPS_CPIC	fifos/fifos-1/elf.h	1117;"	d
+EF_MIPS_CPIC	fifos/memos-2/elf.h	1117;"	d
+EF_MIPS_NOREORDER	fifos/fifos-1/elf.h	1115;"	d
+EF_MIPS_NOREORDER	fifos/memos-2/elf.h	1115;"	d
+EF_MIPS_PIC	fifos/fifos-1/elf.h	1116;"	d
+EF_MIPS_PIC	fifos/memos-2/elf.h	1116;"	d
+EF_MIPS_XGOT	fifos/fifos-1/elf.h	1118;"	d
+EF_MIPS_XGOT	fifos/memos-2/elf.h	1118;"	d
+EF_PARISC_ARCH	fifos/fifos-1/elf.h	1480;"	d
+EF_PARISC_ARCH	fifos/memos-2/elf.h	1480;"	d
+EF_PARISC_EXT	fifos/fifos-1/elf.h	1474;"	d
+EF_PARISC_EXT	fifos/memos-2/elf.h	1474;"	d
+EF_PARISC_LAZYSWAP	fifos/fifos-1/elf.h	1479;"	d
+EF_PARISC_LAZYSWAP	fifos/memos-2/elf.h	1479;"	d
+EF_PARISC_LSB	fifos/fifos-1/elf.h	1475;"	d
+EF_PARISC_LSB	fifos/memos-2/elf.h	1475;"	d
+EF_PARISC_NO_KABP	fifos/fifos-1/elf.h	1477;"	d
+EF_PARISC_NO_KABP	fifos/memos-2/elf.h	1477;"	d
+EF_PARISC_TRAPNIL	fifos/fifos-1/elf.h	1473;"	d
+EF_PARISC_TRAPNIL	fifos/memos-2/elf.h	1473;"	d
+EF_PARISC_WIDE	fifos/fifos-1/elf.h	1476;"	d
+EF_PARISC_WIDE	fifos/memos-2/elf.h	1476;"	d
+EF_PPC_EMB	fifos/fifos-1/elf.h	1696;"	d
+EF_PPC_EMB	fifos/memos-2/elf.h	1696;"	d
+EF_PPC_RELOCATABLE	fifos/fifos-1/elf.h	1699;"	d
+EF_PPC_RELOCATABLE	fifos/memos-2/elf.h	1699;"	d
+EF_PPC_RELOCATABLE_LIB	fifos/fifos-1/elf.h	1700;"	d
+EF_PPC_RELOCATABLE_LIB	fifos/memos-2/elf.h	1700;"	d
+EF_SPARCV9_MM	fifos/fifos-1/elf.h	1023;"	d
+EF_SPARCV9_MM	fifos/memos-2/elf.h	1023;"	d
+EF_SPARCV9_PSO	fifos/fifos-1/elf.h	1025;"	d
+EF_SPARCV9_PSO	fifos/memos-2/elf.h	1025;"	d
+EF_SPARCV9_RMO	fifos/fifos-1/elf.h	1026;"	d
+EF_SPARCV9_RMO	fifos/memos-2/elf.h	1026;"	d
+EF_SPARCV9_TSO	fifos/fifos-1/elf.h	1024;"	d
+EF_SPARCV9_TSO	fifos/memos-2/elf.h	1024;"	d
+EF_SPARC_32PLUS	fifos/fifos-1/elf.h	1029;"	d
+EF_SPARC_32PLUS	fifos/memos-2/elf.h	1029;"	d
+EF_SPARC_EXT_MASK	fifos/fifos-1/elf.h	1028;"	d
+EF_SPARC_EXT_MASK	fifos/memos-2/elf.h	1028;"	d
+EF_SPARC_HAL_R1	fifos/fifos-1/elf.h	1031;"	d
+EF_SPARC_HAL_R1	fifos/memos-2/elf.h	1031;"	d
+EF_SPARC_LEDATA	fifos/fifos-1/elf.h	1027;"	d
+EF_SPARC_LEDATA	fifos/memos-2/elf.h	1027;"	d
+EF_SPARC_SUN_US1	fifos/fifos-1/elf.h	1030;"	d
+EF_SPARC_SUN_US1	fifos/memos-2/elf.h	1030;"	d
+EF_SPARC_SUN_US3	fifos/fifos-1/elf.h	1032;"	d
+EF_SPARC_SUN_US3	fifos/memos-2/elf.h	1032;"	d
+EI_ABIVERSION	fifos/fifos-1/elf.h	125;"	d
+EI_ABIVERSION	fifos/memos-2/elf.h	125;"	d
+EI_CLASS	fifos/fifos-1/elf.h	104;"	d
+EI_CLASS	fifos/memos-2/elf.h	104;"	d
+EI_DATA	fifos/fifos-1/elf.h	110;"	d
+EI_DATA	fifos/memos-2/elf.h	110;"	d
+EI_MAG0	fifos/fifos-1/elf.h	88;"	d
+EI_MAG0	fifos/memos-2/elf.h	88;"	d
+EI_MAG1	fifos/fifos-1/elf.h	91;"	d
+EI_MAG1	fifos/memos-2/elf.h	91;"	d
+EI_MAG2	fifos/fifos-1/elf.h	94;"	d
+EI_MAG2	fifos/memos-2/elf.h	94;"	d
+EI_MAG3	fifos/fifos-1/elf.h	97;"	d
+EI_MAG3	fifos/memos-2/elf.h	97;"	d
+EI_NIDENT	fifos/fifos-1/elf.h	46;"	d
+EI_NIDENT	fifos/memos-2/elf.h	46;"	d
+EI_OSABI	fifos/fifos-1/elf.h	119;"	d
+EI_OSABI	fifos/memos-2/elf.h	119;"	d
+EI_PAD	fifos/fifos-1/elf.h	127;"	d
+EI_PAD	fifos/memos-2/elf.h	127;"	d
+EI_VERSION	fifos/fifos-1/elf.h	116;"	d
+EI_VERSION	fifos/memos-2/elf.h	116;"	d
+ELF32_M_INFO	fifos/fifos-1/elf.h	957;"	d
+ELF32_M_INFO	fifos/memos-2/elf.h	957;"	d
+ELF32_M_SIZE	fifos/fifos-1/elf.h	956;"	d
+ELF32_M_SIZE	fifos/memos-2/elf.h	956;"	d
+ELF32_M_SYM	fifos/fifos-1/elf.h	955;"	d
+ELF32_M_SYM	fifos/memos-2/elf.h	955;"	d
+ELF32_R_INFO	fifos/fifos-1/elf.h	483;"	d
+ELF32_R_INFO	fifos/memos-2/elf.h	483;"	d
+ELF32_R_SYM	fifos/fifos-1/elf.h	481;"	d
+ELF32_R_SYM	fifos/memos-2/elf.h	481;"	d
+ELF32_R_TYPE	fifos/fifos-1/elf.h	482;"	d
+ELF32_R_TYPE	fifos/memos-2/elf.h	482;"	d
+ELF32_ST_BIND	fifos/fifos-1/elf.h	388;"	d
+ELF32_ST_BIND	fifos/memos-2/elf.h	388;"	d
+ELF32_ST_INFO	fifos/fifos-1/elf.h	390;"	d
+ELF32_ST_INFO	fifos/memos-2/elf.h	390;"	d
+ELF32_ST_TYPE	fifos/fifos-1/elf.h	389;"	d
+ELF32_ST_TYPE	fifos/memos-2/elf.h	389;"	d
+ELF32_ST_VISIBILITY	fifos/fifos-1/elf.h	432;"	d
+ELF32_ST_VISIBILITY	fifos/memos-2/elf.h	432;"	d
+ELF64_M_INFO	fifos/fifos-1/elf.h	961;"	d
+ELF64_M_INFO	fifos/memos-2/elf.h	961;"	d
+ELF64_M_SIZE	fifos/fifos-1/elf.h	960;"	d
+ELF64_M_SIZE	fifos/memos-2/elf.h	960;"	d
+ELF64_M_SYM	fifos/fifos-1/elf.h	959;"	d
+ELF64_M_SYM	fifos/memos-2/elf.h	959;"	d
+ELF64_R_INFO	fifos/fifos-1/elf.h	487;"	d
+ELF64_R_INFO	fifos/memos-2/elf.h	487;"	d
+ELF64_R_SYM	fifos/fifos-1/elf.h	485;"	d
+ELF64_R_SYM	fifos/memos-2/elf.h	485;"	d
+ELF64_R_TYPE	fifos/fifos-1/elf.h	486;"	d
+ELF64_R_TYPE	fifos/memos-2/elf.h	486;"	d
+ELF64_ST_BIND	fifos/fifos-1/elf.h	393;"	d
+ELF64_ST_BIND	fifos/memos-2/elf.h	393;"	d
+ELF64_ST_INFO	fifos/fifos-1/elf.h	395;"	d
+ELF64_ST_INFO	fifos/memos-2/elf.h	395;"	d
+ELF64_ST_TYPE	fifos/fifos-1/elf.h	394;"	d
+ELF64_ST_TYPE	fifos/memos-2/elf.h	394;"	d
+ELF64_ST_VISIBILITY	fifos/fifos-1/elf.h	435;"	d
+ELF64_ST_VISIBILITY	fifos/memos-2/elf.h	435;"	d
+ELFCLASS32	fifos/fifos-1/elf.h	106;"	d
+ELFCLASS32	fifos/memos-2/elf.h	106;"	d
+ELFCLASS64	fifos/fifos-1/elf.h	107;"	d
+ELFCLASS64	fifos/memos-2/elf.h	107;"	d
+ELFCLASSNONE	fifos/fifos-1/elf.h	105;"	d
+ELFCLASSNONE	fifos/memos-2/elf.h	105;"	d
+ELFCLASSNUM	fifos/fifos-1/elf.h	108;"	d
+ELFCLASSNUM	fifos/memos-2/elf.h	108;"	d
+ELFDATA2LSB	fifos/fifos-1/elf.h	112;"	d
+ELFDATA2LSB	fifos/memos-2/elf.h	112;"	d
+ELFDATA2MSB	fifos/fifos-1/elf.h	113;"	d
+ELFDATA2MSB	fifos/memos-2/elf.h	113;"	d
+ELFDATANONE	fifos/fifos-1/elf.h	111;"	d
+ELFDATANONE	fifos/memos-2/elf.h	111;"	d
+ELFDATANUM	fifos/fifos-1/elf.h	114;"	d
+ELFDATANUM	fifos/memos-2/elf.h	114;"	d
+ELFMAG	fifos/fifos-1/elf.h	101;"	d
+ELFMAG	fifos/memos-2/elf.h	101;"	d
+ELFMAG0	fifos/fifos-1/elf.h	89;"	d
+ELFMAG0	fifos/memos-2/elf.h	89;"	d
+ELFMAG1	fifos/fifos-1/elf.h	92;"	d
+ELFMAG1	fifos/memos-2/elf.h	92;"	d
+ELFMAG2	fifos/fifos-1/elf.h	95;"	d
+ELFMAG2	fifos/memos-2/elf.h	95;"	d
+ELFMAG3	fifos/fifos-1/elf.h	98;"	d
+ELFMAG3	fifos/memos-2/elf.h	98;"	d
+ELFOSABI_ARM	fifos/fifos-1/elf.h	122;"	d
+ELFOSABI_ARM	fifos/memos-2/elf.h	122;"	d
+ELFOSABI_HPUX	fifos/fifos-1/elf.h	121;"	d
+ELFOSABI_HPUX	fifos/memos-2/elf.h	121;"	d
+ELFOSABI_STANDALONE	fifos/fifos-1/elf.h	123;"	d
+ELFOSABI_STANDALONE	fifos/memos-2/elf.h	123;"	d
+ELFOSABI_SYSV	fifos/fifos-1/elf.h	120;"	d
+ELFOSABI_SYSV	fifos/memos-2/elf.h	120;"	d
+ELF_NOTE_ABI	fifos/fifos-1/elf.h	926;"	d
+ELF_NOTE_ABI	fifos/memos-2/elf.h	926;"	d
+ELF_NOTE_GNU	fifos/fifos-1/elf.h	909;"	d
+ELF_NOTE_GNU	fifos/memos-2/elf.h	909;"	d
+ELF_NOTE_OS_GNU	fifos/fifos-1/elf.h	931;"	d
+ELF_NOTE_OS_GNU	fifos/memos-2/elf.h	931;"	d
+ELF_NOTE_OS_LINUX	fifos/fifos-1/elf.h	930;"	d
+ELF_NOTE_OS_LINUX	fifos/memos-2/elf.h	930;"	d
+ELF_NOTE_OS_SOLARIS2	fifos/fifos-1/elf.h	932;"	d
+ELF_NOTE_OS_SOLARIS2	fifos/memos-2/elf.h	932;"	d
+ELF_NOTE_PAGESIZE_HINT	fifos/fifos-1/elf.h	915;"	d
+ELF_NOTE_PAGESIZE_HINT	fifos/memos-2/elf.h	915;"	d
+ELF_NOTE_SOLARIS	fifos/fifos-1/elf.h	906;"	d
+ELF_NOTE_SOLARIS	fifos/memos-2/elf.h	906;"	d
+EM_386	fifos/fifos-1/elf.h	147;"	d
+EM_386	fifos/memos-2/elf.h	147;"	d
+EM_68HC05	fifos/fifos-1/elf.h	198;"	d
+EM_68HC05	fifos/memos-2/elf.h	198;"	d
+EM_68HC08	fifos/fifos-1/elf.h	197;"	d
+EM_68HC08	fifos/memos-2/elf.h	197;"	d
+EM_68HC11	fifos/fifos-1/elf.h	196;"	d
+EM_68HC11	fifos/memos-2/elf.h	196;"	d
+EM_68HC12	fifos/fifos-1/elf.h	180;"	d
+EM_68HC12	fifos/memos-2/elf.h	180;"	d
+EM_68HC16	fifos/fifos-1/elf.h	195;"	d
+EM_68HC16	fifos/memos-2/elf.h	195;"	d
+EM_68K	fifos/fifos-1/elf.h	148;"	d
+EM_68K	fifos/memos-2/elf.h	148;"	d
+EM_860	fifos/fifos-1/elf.h	150;"	d
+EM_860	fifos/memos-2/elf.h	150;"	d
+EM_88K	fifos/fifos-1/elf.h	149;"	d
+EM_88K	fifos/memos-2/elf.h	149;"	d
+EM_960	fifos/fifos-1/elf.h	158;"	d
+EM_960	fifos/memos-2/elf.h	158;"	d
+EM_ALPHA	fifos/fifos-1/elf.h	224;"	d
+EM_ALPHA	fifos/memos-2/elf.h	224;"	d
+EM_ARC	fifos/fifos-1/elf.h	172;"	d
+EM_ARC	fifos/memos-2/elf.h	172;"	d
+EM_ARM	fifos/fifos-1/elf.h	167;"	d
+EM_ARM	fifos/memos-2/elf.h	167;"	d
+EM_AT19	fifos/fifos-1/elf.h	200;"	d
+EM_AT19	fifos/memos-2/elf.h	200;"	d
+EM_AVR	fifos/fifos-1/elf.h	209;"	d
+EM_AVR	fifos/memos-2/elf.h	209;"	d
+EM_COLDFIRE	fifos/fifos-1/elf.h	179;"	d
+EM_COLDFIRE	fifos/memos-2/elf.h	179;"	d
+EM_CRIS	fifos/fifos-1/elf.h	202;"	d
+EM_CRIS	fifos/memos-2/elf.h	202;"	d
+EM_D10V	fifos/fifos-1/elf.h	211;"	d
+EM_D10V	fifos/memos-2/elf.h	211;"	d
+EM_D30V	fifos/fifos-1/elf.h	212;"	d
+EM_D30V	fifos/memos-2/elf.h	212;"	d
+EM_FAKE_ALPHA	fifos/fifos-1/elf.h	168;"	d
+EM_FAKE_ALPHA	fifos/memos-2/elf.h	168;"	d
+EM_FIREPATH	fifos/fifos-1/elf.h	204;"	d
+EM_FIREPATH	fifos/memos-2/elf.h	204;"	d
+EM_FR20	fifos/fifos-1/elf.h	164;"	d
+EM_FR20	fifos/memos-2/elf.h	164;"	d
+EM_FR30	fifos/fifos-1/elf.h	210;"	d
+EM_FR30	fifos/memos-2/elf.h	210;"	d
+EM_FX66	fifos/fifos-1/elf.h	192;"	d
+EM_FX66	fifos/memos-2/elf.h	192;"	d
+EM_H8S	fifos/fifos-1/elf.h	175;"	d
+EM_H8S	fifos/memos-2/elf.h	175;"	d
+EM_H8_300	fifos/fifos-1/elf.h	173;"	d
+EM_H8_300	fifos/memos-2/elf.h	173;"	d
+EM_H8_300H	fifos/fifos-1/elf.h	174;"	d
+EM_H8_300H	fifos/memos-2/elf.h	174;"	d
+EM_H8_500	fifos/fifos-1/elf.h	176;"	d
+EM_H8_500	fifos/memos-2/elf.h	176;"	d
+EM_HUANY	fifos/fifos-1/elf.h	207;"	d
+EM_HUANY	fifos/memos-2/elf.h	207;"	d
+EM_IA_64	fifos/fifos-1/elf.h	177;"	d
+EM_IA_64	fifos/memos-2/elf.h	177;"	d
+EM_JAVELIN	fifos/fifos-1/elf.h	203;"	d
+EM_JAVELIN	fifos/memos-2/elf.h	203;"	d
+EM_M32	fifos/fifos-1/elf.h	145;"	d
+EM_M32	fifos/memos-2/elf.h	145;"	d
+EM_M32R	fifos/fifos-1/elf.h	214;"	d
+EM_M32R	fifos/memos-2/elf.h	214;"	d
+EM_ME16	fifos/fifos-1/elf.h	186;"	d
+EM_ME16	fifos/memos-2/elf.h	186;"	d
+EM_MIPS	fifos/fifos-1/elf.h	151;"	d
+EM_MIPS	fifos/memos-2/elf.h	151;"	d
+EM_MIPS_RS3_LE	fifos/fifos-1/elf.h	153;"	d
+EM_MIPS_RS3_LE	fifos/memos-2/elf.h	153;"	d
+EM_MIPS_X	fifos/fifos-1/elf.h	178;"	d
+EM_MIPS_X	fifos/memos-2/elf.h	178;"	d
+EM_MMA	fifos/fifos-1/elf.h	181;"	d
+EM_MMA	fifos/memos-2/elf.h	181;"	d
+EM_MMIX	fifos/fifos-1/elf.h	206;"	d
+EM_MMIX	fifos/memos-2/elf.h	206;"	d
+EM_MN10200	fifos/fifos-1/elf.h	216;"	d
+EM_MN10200	fifos/memos-2/elf.h	216;"	d
+EM_MN10300	fifos/fifos-1/elf.h	215;"	d
+EM_MN10300	fifos/memos-2/elf.h	215;"	d
+EM_NCPU	fifos/fifos-1/elf.h	183;"	d
+EM_NCPU	fifos/memos-2/elf.h	183;"	d
+EM_NDR1	fifos/fifos-1/elf.h	184;"	d
+EM_NDR1	fifos/memos-2/elf.h	184;"	d
+EM_NONE	fifos/fifos-1/elf.h	144;"	d
+EM_NONE	fifos/memos-2/elf.h	144;"	d
+EM_NUM	fifos/fifos-1/elf.h	218;"	d
+EM_NUM	fifos/memos-2/elf.h	218;"	d
+EM_PARISC	fifos/fifos-1/elf.h	155;"	d
+EM_PARISC	fifos/memos-2/elf.h	155;"	d
+EM_PCP	fifos/fifos-1/elf.h	182;"	d
+EM_PCP	fifos/memos-2/elf.h	182;"	d
+EM_PDSP	fifos/fifos-1/elf.h	190;"	d
+EM_PDSP	fifos/memos-2/elf.h	190;"	d
+EM_PJ	fifos/fifos-1/elf.h	217;"	d
+EM_PJ	fifos/memos-2/elf.h	217;"	d
+EM_PPC	fifos/fifos-1/elf.h	159;"	d
+EM_PPC	fifos/memos-2/elf.h	159;"	d
+EM_PPC64	fifos/fifos-1/elf.h	160;"	d
+EM_PPC64	fifos/memos-2/elf.h	160;"	d
+EM_PRISM	fifos/fifos-1/elf.h	208;"	d
+EM_PRISM	fifos/memos-2/elf.h	208;"	d
+EM_RCE	fifos/fifos-1/elf.h	166;"	d
+EM_RCE	fifos/memos-2/elf.h	166;"	d
+EM_RH32	fifos/fifos-1/elf.h	165;"	d
+EM_RH32	fifos/memos-2/elf.h	165;"	d
+EM_S370	fifos/fifos-1/elf.h	152;"	d
+EM_S370	fifos/memos-2/elf.h	152;"	d
+EM_S390	fifos/fifos-1/elf.h	161;"	d
+EM_S390	fifos/memos-2/elf.h	161;"	d
+EM_SH	fifos/fifos-1/elf.h	169;"	d
+EM_SH	fifos/memos-2/elf.h	169;"	d
+EM_SPARC	fifos/fifos-1/elf.h	146;"	d
+EM_SPARC	fifos/memos-2/elf.h	146;"	d
+EM_SPARC32PLUS	fifos/fifos-1/elf.h	157;"	d
+EM_SPARC32PLUS	fifos/memos-2/elf.h	157;"	d
+EM_SPARCV9	fifos/fifos-1/elf.h	170;"	d
+EM_SPARCV9	fifos/memos-2/elf.h	170;"	d
+EM_ST100	fifos/fifos-1/elf.h	187;"	d
+EM_ST100	fifos/memos-2/elf.h	187;"	d
+EM_ST7	fifos/fifos-1/elf.h	194;"	d
+EM_ST7	fifos/memos-2/elf.h	194;"	d
+EM_ST9PLUS	fifos/fifos-1/elf.h	193;"	d
+EM_ST9PLUS	fifos/memos-2/elf.h	193;"	d
+EM_STARCORE	fifos/fifos-1/elf.h	185;"	d
+EM_STARCORE	fifos/memos-2/elf.h	185;"	d
+EM_SVX	fifos/fifos-1/elf.h	199;"	d
+EM_SVX	fifos/memos-2/elf.h	199;"	d
+EM_TINYJ	fifos/fifos-1/elf.h	188;"	d
+EM_TINYJ	fifos/memos-2/elf.h	188;"	d
+EM_TRICORE	fifos/fifos-1/elf.h	171;"	d
+EM_TRICORE	fifos/memos-2/elf.h	171;"	d
+EM_V800	fifos/fifos-1/elf.h	163;"	d
+EM_V800	fifos/memos-2/elf.h	163;"	d
+EM_V850	fifos/fifos-1/elf.h	213;"	d
+EM_V850	fifos/memos-2/elf.h	213;"	d
+EM_VAX	fifos/fifos-1/elf.h	201;"	d
+EM_VAX	fifos/memos-2/elf.h	201;"	d
+EM_VPP500	fifos/fifos-1/elf.h	156;"	d
+EM_VPP500	fifos/memos-2/elf.h	156;"	d
+EM_X86_64	fifos/fifos-1/elf.h	189;"	d
+EM_X86_64	fifos/memos-2/elf.h	189;"	d
+EM_ZSP	fifos/fifos-1/elf.h	205;"	d
+EM_ZSP	fifos/memos-2/elf.h	205;"	d
+ET_CORE	fifos/fifos-1/elf.h	135;"	d
+ET_CORE	fifos/memos-2/elf.h	135;"	d
+ET_DYN	fifos/fifos-1/elf.h	134;"	d
+ET_DYN	fifos/memos-2/elf.h	134;"	d
+ET_EXEC	fifos/fifos-1/elf.h	133;"	d
+ET_EXEC	fifos/memos-2/elf.h	133;"	d
+ET_HIOS	fifos/fifos-1/elf.h	138;"	d
+ET_HIOS	fifos/memos-2/elf.h	138;"	d
+ET_HIPROC	fifos/fifos-1/elf.h	140;"	d
+ET_HIPROC	fifos/memos-2/elf.h	140;"	d
+ET_LOOS	fifos/fifos-1/elf.h	137;"	d
+ET_LOOS	fifos/memos-2/elf.h	137;"	d
+ET_LOPROC	fifos/fifos-1/elf.h	139;"	d
+ET_LOPROC	fifos/memos-2/elf.h	139;"	d
+ET_NONE	fifos/fifos-1/elf.h	131;"	d
+ET_NONE	fifos/memos-2/elf.h	131;"	d
+ET_NUM	fifos/fifos-1/elf.h	136;"	d
+ET_NUM	fifos/memos-2/elf.h	136;"	d
+ET_REL	fifos/fifos-1/elf.h	132;"	d
+ET_REL	fifos/memos-2/elf.h	132;"	d
+EV_CURRENT	fifos/fifos-1/elf.h	229;"	d
+EV_CURRENT	fifos/memos-2/elf.h	229;"	d
+EV_NONE	fifos/fifos-1/elf.h	228;"	d
+EV_NONE	fifos/memos-2/elf.h	228;"	d
+EV_NUM	fifos/fifos-1/elf.h	230;"	d
+EV_NUM	fifos/memos-2/elf.h	230;"	d
+E_MIPS_ARCH_1	fifos/fifos-1/elf.h	1136;"	d
+E_MIPS_ARCH_1	fifos/memos-2/elf.h	1136;"	d
+E_MIPS_ARCH_2	fifos/fifos-1/elf.h	1137;"	d
+E_MIPS_ARCH_2	fifos/memos-2/elf.h	1137;"	d
+E_MIPS_ARCH_3	fifos/fifos-1/elf.h	1138;"	d
+E_MIPS_ARCH_3	fifos/memos-2/elf.h	1138;"	d
+E_MIPS_ARCH_32	fifos/fifos-1/elf.h	1141;"	d
+E_MIPS_ARCH_32	fifos/memos-2/elf.h	1141;"	d
+E_MIPS_ARCH_4	fifos/fifos-1/elf.h	1139;"	d
+E_MIPS_ARCH_4	fifos/memos-2/elf.h	1139;"	d
+E_MIPS_ARCH_5	fifos/fifos-1/elf.h	1140;"	d
+E_MIPS_ARCH_5	fifos/memos-2/elf.h	1140;"	d
+E_MIPS_ARCH_64	fifos/fifos-1/elf.h	1142;"	d
+E_MIPS_ARCH_64	fifos/memos-2/elf.h	1142;"	d
+Elf32_Addr	fifos/fifos-1/elf.h	/^typedef unsigned long Elf32_Addr;$/;"	t
+Elf32_Addr	fifos/memos-2/elf.h	/^typedef unsigned long Elf32_Addr;$/;"	t
+Elf32_Conflict	fifos/fifos-1/elf.h	/^typedef Elf32_Addr Elf32_Conflict;$/;"	t
+Elf32_Conflict	fifos/memos-2/elf.h	/^typedef Elf32_Addr Elf32_Conflict;$/;"	t
+Elf32_Dyn	fifos/fifos-1/elf.h	/^} Elf32_Dyn;$/;"	t	typeref:struct:__anon16
+Elf32_Dyn	fifos/memos-2/elf.h	/^} Elf32_Dyn;$/;"	t	typeref:struct:__anon58
+Elf32_Ehdr	fifos/fifos-1/elf.h	/^} Elf32_Ehdr;$/;"	t	typeref:struct:__anon2
+Elf32_Ehdr	fifos/memos-2/elf.h	/^} Elf32_Ehdr;$/;"	t	typeref:struct:__anon44
+Elf32_Half	fifos/fifos-1/elf.h	/^typedef unsigned short Elf32_Half;$/;"	t
+Elf32_Half	fifos/memos-2/elf.h	/^typedef unsigned short Elf32_Half;$/;"	t
+Elf32_Lib	fifos/fifos-1/elf.h	/^} Elf32_Lib;$/;"	t	typeref:struct:__anon42
+Elf32_Lib	fifos/memos-2/elf.h	/^} Elf32_Lib;$/;"	t	typeref:struct:__anon84
+Elf32_Move	fifos/fifos-1/elf.h	/^} Elf32_Move;$/;"	t	typeref:struct:__anon34
+Elf32_Move	fifos/memos-2/elf.h	/^} Elf32_Move;$/;"	t	typeref:struct:__anon76
+Elf32_Nhdr	fifos/fifos-1/elf.h	/^} Elf32_Nhdr;$/;"	t	typeref:struct:__anon32
+Elf32_Nhdr	fifos/memos-2/elf.h	/^} Elf32_Nhdr;$/;"	t	typeref:struct:__anon74
+Elf32_Off	fifos/fifos-1/elf.h	/^typedef unsigned long Elf32_Off;$/;"	t
+Elf32_Off	fifos/memos-2/elf.h	/^typedef unsigned long Elf32_Off;$/;"	t
+Elf32_Phdr	fifos/fifos-1/elf.h	/^} Elf32_Phdr;$/;"	t	typeref:struct:__anon14
+Elf32_Phdr	fifos/memos-2/elf.h	/^} Elf32_Phdr;$/;"	t	typeref:struct:__anon56
+Elf32_RegInfo	fifos/fifos-1/elf.h	/^} Elf32_RegInfo;$/;"	t	typeref:struct:__anon39
+Elf32_RegInfo	fifos/memos-2/elf.h	/^} Elf32_RegInfo;$/;"	t	typeref:struct:__anon81
+Elf32_Rel	fifos/fifos-1/elf.h	/^} Elf32_Rel;$/;"	t	typeref:struct:__anon10
+Elf32_Rel	fifos/memos-2/elf.h	/^} Elf32_Rel;$/;"	t	typeref:struct:__anon52
+Elf32_Rela	fifos/fifos-1/elf.h	/^} Elf32_Rela;$/;"	t	typeref:struct:__anon12
+Elf32_Rela	fifos/memos-2/elf.h	/^} Elf32_Rela;$/;"	t	typeref:struct:__anon54
+Elf32_Section	fifos/fifos-1/elf.h	/^typedef unsigned short Elf32_Section;$/;"	t
+Elf32_Section	fifos/memos-2/elf.h	/^typedef unsigned short Elf32_Section;$/;"	t
+Elf32_Shdr	fifos/fifos-1/elf.h	/^} Elf32_Shdr;$/;"	t	typeref:struct:__anon4
+Elf32_Shdr	fifos/memos-2/elf.h	/^} Elf32_Shdr;$/;"	t	typeref:struct:__anon46
+Elf32_Sword	fifos/fifos-1/elf.h	/^typedef	long Elf32_Sword;$/;"	t
+Elf32_Sword	fifos/memos-2/elf.h	/^typedef	long Elf32_Sword;$/;"	t
+Elf32_Sxword	fifos/fifos-1/elf.h	/^typedef	long long Elf32_Sxword;$/;"	t
+Elf32_Sxword	fifos/memos-2/elf.h	/^typedef	long long Elf32_Sxword;$/;"	t
+Elf32_Sym	fifos/fifos-1/elf.h	/^} Elf32_Sym;$/;"	t	typeref:struct:__anon6
+Elf32_Sym	fifos/memos-2/elf.h	/^} Elf32_Sym;$/;"	t	typeref:struct:__anon48
+Elf32_Syminfo	fifos/fifos-1/elf.h	/^} Elf32_Syminfo;$/;"	t	typeref:struct:__anon8
+Elf32_Syminfo	fifos/memos-2/elf.h	/^} Elf32_Syminfo;$/;"	t	typeref:struct:__anon50
+Elf32_Verdaux	fifos/fifos-1/elf.h	/^} Elf32_Verdaux;$/;"	t	typeref:struct:__anon22
+Elf32_Verdaux	fifos/memos-2/elf.h	/^} Elf32_Verdaux;$/;"	t	typeref:struct:__anon64
+Elf32_Verdef	fifos/fifos-1/elf.h	/^} Elf32_Verdef;$/;"	t	typeref:struct:__anon20
+Elf32_Verdef	fifos/memos-2/elf.h	/^} Elf32_Verdef;$/;"	t	typeref:struct:__anon62
+Elf32_Vernaux	fifos/fifos-1/elf.h	/^} Elf32_Vernaux;$/;"	t	typeref:struct:__anon26
+Elf32_Vernaux	fifos/memos-2/elf.h	/^} Elf32_Vernaux;$/;"	t	typeref:struct:__anon68
+Elf32_Verneed	fifos/fifos-1/elf.h	/^} Elf32_Verneed;$/;"	t	typeref:struct:__anon24
+Elf32_Verneed	fifos/memos-2/elf.h	/^} Elf32_Verneed;$/;"	t	typeref:struct:__anon66
+Elf32_Versym	fifos/fifos-1/elf.h	/^typedef Elf32_Half Elf32_Versym;$/;"	t
+Elf32_Versym	fifos/memos-2/elf.h	/^typedef Elf32_Half Elf32_Versym;$/;"	t
+Elf32_Word	fifos/fifos-1/elf.h	/^typedef unsigned long Elf32_Word;$/;"	t
+Elf32_Word	fifos/memos-2/elf.h	/^typedef unsigned long Elf32_Word;$/;"	t
+Elf32_Xword	fifos/fifos-1/elf.h	/^typedef unsigned long long Elf32_Xword;$/;"	t
+Elf32_Xword	fifos/memos-2/elf.h	/^typedef unsigned long long Elf32_Xword;$/;"	t
+Elf32_auxv_t	fifos/fifos-1/elf.h	/^} Elf32_auxv_t;$/;"	t	typeref:struct:__anon28
+Elf32_auxv_t	fifos/memos-2/elf.h	/^} Elf32_auxv_t;$/;"	t	typeref:struct:__anon70
+Elf32_gptab	fifos/fifos-1/elf.h	/^} Elf32_gptab;$/;"	t	typeref:union:__anon36
+Elf32_gptab	fifos/memos-2/elf.h	/^} Elf32_gptab;$/;"	t	typeref:union:__anon78
+Elf64_Addr	fifos/fifos-1/elf.h	/^typedef unsigned long long Elf64_Addr;$/;"	t
+Elf64_Addr	fifos/memos-2/elf.h	/^typedef unsigned long long Elf64_Addr;$/;"	t
+Elf64_Dyn	fifos/fifos-1/elf.h	/^} Elf64_Dyn;$/;"	t	typeref:struct:__anon18
+Elf64_Dyn	fifos/memos-2/elf.h	/^} Elf64_Dyn;$/;"	t	typeref:struct:__anon60
+Elf64_Ehdr	fifos/fifos-1/elf.h	/^} Elf64_Ehdr;$/;"	t	typeref:struct:__anon3
+Elf64_Ehdr	fifos/memos-2/elf.h	/^} Elf64_Ehdr;$/;"	t	typeref:struct:__anon45
+Elf64_Half	fifos/fifos-1/elf.h	/^typedef unsigned short Elf64_Half;$/;"	t
+Elf64_Half	fifos/memos-2/elf.h	/^typedef unsigned short Elf64_Half;$/;"	t
+Elf64_Lib	fifos/fifos-1/elf.h	/^} Elf64_Lib;$/;"	t	typeref:struct:__anon43
+Elf64_Lib	fifos/memos-2/elf.h	/^} Elf64_Lib;$/;"	t	typeref:struct:__anon85
+Elf64_Move	fifos/fifos-1/elf.h	/^} Elf64_Move;$/;"	t	typeref:struct:__anon35
+Elf64_Move	fifos/memos-2/elf.h	/^} Elf64_Move;$/;"	t	typeref:struct:__anon77
+Elf64_Nhdr	fifos/fifos-1/elf.h	/^} Elf64_Nhdr;$/;"	t	typeref:struct:__anon33
+Elf64_Nhdr	fifos/memos-2/elf.h	/^} Elf64_Nhdr;$/;"	t	typeref:struct:__anon75
+Elf64_Off	fifos/fifos-1/elf.h	/^typedef unsigned long long Elf64_Off;$/;"	t
+Elf64_Off	fifos/memos-2/elf.h	/^typedef unsigned long long Elf64_Off;$/;"	t
+Elf64_Phdr	fifos/fifos-1/elf.h	/^} Elf64_Phdr;$/;"	t	typeref:struct:__anon15
+Elf64_Phdr	fifos/memos-2/elf.h	/^} Elf64_Phdr;$/;"	t	typeref:struct:__anon57
+Elf64_Rel	fifos/fifos-1/elf.h	/^} Elf64_Rel;$/;"	t	typeref:struct:__anon11
+Elf64_Rel	fifos/memos-2/elf.h	/^} Elf64_Rel;$/;"	t	typeref:struct:__anon53
+Elf64_Rela	fifos/fifos-1/elf.h	/^} Elf64_Rela;$/;"	t	typeref:struct:__anon13
+Elf64_Rela	fifos/memos-2/elf.h	/^} Elf64_Rela;$/;"	t	typeref:struct:__anon55
+Elf64_Section	fifos/fifos-1/elf.h	/^typedef unsigned short Elf64_Section;$/;"	t
+Elf64_Section	fifos/memos-2/elf.h	/^typedef unsigned short Elf64_Section;$/;"	t
+Elf64_Shdr	fifos/fifos-1/elf.h	/^} Elf64_Shdr;$/;"	t	typeref:struct:__anon5
+Elf64_Shdr	fifos/memos-2/elf.h	/^} Elf64_Shdr;$/;"	t	typeref:struct:__anon47
+Elf64_Sword	fifos/fifos-1/elf.h	/^typedef	long Elf64_Sword;$/;"	t
+Elf64_Sword	fifos/memos-2/elf.h	/^typedef	long Elf64_Sword;$/;"	t
+Elf64_Sxword	fifos/fifos-1/elf.h	/^typedef	long long Elf64_Sxword;$/;"	t
+Elf64_Sxword	fifos/memos-2/elf.h	/^typedef	long long Elf64_Sxword;$/;"	t
+Elf64_Sym	fifos/fifos-1/elf.h	/^} Elf64_Sym;$/;"	t	typeref:struct:__anon7
+Elf64_Sym	fifos/memos-2/elf.h	/^} Elf64_Sym;$/;"	t	typeref:struct:__anon49
+Elf64_Syminfo	fifos/fifos-1/elf.h	/^} Elf64_Syminfo;$/;"	t	typeref:struct:__anon9
+Elf64_Syminfo	fifos/memos-2/elf.h	/^} Elf64_Syminfo;$/;"	t	typeref:struct:__anon51
+Elf64_Verdaux	fifos/fifos-1/elf.h	/^} Elf64_Verdaux;$/;"	t	typeref:struct:__anon23
+Elf64_Verdaux	fifos/memos-2/elf.h	/^} Elf64_Verdaux;$/;"	t	typeref:struct:__anon65
+Elf64_Verdef	fifos/fifos-1/elf.h	/^} Elf64_Verdef;$/;"	t	typeref:struct:__anon21
+Elf64_Verdef	fifos/memos-2/elf.h	/^} Elf64_Verdef;$/;"	t	typeref:struct:__anon63
+Elf64_Vernaux	fifos/fifos-1/elf.h	/^} Elf64_Vernaux;$/;"	t	typeref:struct:__anon27
+Elf64_Vernaux	fifos/memos-2/elf.h	/^} Elf64_Vernaux;$/;"	t	typeref:struct:__anon69
+Elf64_Verneed	fifos/fifos-1/elf.h	/^} Elf64_Verneed;$/;"	t	typeref:struct:__anon25
+Elf64_Verneed	fifos/memos-2/elf.h	/^} Elf64_Verneed;$/;"	t	typeref:struct:__anon67
+Elf64_Versym	fifos/fifos-1/elf.h	/^typedef Elf64_Half Elf64_Versym;$/;"	t
+Elf64_Versym	fifos/memos-2/elf.h	/^typedef Elf64_Half Elf64_Versym;$/;"	t
+Elf64_Word	fifos/fifos-1/elf.h	/^typedef unsigned long Elf64_Word;$/;"	t
+Elf64_Word	fifos/memos-2/elf.h	/^typedef unsigned long Elf64_Word;$/;"	t
+Elf64_Xword	fifos/fifos-1/elf.h	/^typedef unsigned long long Elf64_Xword;$/;"	t
+Elf64_Xword	fifos/memos-2/elf.h	/^typedef unsigned long long Elf64_Xword;$/;"	t
+Elf64_auxv_t	fifos/fifos-1/elf.h	/^} Elf64_auxv_t;$/;"	t	typeref:struct:__anon30
+Elf64_auxv_t	fifos/memos-2/elf.h	/^} Elf64_auxv_t;$/;"	t	typeref:struct:__anon72
+Elf_Options	fifos/fifos-1/elf.h	/^} Elf_Options;$/;"	t	typeref:struct:__anon40
+Elf_Options	fifos/memos-2/elf.h	/^} Elf_Options;$/;"	t	typeref:struct:__anon82
+Elf_Options_Hw	fifos/fifos-1/elf.h	/^} Elf_Options_Hw;$/;"	t	typeref:struct:__anon41
+Elf_Options_Hw	fifos/memos-2/elf.h	/^} Elf_Options_Hw;$/;"	t	typeref:struct:__anon83
+FALSE	fifos/fifos-1/coroutine.c	/^  FALSE,$/;"	e	enum:__anon1	file:
+FALSE	fifos/fifos-1/types.h	1;"	d
+FALSE	fifos/memos-2/init.c	/^	FALSE,$/;"	e	enum:__anon86	file:
+FALSE	fifos/memos-2/types.h	1;"	d
+GRP_COMDAT	fifos/fifos-1/elf.h	326;"	d
+GRP_COMDAT	fifos/memos-2/elf.h	326;"	d
+HWCAP_SPARC_FLUSH	fifos/fifos-1/elf.h	1104;"	d
+HWCAP_SPARC_FLUSH	fifos/memos-2/elf.h	1104;"	d
+HWCAP_SPARC_MULDIV	fifos/fifos-1/elf.h	1107;"	d
+HWCAP_SPARC_MULDIV	fifos/memos-2/elf.h	1107;"	d
+HWCAP_SPARC_STBAR	fifos/fifos-1/elf.h	1105;"	d
+HWCAP_SPARC_STBAR	fifos/memos-2/elf.h	1105;"	d
+HWCAP_SPARC_SWAP	fifos/fifos-1/elf.h	1106;"	d
+HWCAP_SPARC_SWAP	fifos/memos-2/elf.h	1106;"	d
+HWCAP_SPARC_ULTRA3	fifos/fifos-1/elf.h	1109;"	d
+HWCAP_SPARC_ULTRA3	fifos/memos-2/elf.h	1109;"	d
+HWCAP_SPARC_V9	fifos/fifos-1/elf.h	1108;"	d
+HWCAP_SPARC_V9	fifos/memos-2/elf.h	1108;"	d
+IOCTL_TEST	primer/ioctl_module.c	22;"	d	file:
+IOCTL_TEST	primer/ioctl_test.c	5;"	d	file:
+LL_DELAY_LOAD	fifos/fifos-1/elf.h	1461;"	d
+LL_DELAY_LOAD	fifos/memos-2/elf.h	1461;"	d
+LL_DELTA	fifos/fifos-1/elf.h	1462;"	d
+LL_DELTA	fifos/memos-2/elf.h	1462;"	d
+LL_EXACT_MATCH	fifos/fifos-1/elf.h	1457;"	d
+LL_EXACT_MATCH	fifos/memos-2/elf.h	1457;"	d
+LL_EXPORTS	fifos/fifos-1/elf.h	1460;"	d
+LL_EXPORTS	fifos/memos-2/elf.h	1460;"	d
+LL_IGNORE_INT_VER	fifos/fifos-1/elf.h	1458;"	d
+LL_IGNORE_INT_VER	fifos/memos-2/elf.h	1458;"	d
+LL_NONE	fifos/fifos-1/elf.h	1456;"	d
+LL_NONE	fifos/memos-2/elf.h	1456;"	d
+LL_REQUIRE_MINOR	fifos/fifos-1/elf.h	1459;"	d
+LL_REQUIRE_MINOR	fifos/memos-2/elf.h	1459;"	d
+MAX_THREADS	fifos/fifos-1/coroutine.c	20;"	d	file:
+MAX_THREADS	fifos/fifos-1/fifos.c	21;"	d	file:
+MAX_THREADS	fifos/fifos-1/init.c	31;"	d	file:
+MAX_THREADS	fifos/memos-2/init.c	31;"	d	file:
+MNT_POINT	fifos/fifos-1/Makefile	/^MNT_POINT=\/mnt\/$/;"	m
+MNT_POINT	fifos/memos-2/Makefile	/^MNT_POINT=\/mnt\/$/;"	m
+NT_AUXV	fifos/fifos-1/elf.h	545;"	d
+NT_AUXV	fifos/memos-2/elf.h	545;"	d
+NT_FPREGSET	fifos/fifos-1/elf.h	541;"	d
+NT_FPREGSET	fifos/memos-2/elf.h	541;"	d
+NT_GWINDOWS	fifos/fifos-1/elf.h	546;"	d
+NT_GWINDOWS	fifos/memos-2/elf.h	546;"	d
+NT_LWPSINFO	fifos/fifos-1/elf.h	552;"	d
+NT_LWPSINFO	fifos/memos-2/elf.h	552;"	d
+NT_LWPSTATUS	fifos/fifos-1/elf.h	551;"	d
+NT_LWPSTATUS	fifos/memos-2/elf.h	551;"	d
+NT_PLATFORM	fifos/fifos-1/elf.h	544;"	d
+NT_PLATFORM	fifos/memos-2/elf.h	544;"	d
+NT_PRCRED	fifos/fifos-1/elf.h	549;"	d
+NT_PRCRED	fifos/memos-2/elf.h	549;"	d
+NT_PRFPXREG	fifos/fifos-1/elf.h	553;"	d
+NT_PRFPXREG	fifos/memos-2/elf.h	553;"	d
+NT_PRPSINFO	fifos/fifos-1/elf.h	542;"	d
+NT_PRPSINFO	fifos/memos-2/elf.h	542;"	d
+NT_PRSTATUS	fifos/fifos-1/elf.h	540;"	d
+NT_PRSTATUS	fifos/memos-2/elf.h	540;"	d
+NT_PRXREG	fifos/fifos-1/elf.h	543;"	d
+NT_PRXREG	fifos/memos-2/elf.h	543;"	d
+NT_PSINFO	fifos/fifos-1/elf.h	548;"	d
+NT_PSINFO	fifos/memos-2/elf.h	548;"	d
+NT_PSTATUS	fifos/fifos-1/elf.h	547;"	d
+NT_PSTATUS	fifos/memos-2/elf.h	547;"	d
+NT_UTSNAME	fifos/fifos-1/elf.h	550;"	d
+NT_UTSNAME	fifos/memos-2/elf.h	550;"	d
+NT_VERSION	fifos/fifos-1/elf.h	557;"	d
+NT_VERSION	fifos/memos-2/elf.h	557;"	d
+OBJS	fifos/fifos-1/Makefile	/^OBJS = boot.o fifos.o $/;"	m
+OBJS	fifos/memos-2/Makefile	/^OBJS = boot.o init.o $/;"	m
+ODK_EXCEPTIONS	fifos/fifos-1/elf.h	1259;"	d
+ODK_EXCEPTIONS	fifos/memos-2/elf.h	1259;"	d
+ODK_FILL	fifos/fifos-1/elf.h	1262;"	d
+ODK_FILL	fifos/memos-2/elf.h	1262;"	d
+ODK_HWAND	fifos/fifos-1/elf.h	1264;"	d
+ODK_HWAND	fifos/memos-2/elf.h	1264;"	d
+ODK_HWOR	fifos/fifos-1/elf.h	1265;"	d
+ODK_HWOR	fifos/memos-2/elf.h	1265;"	d
+ODK_HWPATCH	fifos/fifos-1/elf.h	1261;"	d
+ODK_HWPATCH	fifos/memos-2/elf.h	1261;"	d
+ODK_NULL	fifos/fifos-1/elf.h	1257;"	d
+ODK_NULL	fifos/memos-2/elf.h	1257;"	d
+ODK_PAD	fifos/fifos-1/elf.h	1260;"	d
+ODK_PAD	fifos/memos-2/elf.h	1260;"	d
+ODK_REGINFO	fifos/fifos-1/elf.h	1258;"	d
+ODK_REGINFO	fifos/memos-2/elf.h	1258;"	d
+ODK_TAGS	fifos/fifos-1/elf.h	1263;"	d
+ODK_TAGS	fifos/memos-2/elf.h	1263;"	d
+OEX_DISMISS	fifos/fifos-1/elf.h	1275;"	d
+OEX_DISMISS	fifos/memos-2/elf.h	1275;"	d
+OEX_FPDBUG	fifos/fifos-1/elf.h	1273;"	d
+OEX_FPDBUG	fifos/memos-2/elf.h	1273;"	d
+OEX_FPU_DIV0	fifos/fifos-1/elf.h	1278;"	d
+OEX_FPU_DIV0	fifos/memos-2/elf.h	1278;"	d
+OEX_FPU_INEX	fifos/fifos-1/elf.h	1281;"	d
+OEX_FPU_INEX	fifos/memos-2/elf.h	1281;"	d
+OEX_FPU_INVAL	fifos/fifos-1/elf.h	1277;"	d
+OEX_FPU_INVAL	fifos/memos-2/elf.h	1277;"	d
+OEX_FPU_MAX	fifos/fifos-1/elf.h	1270;"	d
+OEX_FPU_MAX	fifos/memos-2/elf.h	1270;"	d
+OEX_FPU_MIN	fifos/fifos-1/elf.h	1269;"	d
+OEX_FPU_MIN	fifos/memos-2/elf.h	1269;"	d
+OEX_FPU_OFLO	fifos/fifos-1/elf.h	1279;"	d
+OEX_FPU_OFLO	fifos/memos-2/elf.h	1279;"	d
+OEX_FPU_UFLO	fifos/fifos-1/elf.h	1280;"	d
+OEX_FPU_UFLO	fifos/memos-2/elf.h	1280;"	d
+OEX_PAGE0	fifos/fifos-1/elf.h	1271;"	d
+OEX_PAGE0	fifos/memos-2/elf.h	1271;"	d
+OEX_PRECISEFP	fifos/fifos-1/elf.h	1274;"	d
+OEX_PRECISEFP	fifos/memos-2/elf.h	1274;"	d
+OEX_SMM	fifos/fifos-1/elf.h	1272;"	d
+OEX_SMM	fifos/memos-2/elf.h	1272;"	d
+OHWA0_R4KEOP_CHECKED	fifos/fifos-1/elf.h	1304;"	d
+OHWA0_R4KEOP_CHECKED	fifos/memos-2/elf.h	1304;"	d
+OHWA1_R4KEOP_CLEAN	fifos/fifos-1/elf.h	1305;"	d
+OHWA1_R4KEOP_CLEAN	fifos/memos-2/elf.h	1305;"	d
+OHW_R4KEOP	fifos/fifos-1/elf.h	1285;"	d
+OHW_R4KEOP	fifos/memos-2/elf.h	1285;"	d
+OHW_R5KCVTL	fifos/fifos-1/elf.h	1288;"	d
+OHW_R5KCVTL	fifos/memos-2/elf.h	1288;"	d
+OHW_R5KEOP	fifos/fifos-1/elf.h	1287;"	d
+OHW_R5KEOP	fifos/memos-2/elf.h	1287;"	d
+OHW_R8KPFETCH	fifos/fifos-1/elf.h	1286;"	d
+OHW_R8KPFETCH	fifos/memos-2/elf.h	1286;"	d
+OPAD_POSTFIX	fifos/fifos-1/elf.h	1291;"	d
+OPAD_POSTFIX	fifos/memos-2/elf.h	1291;"	d
+OPAD_PREFIX	fifos/fifos-1/elf.h	1290;"	d
+OPAD_PREFIX	fifos/memos-2/elf.h	1290;"	d
+OPAD_SYMBOL	fifos/fifos-1/elf.h	1292;"	d
+OPAD_SYMBOL	fifos/memos-2/elf.h	1292;"	d
+PCB	fifos/fifos-1/thread.c	/^} __attribute__((packed)) PCB;$/;"	t	typeref:struct:_PCB	file:
+PF_ARM_SB	fifos/fifos-1/elf.h	1810;"	d
+PF_ARM_SB	fifos/memos-2/elf.h	1810;"	d
+PF_HP_CODE	fifos/fifos-1/elf.h	1632;"	d
+PF_HP_CODE	fifos/memos-2/elf.h	1632;"	d
+PF_HP_FAR_SHARED	fifos/fifos-1/elf.h	1630;"	d
+PF_HP_FAR_SHARED	fifos/memos-2/elf.h	1630;"	d
+PF_HP_LAZYSWAP	fifos/fifos-1/elf.h	1634;"	d
+PF_HP_LAZYSWAP	fifos/memos-2/elf.h	1634;"	d
+PF_HP_MODIFY	fifos/fifos-1/elf.h	1633;"	d
+PF_HP_MODIFY	fifos/memos-2/elf.h	1633;"	d
+PF_HP_NEAR_SHARED	fifos/fifos-1/elf.h	1631;"	d
+PF_HP_NEAR_SHARED	fifos/memos-2/elf.h	1631;"	d
+PF_HP_PAGE_SIZE	fifos/fifos-1/elf.h	1629;"	d
+PF_HP_PAGE_SIZE	fifos/memos-2/elf.h	1629;"	d
+PF_HP_SBP	fifos/fifos-1/elf.h	1635;"	d
+PF_HP_SBP	fifos/memos-2/elf.h	1635;"	d
+PF_IA_64_NORECOV	fifos/fifos-1/elf.h	1871;"	d
+PF_IA_64_NORECOV	fifos/memos-2/elf.h	1871;"	d
+PF_MASKOS	fifos/fifos-1/elf.h	535;"	d
+PF_MASKOS	fifos/memos-2/elf.h	535;"	d
+PF_MASKPROC	fifos/fifos-1/elf.h	536;"	d
+PF_MASKPROC	fifos/memos-2/elf.h	536;"	d
+PF_MIPS_LOCAL	fifos/fifos-1/elf.h	1356;"	d
+PF_MIPS_LOCAL	fifos/memos-2/elf.h	1356;"	d
+PF_PARISC_SBP	fifos/fifos-1/elf.h	1627;"	d
+PF_PARISC_SBP	fifos/memos-2/elf.h	1627;"	d
+PF_R	fifos/fifos-1/elf.h	534;"	d
+PF_R	fifos/memos-2/elf.h	534;"	d
+PF_W	fifos/fifos-1/elf.h	533;"	d
+PF_W	fifos/memos-2/elf.h	533;"	d
+PF_X	fifos/fifos-1/elf.h	532;"	d
+PF_X	fifos/memos-2/elf.h	532;"	d
+PROGS	fifos/fifos-1/Makefile	/^PROGS = fifos-1$/;"	m
+PROGS	fifos/memos-2/Makefile	/^PROGS = memos-2$/;"	m
+PT_DYNAMIC	fifos/fifos-1/elf.h	519;"	d
+PT_DYNAMIC	fifos/memos-2/elf.h	519;"	d
+PT_HIOS	fifos/fifos-1/elf.h	526;"	d
+PT_HIOS	fifos/memos-2/elf.h	526;"	d
+PT_HIPROC	fifos/fifos-1/elf.h	528;"	d
+PT_HIPROC	fifos/memos-2/elf.h	528;"	d
+PT_HP_CORE_COMM	fifos/fifos-1/elf.h	1610;"	d
+PT_HP_CORE_COMM	fifos/memos-2/elf.h	1610;"	d
+PT_HP_CORE_KERNEL	fifos/fifos-1/elf.h	1609;"	d
+PT_HP_CORE_KERNEL	fifos/memos-2/elf.h	1609;"	d
+PT_HP_CORE_LOADABLE	fifos/fifos-1/elf.h	1612;"	d
+PT_HP_CORE_LOADABLE	fifos/memos-2/elf.h	1612;"	d
+PT_HP_CORE_MMF	fifos/fifos-1/elf.h	1615;"	d
+PT_HP_CORE_MMF	fifos/memos-2/elf.h	1615;"	d
+PT_HP_CORE_NONE	fifos/fifos-1/elf.h	1607;"	d
+PT_HP_CORE_NONE	fifos/memos-2/elf.h	1607;"	d
+PT_HP_CORE_PROC	fifos/fifos-1/elf.h	1611;"	d
+PT_HP_CORE_PROC	fifos/memos-2/elf.h	1611;"	d
+PT_HP_CORE_SHM	fifos/fifos-1/elf.h	1614;"	d
+PT_HP_CORE_SHM	fifos/memos-2/elf.h	1614;"	d
+PT_HP_CORE_STACK	fifos/fifos-1/elf.h	1613;"	d
+PT_HP_CORE_STACK	fifos/memos-2/elf.h	1613;"	d
+PT_HP_CORE_VERSION	fifos/fifos-1/elf.h	1608;"	d
+PT_HP_CORE_VERSION	fifos/memos-2/elf.h	1608;"	d
+PT_HP_FASTBIND	fifos/fifos-1/elf.h	1617;"	d
+PT_HP_FASTBIND	fifos/memos-2/elf.h	1617;"	d
+PT_HP_HSL_ANNOT	fifos/fifos-1/elf.h	1619;"	d
+PT_HP_HSL_ANNOT	fifos/memos-2/elf.h	1619;"	d
+PT_HP_OPT_ANNOT	fifos/fifos-1/elf.h	1618;"	d
+PT_HP_OPT_ANNOT	fifos/memos-2/elf.h	1618;"	d
+PT_HP_PARALLEL	fifos/fifos-1/elf.h	1616;"	d
+PT_HP_PARALLEL	fifos/memos-2/elf.h	1616;"	d
+PT_HP_STACK	fifos/fifos-1/elf.h	1620;"	d
+PT_HP_STACK	fifos/memos-2/elf.h	1620;"	d
+PT_HP_TLS	fifos/fifos-1/elf.h	1606;"	d
+PT_HP_TLS	fifos/memos-2/elf.h	1606;"	d
+PT_IA_64_ARCHEXT	fifos/fifos-1/elf.h	1867;"	d
+PT_IA_64_ARCHEXT	fifos/memos-2/elf.h	1867;"	d
+PT_IA_64_UNWIND	fifos/fifos-1/elf.h	1868;"	d
+PT_IA_64_UNWIND	fifos/memos-2/elf.h	1868;"	d
+PT_INTERP	fifos/fifos-1/elf.h	520;"	d
+PT_INTERP	fifos/memos-2/elf.h	520;"	d
+PT_LOAD	fifos/fifos-1/elf.h	518;"	d
+PT_LOAD	fifos/memos-2/elf.h	518;"	d
+PT_LOOS	fifos/fifos-1/elf.h	525;"	d
+PT_LOOS	fifos/memos-2/elf.h	525;"	d
+PT_LOPROC	fifos/fifos-1/elf.h	527;"	d
+PT_LOPROC	fifos/memos-2/elf.h	527;"	d
+PT_MIPS_OPTIONS	fifos/fifos-1/elf.h	1352;"	d
+PT_MIPS_OPTIONS	fifos/memos-2/elf.h	1352;"	d
+PT_MIPS_REGINFO	fifos/fifos-1/elf.h	1350;"	d
+PT_MIPS_REGINFO	fifos/memos-2/elf.h	1350;"	d
+PT_MIPS_RTPROC	fifos/fifos-1/elf.h	1351;"	d
+PT_MIPS_RTPROC	fifos/memos-2/elf.h	1351;"	d
+PT_NOTE	fifos/fifos-1/elf.h	521;"	d
+PT_NOTE	fifos/memos-2/elf.h	521;"	d
+PT_NULL	fifos/fifos-1/elf.h	517;"	d
+PT_NULL	fifos/memos-2/elf.h	517;"	d
+PT_NUM	fifos/fifos-1/elf.h	524;"	d
+PT_NUM	fifos/memos-2/elf.h	524;"	d
+PT_PARISC_ARCHEXT	fifos/fifos-1/elf.h	1622;"	d
+PT_PARISC_ARCHEXT	fifos/memos-2/elf.h	1622;"	d
+PT_PARISC_UNWIND	fifos/fifos-1/elf.h	1623;"	d
+PT_PARISC_UNWIND	fifos/memos-2/elf.h	1623;"	d
+PT_PHDR	fifos/fifos-1/elf.h	523;"	d
+PT_PHDR	fifos/memos-2/elf.h	523;"	d
+PT_SHLIB	fifos/fifos-1/elf.h	522;"	d
+PT_SHLIB	fifos/memos-2/elf.h	522;"	d
+RHF_CORD	fifos/fifos-1/elf.h	1429;"	d
+RHF_CORD	fifos/memos-2/elf.h	1429;"	d
+RHF_DEFAULT_DELAY_LOAD	fifos/fifos-1/elf.h	1426;"	d
+RHF_DEFAULT_DELAY_LOAD	fifos/memos-2/elf.h	1426;"	d
+RHF_DELTA_C_PLUS_PLUS	fifos/fifos-1/elf.h	1423;"	d
+RHF_DELTA_C_PLUS_PLUS	fifos/memos-2/elf.h	1423;"	d
+RHF_GUARANTEE_INIT	fifos/fifos-1/elf.h	1422;"	d
+RHF_GUARANTEE_INIT	fifos/memos-2/elf.h	1422;"	d
+RHF_GUARANTEE_START_INIT	fifos/fifos-1/elf.h	1424;"	d
+RHF_GUARANTEE_START_INIT	fifos/memos-2/elf.h	1424;"	d
+RHF_NONE	fifos/fifos-1/elf.h	1416;"	d
+RHF_NONE	fifos/memos-2/elf.h	1416;"	d
+RHF_NOTPOT	fifos/fifos-1/elf.h	1418;"	d
+RHF_NOTPOT	fifos/memos-2/elf.h	1418;"	d
+RHF_NO_LIBRARY_REPLACEMENT	fifos/fifos-1/elf.h	1419;"	d
+RHF_NO_LIBRARY_REPLACEMENT	fifos/memos-2/elf.h	1419;"	d
+RHF_NO_MOVE	fifos/fifos-1/elf.h	1420;"	d
+RHF_NO_MOVE	fifos/memos-2/elf.h	1420;"	d
+RHF_NO_UNRES_UNDEF	fifos/fifos-1/elf.h	1430;"	d
+RHF_NO_UNRES_UNDEF	fifos/memos-2/elf.h	1430;"	d
+RHF_PIXIE	fifos/fifos-1/elf.h	1425;"	d
+RHF_PIXIE	fifos/memos-2/elf.h	1425;"	d
+RHF_QUICKSTART	fifos/fifos-1/elf.h	1417;"	d
+RHF_QUICKSTART	fifos/memos-2/elf.h	1417;"	d
+RHF_REQUICKSTART	fifos/fifos-1/elf.h	1427;"	d
+RHF_REQUICKSTART	fifos/memos-2/elf.h	1427;"	d
+RHF_REQUICKSTARTED	fifos/fifos-1/elf.h	1428;"	d
+RHF_REQUICKSTARTED	fifos/memos-2/elf.h	1428;"	d
+RHF_RLD_ORDER_SAFE	fifos/fifos-1/elf.h	1431;"	d
+RHF_RLD_ORDER_SAFE	fifos/memos-2/elf.h	1431;"	d
+RHF_SGI_ONLY	fifos/fifos-1/elf.h	1421;"	d
+RHF_SGI_ONLY	fifos/memos-2/elf.h	1421;"	d
+R_386_32	fifos/fifos-1/elf.h	1002;"	d
+R_386_32	fifos/memos-2/elf.h	1002;"	d
+R_386_COPY	fifos/fifos-1/elf.h	1006;"	d
+R_386_COPY	fifos/memos-2/elf.h	1006;"	d
+R_386_GLOB_DAT	fifos/fifos-1/elf.h	1007;"	d
+R_386_GLOB_DAT	fifos/memos-2/elf.h	1007;"	d
+R_386_GOT32	fifos/fifos-1/elf.h	1004;"	d
+R_386_GOT32	fifos/memos-2/elf.h	1004;"	d
+R_386_GOTOFF	fifos/fifos-1/elf.h	1010;"	d
+R_386_GOTOFF	fifos/memos-2/elf.h	1010;"	d
+R_386_GOTPC	fifos/fifos-1/elf.h	1011;"	d
+R_386_GOTPC	fifos/memos-2/elf.h	1011;"	d
+R_386_JMP_SLOT	fifos/fifos-1/elf.h	1008;"	d
+R_386_JMP_SLOT	fifos/memos-2/elf.h	1008;"	d
+R_386_NONE	fifos/fifos-1/elf.h	1001;"	d
+R_386_NONE	fifos/memos-2/elf.h	1001;"	d
+R_386_NUM	fifos/fifos-1/elf.h	1013;"	d
+R_386_NUM	fifos/memos-2/elf.h	1013;"	d
+R_386_PC32	fifos/fifos-1/elf.h	1003;"	d
+R_386_PC32	fifos/memos-2/elf.h	1003;"	d
+R_386_PLT32	fifos/fifos-1/elf.h	1005;"	d
+R_386_PLT32	fifos/memos-2/elf.h	1005;"	d
+R_386_RELATIVE	fifos/fifos-1/elf.h	1009;"	d
+R_386_RELATIVE	fifos/memos-2/elf.h	1009;"	d
+R_390_12	fifos/fifos-1/elf.h	2007;"	d
+R_390_12	fifos/memos-2/elf.h	2007;"	d
+R_390_16	fifos/fifos-1/elf.h	2008;"	d
+R_390_16	fifos/memos-2/elf.h	2008;"	d
+R_390_32	fifos/fifos-1/elf.h	2009;"	d
+R_390_32	fifos/memos-2/elf.h	2009;"	d
+R_390_64	fifos/fifos-1/elf.h	2027;"	d
+R_390_64	fifos/memos-2/elf.h	2027;"	d
+R_390_8	fifos/fifos-1/elf.h	2006;"	d
+R_390_8	fifos/memos-2/elf.h	2006;"	d
+R_390_COPY	fifos/fifos-1/elf.h	2014;"	d
+R_390_COPY	fifos/memos-2/elf.h	2014;"	d
+R_390_GLOB_DAT	fifos/fifos-1/elf.h	2015;"	d
+R_390_GLOB_DAT	fifos/memos-2/elf.h	2015;"	d
+R_390_GOT12	fifos/fifos-1/elf.h	2011;"	d
+R_390_GOT12	fifos/memos-2/elf.h	2011;"	d
+R_390_GOT16	fifos/fifos-1/elf.h	2020;"	d
+R_390_GOT16	fifos/memos-2/elf.h	2020;"	d
+R_390_GOT32	fifos/fifos-1/elf.h	2012;"	d
+R_390_GOT32	fifos/memos-2/elf.h	2012;"	d
+R_390_GOT64	fifos/fifos-1/elf.h	2029;"	d
+R_390_GOT64	fifos/memos-2/elf.h	2029;"	d
+R_390_GOTENT	fifos/fifos-1/elf.h	2031;"	d
+R_390_GOTENT	fifos/memos-2/elf.h	2031;"	d
+R_390_GOTOFF	fifos/fifos-1/elf.h	2018;"	d
+R_390_GOTOFF	fifos/memos-2/elf.h	2018;"	d
+R_390_GOTPC	fifos/fifos-1/elf.h	2019;"	d
+R_390_GOTPC	fifos/memos-2/elf.h	2019;"	d
+R_390_GOTPCDBL	fifos/fifos-1/elf.h	2026;"	d
+R_390_GOTPCDBL	fifos/memos-2/elf.h	2026;"	d
+R_390_JMP_SLOT	fifos/fifos-1/elf.h	2016;"	d
+R_390_JMP_SLOT	fifos/memos-2/elf.h	2016;"	d
+R_390_NONE	fifos/fifos-1/elf.h	2005;"	d
+R_390_NONE	fifos/memos-2/elf.h	2005;"	d
+R_390_NUM	fifos/fifos-1/elf.h	2034;"	d
+R_390_NUM	fifos/memos-2/elf.h	2034;"	d
+R_390_PC16	fifos/fifos-1/elf.h	2021;"	d
+R_390_PC16	fifos/memos-2/elf.h	2021;"	d
+R_390_PC16DBL	fifos/fifos-1/elf.h	2022;"	d
+R_390_PC16DBL	fifos/memos-2/elf.h	2022;"	d
+R_390_PC32	fifos/fifos-1/elf.h	2010;"	d
+R_390_PC32	fifos/memos-2/elf.h	2010;"	d
+R_390_PC32DBL	fifos/fifos-1/elf.h	2024;"	d
+R_390_PC32DBL	fifos/memos-2/elf.h	2024;"	d
+R_390_PC64	fifos/fifos-1/elf.h	2028;"	d
+R_390_PC64	fifos/memos-2/elf.h	2028;"	d
+R_390_PLT16DBL	fifos/fifos-1/elf.h	2023;"	d
+R_390_PLT16DBL	fifos/memos-2/elf.h	2023;"	d
+R_390_PLT32	fifos/fifos-1/elf.h	2013;"	d
+R_390_PLT32	fifos/memos-2/elf.h	2013;"	d
+R_390_PLT32DBL	fifos/fifos-1/elf.h	2025;"	d
+R_390_PLT32DBL	fifos/memos-2/elf.h	2025;"	d
+R_390_PLT64	fifos/fifos-1/elf.h	2030;"	d
+R_390_PLT64	fifos/memos-2/elf.h	2030;"	d
+R_390_RELATIVE	fifos/fifos-1/elf.h	2017;"	d
+R_390_RELATIVE	fifos/memos-2/elf.h	2017;"	d
+R_68K_16	fifos/fifos-1/elf.h	973;"	d
+R_68K_16	fifos/memos-2/elf.h	973;"	d
+R_68K_32	fifos/fifos-1/elf.h	972;"	d
+R_68K_32	fifos/memos-2/elf.h	972;"	d
+R_68K_8	fifos/fifos-1/elf.h	974;"	d
+R_68K_8	fifos/memos-2/elf.h	974;"	d
+R_68K_COPY	fifos/fifos-1/elf.h	990;"	d
+R_68K_COPY	fifos/memos-2/elf.h	990;"	d
+R_68K_GLOB_DAT	fifos/fifos-1/elf.h	991;"	d
+R_68K_GLOB_DAT	fifos/memos-2/elf.h	991;"	d
+R_68K_GOT16	fifos/fifos-1/elf.h	979;"	d
+R_68K_GOT16	fifos/memos-2/elf.h	979;"	d
+R_68K_GOT16O	fifos/fifos-1/elf.h	982;"	d
+R_68K_GOT16O	fifos/memos-2/elf.h	982;"	d
+R_68K_GOT32	fifos/fifos-1/elf.h	978;"	d
+R_68K_GOT32	fifos/memos-2/elf.h	978;"	d
+R_68K_GOT32O	fifos/fifos-1/elf.h	981;"	d
+R_68K_GOT32O	fifos/memos-2/elf.h	981;"	d
+R_68K_GOT8	fifos/fifos-1/elf.h	980;"	d
+R_68K_GOT8	fifos/memos-2/elf.h	980;"	d
+R_68K_GOT8O	fifos/fifos-1/elf.h	983;"	d
+R_68K_GOT8O	fifos/memos-2/elf.h	983;"	d
+R_68K_JMP_SLOT	fifos/fifos-1/elf.h	992;"	d
+R_68K_JMP_SLOT	fifos/memos-2/elf.h	992;"	d
+R_68K_NONE	fifos/fifos-1/elf.h	971;"	d
+R_68K_NONE	fifos/memos-2/elf.h	971;"	d
+R_68K_NUM	fifos/fifos-1/elf.h	995;"	d
+R_68K_NUM	fifos/memos-2/elf.h	995;"	d
+R_68K_PC16	fifos/fifos-1/elf.h	976;"	d
+R_68K_PC16	fifos/memos-2/elf.h	976;"	d
+R_68K_PC32	fifos/fifos-1/elf.h	975;"	d
+R_68K_PC32	fifos/memos-2/elf.h	975;"	d
+R_68K_PC8	fifos/fifos-1/elf.h	977;"	d
+R_68K_PC8	fifos/memos-2/elf.h	977;"	d
+R_68K_PLT16	fifos/fifos-1/elf.h	985;"	d
+R_68K_PLT16	fifos/memos-2/elf.h	985;"	d
+R_68K_PLT16O	fifos/fifos-1/elf.h	988;"	d
+R_68K_PLT16O	fifos/memos-2/elf.h	988;"	d
+R_68K_PLT32	fifos/fifos-1/elf.h	984;"	d
+R_68K_PLT32	fifos/memos-2/elf.h	984;"	d
+R_68K_PLT32O	fifos/fifos-1/elf.h	987;"	d
+R_68K_PLT32O	fifos/memos-2/elf.h	987;"	d
+R_68K_PLT8	fifos/fifos-1/elf.h	986;"	d
+R_68K_PLT8	fifos/memos-2/elf.h	986;"	d
+R_68K_PLT8O	fifos/fifos-1/elf.h	989;"	d
+R_68K_PLT8O	fifos/memos-2/elf.h	989;"	d
+R_68K_RELATIVE	fifos/fifos-1/elf.h	993;"	d
+R_68K_RELATIVE	fifos/memos-2/elf.h	993;"	d
+R_ALPHA_BRADDR	fifos/fifos-1/elf.h	1668;"	d
+R_ALPHA_BRADDR	fifos/memos-2/elf.h	1668;"	d
+R_ALPHA_COPY	fifos/fifos-1/elf.h	1685;"	d
+R_ALPHA_COPY	fifos/memos-2/elf.h	1685;"	d
+R_ALPHA_GLOB_DAT	fifos/fifos-1/elf.h	1686;"	d
+R_ALPHA_GLOB_DAT	fifos/memos-2/elf.h	1686;"	d
+R_ALPHA_GPDISP	fifos/fifos-1/elf.h	1667;"	d
+R_ALPHA_GPDISP	fifos/memos-2/elf.h	1667;"	d
+R_ALPHA_GPREL32	fifos/fifos-1/elf.h	1664;"	d
+R_ALPHA_GPREL32	fifos/memos-2/elf.h	1664;"	d
+R_ALPHA_GPRELHIGH	fifos/fifos-1/elf.h	1678;"	d
+R_ALPHA_GPRELHIGH	fifos/memos-2/elf.h	1678;"	d
+R_ALPHA_GPRELLOW	fifos/fifos-1/elf.h	1679;"	d
+R_ALPHA_GPRELLOW	fifos/memos-2/elf.h	1679;"	d
+R_ALPHA_GPVALUE	fifos/fifos-1/elf.h	1677;"	d
+R_ALPHA_GPVALUE	fifos/memos-2/elf.h	1677;"	d
+R_ALPHA_HINT	fifos/fifos-1/elf.h	1669;"	d
+R_ALPHA_HINT	fifos/memos-2/elf.h	1669;"	d
+R_ALPHA_IMMED_BR_HI32	fifos/fifos-1/elf.h	1683;"	d
+R_ALPHA_IMMED_BR_HI32	fifos/memos-2/elf.h	1683;"	d
+R_ALPHA_IMMED_GP_16	fifos/fifos-1/elf.h	1680;"	d
+R_ALPHA_IMMED_GP_16	fifos/memos-2/elf.h	1680;"	d
+R_ALPHA_IMMED_GP_HI32	fifos/fifos-1/elf.h	1681;"	d
+R_ALPHA_IMMED_GP_HI32	fifos/memos-2/elf.h	1681;"	d
+R_ALPHA_IMMED_LO32	fifos/fifos-1/elf.h	1684;"	d
+R_ALPHA_IMMED_LO32	fifos/memos-2/elf.h	1684;"	d
+R_ALPHA_IMMED_SCN_HI32	fifos/fifos-1/elf.h	1682;"	d
+R_ALPHA_IMMED_SCN_HI32	fifos/memos-2/elf.h	1682;"	d
+R_ALPHA_JMP_SLOT	fifos/fifos-1/elf.h	1687;"	d
+R_ALPHA_JMP_SLOT	fifos/memos-2/elf.h	1687;"	d
+R_ALPHA_LITERAL	fifos/fifos-1/elf.h	1665;"	d
+R_ALPHA_LITERAL	fifos/memos-2/elf.h	1665;"	d
+R_ALPHA_LITUSE	fifos/fifos-1/elf.h	1666;"	d
+R_ALPHA_LITUSE	fifos/memos-2/elf.h	1666;"	d
+R_ALPHA_NONE	fifos/fifos-1/elf.h	1661;"	d
+R_ALPHA_NONE	fifos/memos-2/elf.h	1661;"	d
+R_ALPHA_NUM	fifos/fifos-1/elf.h	1690;"	d
+R_ALPHA_NUM	fifos/memos-2/elf.h	1690;"	d
+R_ALPHA_OP_PRSHIFT	fifos/fifos-1/elf.h	1676;"	d
+R_ALPHA_OP_PRSHIFT	fifos/memos-2/elf.h	1676;"	d
+R_ALPHA_OP_PSUB	fifos/fifos-1/elf.h	1675;"	d
+R_ALPHA_OP_PSUB	fifos/memos-2/elf.h	1675;"	d
+R_ALPHA_OP_PUSH	fifos/fifos-1/elf.h	1673;"	d
+R_ALPHA_OP_PUSH	fifos/memos-2/elf.h	1673;"	d
+R_ALPHA_OP_STORE	fifos/fifos-1/elf.h	1674;"	d
+R_ALPHA_OP_STORE	fifos/memos-2/elf.h	1674;"	d
+R_ALPHA_REFLONG	fifos/fifos-1/elf.h	1662;"	d
+R_ALPHA_REFLONG	fifos/memos-2/elf.h	1662;"	d
+R_ALPHA_REFQUAD	fifos/fifos-1/elf.h	1663;"	d
+R_ALPHA_REFQUAD	fifos/memos-2/elf.h	1663;"	d
+R_ALPHA_RELATIVE	fifos/fifos-1/elf.h	1688;"	d
+R_ALPHA_RELATIVE	fifos/memos-2/elf.h	1688;"	d
+R_ALPHA_SREL16	fifos/fifos-1/elf.h	1670;"	d
+R_ALPHA_SREL16	fifos/memos-2/elf.h	1670;"	d
+R_ALPHA_SREL32	fifos/fifos-1/elf.h	1671;"	d
+R_ALPHA_SREL32	fifos/memos-2/elf.h	1671;"	d
+R_ALPHA_SREL64	fifos/fifos-1/elf.h	1672;"	d
+R_ALPHA_SREL64	fifos/memos-2/elf.h	1672;"	d
+R_ARM_ABS12	fifos/fifos-1/elf.h	1820;"	d
+R_ARM_ABS12	fifos/memos-2/elf.h	1820;"	d
+R_ARM_ABS16	fifos/fifos-1/elf.h	1819;"	d
+R_ARM_ABS16	fifos/memos-2/elf.h	1819;"	d
+R_ARM_ABS32	fifos/fifos-1/elf.h	1816;"	d
+R_ARM_ABS32	fifos/memos-2/elf.h	1816;"	d
+R_ARM_ABS8	fifos/fifos-1/elf.h	1822;"	d
+R_ARM_ABS8	fifos/memos-2/elf.h	1822;"	d
+R_ARM_ALU_PCREL_15_8	fifos/fifos-1/elf.h	1840;"	d
+R_ARM_ALU_PCREL_15_8	fifos/memos-2/elf.h	1840;"	d
+R_ARM_ALU_PCREL_23_15	fifos/fifos-1/elf.h	1841;"	d
+R_ARM_ALU_PCREL_23_15	fifos/memos-2/elf.h	1841;"	d
+R_ARM_ALU_PCREL_7_0	fifos/fifos-1/elf.h	1839;"	d
+R_ARM_ALU_PCREL_7_0	fifos/memos-2/elf.h	1839;"	d
+R_ARM_ALU_SBREL_19_12	fifos/fifos-1/elf.h	1843;"	d
+R_ARM_ALU_SBREL_19_12	fifos/memos-2/elf.h	1843;"	d
+R_ARM_ALU_SBREL_27_20	fifos/fifos-1/elf.h	1844;"	d
+R_ARM_ALU_SBREL_27_20	fifos/memos-2/elf.h	1844;"	d
+R_ARM_AMP_VCALL9	fifos/fifos-1/elf.h	1826;"	d
+R_ARM_AMP_VCALL9	fifos/memos-2/elf.h	1826;"	d
+R_ARM_COPY	fifos/fifos-1/elf.h	1831;"	d
+R_ARM_COPY	fifos/memos-2/elf.h	1831;"	d
+R_ARM_GLOB_DAT	fifos/fifos-1/elf.h	1832;"	d
+R_ARM_GLOB_DAT	fifos/memos-2/elf.h	1832;"	d
+R_ARM_GNU_VTENTRY	fifos/fifos-1/elf.h	1845;"	d
+R_ARM_GNU_VTENTRY	fifos/memos-2/elf.h	1845;"	d
+R_ARM_GNU_VTINHERIT	fifos/fifos-1/elf.h	1846;"	d
+R_ARM_GNU_VTINHERIT	fifos/memos-2/elf.h	1846;"	d
+R_ARM_GOT32	fifos/fifos-1/elf.h	1837;"	d
+R_ARM_GOT32	fifos/memos-2/elf.h	1837;"	d
+R_ARM_GOTOFF	fifos/fifos-1/elf.h	1835;"	d
+R_ARM_GOTOFF	fifos/memos-2/elf.h	1835;"	d
+R_ARM_GOTPC	fifos/fifos-1/elf.h	1836;"	d
+R_ARM_GOTPC	fifos/memos-2/elf.h	1836;"	d
+R_ARM_JUMP_SLOT	fifos/fifos-1/elf.h	1833;"	d
+R_ARM_JUMP_SLOT	fifos/memos-2/elf.h	1833;"	d
+R_ARM_LDR_SBREL_11_0	fifos/fifos-1/elf.h	1842;"	d
+R_ARM_LDR_SBREL_11_0	fifos/memos-2/elf.h	1842;"	d
+R_ARM_NONE	fifos/fifos-1/elf.h	1814;"	d
+R_ARM_NONE	fifos/memos-2/elf.h	1814;"	d
+R_ARM_NUM	fifos/fifos-1/elf.h	1857;"	d
+R_ARM_NUM	fifos/memos-2/elf.h	1857;"	d
+R_ARM_PC13	fifos/fifos-1/elf.h	1818;"	d
+R_ARM_PC13	fifos/memos-2/elf.h	1818;"	d
+R_ARM_PC24	fifos/fifos-1/elf.h	1815;"	d
+R_ARM_PC24	fifos/memos-2/elf.h	1815;"	d
+R_ARM_PLT32	fifos/fifos-1/elf.h	1838;"	d
+R_ARM_PLT32	fifos/memos-2/elf.h	1838;"	d
+R_ARM_RABS22	fifos/fifos-1/elf.h	1853;"	d
+R_ARM_RABS22	fifos/memos-2/elf.h	1853;"	d
+R_ARM_RBASE	fifos/fifos-1/elf.h	1855;"	d
+R_ARM_RBASE	fifos/memos-2/elf.h	1855;"	d
+R_ARM_REL32	fifos/fifos-1/elf.h	1817;"	d
+R_ARM_REL32	fifos/memos-2/elf.h	1817;"	d
+R_ARM_RELATIVE	fifos/fifos-1/elf.h	1834;"	d
+R_ARM_RELATIVE	fifos/memos-2/elf.h	1834;"	d
+R_ARM_RPC24	fifos/fifos-1/elf.h	1854;"	d
+R_ARM_RPC24	fifos/memos-2/elf.h	1854;"	d
+R_ARM_RREL32	fifos/fifos-1/elf.h	1852;"	d
+R_ARM_RREL32	fifos/memos-2/elf.h	1852;"	d
+R_ARM_RSBREL32	fifos/fifos-1/elf.h	1850;"	d
+R_ARM_RSBREL32	fifos/memos-2/elf.h	1850;"	d
+R_ARM_RXPC25	fifos/fifos-1/elf.h	1849;"	d
+R_ARM_RXPC25	fifos/memos-2/elf.h	1849;"	d
+R_ARM_SBREL32	fifos/fifos-1/elf.h	1823;"	d
+R_ARM_SBREL32	fifos/memos-2/elf.h	1823;"	d
+R_ARM_SWI24	fifos/fifos-1/elf.h	1827;"	d
+R_ARM_SWI24	fifos/memos-2/elf.h	1827;"	d
+R_ARM_THM_ABS5	fifos/fifos-1/elf.h	1821;"	d
+R_ARM_THM_ABS5	fifos/memos-2/elf.h	1821;"	d
+R_ARM_THM_PC11	fifos/fifos-1/elf.h	1847;"	d
+R_ARM_THM_PC11	fifos/memos-2/elf.h	1847;"	d
+R_ARM_THM_PC22	fifos/fifos-1/elf.h	1824;"	d
+R_ARM_THM_PC22	fifos/memos-2/elf.h	1824;"	d
+R_ARM_THM_PC8	fifos/fifos-1/elf.h	1825;"	d
+R_ARM_THM_PC8	fifos/memos-2/elf.h	1825;"	d
+R_ARM_THM_PC9	fifos/fifos-1/elf.h	1848;"	d
+R_ARM_THM_PC9	fifos/memos-2/elf.h	1848;"	d
+R_ARM_THM_RPC22	fifos/fifos-1/elf.h	1851;"	d
+R_ARM_THM_RPC22	fifos/memos-2/elf.h	1851;"	d
+R_ARM_THM_SWI8	fifos/fifos-1/elf.h	1828;"	d
+R_ARM_THM_SWI8	fifos/memos-2/elf.h	1828;"	d
+R_ARM_THM_XPC22	fifos/fifos-1/elf.h	1830;"	d
+R_ARM_THM_XPC22	fifos/memos-2/elf.h	1830;"	d
+R_ARM_XPC25	fifos/fifos-1/elf.h	1829;"	d
+R_ARM_XPC25	fifos/memos-2/elf.h	1829;"	d
+R_CRIS_16	fifos/fifos-1/elf.h	2039;"	d
+R_CRIS_16	fifos/memos-2/elf.h	2039;"	d
+R_CRIS_16_GOT	fifos/fifos-1/elf.h	2050;"	d
+R_CRIS_16_GOT	fifos/memos-2/elf.h	2050;"	d
+R_CRIS_16_GOTPLT	fifos/fifos-1/elf.h	2052;"	d
+R_CRIS_16_GOTPLT	fifos/memos-2/elf.h	2052;"	d
+R_CRIS_16_PCREL	fifos/fifos-1/elf.h	2042;"	d
+R_CRIS_16_PCREL	fifos/memos-2/elf.h	2042;"	d
+R_CRIS_32	fifos/fifos-1/elf.h	2040;"	d
+R_CRIS_32	fifos/memos-2/elf.h	2040;"	d
+R_CRIS_32_GOT	fifos/fifos-1/elf.h	2051;"	d
+R_CRIS_32_GOT	fifos/memos-2/elf.h	2051;"	d
+R_CRIS_32_GOTPLT	fifos/fifos-1/elf.h	2053;"	d
+R_CRIS_32_GOTPLT	fifos/memos-2/elf.h	2053;"	d
+R_CRIS_32_GOTREL	fifos/fifos-1/elf.h	2054;"	d
+R_CRIS_32_GOTREL	fifos/memos-2/elf.h	2054;"	d
+R_CRIS_32_PCREL	fifos/fifos-1/elf.h	2043;"	d
+R_CRIS_32_PCREL	fifos/memos-2/elf.h	2043;"	d
+R_CRIS_32_PLT_GOTREL	fifos/fifos-1/elf.h	2055;"	d
+R_CRIS_32_PLT_GOTREL	fifos/memos-2/elf.h	2055;"	d
+R_CRIS_32_PLT_PCREL	fifos/fifos-1/elf.h	2056;"	d
+R_CRIS_32_PLT_PCREL	fifos/memos-2/elf.h	2056;"	d
+R_CRIS_8	fifos/fifos-1/elf.h	2038;"	d
+R_CRIS_8	fifos/memos-2/elf.h	2038;"	d
+R_CRIS_8_PCREL	fifos/fifos-1/elf.h	2041;"	d
+R_CRIS_8_PCREL	fifos/memos-2/elf.h	2041;"	d
+R_CRIS_COPY	fifos/fifos-1/elf.h	2046;"	d
+R_CRIS_COPY	fifos/memos-2/elf.h	2046;"	d
+R_CRIS_GLOB_DAT	fifos/fifos-1/elf.h	2047;"	d
+R_CRIS_GLOB_DAT	fifos/memos-2/elf.h	2047;"	d
+R_CRIS_GNU_VTENTRY	fifos/fifos-1/elf.h	2045;"	d
+R_CRIS_GNU_VTENTRY	fifos/memos-2/elf.h	2045;"	d
+R_CRIS_GNU_VTINHERIT	fifos/fifos-1/elf.h	2044;"	d
+R_CRIS_GNU_VTINHERIT	fifos/memos-2/elf.h	2044;"	d
+R_CRIS_JUMP_SLOT	fifos/fifos-1/elf.h	2048;"	d
+R_CRIS_JUMP_SLOT	fifos/memos-2/elf.h	2048;"	d
+R_CRIS_NONE	fifos/fifos-1/elf.h	2037;"	d
+R_CRIS_NONE	fifos/memos-2/elf.h	2037;"	d
+R_CRIS_NUM	fifos/fifos-1/elf.h	2058;"	d
+R_CRIS_NUM	fifos/memos-2/elf.h	2058;"	d
+R_CRIS_RELATIVE	fifos/fifos-1/elf.h	2049;"	d
+R_CRIS_RELATIVE	fifos/memos-2/elf.h	2049;"	d
+R_IA64_COPY	fifos/fifos-1/elf.h	1946;"	d
+R_IA64_COPY	fifos/memos-2/elf.h	1946;"	d
+R_IA64_DIR32LSB	fifos/fifos-1/elf.h	1891;"	d
+R_IA64_DIR32LSB	fifos/memos-2/elf.h	1891;"	d
+R_IA64_DIR32MSB	fifos/fifos-1/elf.h	1890;"	d
+R_IA64_DIR32MSB	fifos/memos-2/elf.h	1890;"	d
+R_IA64_DIR64LSB	fifos/fifos-1/elf.h	1893;"	d
+R_IA64_DIR64LSB	fifos/memos-2/elf.h	1893;"	d
+R_IA64_DIR64MSB	fifos/fifos-1/elf.h	1892;"	d
+R_IA64_DIR64MSB	fifos/memos-2/elf.h	1892;"	d
+R_IA64_DTPMOD64LSB	fifos/fifos-1/elf.h	1957;"	d
+R_IA64_DTPMOD64LSB	fifos/memos-2/elf.h	1957;"	d
+R_IA64_DTPMOD64MSB	fifos/fifos-1/elf.h	1956;"	d
+R_IA64_DTPMOD64MSB	fifos/memos-2/elf.h	1956;"	d
+R_IA64_DTPREL14	fifos/fifos-1/elf.h	1959;"	d
+R_IA64_DTPREL14	fifos/memos-2/elf.h	1959;"	d
+R_IA64_DTPREL22	fifos/fifos-1/elf.h	1960;"	d
+R_IA64_DTPREL22	fifos/memos-2/elf.h	1960;"	d
+R_IA64_DTPREL32LSB	fifos/fifos-1/elf.h	1963;"	d
+R_IA64_DTPREL32LSB	fifos/memos-2/elf.h	1963;"	d
+R_IA64_DTPREL32MSB	fifos/fifos-1/elf.h	1962;"	d
+R_IA64_DTPREL32MSB	fifos/memos-2/elf.h	1962;"	d
+R_IA64_DTPREL64I	fifos/fifos-1/elf.h	1961;"	d
+R_IA64_DTPREL64I	fifos/memos-2/elf.h	1961;"	d
+R_IA64_DTPREL64LSB	fifos/fifos-1/elf.h	1965;"	d
+R_IA64_DTPREL64LSB	fifos/memos-2/elf.h	1965;"	d
+R_IA64_DTPREL64MSB	fifos/fifos-1/elf.h	1964;"	d
+R_IA64_DTPREL64MSB	fifos/memos-2/elf.h	1964;"	d
+R_IA64_FPTR32LSB	fifos/fifos-1/elf.h	1908;"	d
+R_IA64_FPTR32LSB	fifos/memos-2/elf.h	1908;"	d
+R_IA64_FPTR32MSB	fifos/fifos-1/elf.h	1907;"	d
+R_IA64_FPTR32MSB	fifos/memos-2/elf.h	1907;"	d
+R_IA64_FPTR64I	fifos/fifos-1/elf.h	1906;"	d
+R_IA64_FPTR64I	fifos/memos-2/elf.h	1906;"	d
+R_IA64_FPTR64LSB	fifos/fifos-1/elf.h	1910;"	d
+R_IA64_FPTR64LSB	fifos/memos-2/elf.h	1910;"	d
+R_IA64_FPTR64MSB	fifos/fifos-1/elf.h	1909;"	d
+R_IA64_FPTR64MSB	fifos/memos-2/elf.h	1909;"	d
+R_IA64_GPREL22	fifos/fifos-1/elf.h	1894;"	d
+R_IA64_GPREL22	fifos/memos-2/elf.h	1894;"	d
+R_IA64_GPREL32LSB	fifos/fifos-1/elf.h	1897;"	d
+R_IA64_GPREL32LSB	fifos/memos-2/elf.h	1897;"	d
+R_IA64_GPREL32MSB	fifos/fifos-1/elf.h	1896;"	d
+R_IA64_GPREL32MSB	fifos/memos-2/elf.h	1896;"	d
+R_IA64_GPREL64I	fifos/fifos-1/elf.h	1895;"	d
+R_IA64_GPREL64I	fifos/memos-2/elf.h	1895;"	d
+R_IA64_GPREL64LSB	fifos/fifos-1/elf.h	1899;"	d
+R_IA64_GPREL64LSB	fifos/memos-2/elf.h	1899;"	d
+R_IA64_GPREL64MSB	fifos/fifos-1/elf.h	1898;"	d
+R_IA64_GPREL64MSB	fifos/memos-2/elf.h	1898;"	d
+R_IA64_IMM14	fifos/fifos-1/elf.h	1887;"	d
+R_IA64_IMM14	fifos/memos-2/elf.h	1887;"	d
+R_IA64_IMM22	fifos/fifos-1/elf.h	1888;"	d
+R_IA64_IMM22	fifos/memos-2/elf.h	1888;"	d
+R_IA64_IMM64	fifos/fifos-1/elf.h	1889;"	d
+R_IA64_IMM64	fifos/memos-2/elf.h	1889;"	d
+R_IA64_IPLTLSB	fifos/fifos-1/elf.h	1945;"	d
+R_IA64_IPLTLSB	fifos/memos-2/elf.h	1945;"	d
+R_IA64_IPLTMSB	fifos/fifos-1/elf.h	1944;"	d
+R_IA64_IPLTMSB	fifos/memos-2/elf.h	1944;"	d
+R_IA64_LDXMOV	fifos/fifos-1/elf.h	1949;"	d
+R_IA64_LDXMOV	fifos/memos-2/elf.h	1949;"	d
+R_IA64_LTOFF22	fifos/fifos-1/elf.h	1900;"	d
+R_IA64_LTOFF22	fifos/memos-2/elf.h	1900;"	d
+R_IA64_LTOFF22X	fifos/fifos-1/elf.h	1948;"	d
+R_IA64_LTOFF22X	fifos/memos-2/elf.h	1948;"	d
+R_IA64_LTOFF64I	fifos/fifos-1/elf.h	1901;"	d
+R_IA64_LTOFF64I	fifos/memos-2/elf.h	1901;"	d
+R_IA64_LTOFF_DTPMOD22	fifos/fifos-1/elf.h	1958;"	d
+R_IA64_LTOFF_DTPMOD22	fifos/memos-2/elf.h	1958;"	d
+R_IA64_LTOFF_DTPREL22	fifos/fifos-1/elf.h	1966;"	d
+R_IA64_LTOFF_DTPREL22	fifos/memos-2/elf.h	1966;"	d
+R_IA64_LTOFF_FPTR22	fifos/fifos-1/elf.h	1919;"	d
+R_IA64_LTOFF_FPTR22	fifos/memos-2/elf.h	1919;"	d
+R_IA64_LTOFF_FPTR32LSB	fifos/fifos-1/elf.h	1922;"	d
+R_IA64_LTOFF_FPTR32LSB	fifos/memos-2/elf.h	1922;"	d
+R_IA64_LTOFF_FPTR32MSB	fifos/fifos-1/elf.h	1921;"	d
+R_IA64_LTOFF_FPTR32MSB	fifos/memos-2/elf.h	1921;"	d
+R_IA64_LTOFF_FPTR64I	fifos/fifos-1/elf.h	1920;"	d
+R_IA64_LTOFF_FPTR64I	fifos/memos-2/elf.h	1920;"	d
+R_IA64_LTOFF_FPTR64LSB	fifos/fifos-1/elf.h	1924;"	d
+R_IA64_LTOFF_FPTR64LSB	fifos/memos-2/elf.h	1924;"	d
+R_IA64_LTOFF_FPTR64MSB	fifos/fifos-1/elf.h	1923;"	d
+R_IA64_LTOFF_FPTR64MSB	fifos/memos-2/elf.h	1923;"	d
+R_IA64_LTOFF_TPREL22	fifos/fifos-1/elf.h	1955;"	d
+R_IA64_LTOFF_TPREL22	fifos/memos-2/elf.h	1955;"	d
+R_IA64_LTV32LSB	fifos/fifos-1/elf.h	1938;"	d
+R_IA64_LTV32LSB	fifos/memos-2/elf.h	1938;"	d
+R_IA64_LTV32MSB	fifos/fifos-1/elf.h	1937;"	d
+R_IA64_LTV32MSB	fifos/memos-2/elf.h	1937;"	d
+R_IA64_LTV64LSB	fifos/fifos-1/elf.h	1940;"	d
+R_IA64_LTV64LSB	fifos/memos-2/elf.h	1940;"	d
+R_IA64_LTV64MSB	fifos/fifos-1/elf.h	1939;"	d
+R_IA64_LTV64MSB	fifos/memos-2/elf.h	1939;"	d
+R_IA64_NONE	fifos/fifos-1/elf.h	1886;"	d
+R_IA64_NONE	fifos/memos-2/elf.h	1886;"	d
+R_IA64_PCREL21B	fifos/fifos-1/elf.h	1912;"	d
+R_IA64_PCREL21B	fifos/memos-2/elf.h	1912;"	d
+R_IA64_PCREL21BI	fifos/fifos-1/elf.h	1941;"	d
+R_IA64_PCREL21BI	fifos/memos-2/elf.h	1941;"	d
+R_IA64_PCREL21F	fifos/fifos-1/elf.h	1914;"	d
+R_IA64_PCREL21F	fifos/memos-2/elf.h	1914;"	d
+R_IA64_PCREL21M	fifos/fifos-1/elf.h	1913;"	d
+R_IA64_PCREL21M	fifos/memos-2/elf.h	1913;"	d
+R_IA64_PCREL22	fifos/fifos-1/elf.h	1942;"	d
+R_IA64_PCREL22	fifos/memos-2/elf.h	1942;"	d
+R_IA64_PCREL32LSB	fifos/fifos-1/elf.h	1916;"	d
+R_IA64_PCREL32LSB	fifos/memos-2/elf.h	1916;"	d
+R_IA64_PCREL32MSB	fifos/fifos-1/elf.h	1915;"	d
+R_IA64_PCREL32MSB	fifos/memos-2/elf.h	1915;"	d
+R_IA64_PCREL60B	fifos/fifos-1/elf.h	1911;"	d
+R_IA64_PCREL60B	fifos/memos-2/elf.h	1911;"	d
+R_IA64_PCREL64I	fifos/fifos-1/elf.h	1943;"	d
+R_IA64_PCREL64I	fifos/memos-2/elf.h	1943;"	d
+R_IA64_PCREL64LSB	fifos/fifos-1/elf.h	1918;"	d
+R_IA64_PCREL64LSB	fifos/memos-2/elf.h	1918;"	d
+R_IA64_PCREL64MSB	fifos/fifos-1/elf.h	1917;"	d
+R_IA64_PCREL64MSB	fifos/memos-2/elf.h	1917;"	d
+R_IA64_PLTOFF22	fifos/fifos-1/elf.h	1902;"	d
+R_IA64_PLTOFF22	fifos/memos-2/elf.h	1902;"	d
+R_IA64_PLTOFF64I	fifos/fifos-1/elf.h	1903;"	d
+R_IA64_PLTOFF64I	fifos/memos-2/elf.h	1903;"	d
+R_IA64_PLTOFF64LSB	fifos/fifos-1/elf.h	1905;"	d
+R_IA64_PLTOFF64LSB	fifos/memos-2/elf.h	1905;"	d
+R_IA64_PLTOFF64MSB	fifos/fifos-1/elf.h	1904;"	d
+R_IA64_PLTOFF64MSB	fifos/memos-2/elf.h	1904;"	d
+R_IA64_REL32LSB	fifos/fifos-1/elf.h	1934;"	d
+R_IA64_REL32LSB	fifos/memos-2/elf.h	1934;"	d
+R_IA64_REL32MSB	fifos/fifos-1/elf.h	1933;"	d
+R_IA64_REL32MSB	fifos/memos-2/elf.h	1933;"	d
+R_IA64_REL64LSB	fifos/fifos-1/elf.h	1936;"	d
+R_IA64_REL64LSB	fifos/memos-2/elf.h	1936;"	d
+R_IA64_REL64MSB	fifos/fifos-1/elf.h	1935;"	d
+R_IA64_REL64MSB	fifos/memos-2/elf.h	1935;"	d
+R_IA64_SECREL32LSB	fifos/fifos-1/elf.h	1930;"	d
+R_IA64_SECREL32LSB	fifos/memos-2/elf.h	1930;"	d
+R_IA64_SECREL32MSB	fifos/fifos-1/elf.h	1929;"	d
+R_IA64_SECREL32MSB	fifos/memos-2/elf.h	1929;"	d
+R_IA64_SECREL64LSB	fifos/fifos-1/elf.h	1932;"	d
+R_IA64_SECREL64LSB	fifos/memos-2/elf.h	1932;"	d
+R_IA64_SECREL64MSB	fifos/fifos-1/elf.h	1931;"	d
+R_IA64_SECREL64MSB	fifos/memos-2/elf.h	1931;"	d
+R_IA64_SEGREL32LSB	fifos/fifos-1/elf.h	1926;"	d
+R_IA64_SEGREL32LSB	fifos/memos-2/elf.h	1926;"	d
+R_IA64_SEGREL32MSB	fifos/fifos-1/elf.h	1925;"	d
+R_IA64_SEGREL32MSB	fifos/memos-2/elf.h	1925;"	d
+R_IA64_SEGREL64LSB	fifos/fifos-1/elf.h	1928;"	d
+R_IA64_SEGREL64LSB	fifos/memos-2/elf.h	1928;"	d
+R_IA64_SEGREL64MSB	fifos/fifos-1/elf.h	1927;"	d
+R_IA64_SEGREL64MSB	fifos/memos-2/elf.h	1927;"	d
+R_IA64_SUB	fifos/fifos-1/elf.h	1947;"	d
+R_IA64_SUB	fifos/memos-2/elf.h	1947;"	d
+R_IA64_TPREL14	fifos/fifos-1/elf.h	1950;"	d
+R_IA64_TPREL14	fifos/memos-2/elf.h	1950;"	d
+R_IA64_TPREL22	fifos/fifos-1/elf.h	1951;"	d
+R_IA64_TPREL22	fifos/memos-2/elf.h	1951;"	d
+R_IA64_TPREL64I	fifos/fifos-1/elf.h	1952;"	d
+R_IA64_TPREL64I	fifos/memos-2/elf.h	1952;"	d
+R_IA64_TPREL64LSB	fifos/fifos-1/elf.h	1954;"	d
+R_IA64_TPREL64LSB	fifos/memos-2/elf.h	1954;"	d
+R_IA64_TPREL64MSB	fifos/fifos-1/elf.h	1953;"	d
+R_IA64_TPREL64MSB	fifos/memos-2/elf.h	1953;"	d
+R_MIPS_16	fifos/fifos-1/elf.h	1310;"	d
+R_MIPS_16	fifos/memos-2/elf.h	1310;"	d
+R_MIPS_26	fifos/fifos-1/elf.h	1313;"	d
+R_MIPS_26	fifos/memos-2/elf.h	1313;"	d
+R_MIPS_32	fifos/fifos-1/elf.h	1311;"	d
+R_MIPS_32	fifos/memos-2/elf.h	1311;"	d
+R_MIPS_64	fifos/fifos-1/elf.h	1325;"	d
+R_MIPS_64	fifos/memos-2/elf.h	1325;"	d
+R_MIPS_ADD_IMMEDIATE	fifos/fifos-1/elf.h	1341;"	d
+R_MIPS_ADD_IMMEDIATE	fifos/memos-2/elf.h	1341;"	d
+R_MIPS_CALL16	fifos/fifos-1/elf.h	1320;"	d
+R_MIPS_CALL16	fifos/memos-2/elf.h	1320;"	d
+R_MIPS_CALL_HI16	fifos/fifos-1/elf.h	1337;"	d
+R_MIPS_CALL_HI16	fifos/memos-2/elf.h	1337;"	d
+R_MIPS_CALL_LO16	fifos/fifos-1/elf.h	1338;"	d
+R_MIPS_CALL_LO16	fifos/memos-2/elf.h	1338;"	d
+R_MIPS_DELETE	fifos/fifos-1/elf.h	1334;"	d
+R_MIPS_DELETE	fifos/memos-2/elf.h	1334;"	d
+R_MIPS_GOT16	fifos/fifos-1/elf.h	1318;"	d
+R_MIPS_GOT16	fifos/memos-2/elf.h	1318;"	d
+R_MIPS_GOT_DISP	fifos/fifos-1/elf.h	1326;"	d
+R_MIPS_GOT_DISP	fifos/memos-2/elf.h	1326;"	d
+R_MIPS_GOT_HI16	fifos/fifos-1/elf.h	1329;"	d
+R_MIPS_GOT_HI16	fifos/memos-2/elf.h	1329;"	d
+R_MIPS_GOT_LO16	fifos/fifos-1/elf.h	1330;"	d
+R_MIPS_GOT_LO16	fifos/memos-2/elf.h	1330;"	d
+R_MIPS_GOT_OFST	fifos/fifos-1/elf.h	1328;"	d
+R_MIPS_GOT_OFST	fifos/memos-2/elf.h	1328;"	d
+R_MIPS_GOT_PAGE	fifos/fifos-1/elf.h	1327;"	d
+R_MIPS_GOT_PAGE	fifos/memos-2/elf.h	1327;"	d
+R_MIPS_GPREL16	fifos/fifos-1/elf.h	1316;"	d
+R_MIPS_GPREL16	fifos/memos-2/elf.h	1316;"	d
+R_MIPS_GPREL32	fifos/fifos-1/elf.h	1321;"	d
+R_MIPS_GPREL32	fifos/memos-2/elf.h	1321;"	d
+R_MIPS_HI16	fifos/fifos-1/elf.h	1314;"	d
+R_MIPS_HI16	fifos/memos-2/elf.h	1314;"	d
+R_MIPS_HIGHER	fifos/fifos-1/elf.h	1335;"	d
+R_MIPS_HIGHER	fifos/memos-2/elf.h	1335;"	d
+R_MIPS_HIGHEST	fifos/fifos-1/elf.h	1336;"	d
+R_MIPS_HIGHEST	fifos/memos-2/elf.h	1336;"	d
+R_MIPS_INSERT_A	fifos/fifos-1/elf.h	1332;"	d
+R_MIPS_INSERT_A	fifos/memos-2/elf.h	1332;"	d
+R_MIPS_INSERT_B	fifos/fifos-1/elf.h	1333;"	d
+R_MIPS_INSERT_B	fifos/memos-2/elf.h	1333;"	d
+R_MIPS_JALR	fifos/fifos-1/elf.h	1344;"	d
+R_MIPS_JALR	fifos/memos-2/elf.h	1344;"	d
+R_MIPS_LITERAL	fifos/fifos-1/elf.h	1317;"	d
+R_MIPS_LITERAL	fifos/memos-2/elf.h	1317;"	d
+R_MIPS_LO16	fifos/fifos-1/elf.h	1315;"	d
+R_MIPS_LO16	fifos/memos-2/elf.h	1315;"	d
+R_MIPS_NONE	fifos/fifos-1/elf.h	1309;"	d
+R_MIPS_NONE	fifos/memos-2/elf.h	1309;"	d
+R_MIPS_NUM	fifos/fifos-1/elf.h	1346;"	d
+R_MIPS_NUM	fifos/memos-2/elf.h	1346;"	d
+R_MIPS_PC16	fifos/fifos-1/elf.h	1319;"	d
+R_MIPS_PC16	fifos/memos-2/elf.h	1319;"	d
+R_MIPS_PJUMP	fifos/fifos-1/elf.h	1342;"	d
+R_MIPS_PJUMP	fifos/memos-2/elf.h	1342;"	d
+R_MIPS_REL16	fifos/fifos-1/elf.h	1340;"	d
+R_MIPS_REL16	fifos/memos-2/elf.h	1340;"	d
+R_MIPS_REL32	fifos/fifos-1/elf.h	1312;"	d
+R_MIPS_REL32	fifos/memos-2/elf.h	1312;"	d
+R_MIPS_RELGOT	fifos/fifos-1/elf.h	1343;"	d
+R_MIPS_RELGOT	fifos/memos-2/elf.h	1343;"	d
+R_MIPS_SCN_DISP	fifos/fifos-1/elf.h	1339;"	d
+R_MIPS_SCN_DISP	fifos/memos-2/elf.h	1339;"	d
+R_MIPS_SHIFT5	fifos/fifos-1/elf.h	1323;"	d
+R_MIPS_SHIFT5	fifos/memos-2/elf.h	1323;"	d
+R_MIPS_SHIFT6	fifos/fifos-1/elf.h	1324;"	d
+R_MIPS_SHIFT6	fifos/memos-2/elf.h	1324;"	d
+R_MIPS_SUB	fifos/fifos-1/elf.h	1331;"	d
+R_MIPS_SUB	fifos/memos-2/elf.h	1331;"	d
+R_PARISC_COPY	fifos/fifos-1/elf.h	1581;"	d
+R_PARISC_COPY	fifos/memos-2/elf.h	1581;"	d
+R_PARISC_DIR14DR	fifos/fifos-1/elf.h	1551;"	d
+R_PARISC_DIR14DR	fifos/memos-2/elf.h	1551;"	d
+R_PARISC_DIR14R	fifos/fifos-1/elf.h	1520;"	d
+R_PARISC_DIR14R	fifos/memos-2/elf.h	1520;"	d
+R_PARISC_DIR14WR	fifos/fifos-1/elf.h	1550;"	d
+R_PARISC_DIR14WR	fifos/memos-2/elf.h	1550;"	d
+R_PARISC_DIR16DF	fifos/fifos-1/elf.h	1554;"	d
+R_PARISC_DIR16DF	fifos/memos-2/elf.h	1554;"	d
+R_PARISC_DIR16F	fifos/fifos-1/elf.h	1552;"	d
+R_PARISC_DIR16F	fifos/memos-2/elf.h	1552;"	d
+R_PARISC_DIR16WF	fifos/fifos-1/elf.h	1553;"	d
+R_PARISC_DIR16WF	fifos/memos-2/elf.h	1553;"	d
+R_PARISC_DIR17F	fifos/fifos-1/elf.h	1519;"	d
+R_PARISC_DIR17F	fifos/memos-2/elf.h	1519;"	d
+R_PARISC_DIR17R	fifos/fifos-1/elf.h	1518;"	d
+R_PARISC_DIR17R	fifos/memos-2/elf.h	1518;"	d
+R_PARISC_DIR21L	fifos/fifos-1/elf.h	1517;"	d
+R_PARISC_DIR21L	fifos/memos-2/elf.h	1517;"	d
+R_PARISC_DIR32	fifos/fifos-1/elf.h	1516;"	d
+R_PARISC_DIR32	fifos/memos-2/elf.h	1516;"	d
+R_PARISC_DIR64	fifos/fifos-1/elf.h	1549;"	d
+R_PARISC_DIR64	fifos/memos-2/elf.h	1549;"	d
+R_PARISC_DPREL14R	fifos/fifos-1/elf.h	1527;"	d
+R_PARISC_DPREL14R	fifos/memos-2/elf.h	1527;"	d
+R_PARISC_DPREL21L	fifos/fifos-1/elf.h	1526;"	d
+R_PARISC_DPREL21L	fifos/memos-2/elf.h	1526;"	d
+R_PARISC_EPLT	fifos/fifos-1/elf.h	1583;"	d
+R_PARISC_EPLT	fifos/memos-2/elf.h	1583;"	d
+R_PARISC_FPTR64	fifos/fifos-1/elf.h	1540;"	d
+R_PARISC_FPTR64	fifos/memos-2/elf.h	1540;"	d
+R_PARISC_GPREL14DR	fifos/fifos-1/elf.h	1557;"	d
+R_PARISC_GPREL14DR	fifos/memos-2/elf.h	1557;"	d
+R_PARISC_GPREL14R	fifos/fifos-1/elf.h	1529;"	d
+R_PARISC_GPREL14R	fifos/memos-2/elf.h	1529;"	d
+R_PARISC_GPREL14WR	fifos/fifos-1/elf.h	1556;"	d
+R_PARISC_GPREL14WR	fifos/memos-2/elf.h	1556;"	d
+R_PARISC_GPREL16DF	fifos/fifos-1/elf.h	1560;"	d
+R_PARISC_GPREL16DF	fifos/memos-2/elf.h	1560;"	d
+R_PARISC_GPREL16F	fifos/fifos-1/elf.h	1558;"	d
+R_PARISC_GPREL16F	fifos/memos-2/elf.h	1558;"	d
+R_PARISC_GPREL16WF	fifos/fifos-1/elf.h	1559;"	d
+R_PARISC_GPREL16WF	fifos/memos-2/elf.h	1559;"	d
+R_PARISC_GPREL21L	fifos/fifos-1/elf.h	1528;"	d
+R_PARISC_GPREL21L	fifos/memos-2/elf.h	1528;"	d
+R_PARISC_GPREL64	fifos/fifos-1/elf.h	1555;"	d
+R_PARISC_GPREL64	fifos/memos-2/elf.h	1555;"	d
+R_PARISC_HIRESERVE	fifos/fifos-1/elf.h	1602;"	d
+R_PARISC_HIRESERVE	fifos/memos-2/elf.h	1602;"	d
+R_PARISC_IPLT	fifos/fifos-1/elf.h	1582;"	d
+R_PARISC_IPLT	fifos/memos-2/elf.h	1582;"	d
+R_PARISC_LORESERVE	fifos/fifos-1/elf.h	1580;"	d
+R_PARISC_LORESERVE	fifos/memos-2/elf.h	1580;"	d
+R_PARISC_LTOFF14DR	fifos/fifos-1/elf.h	1563;"	d
+R_PARISC_LTOFF14DR	fifos/memos-2/elf.h	1563;"	d
+R_PARISC_LTOFF14R	fifos/fifos-1/elf.h	1531;"	d
+R_PARISC_LTOFF14R	fifos/memos-2/elf.h	1531;"	d
+R_PARISC_LTOFF14WR	fifos/fifos-1/elf.h	1562;"	d
+R_PARISC_LTOFF14WR	fifos/memos-2/elf.h	1562;"	d
+R_PARISC_LTOFF16DF	fifos/fifos-1/elf.h	1566;"	d
+R_PARISC_LTOFF16DF	fifos/memos-2/elf.h	1566;"	d
+R_PARISC_LTOFF16F	fifos/fifos-1/elf.h	1564;"	d
+R_PARISC_LTOFF16F	fifos/memos-2/elf.h	1564;"	d
+R_PARISC_LTOFF16WF	fifos/fifos-1/elf.h	1565;"	d
+R_PARISC_LTOFF16WF	fifos/memos-2/elf.h	1565;"	d
+R_PARISC_LTOFF21L	fifos/fifos-1/elf.h	1530;"	d
+R_PARISC_LTOFF21L	fifos/memos-2/elf.h	1530;"	d
+R_PARISC_LTOFF64	fifos/fifos-1/elf.h	1561;"	d
+R_PARISC_LTOFF64	fifos/memos-2/elf.h	1561;"	d
+R_PARISC_LTOFF_FPTR14DR	fifos/fifos-1/elf.h	1576;"	d
+R_PARISC_LTOFF_FPTR14DR	fifos/memos-2/elf.h	1576;"	d
+R_PARISC_LTOFF_FPTR14R	fifos/fifos-1/elf.h	1539;"	d
+R_PARISC_LTOFF_FPTR14R	fifos/memos-2/elf.h	1539;"	d
+R_PARISC_LTOFF_FPTR14WR	fifos/fifos-1/elf.h	1575;"	d
+R_PARISC_LTOFF_FPTR14WR	fifos/memos-2/elf.h	1575;"	d
+R_PARISC_LTOFF_FPTR16DF	fifos/fifos-1/elf.h	1579;"	d
+R_PARISC_LTOFF_FPTR16DF	fifos/memos-2/elf.h	1579;"	d
+R_PARISC_LTOFF_FPTR16F	fifos/fifos-1/elf.h	1577;"	d
+R_PARISC_LTOFF_FPTR16F	fifos/memos-2/elf.h	1577;"	d
+R_PARISC_LTOFF_FPTR16WF	fifos/fifos-1/elf.h	1578;"	d
+R_PARISC_LTOFF_FPTR16WF	fifos/memos-2/elf.h	1578;"	d
+R_PARISC_LTOFF_FPTR21L	fifos/fifos-1/elf.h	1538;"	d
+R_PARISC_LTOFF_FPTR21L	fifos/memos-2/elf.h	1538;"	d
+R_PARISC_LTOFF_FPTR32	fifos/fifos-1/elf.h	1537;"	d
+R_PARISC_LTOFF_FPTR32	fifos/memos-2/elf.h	1537;"	d
+R_PARISC_LTOFF_FPTR64	fifos/fifos-1/elf.h	1574;"	d
+R_PARISC_LTOFF_FPTR64	fifos/memos-2/elf.h	1574;"	d
+R_PARISC_LTOFF_TP14DR	fifos/fifos-1/elf.h	1598;"	d
+R_PARISC_LTOFF_TP14DR	fifos/memos-2/elf.h	1598;"	d
+R_PARISC_LTOFF_TP14F	fifos/fifos-1/elf.h	1589;"	d
+R_PARISC_LTOFF_TP14F	fifos/memos-2/elf.h	1589;"	d
+R_PARISC_LTOFF_TP14R	fifos/fifos-1/elf.h	1588;"	d
+R_PARISC_LTOFF_TP14R	fifos/memos-2/elf.h	1588;"	d
+R_PARISC_LTOFF_TP14WR	fifos/fifos-1/elf.h	1597;"	d
+R_PARISC_LTOFF_TP14WR	fifos/memos-2/elf.h	1597;"	d
+R_PARISC_LTOFF_TP16DF	fifos/fifos-1/elf.h	1601;"	d
+R_PARISC_LTOFF_TP16DF	fifos/memos-2/elf.h	1601;"	d
+R_PARISC_LTOFF_TP16F	fifos/fifos-1/elf.h	1599;"	d
+R_PARISC_LTOFF_TP16F	fifos/memos-2/elf.h	1599;"	d
+R_PARISC_LTOFF_TP16WF	fifos/fifos-1/elf.h	1600;"	d
+R_PARISC_LTOFF_TP16WF	fifos/memos-2/elf.h	1600;"	d
+R_PARISC_LTOFF_TP21L	fifos/fifos-1/elf.h	1587;"	d
+R_PARISC_LTOFF_TP21L	fifos/memos-2/elf.h	1587;"	d
+R_PARISC_LTOFF_TP64	fifos/fifos-1/elf.h	1596;"	d
+R_PARISC_LTOFF_TP64	fifos/memos-2/elf.h	1596;"	d
+R_PARISC_NONE	fifos/fifos-1/elf.h	1515;"	d
+R_PARISC_NONE	fifos/memos-2/elf.h	1515;"	d
+R_PARISC_PCREL14DR	fifos/fifos-1/elf.h	1545;"	d
+R_PARISC_PCREL14DR	fifos/memos-2/elf.h	1545;"	d
+R_PARISC_PCREL14R	fifos/fifos-1/elf.h	1525;"	d
+R_PARISC_PCREL14R	fifos/memos-2/elf.h	1525;"	d
+R_PARISC_PCREL14WR	fifos/fifos-1/elf.h	1544;"	d
+R_PARISC_PCREL14WR	fifos/memos-2/elf.h	1544;"	d
+R_PARISC_PCREL16DF	fifos/fifos-1/elf.h	1548;"	d
+R_PARISC_PCREL16DF	fifos/memos-2/elf.h	1548;"	d
+R_PARISC_PCREL16F	fifos/fifos-1/elf.h	1546;"	d
+R_PARISC_PCREL16F	fifos/memos-2/elf.h	1546;"	d
+R_PARISC_PCREL16WF	fifos/fifos-1/elf.h	1547;"	d
+R_PARISC_PCREL16WF	fifos/memos-2/elf.h	1547;"	d
+R_PARISC_PCREL17F	fifos/fifos-1/elf.h	1524;"	d
+R_PARISC_PCREL17F	fifos/memos-2/elf.h	1524;"	d
+R_PARISC_PCREL17R	fifos/fifos-1/elf.h	1523;"	d
+R_PARISC_PCREL17R	fifos/memos-2/elf.h	1523;"	d
+R_PARISC_PCREL21L	fifos/fifos-1/elf.h	1522;"	d
+R_PARISC_PCREL21L	fifos/memos-2/elf.h	1522;"	d
+R_PARISC_PCREL22F	fifos/fifos-1/elf.h	1543;"	d
+R_PARISC_PCREL22F	fifos/memos-2/elf.h	1543;"	d
+R_PARISC_PCREL32	fifos/fifos-1/elf.h	1521;"	d
+R_PARISC_PCREL32	fifos/memos-2/elf.h	1521;"	d
+R_PARISC_PCREL64	fifos/fifos-1/elf.h	1542;"	d
+R_PARISC_PCREL64	fifos/memos-2/elf.h	1542;"	d
+R_PARISC_PLABEL32	fifos/fifos-1/elf.h	1541;"	d
+R_PARISC_PLABEL32	fifos/memos-2/elf.h	1541;"	d
+R_PARISC_PLTOFF14DR	fifos/fifos-1/elf.h	1570;"	d
+R_PARISC_PLTOFF14DR	fifos/memos-2/elf.h	1570;"	d
+R_PARISC_PLTOFF14R	fifos/fifos-1/elf.h	1536;"	d
+R_PARISC_PLTOFF14R	fifos/memos-2/elf.h	1536;"	d
+R_PARISC_PLTOFF14WR	fifos/fifos-1/elf.h	1569;"	d
+R_PARISC_PLTOFF14WR	fifos/memos-2/elf.h	1569;"	d
+R_PARISC_PLTOFF16DF	fifos/fifos-1/elf.h	1573;"	d
+R_PARISC_PLTOFF16DF	fifos/memos-2/elf.h	1573;"	d
+R_PARISC_PLTOFF16F	fifos/fifos-1/elf.h	1571;"	d
+R_PARISC_PLTOFF16F	fifos/memos-2/elf.h	1571;"	d
+R_PARISC_PLTOFF16WF	fifos/fifos-1/elf.h	1572;"	d
+R_PARISC_PLTOFF16WF	fifos/memos-2/elf.h	1572;"	d
+R_PARISC_PLTOFF21L	fifos/fifos-1/elf.h	1535;"	d
+R_PARISC_PLTOFF21L	fifos/memos-2/elf.h	1535;"	d
+R_PARISC_SECREL32	fifos/fifos-1/elf.h	1532;"	d
+R_PARISC_SECREL32	fifos/memos-2/elf.h	1532;"	d
+R_PARISC_SECREL64	fifos/fifos-1/elf.h	1567;"	d
+R_PARISC_SECREL64	fifos/memos-2/elf.h	1567;"	d
+R_PARISC_SEGBASE	fifos/fifos-1/elf.h	1533;"	d
+R_PARISC_SEGBASE	fifos/memos-2/elf.h	1533;"	d
+R_PARISC_SEGREL32	fifos/fifos-1/elf.h	1534;"	d
+R_PARISC_SEGREL32	fifos/memos-2/elf.h	1534;"	d
+R_PARISC_SEGREL64	fifos/fifos-1/elf.h	1568;"	d
+R_PARISC_SEGREL64	fifos/memos-2/elf.h	1568;"	d
+R_PARISC_TPREL14DR	fifos/fifos-1/elf.h	1592;"	d
+R_PARISC_TPREL14DR	fifos/memos-2/elf.h	1592;"	d
+R_PARISC_TPREL14R	fifos/fifos-1/elf.h	1586;"	d
+R_PARISC_TPREL14R	fifos/memos-2/elf.h	1586;"	d
+R_PARISC_TPREL14WR	fifos/fifos-1/elf.h	1591;"	d
+R_PARISC_TPREL14WR	fifos/memos-2/elf.h	1591;"	d
+R_PARISC_TPREL16DF	fifos/fifos-1/elf.h	1595;"	d
+R_PARISC_TPREL16DF	fifos/memos-2/elf.h	1595;"	d
+R_PARISC_TPREL16F	fifos/fifos-1/elf.h	1593;"	d
+R_PARISC_TPREL16F	fifos/memos-2/elf.h	1593;"	d
+R_PARISC_TPREL16WF	fifos/fifos-1/elf.h	1594;"	d
+R_PARISC_TPREL16WF	fifos/memos-2/elf.h	1594;"	d
+R_PARISC_TPREL21L	fifos/fifos-1/elf.h	1585;"	d
+R_PARISC_TPREL21L	fifos/memos-2/elf.h	1585;"	d
+R_PARISC_TPREL32	fifos/fifos-1/elf.h	1584;"	d
+R_PARISC_TPREL32	fifos/memos-2/elf.h	1584;"	d
+R_PARISC_TPREL64	fifos/fifos-1/elf.h	1590;"	d
+R_PARISC_TPREL64	fifos/memos-2/elf.h	1590;"	d
+R_PPC_ADDR14	fifos/fifos-1/elf.h	1711;"	d
+R_PPC_ADDR14	fifos/memos-2/elf.h	1711;"	d
+R_PPC_ADDR14_BRNTAKEN	fifos/fifos-1/elf.h	1713;"	d
+R_PPC_ADDR14_BRNTAKEN	fifos/memos-2/elf.h	1713;"	d
+R_PPC_ADDR14_BRTAKEN	fifos/fifos-1/elf.h	1712;"	d
+R_PPC_ADDR14_BRTAKEN	fifos/memos-2/elf.h	1712;"	d
+R_PPC_ADDR16	fifos/fifos-1/elf.h	1707;"	d
+R_PPC_ADDR16	fifos/memos-2/elf.h	1707;"	d
+R_PPC_ADDR16_HA	fifos/fifos-1/elf.h	1710;"	d
+R_PPC_ADDR16_HA	fifos/memos-2/elf.h	1710;"	d
+R_PPC_ADDR16_HI	fifos/fifos-1/elf.h	1709;"	d
+R_PPC_ADDR16_HI	fifos/memos-2/elf.h	1709;"	d
+R_PPC_ADDR16_LO	fifos/fifos-1/elf.h	1708;"	d
+R_PPC_ADDR16_LO	fifos/memos-2/elf.h	1708;"	d
+R_PPC_ADDR24	fifos/fifos-1/elf.h	1706;"	d
+R_PPC_ADDR24	fifos/memos-2/elf.h	1706;"	d
+R_PPC_ADDR32	fifos/fifos-1/elf.h	1705;"	d
+R_PPC_ADDR32	fifos/memos-2/elf.h	1705;"	d
+R_PPC_COPY	fifos/fifos-1/elf.h	1723;"	d
+R_PPC_COPY	fifos/memos-2/elf.h	1723;"	d
+R_PPC_DIAB_RELSDA_HA	fifos/fifos-1/elf.h	1769;"	d
+R_PPC_DIAB_RELSDA_HA	fifos/memos-2/elf.h	1769;"	d
+R_PPC_DIAB_RELSDA_HI	fifos/fifos-1/elf.h	1768;"	d
+R_PPC_DIAB_RELSDA_HI	fifos/memos-2/elf.h	1768;"	d
+R_PPC_DIAB_RELSDA_LO	fifos/fifos-1/elf.h	1767;"	d
+R_PPC_DIAB_RELSDA_LO	fifos/memos-2/elf.h	1767;"	d
+R_PPC_DIAB_SDA21_HA	fifos/fifos-1/elf.h	1766;"	d
+R_PPC_DIAB_SDA21_HA	fifos/memos-2/elf.h	1766;"	d
+R_PPC_DIAB_SDA21_HI	fifos/fifos-1/elf.h	1765;"	d
+R_PPC_DIAB_SDA21_HI	fifos/memos-2/elf.h	1765;"	d
+R_PPC_DIAB_SDA21_LO	fifos/fifos-1/elf.h	1764;"	d
+R_PPC_DIAB_SDA21_LO	fifos/memos-2/elf.h	1764;"	d
+R_PPC_EMB_BIT_FLD	fifos/fifos-1/elf.h	1760;"	d
+R_PPC_EMB_BIT_FLD	fifos/memos-2/elf.h	1760;"	d
+R_PPC_EMB_MRKREF	fifos/fifos-1/elf.h	1755;"	d
+R_PPC_EMB_MRKREF	fifos/memos-2/elf.h	1755;"	d
+R_PPC_EMB_NADDR16	fifos/fifos-1/elf.h	1747;"	d
+R_PPC_EMB_NADDR16	fifos/memos-2/elf.h	1747;"	d
+R_PPC_EMB_NADDR16_HA	fifos/fifos-1/elf.h	1750;"	d
+R_PPC_EMB_NADDR16_HA	fifos/memos-2/elf.h	1750;"	d
+R_PPC_EMB_NADDR16_HI	fifos/fifos-1/elf.h	1749;"	d
+R_PPC_EMB_NADDR16_HI	fifos/memos-2/elf.h	1749;"	d
+R_PPC_EMB_NADDR16_LO	fifos/fifos-1/elf.h	1748;"	d
+R_PPC_EMB_NADDR16_LO	fifos/memos-2/elf.h	1748;"	d
+R_PPC_EMB_NADDR32	fifos/fifos-1/elf.h	1746;"	d
+R_PPC_EMB_NADDR32	fifos/memos-2/elf.h	1746;"	d
+R_PPC_EMB_RELSDA	fifos/fifos-1/elf.h	1761;"	d
+R_PPC_EMB_RELSDA	fifos/memos-2/elf.h	1761;"	d
+R_PPC_EMB_RELSEC16	fifos/fifos-1/elf.h	1756;"	d
+R_PPC_EMB_RELSEC16	fifos/memos-2/elf.h	1756;"	d
+R_PPC_EMB_RELST_HA	fifos/fifos-1/elf.h	1759;"	d
+R_PPC_EMB_RELST_HA	fifos/memos-2/elf.h	1759;"	d
+R_PPC_EMB_RELST_HI	fifos/fifos-1/elf.h	1758;"	d
+R_PPC_EMB_RELST_HI	fifos/memos-2/elf.h	1758;"	d
+R_PPC_EMB_RELST_LO	fifos/fifos-1/elf.h	1757;"	d
+R_PPC_EMB_RELST_LO	fifos/memos-2/elf.h	1757;"	d
+R_PPC_EMB_SDA21	fifos/fifos-1/elf.h	1754;"	d
+R_PPC_EMB_SDA21	fifos/memos-2/elf.h	1754;"	d
+R_PPC_EMB_SDA2I16	fifos/fifos-1/elf.h	1752;"	d
+R_PPC_EMB_SDA2I16	fifos/memos-2/elf.h	1752;"	d
+R_PPC_EMB_SDA2REL	fifos/fifos-1/elf.h	1753;"	d
+R_PPC_EMB_SDA2REL	fifos/memos-2/elf.h	1753;"	d
+R_PPC_EMB_SDAI16	fifos/fifos-1/elf.h	1751;"	d
+R_PPC_EMB_SDAI16	fifos/memos-2/elf.h	1751;"	d
+R_PPC_GLOB_DAT	fifos/fifos-1/elf.h	1724;"	d
+R_PPC_GLOB_DAT	fifos/memos-2/elf.h	1724;"	d
+R_PPC_GOT16	fifos/fifos-1/elf.h	1718;"	d
+R_PPC_GOT16	fifos/memos-2/elf.h	1718;"	d
+R_PPC_GOT16_HA	fifos/fifos-1/elf.h	1721;"	d
+R_PPC_GOT16_HA	fifos/memos-2/elf.h	1721;"	d
+R_PPC_GOT16_HI	fifos/fifos-1/elf.h	1720;"	d
+R_PPC_GOT16_HI	fifos/memos-2/elf.h	1720;"	d
+R_PPC_GOT16_LO	fifos/fifos-1/elf.h	1719;"	d
+R_PPC_GOT16_LO	fifos/memos-2/elf.h	1719;"	d
+R_PPC_JMP_SLOT	fifos/fifos-1/elf.h	1725;"	d
+R_PPC_JMP_SLOT	fifos/memos-2/elf.h	1725;"	d
+R_PPC_LOCAL24PC	fifos/fifos-1/elf.h	1727;"	d
+R_PPC_LOCAL24PC	fifos/memos-2/elf.h	1727;"	d
+R_PPC_NONE	fifos/fifos-1/elf.h	1704;"	d
+R_PPC_NONE	fifos/memos-2/elf.h	1704;"	d
+R_PPC_NUM	fifos/fifos-1/elf.h	1742;"	d
+R_PPC_NUM	fifos/memos-2/elf.h	1742;"	d
+R_PPC_PLT16_HA	fifos/fifos-1/elf.h	1735;"	d
+R_PPC_PLT16_HA	fifos/memos-2/elf.h	1735;"	d
+R_PPC_PLT16_HI	fifos/fifos-1/elf.h	1734;"	d
+R_PPC_PLT16_HI	fifos/memos-2/elf.h	1734;"	d
+R_PPC_PLT16_LO	fifos/fifos-1/elf.h	1733;"	d
+R_PPC_PLT16_LO	fifos/memos-2/elf.h	1733;"	d
+R_PPC_PLT32	fifos/fifos-1/elf.h	1731;"	d
+R_PPC_PLT32	fifos/memos-2/elf.h	1731;"	d
+R_PPC_PLTREL24	fifos/fifos-1/elf.h	1722;"	d
+R_PPC_PLTREL24	fifos/memos-2/elf.h	1722;"	d
+R_PPC_PLTREL32	fifos/fifos-1/elf.h	1732;"	d
+R_PPC_PLTREL32	fifos/memos-2/elf.h	1732;"	d
+R_PPC_REL14	fifos/fifos-1/elf.h	1715;"	d
+R_PPC_REL14	fifos/memos-2/elf.h	1715;"	d
+R_PPC_REL14_BRNTAKEN	fifos/fifos-1/elf.h	1717;"	d
+R_PPC_REL14_BRNTAKEN	fifos/memos-2/elf.h	1717;"	d
+R_PPC_REL14_BRTAKEN	fifos/fifos-1/elf.h	1716;"	d
+R_PPC_REL14_BRTAKEN	fifos/memos-2/elf.h	1716;"	d
+R_PPC_REL24	fifos/fifos-1/elf.h	1714;"	d
+R_PPC_REL24	fifos/memos-2/elf.h	1714;"	d
+R_PPC_REL32	fifos/fifos-1/elf.h	1730;"	d
+R_PPC_REL32	fifos/memos-2/elf.h	1730;"	d
+R_PPC_RELATIVE	fifos/fifos-1/elf.h	1726;"	d
+R_PPC_RELATIVE	fifos/memos-2/elf.h	1726;"	d
+R_PPC_SDAREL16	fifos/fifos-1/elf.h	1736;"	d
+R_PPC_SDAREL16	fifos/memos-2/elf.h	1736;"	d
+R_PPC_SECTOFF	fifos/fifos-1/elf.h	1737;"	d
+R_PPC_SECTOFF	fifos/memos-2/elf.h	1737;"	d
+R_PPC_SECTOFF_HA	fifos/fifos-1/elf.h	1740;"	d
+R_PPC_SECTOFF_HA	fifos/memos-2/elf.h	1740;"	d
+R_PPC_SECTOFF_HI	fifos/fifos-1/elf.h	1739;"	d
+R_PPC_SECTOFF_HI	fifos/memos-2/elf.h	1739;"	d
+R_PPC_SECTOFF_LO	fifos/fifos-1/elf.h	1738;"	d
+R_PPC_SECTOFF_LO	fifos/memos-2/elf.h	1738;"	d
+R_PPC_TOC16	fifos/fifos-1/elf.h	1773;"	d
+R_PPC_TOC16	fifos/memos-2/elf.h	1773;"	d
+R_PPC_UADDR16	fifos/fifos-1/elf.h	1729;"	d
+R_PPC_UADDR16	fifos/memos-2/elf.h	1729;"	d
+R_PPC_UADDR32	fifos/fifos-1/elf.h	1728;"	d
+R_PPC_UADDR32	fifos/memos-2/elf.h	1728;"	d
+R_SH_ALIGN	fifos/fifos-1/elf.h	1985;"	d
+R_SH_ALIGN	fifos/memos-2/elf.h	1985;"	d
+R_SH_CODE	fifos/fifos-1/elf.h	1986;"	d
+R_SH_CODE	fifos/memos-2/elf.h	1986;"	d
+R_SH_COPY	fifos/fifos-1/elf.h	1994;"	d
+R_SH_COPY	fifos/memos-2/elf.h	1994;"	d
+R_SH_COUNT	fifos/fifos-1/elf.h	1984;"	d
+R_SH_COUNT	fifos/memos-2/elf.h	1984;"	d
+R_SH_DATA	fifos/fifos-1/elf.h	1987;"	d
+R_SH_DATA	fifos/memos-2/elf.h	1987;"	d
+R_SH_DIR32	fifos/fifos-1/elf.h	1972;"	d
+R_SH_DIR32	fifos/memos-2/elf.h	1972;"	d
+R_SH_DIR8BP	fifos/fifos-1/elf.h	1978;"	d
+R_SH_DIR8BP	fifos/memos-2/elf.h	1978;"	d
+R_SH_DIR8L	fifos/fifos-1/elf.h	1980;"	d
+R_SH_DIR8L	fifos/memos-2/elf.h	1980;"	d
+R_SH_DIR8W	fifos/fifos-1/elf.h	1979;"	d
+R_SH_DIR8W	fifos/memos-2/elf.h	1979;"	d
+R_SH_DIR8WPL	fifos/fifos-1/elf.h	1976;"	d
+R_SH_DIR8WPL	fifos/memos-2/elf.h	1976;"	d
+R_SH_DIR8WPN	fifos/fifos-1/elf.h	1974;"	d
+R_SH_DIR8WPN	fifos/memos-2/elf.h	1974;"	d
+R_SH_DIR8WPZ	fifos/fifos-1/elf.h	1977;"	d
+R_SH_DIR8WPZ	fifos/memos-2/elf.h	1977;"	d
+R_SH_GLOB_DAT	fifos/fifos-1/elf.h	1995;"	d
+R_SH_GLOB_DAT	fifos/memos-2/elf.h	1995;"	d
+R_SH_GNU_VTENTRY	fifos/fifos-1/elf.h	1991;"	d
+R_SH_GNU_VTENTRY	fifos/memos-2/elf.h	1991;"	d
+R_SH_GNU_VTINHERIT	fifos/fifos-1/elf.h	1990;"	d
+R_SH_GNU_VTINHERIT	fifos/memos-2/elf.h	1990;"	d
+R_SH_GOT32	fifos/fifos-1/elf.h	1992;"	d
+R_SH_GOT32	fifos/memos-2/elf.h	1992;"	d
+R_SH_GOTOFF	fifos/fifos-1/elf.h	1998;"	d
+R_SH_GOTOFF	fifos/memos-2/elf.h	1998;"	d
+R_SH_GOTPC	fifos/fifos-1/elf.h	1999;"	d
+R_SH_GOTPC	fifos/memos-2/elf.h	1999;"	d
+R_SH_IND12W	fifos/fifos-1/elf.h	1975;"	d
+R_SH_IND12W	fifos/memos-2/elf.h	1975;"	d
+R_SH_JMP_SLOT	fifos/fifos-1/elf.h	1996;"	d
+R_SH_JMP_SLOT	fifos/memos-2/elf.h	1996;"	d
+R_SH_LABEL	fifos/fifos-1/elf.h	1988;"	d
+R_SH_LABEL	fifos/memos-2/elf.h	1988;"	d
+R_SH_NONE	fifos/fifos-1/elf.h	1971;"	d
+R_SH_NONE	fifos/memos-2/elf.h	1971;"	d
+R_SH_NUM	fifos/fifos-1/elf.h	2001;"	d
+R_SH_NUM	fifos/memos-2/elf.h	2001;"	d
+R_SH_PLT32	fifos/fifos-1/elf.h	1993;"	d
+R_SH_PLT32	fifos/memos-2/elf.h	1993;"	d
+R_SH_REL32	fifos/fifos-1/elf.h	1973;"	d
+R_SH_REL32	fifos/memos-2/elf.h	1973;"	d
+R_SH_RELATIVE	fifos/fifos-1/elf.h	1997;"	d
+R_SH_RELATIVE	fifos/memos-2/elf.h	1997;"	d
+R_SH_SWITCH16	fifos/fifos-1/elf.h	1981;"	d
+R_SH_SWITCH16	fifos/memos-2/elf.h	1981;"	d
+R_SH_SWITCH32	fifos/fifos-1/elf.h	1982;"	d
+R_SH_SWITCH32	fifos/memos-2/elf.h	1982;"	d
+R_SH_SWITCH8	fifos/fifos-1/elf.h	1989;"	d
+R_SH_SWITCH8	fifos/memos-2/elf.h	1989;"	d
+R_SH_USES	fifos/fifos-1/elf.h	1983;"	d
+R_SH_USES	fifos/memos-2/elf.h	1983;"	d
+R_SPARC_10	fifos/fifos-1/elf.h	1069;"	d
+R_SPARC_10	fifos/memos-2/elf.h	1069;"	d
+R_SPARC_11	fifos/fifos-1/elf.h	1070;"	d
+R_SPARC_11	fifos/memos-2/elf.h	1070;"	d
+R_SPARC_13	fifos/fifos-1/elf.h	1047;"	d
+R_SPARC_13	fifos/memos-2/elf.h	1047;"	d
+R_SPARC_16	fifos/fifos-1/elf.h	1038;"	d
+R_SPARC_16	fifos/memos-2/elf.h	1038;"	d
+R_SPARC_22	fifos/fifos-1/elf.h	1046;"	d
+R_SPARC_22	fifos/memos-2/elf.h	1046;"	d
+R_SPARC_32	fifos/fifos-1/elf.h	1039;"	d
+R_SPARC_32	fifos/memos-2/elf.h	1039;"	d
+R_SPARC_5	fifos/fifos-1/elf.h	1082;"	d
+R_SPARC_5	fifos/memos-2/elf.h	1082;"	d
+R_SPARC_6	fifos/fifos-1/elf.h	1083;"	d
+R_SPARC_6	fifos/memos-2/elf.h	1083;"	d
+R_SPARC_64	fifos/fifos-1/elf.h	1071;"	d
+R_SPARC_64	fifos/memos-2/elf.h	1071;"	d
+R_SPARC_7	fifos/fifos-1/elf.h	1081;"	d
+R_SPARC_7	fifos/memos-2/elf.h	1081;"	d
+R_SPARC_8	fifos/fifos-1/elf.h	1037;"	d
+R_SPARC_8	fifos/memos-2/elf.h	1037;"	d
+R_SPARC_COPY	fifos/fifos-1/elf.h	1055;"	d
+R_SPARC_COPY	fifos/memos-2/elf.h	1055;"	d
+R_SPARC_DISP16	fifos/fifos-1/elf.h	1041;"	d
+R_SPARC_DISP16	fifos/memos-2/elf.h	1041;"	d
+R_SPARC_DISP32	fifos/fifos-1/elf.h	1042;"	d
+R_SPARC_DISP32	fifos/memos-2/elf.h	1042;"	d
+R_SPARC_DISP64	fifos/fifos-1/elf.h	1084;"	d
+R_SPARC_DISP64	fifos/memos-2/elf.h	1084;"	d
+R_SPARC_DISP8	fifos/fifos-1/elf.h	1040;"	d
+R_SPARC_DISP8	fifos/memos-2/elf.h	1040;"	d
+R_SPARC_GLOB_DAT	fifos/fifos-1/elf.h	1056;"	d
+R_SPARC_GLOB_DAT	fifos/memos-2/elf.h	1056;"	d
+R_SPARC_GOT10	fifos/fifos-1/elf.h	1049;"	d
+R_SPARC_GOT10	fifos/memos-2/elf.h	1049;"	d
+R_SPARC_GOT13	fifos/fifos-1/elf.h	1050;"	d
+R_SPARC_GOT13	fifos/memos-2/elf.h	1050;"	d
+R_SPARC_GOT22	fifos/fifos-1/elf.h	1051;"	d
+R_SPARC_GOT22	fifos/memos-2/elf.h	1051;"	d
+R_SPARC_H44	fifos/fifos-1/elf.h	1088;"	d
+R_SPARC_H44	fifos/memos-2/elf.h	1088;"	d
+R_SPARC_HH22	fifos/fifos-1/elf.h	1073;"	d
+R_SPARC_HH22	fifos/memos-2/elf.h	1073;"	d
+R_SPARC_HI22	fifos/fifos-1/elf.h	1045;"	d
+R_SPARC_HI22	fifos/memos-2/elf.h	1045;"	d
+R_SPARC_HIPLT22	fifos/fifos-1/elf.h	1064;"	d
+R_SPARC_HIPLT22	fifos/memos-2/elf.h	1064;"	d
+R_SPARC_HIX22	fifos/fifos-1/elf.h	1086;"	d
+R_SPARC_HIX22	fifos/memos-2/elf.h	1086;"	d
+R_SPARC_HM10	fifos/fifos-1/elf.h	1074;"	d
+R_SPARC_HM10	fifos/memos-2/elf.h	1074;"	d
+R_SPARC_JMP_SLOT	fifos/fifos-1/elf.h	1057;"	d
+R_SPARC_JMP_SLOT	fifos/memos-2/elf.h	1057;"	d
+R_SPARC_L44	fifos/fifos-1/elf.h	1090;"	d
+R_SPARC_L44	fifos/memos-2/elf.h	1090;"	d
+R_SPARC_LM22	fifos/fifos-1/elf.h	1075;"	d
+R_SPARC_LM22	fifos/memos-2/elf.h	1075;"	d
+R_SPARC_LO10	fifos/fifos-1/elf.h	1048;"	d
+R_SPARC_LO10	fifos/memos-2/elf.h	1048;"	d
+R_SPARC_LOPLT10	fifos/fifos-1/elf.h	1065;"	d
+R_SPARC_LOPLT10	fifos/memos-2/elf.h	1065;"	d
+R_SPARC_LOX10	fifos/fifos-1/elf.h	1087;"	d
+R_SPARC_LOX10	fifos/memos-2/elf.h	1087;"	d
+R_SPARC_M44	fifos/fifos-1/elf.h	1089;"	d
+R_SPARC_M44	fifos/memos-2/elf.h	1089;"	d
+R_SPARC_NONE	fifos/fifos-1/elf.h	1036;"	d
+R_SPARC_NONE	fifos/memos-2/elf.h	1036;"	d
+R_SPARC_NUM	fifos/fifos-1/elf.h	1095;"	d
+R_SPARC_NUM	fifos/memos-2/elf.h	1095;"	d
+R_SPARC_OLO10	fifos/fifos-1/elf.h	1072;"	d
+R_SPARC_OLO10	fifos/memos-2/elf.h	1072;"	d
+R_SPARC_PC10	fifos/fifos-1/elf.h	1052;"	d
+R_SPARC_PC10	fifos/memos-2/elf.h	1052;"	d
+R_SPARC_PC22	fifos/fifos-1/elf.h	1053;"	d
+R_SPARC_PC22	fifos/memos-2/elf.h	1053;"	d
+R_SPARC_PCPLT10	fifos/fifos-1/elf.h	1068;"	d
+R_SPARC_PCPLT10	fifos/memos-2/elf.h	1068;"	d
+R_SPARC_PCPLT22	fifos/fifos-1/elf.h	1067;"	d
+R_SPARC_PCPLT22	fifos/memos-2/elf.h	1067;"	d
+R_SPARC_PCPLT32	fifos/fifos-1/elf.h	1066;"	d
+R_SPARC_PCPLT32	fifos/memos-2/elf.h	1066;"	d
+R_SPARC_PC_HH22	fifos/fifos-1/elf.h	1076;"	d
+R_SPARC_PC_HH22	fifos/memos-2/elf.h	1076;"	d
+R_SPARC_PC_HM10	fifos/fifos-1/elf.h	1077;"	d
+R_SPARC_PC_HM10	fifos/memos-2/elf.h	1077;"	d
+R_SPARC_PC_LM22	fifos/fifos-1/elf.h	1078;"	d
+R_SPARC_PC_LM22	fifos/memos-2/elf.h	1078;"	d
+R_SPARC_PLT32	fifos/fifos-1/elf.h	1063;"	d
+R_SPARC_PLT32	fifos/memos-2/elf.h	1063;"	d
+R_SPARC_PLT64	fifos/fifos-1/elf.h	1085;"	d
+R_SPARC_PLT64	fifos/memos-2/elf.h	1085;"	d
+R_SPARC_REGISTER	fifos/fifos-1/elf.h	1091;"	d
+R_SPARC_REGISTER	fifos/memos-2/elf.h	1091;"	d
+R_SPARC_RELATIVE	fifos/fifos-1/elf.h	1058;"	d
+R_SPARC_RELATIVE	fifos/memos-2/elf.h	1058;"	d
+R_SPARC_UA16	fifos/fifos-1/elf.h	1093;"	d
+R_SPARC_UA16	fifos/memos-2/elf.h	1093;"	d
+R_SPARC_UA32	fifos/fifos-1/elf.h	1059;"	d
+R_SPARC_UA32	fifos/memos-2/elf.h	1059;"	d
+R_SPARC_UA64	fifos/fifos-1/elf.h	1092;"	d
+R_SPARC_UA64	fifos/memos-2/elf.h	1092;"	d
+R_SPARC_WDISP16	fifos/fifos-1/elf.h	1079;"	d
+R_SPARC_WDISP16	fifos/memos-2/elf.h	1079;"	d
+R_SPARC_WDISP19	fifos/fifos-1/elf.h	1080;"	d
+R_SPARC_WDISP19	fifos/memos-2/elf.h	1080;"	d
+R_SPARC_WDISP22	fifos/fifos-1/elf.h	1044;"	d
+R_SPARC_WDISP22	fifos/memos-2/elf.h	1044;"	d
+R_SPARC_WDISP30	fifos/fifos-1/elf.h	1043;"	d
+R_SPARC_WDISP30	fifos/memos-2/elf.h	1043;"	d
+R_SPARC_WPLT30	fifos/fifos-1/elf.h	1054;"	d
+R_SPARC_WPLT30	fifos/memos-2/elf.h	1054;"	d
+SELFMAG	fifos/fifos-1/elf.h	102;"	d
+SELFMAG	fifos/memos-2/elf.h	102;"	d
+SHF_ALLOC	fifos/fifos-1/elf.h	314;"	d
+SHF_ALLOC	fifos/memos-2/elf.h	314;"	d
+SHF_ALPHA_GPREL	fifos/fifos-1/elf.h	1653;"	d
+SHF_ALPHA_GPREL	fifos/memos-2/elf.h	1653;"	d
+SHF_ARM_COMDEF	fifos/fifos-1/elf.h	1806;"	d
+SHF_ARM_COMDEF	fifos/memos-2/elf.h	1806;"	d
+SHF_ARM_ENTRYSECT	fifos/fifos-1/elf.h	1805;"	d
+SHF_ARM_ENTRYSECT	fifos/memos-2/elf.h	1805;"	d
+SHF_EXECINSTR	fifos/fifos-1/elf.h	315;"	d
+SHF_EXECINSTR	fifos/memos-2/elf.h	315;"	d
+SHF_IA_64_NORECOV	fifos/fifos-1/elf.h	1879;"	d
+SHF_IA_64_NORECOV	fifos/memos-2/elf.h	1879;"	d
+SHF_IA_64_SHORT	fifos/fifos-1/elf.h	1878;"	d
+SHF_IA_64_SHORT	fifos/memos-2/elf.h	1878;"	d
+SHF_INFO_LINK	fifos/fifos-1/elf.h	318;"	d
+SHF_INFO_LINK	fifos/memos-2/elf.h	318;"	d
+SHF_LINK_ORDER	fifos/fifos-1/elf.h	319;"	d
+SHF_LINK_ORDER	fifos/memos-2/elf.h	319;"	d
+SHF_MASKOS	fifos/fifos-1/elf.h	322;"	d
+SHF_MASKOS	fifos/memos-2/elf.h	322;"	d
+SHF_MASKPROC	fifos/fifos-1/elf.h	323;"	d
+SHF_MASKPROC	fifos/memos-2/elf.h	323;"	d
+SHF_MERGE	fifos/fifos-1/elf.h	316;"	d
+SHF_MERGE	fifos/memos-2/elf.h	316;"	d
+SHF_MIPS_ADDR	fifos/fifos-1/elf.h	1198;"	d
+SHF_MIPS_ADDR	fifos/memos-2/elf.h	1198;"	d
+SHF_MIPS_GPREL	fifos/fifos-1/elf.h	1196;"	d
+SHF_MIPS_GPREL	fifos/memos-2/elf.h	1196;"	d
+SHF_MIPS_LOCAL	fifos/fifos-1/elf.h	1201;"	d
+SHF_MIPS_LOCAL	fifos/memos-2/elf.h	1201;"	d
+SHF_MIPS_MERGE	fifos/fifos-1/elf.h	1197;"	d
+SHF_MIPS_MERGE	fifos/memos-2/elf.h	1197;"	d
+SHF_MIPS_NAMES	fifos/fifos-1/elf.h	1202;"	d
+SHF_MIPS_NAMES	fifos/memos-2/elf.h	1202;"	d
+SHF_MIPS_NODUPE	fifos/fifos-1/elf.h	1203;"	d
+SHF_MIPS_NODUPE	fifos/memos-2/elf.h	1203;"	d
+SHF_MIPS_NOSTRIP	fifos/fifos-1/elf.h	1200;"	d
+SHF_MIPS_NOSTRIP	fifos/memos-2/elf.h	1200;"	d
+SHF_MIPS_STRINGS	fifos/fifos-1/elf.h	1199;"	d
+SHF_MIPS_STRINGS	fifos/memos-2/elf.h	1199;"	d
+SHF_OS_NONCONFORMING	fifos/fifos-1/elf.h	320;"	d
+SHF_OS_NONCONFORMING	fifos/memos-2/elf.h	320;"	d
+SHF_PARISC_HUGE	fifos/fifos-1/elf.h	1503;"	d
+SHF_PARISC_HUGE	fifos/memos-2/elf.h	1503;"	d
+SHF_PARISC_SBP	fifos/fifos-1/elf.h	1504;"	d
+SHF_PARISC_SBP	fifos/memos-2/elf.h	1504;"	d
+SHF_PARISC_SHORT	fifos/fifos-1/elf.h	1502;"	d
+SHF_PARISC_SHORT	fifos/memos-2/elf.h	1502;"	d
+SHF_STRINGS	fifos/fifos-1/elf.h	317;"	d
+SHF_STRINGS	fifos/memos-2/elf.h	317;"	d
+SHF_WRITE	fifos/fifos-1/elf.h	313;"	d
+SHF_WRITE	fifos/memos-2/elf.h	313;"	d
+SHN_ABS	fifos/fifos-1/elf.h	270;"	d
+SHN_ABS	fifos/memos-2/elf.h	270;"	d
+SHN_COMMON	fifos/fifos-1/elf.h	271;"	d
+SHN_COMMON	fifos/memos-2/elf.h	271;"	d
+SHN_HIOS	fifos/fifos-1/elf.h	269;"	d
+SHN_HIOS	fifos/memos-2/elf.h	269;"	d
+SHN_HIPROC	fifos/fifos-1/elf.h	267;"	d
+SHN_HIPROC	fifos/memos-2/elf.h	267;"	d
+SHN_HIRESERVE	fifos/fifos-1/elf.h	273;"	d
+SHN_HIRESERVE	fifos/memos-2/elf.h	273;"	d
+SHN_LOOS	fifos/fifos-1/elf.h	268;"	d
+SHN_LOOS	fifos/memos-2/elf.h	268;"	d
+SHN_LOPROC	fifos/fifos-1/elf.h	266;"	d
+SHN_LOPROC	fifos/memos-2/elf.h	266;"	d
+SHN_LORESERVE	fifos/fifos-1/elf.h	265;"	d
+SHN_LORESERVE	fifos/memos-2/elf.h	265;"	d
+SHN_MIPS_ACOMMON	fifos/fifos-1/elf.h	1146;"	d
+SHN_MIPS_ACOMMON	fifos/memos-2/elf.h	1146;"	d
+SHN_MIPS_DATA	fifos/fifos-1/elf.h	1148;"	d
+SHN_MIPS_DATA	fifos/memos-2/elf.h	1148;"	d
+SHN_MIPS_SCOMMON	fifos/fifos-1/elf.h	1149;"	d
+SHN_MIPS_SCOMMON	fifos/memos-2/elf.h	1149;"	d
+SHN_MIPS_SUNDEFINED	fifos/fifos-1/elf.h	1150;"	d
+SHN_MIPS_SUNDEFINED	fifos/memos-2/elf.h	1150;"	d
+SHN_MIPS_TEXT	fifos/fifos-1/elf.h	1147;"	d
+SHN_MIPS_TEXT	fifos/memos-2/elf.h	1147;"	d
+SHN_PARISC_ANSI_COMMON	fifos/fifos-1/elf.h	1490;"	d
+SHN_PARISC_ANSI_COMMON	fifos/memos-2/elf.h	1490;"	d
+SHN_PARISC_HUGE_COMMON	fifos/fifos-1/elf.h	1492;"	d
+SHN_PARISC_HUGE_COMMON	fifos/memos-2/elf.h	1492;"	d
+SHN_UNDEF	fifos/fifos-1/elf.h	264;"	d
+SHN_UNDEF	fifos/fifos-1/elf.h	384;"	d
+SHN_UNDEF	fifos/memos-2/elf.h	264;"	d
+SHN_UNDEF	fifos/memos-2/elf.h	384;"	d
+SHN_XINDEX	fifos/fifos-1/elf.h	272;"	d
+SHN_XINDEX	fifos/memos-2/elf.h	272;"	d
+SHT_ALPHA_DEBUG	fifos/fifos-1/elf.h	1648;"	d
+SHT_ALPHA_DEBUG	fifos/memos-2/elf.h	1648;"	d
+SHT_ALPHA_REGINFO	fifos/fifos-1/elf.h	1649;"	d
+SHT_ALPHA_REGINFO	fifos/memos-2/elf.h	1649;"	d
+SHT_CHECKSUM	fifos/fifos-1/elf.h	296;"	d
+SHT_CHECKSUM	fifos/memos-2/elf.h	296;"	d
+SHT_DYNAMIC	fifos/fifos-1/elf.h	283;"	d
+SHT_DYNAMIC	fifos/memos-2/elf.h	283;"	d
+SHT_DYNSYM	fifos/fifos-1/elf.h	288;"	d
+SHT_DYNSYM	fifos/memos-2/elf.h	288;"	d
+SHT_FINI_ARRAY	fifos/fifos-1/elf.h	290;"	d
+SHT_FINI_ARRAY	fifos/memos-2/elf.h	290;"	d
+SHT_GNU_verdef	fifos/fifos-1/elf.h	301;"	d
+SHT_GNU_verdef	fifos/memos-2/elf.h	301;"	d
+SHT_GNU_verneed	fifos/fifos-1/elf.h	302;"	d
+SHT_GNU_verneed	fifos/memos-2/elf.h	302;"	d
+SHT_GNU_versym	fifos/fifos-1/elf.h	303;"	d
+SHT_GNU_versym	fifos/memos-2/elf.h	303;"	d
+SHT_GROUP	fifos/fifos-1/elf.h	292;"	d
+SHT_GROUP	fifos/memos-2/elf.h	292;"	d
+SHT_HASH	fifos/fifos-1/elf.h	282;"	d
+SHT_HASH	fifos/memos-2/elf.h	282;"	d
+SHT_HIOS	fifos/fifos-1/elf.h	305;"	d
+SHT_HIOS	fifos/memos-2/elf.h	305;"	d
+SHT_HIPROC	fifos/fifos-1/elf.h	307;"	d
+SHT_HIPROC	fifos/memos-2/elf.h	307;"	d
+SHT_HISUNW	fifos/fifos-1/elf.h	304;"	d
+SHT_HISUNW	fifos/memos-2/elf.h	304;"	d
+SHT_HIUSER	fifos/fifos-1/elf.h	309;"	d
+SHT_HIUSER	fifos/memos-2/elf.h	309;"	d
+SHT_IA_64_EXT	fifos/fifos-1/elf.h	1874;"	d
+SHT_IA_64_EXT	fifos/memos-2/elf.h	1874;"	d
+SHT_IA_64_UNWIND	fifos/fifos-1/elf.h	1875;"	d
+SHT_IA_64_UNWIND	fifos/memos-2/elf.h	1875;"	d
+SHT_INIT_ARRAY	fifos/fifos-1/elf.h	289;"	d
+SHT_INIT_ARRAY	fifos/memos-2/elf.h	289;"	d
+SHT_LOOS	fifos/fifos-1/elf.h	295;"	d
+SHT_LOOS	fifos/memos-2/elf.h	295;"	d
+SHT_LOPROC	fifos/fifos-1/elf.h	306;"	d
+SHT_LOPROC	fifos/memos-2/elf.h	306;"	d
+SHT_LOSUNW	fifos/fifos-1/elf.h	297;"	d
+SHT_LOSUNW	fifos/memos-2/elf.h	297;"	d
+SHT_LOUSER	fifos/fifos-1/elf.h	308;"	d
+SHT_LOUSER	fifos/memos-2/elf.h	308;"	d
+SHT_MIPS_AUXSYM	fifos/fifos-1/elf.h	1173;"	d
+SHT_MIPS_AUXSYM	fifos/memos-2/elf.h	1173;"	d
+SHT_MIPS_CONFLICT	fifos/fifos-1/elf.h	1156;"	d
+SHT_MIPS_CONFLICT	fifos/memos-2/elf.h	1156;"	d
+SHT_MIPS_CONTENT	fifos/fifos-1/elf.h	1165;"	d
+SHT_MIPS_CONTENT	fifos/memos-2/elf.h	1165;"	d
+SHT_MIPS_DEBUG	fifos/fifos-1/elf.h	1159;"	d
+SHT_MIPS_DEBUG	fifos/memos-2/elf.h	1159;"	d
+SHT_MIPS_DELTACLASS	fifos/fifos-1/elf.h	1180;"	d
+SHT_MIPS_DELTACLASS	fifos/memos-2/elf.h	1180;"	d
+SHT_MIPS_DELTADECL	fifos/fifos-1/elf.h	1182;"	d
+SHT_MIPS_DELTADECL	fifos/memos-2/elf.h	1182;"	d
+SHT_MIPS_DELTAINST	fifos/fifos-1/elf.h	1179;"	d
+SHT_MIPS_DELTAINST	fifos/memos-2/elf.h	1179;"	d
+SHT_MIPS_DELTASYM	fifos/fifos-1/elf.h	1178;"	d
+SHT_MIPS_DELTASYM	fifos/memos-2/elf.h	1178;"	d
+SHT_MIPS_DENSE	fifos/fifos-1/elf.h	1170;"	d
+SHT_MIPS_DENSE	fifos/memos-2/elf.h	1170;"	d
+SHT_MIPS_DWARF	fifos/fifos-1/elf.h	1181;"	d
+SHT_MIPS_DWARF	fifos/memos-2/elf.h	1181;"	d
+SHT_MIPS_EH_REGION	fifos/fifos-1/elf.h	1190;"	d
+SHT_MIPS_EH_REGION	fifos/memos-2/elf.h	1190;"	d
+SHT_MIPS_EVENTS	fifos/fifos-1/elf.h	1184;"	d
+SHT_MIPS_EVENTS	fifos/memos-2/elf.h	1184;"	d
+SHT_MIPS_EXTSYM	fifos/fifos-1/elf.h	1169;"	d
+SHT_MIPS_EXTSYM	fifos/memos-2/elf.h	1169;"	d
+SHT_MIPS_FDESC	fifos/fifos-1/elf.h	1168;"	d
+SHT_MIPS_FDESC	fifos/memos-2/elf.h	1168;"	d
+SHT_MIPS_GPTAB	fifos/fifos-1/elf.h	1157;"	d
+SHT_MIPS_GPTAB	fifos/memos-2/elf.h	1157;"	d
+SHT_MIPS_IFACE	fifos/fifos-1/elf.h	1164;"	d
+SHT_MIPS_IFACE	fifos/memos-2/elf.h	1164;"	d
+SHT_MIPS_LIBLIST	fifos/fifos-1/elf.h	1154;"	d
+SHT_MIPS_LIBLIST	fifos/memos-2/elf.h	1154;"	d
+SHT_MIPS_LINE	fifos/fifos-1/elf.h	1176;"	d
+SHT_MIPS_LINE	fifos/memos-2/elf.h	1176;"	d
+SHT_MIPS_LOCSTR	fifos/fifos-1/elf.h	1175;"	d
+SHT_MIPS_LOCSTR	fifos/memos-2/elf.h	1175;"	d
+SHT_MIPS_LOCSYM	fifos/fifos-1/elf.h	1172;"	d
+SHT_MIPS_LOCSYM	fifos/memos-2/elf.h	1172;"	d
+SHT_MIPS_MSYM	fifos/fifos-1/elf.h	1155;"	d
+SHT_MIPS_MSYM	fifos/memos-2/elf.h	1155;"	d
+SHT_MIPS_OPTIONS	fifos/fifos-1/elf.h	1166;"	d
+SHT_MIPS_OPTIONS	fifos/memos-2/elf.h	1166;"	d
+SHT_MIPS_OPTSYM	fifos/fifos-1/elf.h	1174;"	d
+SHT_MIPS_OPTSYM	fifos/memos-2/elf.h	1174;"	d
+SHT_MIPS_PACKAGE	fifos/fifos-1/elf.h	1161;"	d
+SHT_MIPS_PACKAGE	fifos/memos-2/elf.h	1161;"	d
+SHT_MIPS_PACKSYM	fifos/fifos-1/elf.h	1162;"	d
+SHT_MIPS_PACKSYM	fifos/memos-2/elf.h	1162;"	d
+SHT_MIPS_PDESC	fifos/fifos-1/elf.h	1171;"	d
+SHT_MIPS_PDESC	fifos/memos-2/elf.h	1171;"	d
+SHT_MIPS_PDR_EXCEPTION	fifos/fifos-1/elf.h	1192;"	d
+SHT_MIPS_PDR_EXCEPTION	fifos/memos-2/elf.h	1192;"	d
+SHT_MIPS_PIXIE	fifos/fifos-1/elf.h	1186;"	d
+SHT_MIPS_PIXIE	fifos/memos-2/elf.h	1186;"	d
+SHT_MIPS_REGINFO	fifos/fifos-1/elf.h	1160;"	d
+SHT_MIPS_REGINFO	fifos/memos-2/elf.h	1160;"	d
+SHT_MIPS_RELD	fifos/fifos-1/elf.h	1163;"	d
+SHT_MIPS_RELD	fifos/memos-2/elf.h	1163;"	d
+SHT_MIPS_RFDESC	fifos/fifos-1/elf.h	1177;"	d
+SHT_MIPS_RFDESC	fifos/memos-2/elf.h	1177;"	d
+SHT_MIPS_SHDR	fifos/fifos-1/elf.h	1167;"	d
+SHT_MIPS_SHDR	fifos/memos-2/elf.h	1167;"	d
+SHT_MIPS_SYMBOL_LIB	fifos/fifos-1/elf.h	1183;"	d
+SHT_MIPS_SYMBOL_LIB	fifos/memos-2/elf.h	1183;"	d
+SHT_MIPS_TRANSLATE	fifos/fifos-1/elf.h	1185;"	d
+SHT_MIPS_TRANSLATE	fifos/memos-2/elf.h	1185;"	d
+SHT_MIPS_UCODE	fifos/fifos-1/elf.h	1158;"	d
+SHT_MIPS_UCODE	fifos/memos-2/elf.h	1158;"	d
+SHT_MIPS_WHIRL	fifos/fifos-1/elf.h	1189;"	d
+SHT_MIPS_WHIRL	fifos/memos-2/elf.h	1189;"	d
+SHT_MIPS_XLATE	fifos/fifos-1/elf.h	1187;"	d
+SHT_MIPS_XLATE	fifos/memos-2/elf.h	1187;"	d
+SHT_MIPS_XLATE_DEBUG	fifos/fifos-1/elf.h	1188;"	d
+SHT_MIPS_XLATE_DEBUG	fifos/memos-2/elf.h	1188;"	d
+SHT_MIPS_XLATE_OLD	fifos/fifos-1/elf.h	1191;"	d
+SHT_MIPS_XLATE_OLD	fifos/memos-2/elf.h	1191;"	d
+SHT_NOBITS	fifos/fifos-1/elf.h	285;"	d
+SHT_NOBITS	fifos/memos-2/elf.h	285;"	d
+SHT_NOTE	fifos/fifos-1/elf.h	284;"	d
+SHT_NOTE	fifos/memos-2/elf.h	284;"	d
+SHT_NULL	fifos/fifos-1/elf.h	277;"	d
+SHT_NULL	fifos/memos-2/elf.h	277;"	d
+SHT_NUM	fifos/fifos-1/elf.h	294;"	d
+SHT_NUM	fifos/memos-2/elf.h	294;"	d
+SHT_PARISC_DOC	fifos/fifos-1/elf.h	1498;"	d
+SHT_PARISC_DOC	fifos/memos-2/elf.h	1498;"	d
+SHT_PARISC_EXT	fifos/fifos-1/elf.h	1496;"	d
+SHT_PARISC_EXT	fifos/memos-2/elf.h	1496;"	d
+SHT_PARISC_UNWIND	fifos/fifos-1/elf.h	1497;"	d
+SHT_PARISC_UNWIND	fifos/memos-2/elf.h	1497;"	d
+SHT_PREINIT_ARRAY	fifos/fifos-1/elf.h	291;"	d
+SHT_PREINIT_ARRAY	fifos/memos-2/elf.h	291;"	d
+SHT_PROGBITS	fifos/fifos-1/elf.h	278;"	d
+SHT_PROGBITS	fifos/memos-2/elf.h	278;"	d
+SHT_REL	fifos/fifos-1/elf.h	286;"	d
+SHT_REL	fifos/memos-2/elf.h	286;"	d
+SHT_RELA	fifos/fifos-1/elf.h	281;"	d
+SHT_RELA	fifos/memos-2/elf.h	281;"	d
+SHT_SHLIB	fifos/fifos-1/elf.h	287;"	d
+SHT_SHLIB	fifos/memos-2/elf.h	287;"	d
+SHT_STRTAB	fifos/fifos-1/elf.h	280;"	d
+SHT_STRTAB	fifos/memos-2/elf.h	280;"	d
+SHT_SUNW_COMDAT	fifos/fifos-1/elf.h	299;"	d
+SHT_SUNW_COMDAT	fifos/memos-2/elf.h	299;"	d
+SHT_SUNW_move	fifos/fifos-1/elf.h	298;"	d
+SHT_SUNW_move	fifos/memos-2/elf.h	298;"	d
+SHT_SUNW_syminfo	fifos/fifos-1/elf.h	300;"	d
+SHT_SUNW_syminfo	fifos/memos-2/elf.h	300;"	d
+SHT_SYMTAB	fifos/fifos-1/elf.h	279;"	d
+SHT_SYMTAB	fifos/memos-2/elf.h	279;"	d
+SHT_SYMTAB_SHNDX	fifos/fifos-1/elf.h	293;"	d
+SHT_SYMTAB_SHNDX	fifos/memos-2/elf.h	293;"	d
+STB_GLOBAL	fifos/fifos-1/elf.h	400;"	d
+STB_GLOBAL	fifos/memos-2/elf.h	400;"	d
+STB_HIOS	fifos/fifos-1/elf.h	404;"	d
+STB_HIOS	fifos/memos-2/elf.h	404;"	d
+STB_HIPROC	fifos/fifos-1/elf.h	406;"	d
+STB_HIPROC	fifos/memos-2/elf.h	406;"	d
+STB_LOCAL	fifos/fifos-1/elf.h	399;"	d
+STB_LOCAL	fifos/memos-2/elf.h	399;"	d
+STB_LOOS	fifos/fifos-1/elf.h	403;"	d
+STB_LOOS	fifos/memos-2/elf.h	403;"	d
+STB_LOPROC	fifos/fifos-1/elf.h	405;"	d
+STB_LOPROC	fifos/memos-2/elf.h	405;"	d
+STB_MIPS_SPLIT_COMMON	fifos/fifos-1/elf.h	1216;"	d
+STB_MIPS_SPLIT_COMMON	fifos/memos-2/elf.h	1216;"	d
+STB_NUM	fifos/fifos-1/elf.h	402;"	d
+STB_NUM	fifos/memos-2/elf.h	402;"	d
+STB_WEAK	fifos/fifos-1/elf.h	401;"	d
+STB_WEAK	fifos/memos-2/elf.h	401;"	d
+STN_UNDEF	fifos/fifos-1/elf.h	427;"	d
+STN_UNDEF	fifos/memos-2/elf.h	427;"	d
+STO_ALPHA_NOPV	fifos/fifos-1/elf.h	1656;"	d
+STO_ALPHA_NOPV	fifos/memos-2/elf.h	1656;"	d
+STO_ALPHA_STD_GPLOAD	fifos/fifos-1/elf.h	1657;"	d
+STO_ALPHA_STD_GPLOAD	fifos/memos-2/elf.h	1657;"	d
+STO_MIPS_DEFAULT	fifos/fifos-1/elf.h	1209;"	d
+STO_MIPS_DEFAULT	fifos/memos-2/elf.h	1209;"	d
+STO_MIPS_HIDDEN	fifos/fifos-1/elf.h	1211;"	d
+STO_MIPS_HIDDEN	fifos/memos-2/elf.h	1211;"	d
+STO_MIPS_INTERNAL	fifos/fifos-1/elf.h	1210;"	d
+STO_MIPS_INTERNAL	fifos/memos-2/elf.h	1210;"	d
+STO_MIPS_PROTECTED	fifos/fifos-1/elf.h	1212;"	d
+STO_MIPS_PROTECTED	fifos/memos-2/elf.h	1212;"	d
+STO_MIPS_SC_ALIGN_UNUSED	fifos/fifos-1/elf.h	1213;"	d
+STO_MIPS_SC_ALIGN_UNUSED	fifos/memos-2/elf.h	1213;"	d
+STT_ARM_TFUNC	fifos/fifos-1/elf.h	1802;"	d
+STT_ARM_TFUNC	fifos/memos-2/elf.h	1802;"	d
+STT_COMMON	fifos/fifos-1/elf.h	415;"	d
+STT_COMMON	fifos/memos-2/elf.h	415;"	d
+STT_FILE	fifos/fifos-1/elf.h	414;"	d
+STT_FILE	fifos/memos-2/elf.h	414;"	d
+STT_FUNC	fifos/fifos-1/elf.h	412;"	d
+STT_FUNC	fifos/memos-2/elf.h	412;"	d
+STT_HIOS	fifos/fifos-1/elf.h	418;"	d
+STT_HIOS	fifos/memos-2/elf.h	418;"	d
+STT_HIPROC	fifos/fifos-1/elf.h	420;"	d
+STT_HIPROC	fifos/memos-2/elf.h	420;"	d
+STT_HP_OPAQUE	fifos/fifos-1/elf.h	1510;"	d
+STT_HP_OPAQUE	fifos/memos-2/elf.h	1510;"	d
+STT_HP_STUB	fifos/fifos-1/elf.h	1511;"	d
+STT_HP_STUB	fifos/memos-2/elf.h	1511;"	d
+STT_LOOS	fifos/fifos-1/elf.h	417;"	d
+STT_LOOS	fifos/memos-2/elf.h	417;"	d
+STT_LOPROC	fifos/fifos-1/elf.h	419;"	d
+STT_LOPROC	fifos/memos-2/elf.h	419;"	d
+STT_NOTYPE	fifos/fifos-1/elf.h	410;"	d
+STT_NOTYPE	fifos/memos-2/elf.h	410;"	d
+STT_NUM	fifos/fifos-1/elf.h	416;"	d
+STT_NUM	fifos/memos-2/elf.h	416;"	d
+STT_OBJECT	fifos/fifos-1/elf.h	411;"	d
+STT_OBJECT	fifos/memos-2/elf.h	411;"	d
+STT_PARISC_MILLICODE	fifos/fifos-1/elf.h	1508;"	d
+STT_PARISC_MILLICODE	fifos/memos-2/elf.h	1508;"	d
+STT_REGISTER	fifos/fifos-1/elf.h	1019;"	d
+STT_REGISTER	fifos/memos-2/elf.h	1019;"	d
+STT_SECTION	fifos/fifos-1/elf.h	413;"	d
+STT_SECTION	fifos/memos-2/elf.h	413;"	d
+STV_DEFAULT	fifos/fifos-1/elf.h	438;"	d
+STV_DEFAULT	fifos/memos-2/elf.h	438;"	d
+STV_HIDDEN	fifos/fifos-1/elf.h	440;"	d
+STV_HIDDEN	fifos/memos-2/elf.h	440;"	d
+STV_INTERNAL	fifos/fifos-1/elf.h	439;"	d
+STV_INTERNAL	fifos/memos-2/elf.h	439;"	d
+STV_PROTECTED	fifos/fifos-1/elf.h	441;"	d
+STV_PROTECTED	fifos/memos-2/elf.h	441;"	d
+SYMINFO_BT_LOWRESERVE	fifos/fifos-1/elf.h	368;"	d
+SYMINFO_BT_LOWRESERVE	fifos/memos-2/elf.h	368;"	d
+SYMINFO_BT_PARENT	fifos/fifos-1/elf.h	367;"	d
+SYMINFO_BT_PARENT	fifos/memos-2/elf.h	367;"	d
+SYMINFO_BT_SELF	fifos/fifos-1/elf.h	366;"	d
+SYMINFO_BT_SELF	fifos/memos-2/elf.h	366;"	d
+SYMINFO_CURRENT	fifos/fifos-1/elf.h	378;"	d
+SYMINFO_CURRENT	fifos/memos-2/elf.h	378;"	d
+SYMINFO_FLG_COPY	fifos/fifos-1/elf.h	373;"	d
+SYMINFO_FLG_COPY	fifos/memos-2/elf.h	373;"	d
+SYMINFO_FLG_DIRECT	fifos/fifos-1/elf.h	371;"	d
+SYMINFO_FLG_DIRECT	fifos/memos-2/elf.h	371;"	d
+SYMINFO_FLG_LAZYLOAD	fifos/fifos-1/elf.h	374;"	d
+SYMINFO_FLG_LAZYLOAD	fifos/memos-2/elf.h	374;"	d
+SYMINFO_FLG_PASSTHRU	fifos/fifos-1/elf.h	372;"	d
+SYMINFO_FLG_PASSTHRU	fifos/memos-2/elf.h	372;"	d
+SYMINFO_NONE	fifos/fifos-1/elf.h	377;"	d
+SYMINFO_NONE	fifos/memos-2/elf.h	377;"	d
+SYMINFO_NUM	fifos/fifos-1/elf.h	379;"	d
+SYMINFO_NUM	fifos/memos-2/elf.h	379;"	d
+TRUE	fifos/fifos-1/coroutine.c	/^  TRUE$/;"	e	enum:__anon1	file:
+TRUE	fifos/fifos-1/types.h	2;"	d
+TRUE	fifos/memos-2/init.c	/^	TRUE$/;"	e	enum:__anon86	file:
+TRUE	fifos/memos-2/types.h	2;"	d
+VER_DEF_CURRENT	fifos/fifos-1/elf.h	736;"	d
+VER_DEF_CURRENT	fifos/memos-2/elf.h	736;"	d
+VER_DEF_NONE	fifos/fifos-1/elf.h	735;"	d
+VER_DEF_NONE	fifos/memos-2/elf.h	735;"	d
+VER_DEF_NUM	fifos/fifos-1/elf.h	737;"	d
+VER_DEF_NUM	fifos/memos-2/elf.h	737;"	d
+VER_FLG_BASE	fifos/fifos-1/elf.h	740;"	d
+VER_FLG_BASE	fifos/memos-2/elf.h	740;"	d
+VER_FLG_WEAK	fifos/fifos-1/elf.h	741;"	d
+VER_FLG_WEAK	fifos/fifos-1/elf.h	814;"	d
+VER_FLG_WEAK	fifos/memos-2/elf.h	741;"	d
+VER_FLG_WEAK	fifos/memos-2/elf.h	814;"	d
+VER_NEED_CURRENT	fifos/fifos-1/elf.h	787;"	d
+VER_NEED_CURRENT	fifos/memos-2/elf.h	787;"	d
+VER_NEED_NONE	fifos/fifos-1/elf.h	786;"	d
+VER_NEED_NONE	fifos/memos-2/elf.h	786;"	d
+VER_NEED_NUM	fifos/fifos-1/elf.h	788;"	d
+VER_NEED_NUM	fifos/memos-2/elf.h	788;"	d
+VGA_HEIGHT	fifos/fifos-1/fifos.c	/^static const size_t VGA_HEIGHT = 24;$/;"	v	file:
+VGA_HEIGHT	fifos/fifos-1/init.c	/^static const size_t VGA_HEIGHT = 24;$/;"	v	file:
+VGA_HEIGHT	fifos/memos-2/init.c	/^static const size_t VGA_HEIGHT = 24;$/;"	v	file:
+VGA_WIDTH	fifos/fifos-1/fifos.c	/^static const size_t VGA_WIDTH = 80;$/;"	v	file:
+VGA_WIDTH	fifos/fifos-1/init.c	/^static const size_t VGA_WIDTH = 80;$/;"	v	file:
+VGA_WIDTH	fifos/memos-2/init.c	/^static const size_t VGA_WIDTH = 80;$/;"	v	file:
+_ELF_H_	fifos/fifos-1/elf.h	9;"	d
+_ELF_H_	fifos/memos-2/elf.h	9;"	d
+_MULTIBOOT_H_	fifos/fifos-1/multiboot.h	7;"	d
+_MULTIBOOT_H_	fifos/memos-2/multiboot.h	7;"	d
+_PCB	fifos/fifos-1/thread.c	/^typedef struct _PCB {$/;"	s	file:
+_SIZE_T	fifos/fifos-1/types.h	16;"	d
+_SIZE_T	fifos/memos-2/types.h	16;"	d
+_STDINT_	fifos/fifos-1/types.h	25;"	d
+_STDINT_	fifos/memos-2/types.h	25;"	d
+__this_module	primer/ioctl_module.mod.c	/^struct module __this_module$/;"	v	typeref:struct:module
+__this_module	primer/test_module.mod.c	/^struct module __this_module$/;"	v	typeref:struct:module
+__used	primer/ioctl_module.mod.c	/^__used$/;"	v	file:
+__used	primer/ioctl_module.mod.c	/^__used$/;"	v	typeref:struct:____versions	file:
+__used	primer/test_module.mod.c	/^__used$/;"	v	file:
+__used	primer/test_module.mod.c	/^__used$/;"	v	typeref:struct:____versions	file:
+_boot	memos/memos-1.s	/^_boot:$/;"	l
+_multiboot	fifos/fifos-1/multiboot.h	/^typedef struct _multiboot {$/;"	s
+_multiboot	fifos/memos-2/multiboot.h	/^typedef struct _multiboot {$/;"	s
+_multiboot_module	fifos/fifos-1/multiboot.h	/^typedef struct _multiboot_module {$/;"	s
+_multiboot_module	fifos/memos-2/multiboot.h	/^typedef struct _multiboot_module {$/;"	s
+_start	fifos/fifos-1/boot.S	/^_start:$/;"	l
+_start	fifos/memos-2/boot.S	/^_start:$/;"	l
+_start	memos/memos-1.s	/^_start:$/;"	l
+_start	memos/vga16.s	/^_start:$/;"	l
+a_fcn	fifos/fifos-1/elf.h	/^      void (*a_fcn) (void);	\/* Function pointer value *\/$/;"	m	union:__anon28::__anon29
+a_fcn	fifos/fifos-1/elf.h	/^      void (*a_fcn) (void);	\/* Function pointer value *\/$/;"	m	union:__anon30::__anon31
+a_fcn	fifos/memos-2/elf.h	/^      void (*a_fcn) (void);	\/* Function pointer value *\/$/;"	m	union:__anon70::__anon71
+a_fcn	fifos/memos-2/elf.h	/^      void (*a_fcn) (void);	\/* Function pointer value *\/$/;"	m	union:__anon72::__anon73
+a_ptr	fifos/fifos-1/elf.h	/^      void *a_ptr;		\/* Pointer value *\/$/;"	m	union:__anon28::__anon29
+a_ptr	fifos/fifos-1/elf.h	/^      void *a_ptr;		\/* Pointer value *\/$/;"	m	union:__anon30::__anon31
+a_ptr	fifos/memos-2/elf.h	/^      void *a_ptr;		\/* Pointer value *\/$/;"	m	union:__anon70::__anon71
+a_ptr	fifos/memos-2/elf.h	/^      void *a_ptr;		\/* Pointer value *\/$/;"	m	union:__anon72::__anon73
+a_type	fifos/fifos-1/elf.h	/^  int a_type;			\/* Entry type *\/$/;"	m	struct:__anon28
+a_type	fifos/fifos-1/elf.h	/^  long int a_type;		\/* Entry type *\/$/;"	m	struct:__anon30
+a_type	fifos/memos-2/elf.h	/^  int a_type;			\/* Entry type *\/$/;"	m	struct:__anon70
+a_type	fifos/memos-2/elf.h	/^  long int a_type;		\/* Entry type *\/$/;"	m	struct:__anon72
+a_un	fifos/fifos-1/elf.h	/^    } a_un;$/;"	m	struct:__anon28	typeref:union:__anon28::__anon29
+a_un	fifos/fifos-1/elf.h	/^    } a_un;$/;"	m	struct:__anon30	typeref:union:__anon30::__anon31
+a_un	fifos/memos-2/elf.h	/^    } a_un;$/;"	m	struct:__anon70	typeref:union:__anon70::__anon71
+a_un	fifos/memos-2/elf.h	/^    } a_un;$/;"	m	struct:__anon72	typeref:union:__anon72::__anon73
+a_val	fifos/fifos-1/elf.h	/^      long int a_val;		\/* Integer value *\/$/;"	m	union:__anon28::__anon29
+a_val	fifos/fifos-1/elf.h	/^      long int a_val;		\/* Integer value *\/$/;"	m	union:__anon30::__anon31
+a_val	fifos/memos-2/elf.h	/^      long int a_val;		\/* Integer value *\/$/;"	m	union:__anon70::__anon71
+a_val	fifos/memos-2/elf.h	/^      long int a_val;		\/* Integer value *\/$/;"	m	union:__anon72::__anon73
+allDone	fifos/fifos-1/fifos.c	/^int allDone() {$/;"	f
+base_addr_high	fifos/fifos-1/multiboot.h	/^    unsigned long base_addr_high;$/;"	m	struct:memory_map
+base_addr_high	fifos/memos-2/multiboot.h	/^    unsigned long base_addr_high;$/;"	m	struct:memory_map
+base_addr_low	fifos/fifos-1/multiboot.h	/^    unsigned long base_addr_low;$/;"	m	struct:memory_map
+base_addr_low	fifos/memos-2/multiboot.h	/^    unsigned long base_addr_low;$/;"	m	struct:memory_map
+bool	fifos/fifos-1/coroutine.c	/^} bool;$/;"	t	typeref:enum:__anon1	file:
+bool	fifos/fifos-1/types.h	/^typedef signed char bool;$/;"	t
+bool	fifos/memos-2/init.c	/^} bool;$/;"	t	typeref:enum:__anon86	file:
+bool	fifos/memos-2/types.h	/^typedef signed char bool;$/;"	t
+boot_device	fifos/fifos-1/multiboot.h	/^    unsigned long boot_device;$/;"	m	struct:_multiboot
+boot_device	fifos/memos-2/multiboot.h	/^    unsigned long boot_device;$/;"	m	struct:_multiboot
+boot_loader_name	fifos/fifos-1/multiboot.h	/^    char *boot_loader_name;$/;"	m	struct:_multiboot
+boot_loader_name	fifos/memos-2/multiboot.h	/^    char *boot_loader_name;$/;"	m	struct:_multiboot
+bp	fifos/fifos-1/fifos.c	/^	void* bp;$/;"	m	struct:tcb	file:
+bp	fifos/fifos-1/init.c	/^	void *bp;$/;"	m	struct:tcb	file:
+bp	fifos/fifos-1/thread.c	/^	uint32_t bp; \/\/ base pointer$/;"	m	struct:_PCB	file:
+bp	fifos/memos-2/init.c	/^	void *bp;$/;"	m	struct:tcb	file:
+busy	fifos/fifos-1/fifos.c	/^	int busy;$/;"	m	struct:tcb	file:
+cleanup_routine	primer/ioctl_module.c	/^module_exit(cleanup_routine);$/;"	v
+cleanup_routine	primer/ioctl_module.c	/^static void __exit cleanup_routine(void) {$/;"	f	file:
+cleanup_routine	primer/test_module.c	/^module_exit(cleanup_routine);$/;"	v
+cleanup_routine	primer/test_module.c	/^static void __exit cleanup_routine(void) {$/;"	f	file:
+cmdline	fifos/fifos-1/multiboot.h	/^    char *cmdline;$/;"	m	struct:_multiboot
+cmdline	fifos/memos-2/multiboot.h	/^    char *cmdline;$/;"	m	struct:_multiboot
+config_table	fifos/fifos-1/multiboot.h	/^    void *config_table;$/;"	m	struct:_multiboot
+config_table	fifos/memos-2/multiboot.h	/^    void *config_table;$/;"	m	struct:_multiboot
+crBegin	fifos/fifos-1/coroutine.c	10;"	d	file:
+crBegin	fifos/fifos-1/init.c	13;"	d	file:
+crBegin	fifos/memos-2/init.c	13;"	d	file:
+crFinish	fifos/fifos-1/coroutine.c	18;"	d	file:
+crFinish	fifos/fifos-1/init.c	21;"	d	file:
+crFinish	fifos/memos-2/init.c	21;"	d	file:
+crReturn	fifos/fifos-1/coroutine.c	16;"	d	file:
+crReturn	fifos/fifos-1/init.c	19;"	d	file:
+crReturn	fifos/memos-2/init.c	19;"	d	file:
+current	fifos/fifos-1/fifos.c	/^static tcb  *current;$/;"	v	file:
+current_tid	fifos/fifos-1/init.c	/^static int current_tid;$/;"	v	file:
+current_tid	fifos/memos-2/init.c	/^static int current_tid;$/;"	v	file:
+d_ptr	fifos/fifos-1/elf.h	/^      Elf32_Addr d_ptr;			\/* Address value *\/$/;"	m	union:__anon16::__anon17
+d_ptr	fifos/fifos-1/elf.h	/^      Elf64_Addr d_ptr;			\/* Address value *\/$/;"	m	union:__anon18::__anon19
+d_ptr	fifos/memos-2/elf.h	/^      Elf32_Addr d_ptr;			\/* Address value *\/$/;"	m	union:__anon58::__anon59
+d_ptr	fifos/memos-2/elf.h	/^      Elf64_Addr d_ptr;			\/* Address value *\/$/;"	m	union:__anon60::__anon61
+d_tag	fifos/fifos-1/elf.h	/^  Elf32_Sword	d_tag;			\/* Dynamic entry type *\/$/;"	m	struct:__anon16
+d_tag	fifos/fifos-1/elf.h	/^  Elf64_Sxword	d_tag;			\/* Dynamic entry type *\/$/;"	m	struct:__anon18
+d_tag	fifos/memos-2/elf.h	/^  Elf32_Sword	d_tag;			\/* Dynamic entry type *\/$/;"	m	struct:__anon58
+d_tag	fifos/memos-2/elf.h	/^  Elf64_Sxword	d_tag;			\/* Dynamic entry type *\/$/;"	m	struct:__anon60
+d_un	fifos/fifos-1/elf.h	/^    } d_un;$/;"	m	struct:__anon16	typeref:union:__anon16::__anon17
+d_un	fifos/fifos-1/elf.h	/^    } d_un;$/;"	m	struct:__anon18	typeref:union:__anon18::__anon19
+d_un	fifos/memos-2/elf.h	/^    } d_un;$/;"	m	struct:__anon58	typeref:union:__anon58::__anon59
+d_un	fifos/memos-2/elf.h	/^    } d_un;$/;"	m	struct:__anon60	typeref:union:__anon60::__anon61
+d_val	fifos/fifos-1/elf.h	/^      Elf32_Word d_val;			\/* Integer value *\/$/;"	m	union:__anon16::__anon17
+d_val	fifos/fifos-1/elf.h	/^      Elf64_Xword d_val;		\/* Integer value *\/$/;"	m	union:__anon18::__anon19
+d_val	fifos/memos-2/elf.h	/^      Elf32_Word d_val;			\/* Integer value *\/$/;"	m	union:__anon58::__anon59
+d_val	fifos/memos-2/elf.h	/^      Elf64_Xword d_val;		\/* Integer value *\/$/;"	m	union:__anon60::__anon61
+done	fifos/fifos-1/coroutine.c	/^static bool done[MAX_THREADS];$/;"	v	file:
+done	fifos/fifos-1/init.c	/^static bool done[MAX_THREADS];$/;"	v	file:
+done	fifos/memos-2/init.c	/^static bool done[MAX_THREADS];$/;"	v	file:
+drives_addr	fifos/fifos-1/multiboot.h	/^    void *drives_addr;$/;"	m	struct:_multiboot
+drives_addr	fifos/memos-2/multiboot.h	/^    void *drives_addr;$/;"	m	struct:_multiboot
+drives_length	fifos/fifos-1/multiboot.h	/^    unsigned long drives_length;$/;"	m	struct:_multiboot
+drives_length	fifos/memos-2/multiboot.h	/^    unsigned long drives_length;$/;"	m	struct:_multiboot
+e_ehsize	fifos/fifos-1/elf.h	/^  Elf32_Half	e_ehsize;		\/* ELF header size in bytes *\/$/;"	m	struct:__anon2
+e_ehsize	fifos/fifos-1/elf.h	/^  Elf64_Half	e_ehsize;		\/* ELF header size in bytes *\/$/;"	m	struct:__anon3
+e_ehsize	fifos/memos-2/elf.h	/^  Elf32_Half	e_ehsize;		\/* ELF header size in bytes *\/$/;"	m	struct:__anon44
+e_ehsize	fifos/memos-2/elf.h	/^  Elf64_Half	e_ehsize;		\/* ELF header size in bytes *\/$/;"	m	struct:__anon45
+e_entry	fifos/fifos-1/elf.h	/^  Elf32_Addr	e_entry;		\/* Entry point virtual address *\/$/;"	m	struct:__anon2
+e_entry	fifos/fifos-1/elf.h	/^  Elf64_Addr	e_entry;		\/* Entry point virtual address *\/$/;"	m	struct:__anon3
+e_entry	fifos/memos-2/elf.h	/^  Elf32_Addr	e_entry;		\/* Entry point virtual address *\/$/;"	m	struct:__anon44
+e_entry	fifos/memos-2/elf.h	/^  Elf64_Addr	e_entry;		\/* Entry point virtual address *\/$/;"	m	struct:__anon45
+e_flags	fifos/fifos-1/elf.h	/^  Elf32_Word	e_flags;		\/* Processor-specific flags *\/$/;"	m	struct:__anon2
+e_flags	fifos/fifos-1/elf.h	/^  Elf64_Word	e_flags;		\/* Processor-specific flags *\/$/;"	m	struct:__anon3
+e_flags	fifos/memos-2/elf.h	/^  Elf32_Word	e_flags;		\/* Processor-specific flags *\/$/;"	m	struct:__anon44
+e_flags	fifos/memos-2/elf.h	/^  Elf64_Word	e_flags;		\/* Processor-specific flags *\/$/;"	m	struct:__anon45
+e_ident	fifos/fifos-1/elf.h	/^  unsigned char	e_ident[EI_NIDENT];	\/* Magic number and other info *\/$/;"	m	struct:__anon2
+e_ident	fifos/fifos-1/elf.h	/^  unsigned char	e_ident[EI_NIDENT];	\/* Magic number and other info *\/$/;"	m	struct:__anon3
+e_ident	fifos/memos-2/elf.h	/^  unsigned char	e_ident[EI_NIDENT];	\/* Magic number and other info *\/$/;"	m	struct:__anon44
+e_ident	fifos/memos-2/elf.h	/^  unsigned char	e_ident[EI_NIDENT];	\/* Magic number and other info *\/$/;"	m	struct:__anon45
+e_machine	fifos/fifos-1/elf.h	/^  Elf32_Half	e_machine;		\/* Architecture *\/$/;"	m	struct:__anon2
+e_machine	fifos/fifos-1/elf.h	/^  Elf64_Half	e_machine;		\/* Architecture *\/$/;"	m	struct:__anon3
+e_machine	fifos/memos-2/elf.h	/^  Elf32_Half	e_machine;		\/* Architecture *\/$/;"	m	struct:__anon44
+e_machine	fifos/memos-2/elf.h	/^  Elf64_Half	e_machine;		\/* Architecture *\/$/;"	m	struct:__anon45
+e_phentsize	fifos/fifos-1/elf.h	/^  Elf32_Half	e_phentsize;		\/* Program header table entry size *\/$/;"	m	struct:__anon2
+e_phentsize	fifos/fifos-1/elf.h	/^  Elf64_Half	e_phentsize;		\/* Program header table entry size *\/$/;"	m	struct:__anon3
+e_phentsize	fifos/memos-2/elf.h	/^  Elf32_Half	e_phentsize;		\/* Program header table entry size *\/$/;"	m	struct:__anon44
+e_phentsize	fifos/memos-2/elf.h	/^  Elf64_Half	e_phentsize;		\/* Program header table entry size *\/$/;"	m	struct:__anon45
+e_phnum	fifos/fifos-1/elf.h	/^  Elf32_Half	e_phnum;		\/* Program header table entry count *\/$/;"	m	struct:__anon2
+e_phnum	fifos/fifos-1/elf.h	/^  Elf64_Half	e_phnum;		\/* Program header table entry count *\/$/;"	m	struct:__anon3
+e_phnum	fifos/memos-2/elf.h	/^  Elf32_Half	e_phnum;		\/* Program header table entry count *\/$/;"	m	struct:__anon44
+e_phnum	fifos/memos-2/elf.h	/^  Elf64_Half	e_phnum;		\/* Program header table entry count *\/$/;"	m	struct:__anon45
+e_phoff	fifos/fifos-1/elf.h	/^  Elf32_Off	e_phoff;		\/* Program header table file offset *\/$/;"	m	struct:__anon2
+e_phoff	fifos/fifos-1/elf.h	/^  Elf64_Off	e_phoff;		\/* Program header table file offset *\/$/;"	m	struct:__anon3
+e_phoff	fifos/memos-2/elf.h	/^  Elf32_Off	e_phoff;		\/* Program header table file offset *\/$/;"	m	struct:__anon44
+e_phoff	fifos/memos-2/elf.h	/^  Elf64_Off	e_phoff;		\/* Program header table file offset *\/$/;"	m	struct:__anon45
+e_shentsize	fifos/fifos-1/elf.h	/^  Elf32_Half	e_shentsize;		\/* Section header table entry size *\/$/;"	m	struct:__anon2
+e_shentsize	fifos/fifos-1/elf.h	/^  Elf64_Half	e_shentsize;		\/* Section header table entry size *\/$/;"	m	struct:__anon3
+e_shentsize	fifos/memos-2/elf.h	/^  Elf32_Half	e_shentsize;		\/* Section header table entry size *\/$/;"	m	struct:__anon44
+e_shentsize	fifos/memos-2/elf.h	/^  Elf64_Half	e_shentsize;		\/* Section header table entry size *\/$/;"	m	struct:__anon45
+e_shnum	fifos/fifos-1/elf.h	/^  Elf32_Half	e_shnum;		\/* Section header table entry count *\/$/;"	m	struct:__anon2
+e_shnum	fifos/fifos-1/elf.h	/^  Elf64_Half	e_shnum;		\/* Section header table entry count *\/$/;"	m	struct:__anon3
+e_shnum	fifos/memos-2/elf.h	/^  Elf32_Half	e_shnum;		\/* Section header table entry count *\/$/;"	m	struct:__anon44
+e_shnum	fifos/memos-2/elf.h	/^  Elf64_Half	e_shnum;		\/* Section header table entry count *\/$/;"	m	struct:__anon45
+e_shoff	fifos/fifos-1/elf.h	/^  Elf32_Off	e_shoff;		\/* Section header table file offset *\/$/;"	m	struct:__anon2
+e_shoff	fifos/fifos-1/elf.h	/^  Elf64_Off	e_shoff;		\/* Section header table file offset *\/$/;"	m	struct:__anon3
+e_shoff	fifos/memos-2/elf.h	/^  Elf32_Off	e_shoff;		\/* Section header table file offset *\/$/;"	m	struct:__anon44
+e_shoff	fifos/memos-2/elf.h	/^  Elf64_Off	e_shoff;		\/* Section header table file offset *\/$/;"	m	struct:__anon45
+e_shstrndx	fifos/fifos-1/elf.h	/^  Elf32_Half	e_shstrndx;		\/* Section header string table index *\/$/;"	m	struct:__anon2
+e_shstrndx	fifos/fifos-1/elf.h	/^  Elf64_Half	e_shstrndx;		\/* Section header string table index *\/$/;"	m	struct:__anon3
+e_shstrndx	fifos/memos-2/elf.h	/^  Elf32_Half	e_shstrndx;		\/* Section header string table index *\/$/;"	m	struct:__anon44
+e_shstrndx	fifos/memos-2/elf.h	/^  Elf64_Half	e_shstrndx;		\/* Section header string table index *\/$/;"	m	struct:__anon45
+e_type	fifos/fifos-1/elf.h	/^  Elf32_Half	e_type;			\/* Object file type *\/$/;"	m	struct:__anon2
+e_type	fifos/fifos-1/elf.h	/^  Elf64_Half	e_type;			\/* Object file type *\/$/;"	m	struct:__anon3
+e_type	fifos/memos-2/elf.h	/^  Elf32_Half	e_type;			\/* Object file type *\/$/;"	m	struct:__anon44
+e_type	fifos/memos-2/elf.h	/^  Elf64_Half	e_type;			\/* Object file type *\/$/;"	m	struct:__anon45
+e_version	fifos/fifos-1/elf.h	/^  Elf32_Word	e_version;		\/* Object file version *\/$/;"	m	struct:__anon2
+e_version	fifos/fifos-1/elf.h	/^  Elf64_Word	e_version;		\/* Object file version *\/$/;"	m	struct:__anon3
+e_version	fifos/memos-2/elf.h	/^  Elf32_Word	e_version;		\/* Object file version *\/$/;"	m	struct:__anon44
+e_version	fifos/memos-2/elf.h	/^  Elf64_Word	e_version;		\/* Object file version *\/$/;"	m	struct:__anon45
+elf_addr	fifos/fifos-1/multiboot.h	/^    void *elf_addr;$/;"	m	struct:_multiboot
+elf_addr	fifos/memos-2/multiboot.h	/^    void *elf_addr;$/;"	m	struct:_multiboot
+elf_num	fifos/fifos-1/multiboot.h	/^    unsigned long elf_num;$/;"	m	struct:_multiboot
+elf_num	fifos/memos-2/multiboot.h	/^    unsigned long elf_num;$/;"	m	struct:_multiboot
+elf_shndx	fifos/fifos-1/multiboot.h	/^    void *elf_shndx;$/;"	m	struct:_multiboot
+elf_shndx	fifos/memos-2/multiboot.h	/^    void *elf_shndx;$/;"	m	struct:_multiboot
+elf_size	fifos/fifos-1/multiboot.h	/^    unsigned long elf_size;$/;"	m	struct:_multiboot
+elf_size	fifos/memos-2/multiboot.h	/^    unsigned long elf_size;$/;"	m	struct:_multiboot
+entry	fifos/fifos-1/init.c	/^	void (*entry)();$/;"	m	struct:tcb	file:
+entry	fifos/fifos-1/thread.c	/^	uint32_t entry; \/\/ entry point (func)$/;"	m	struct:_PCB	file:
+entry	fifos/memos-2/init.c	/^	int (*entry)();$/;"	m	struct:tcb	file:
+f	fifos/fifos-1/coroutine.c	/^int (*f[MAX_THREADS])(void);$/;"	v
+f	fifos/fifos-1/init.c	/^void (*f[MAX_THREADS])(void);$/;"	v
+f	fifos/memos-2/init.c	/^int (*f[MAX_THREADS])(void);$/;"	v
+flag	fifos/fifos-1/thread.c	/^	uint32_t flag; \/\/ no use here$/;"	m	struct:_PCB	file:
+flags	fifos/fifos-1/multiboot.h	/^    unsigned long flags;$/;"	m	struct:_multiboot
+flags	fifos/memos-2/multiboot.h	/^    unsigned long flags;$/;"	m	struct:_multiboot
+func	fifos/fifos-1/fifos.c	/^	int (*func)();$/;"	m	struct:tcb	file:
+gdt_ptr	fifos/fifos-1/boot.S	/^gdt_ptr:$/;"	l
+gt_bytes	fifos/fifos-1/elf.h	/^      Elf32_Word gt_bytes;		\/* This many bytes would be used *\/$/;"	m	struct:__anon36::__anon38
+gt_bytes	fifos/memos-2/elf.h	/^      Elf32_Word gt_bytes;		\/* This many bytes would be used *\/$/;"	m	struct:__anon78::__anon80
+gt_current_g_value	fifos/fifos-1/elf.h	/^      Elf32_Word gt_current_g_value;	\/* -G value used for compilation *\/$/;"	m	struct:__anon36::__anon37
+gt_current_g_value	fifos/memos-2/elf.h	/^      Elf32_Word gt_current_g_value;	\/* -G value used for compilation *\/$/;"	m	struct:__anon78::__anon79
+gt_entry	fifos/fifos-1/elf.h	/^    } gt_entry;				\/* Subsequent entries in section *\/$/;"	m	union:__anon36	typeref:struct:__anon36::__anon38
+gt_entry	fifos/memos-2/elf.h	/^    } gt_entry;				\/* Subsequent entries in section *\/$/;"	m	union:__anon78	typeref:struct:__anon78::__anon80
+gt_g_value	fifos/fifos-1/elf.h	/^      Elf32_Word gt_g_value;		\/* If this value were used for -G *\/$/;"	m	struct:__anon36::__anon38
+gt_g_value	fifos/memos-2/elf.h	/^      Elf32_Word gt_g_value;		\/* If this value were used for -G *\/$/;"	m	struct:__anon78::__anon80
+gt_header	fifos/fifos-1/elf.h	/^    } gt_header;			\/* First entry in section *\/$/;"	m	union:__anon36	typeref:struct:__anon36::__anon37
+gt_header	fifos/memos-2/elf.h	/^    } gt_header;			\/* First entry in section *\/$/;"	m	union:__anon78	typeref:struct:__anon78::__anon79
+gt_unused	fifos/fifos-1/elf.h	/^      Elf32_Word gt_unused;		\/* Not used *\/$/;"	m	struct:__anon36::__anon37
+gt_unused	fifos/memos-2/elf.h	/^      Elf32_Word gt_unused;		\/* Not used *\/$/;"	m	struct:__anon78::__anon79
+head	fifos/fifos-1/coroutine.c	/^static rq head;$/;"	v	file:
+head	fifos/fifos-1/fifos.c	/^static tcb  *head; \/* queue head *\/$/;"	v	file:
+hwp_flags1	fifos/fifos-1/elf.h	/^  Elf32_Word hwp_flags1;	\/* Extra flags.  *\/$/;"	m	struct:__anon41
+hwp_flags1	fifos/memos-2/elf.h	/^  Elf32_Word hwp_flags1;	\/* Extra flags.  *\/$/;"	m	struct:__anon83
+hwp_flags2	fifos/fifos-1/elf.h	/^  Elf32_Word hwp_flags2;	\/* Extra flags.  *\/$/;"	m	struct:__anon41
+hwp_flags2	fifos/memos-2/elf.h	/^  Elf32_Word hwp_flags2;	\/* Extra flags.  *\/$/;"	m	struct:__anon83
+idt_ptr	fifos/fifos-1/boot.S	/^idt_ptr:$/;"	l
+info	fifos/fifos-1/elf.h	/^  Elf32_Word info;		\/* Kind-specific information.  *\/$/;"	m	struct:__anon40
+info	fifos/fifos-1/init.c	/^	tcb info;$/;"	m	struct:thread	file:
+info	fifos/memos-2/elf.h	/^  Elf32_Word info;		\/* Kind-specific information.  *\/$/;"	m	struct:__anon82
+info	fifos/memos-2/init.c	/^	tcb info;$/;"	m	struct:thread	file:
+init	fifos/fifos-1/fifos.c	/^void init( multiboot* pmb ) {$/;"	f
+init	fifos/fifos-1/init.c	/^void init( multiboot* pmb ) {$/;"	f
+init	fifos/memos-2/init.c	/^void init( multiboot* pmb ) {$/;"	f
+init_pcb	fifos/fifos-1/thread.c	/^void init_pcb(void) {$/;"	f
+init_tcb	fifos/fifos-1/init.c	/^void init_tcb() {$/;"	f
+init_tcb	fifos/memos-2/init.c	/^void init_tcb () {$/;"	f
+init_threads	fifos/fifos-1/init.c	/^void init_threads() {$/;"	f
+initialization_routine	primer/ioctl_module.c	/^module_init(initialization_routine);$/;"	v
+initialization_routine	primer/ioctl_module.c	/^static int __init initialization_routine(void) {$/;"	f	file:
+initialization_routine	primer/test_module.c	/^module_init(initialization_routine);$/;"	v
+initialization_routine	primer/test_module.c	/^static int __init initialization_routine(void) {$/;"	f	file:
+int_table	fifos/fifos-1/boot.S	/^int_table:$/;"	l
+ioctl_test_t	primer/ioctl_module.c	/^struct ioctl_test_t {$/;"	s	file:
+itoa	fifos/fifos-1/fifos.c	/^void itoa (char *buf, int base, int d)$/;"	f
+itoa	fifos/fifos-1/init.c	/^void itoa (char *buf, int base, int d)$/;"	f
+itoa	fifos/memos-2/init.c	/^void itoa (char *buf, int base, int d)$/;"	f
+kind	fifos/fifos-1/elf.h	/^  unsigned char kind;		\/* Determines interpretation of the$/;"	m	struct:__anon40
+kind	fifos/memos-2/elf.h	/^  unsigned char kind;		\/* Determines interpretation of the$/;"	m	struct:__anon82
+l_checksum	fifos/fifos-1/elf.h	/^  Elf32_Word l_checksum;	\/* Checksum *\/$/;"	m	struct:__anon42
+l_checksum	fifos/fifos-1/elf.h	/^  Elf64_Word l_checksum;	\/* Checksum *\/$/;"	m	struct:__anon43
+l_checksum	fifos/memos-2/elf.h	/^  Elf32_Word l_checksum;	\/* Checksum *\/$/;"	m	struct:__anon84
+l_checksum	fifos/memos-2/elf.h	/^  Elf64_Word l_checksum;	\/* Checksum *\/$/;"	m	struct:__anon85
+l_flags	fifos/fifos-1/elf.h	/^  Elf32_Word l_flags;		\/* Flags *\/$/;"	m	struct:__anon42
+l_flags	fifos/fifos-1/elf.h	/^  Elf64_Word l_flags;		\/* Flags *\/$/;"	m	struct:__anon43
+l_flags	fifos/memos-2/elf.h	/^  Elf32_Word l_flags;		\/* Flags *\/$/;"	m	struct:__anon84
+l_flags	fifos/memos-2/elf.h	/^  Elf64_Word l_flags;		\/* Flags *\/$/;"	m	struct:__anon85
+l_name	fifos/fifos-1/elf.h	/^  Elf32_Word l_name;		\/* Name (string table index) *\/$/;"	m	struct:__anon42
+l_name	fifos/fifos-1/elf.h	/^  Elf64_Word l_name;		\/* Name (string table index) *\/$/;"	m	struct:__anon43
+l_name	fifos/memos-2/elf.h	/^  Elf32_Word l_name;		\/* Name (string table index) *\/$/;"	m	struct:__anon84
+l_name	fifos/memos-2/elf.h	/^  Elf64_Word l_name;		\/* Name (string table index) *\/$/;"	m	struct:__anon85
+l_time_stamp	fifos/fifos-1/elf.h	/^  Elf32_Word l_time_stamp;	\/* Timestamp *\/$/;"	m	struct:__anon42
+l_time_stamp	fifos/fifos-1/elf.h	/^  Elf64_Word l_time_stamp;	\/* Timestamp *\/$/;"	m	struct:__anon43
+l_time_stamp	fifos/memos-2/elf.h	/^  Elf32_Word l_time_stamp;	\/* Timestamp *\/$/;"	m	struct:__anon84
+l_time_stamp	fifos/memos-2/elf.h	/^  Elf64_Word l_time_stamp;	\/* Timestamp *\/$/;"	m	struct:__anon85
+l_version	fifos/fifos-1/elf.h	/^  Elf32_Word l_version;		\/* Interface version *\/$/;"	m	struct:__anon42
+l_version	fifos/fifos-1/elf.h	/^  Elf64_Word l_version;		\/* Interface version *\/$/;"	m	struct:__anon43
+l_version	fifos/memos-2/elf.h	/^  Elf32_Word l_version;		\/* Interface version *\/$/;"	m	struct:__anon84
+l_version	fifos/memos-2/elf.h	/^  Elf64_Word l_version;		\/* Interface version *\/$/;"	m	struct:__anon85
+length_high	fifos/fifos-1/multiboot.h	/^    unsigned long length_high;$/;"	m	struct:memory_map
+length_high	fifos/memos-2/multiboot.h	/^    unsigned long length_high;$/;"	m	struct:memory_map
+length_low	fifos/fifos-1/multiboot.h	/^    unsigned long length_low;$/;"	m	struct:memory_map
+length_low	fifos/memos-2/multiboot.h	/^    unsigned long length_low;$/;"	m	struct:memory_map
+loop	fifos/fifos-1/boot.S	/^loop:$/;"	l
+loop	fifos/memos-2/boot.S	/^loop:$/;"	l
+m_info	fifos/fifos-1/elf.h	/^  Elf32_Word m_info;		\/* Size and index.  *\/$/;"	m	struct:__anon34
+m_info	fifos/fifos-1/elf.h	/^  Elf64_Xword m_info;		\/* Size and index.  *\/$/;"	m	struct:__anon35
+m_info	fifos/memos-2/elf.h	/^  Elf32_Word m_info;		\/* Size and index.  *\/$/;"	m	struct:__anon76
+m_info	fifos/memos-2/elf.h	/^  Elf64_Xword m_info;		\/* Size and index.  *\/$/;"	m	struct:__anon77
+m_poffset	fifos/fifos-1/elf.h	/^  Elf32_Word m_poffset;		\/* Symbol offset.  *\/$/;"	m	struct:__anon34
+m_poffset	fifos/fifos-1/elf.h	/^  Elf64_Xword m_poffset;	\/* Symbol offset.  *\/$/;"	m	struct:__anon35
+m_poffset	fifos/memos-2/elf.h	/^  Elf32_Word m_poffset;		\/* Symbol offset.  *\/$/;"	m	struct:__anon76
+m_poffset	fifos/memos-2/elf.h	/^  Elf64_Xword m_poffset;	\/* Symbol offset.  *\/$/;"	m	struct:__anon77
+m_repeat	fifos/fifos-1/elf.h	/^  Elf32_Half m_repeat;		\/* Repeat count.  *\/$/;"	m	struct:__anon34
+m_repeat	fifos/fifos-1/elf.h	/^  Elf64_Half m_repeat;		\/* Repeat count.  *\/$/;"	m	struct:__anon35
+m_repeat	fifos/memos-2/elf.h	/^  Elf32_Half m_repeat;		\/* Repeat count.  *\/$/;"	m	struct:__anon76
+m_repeat	fifos/memos-2/elf.h	/^  Elf64_Half m_repeat;		\/* Repeat count.  *\/$/;"	m	struct:__anon77
+m_stride	fifos/fifos-1/elf.h	/^  Elf32_Half m_stride;		\/* Stride info.  *\/$/;"	m	struct:__anon34
+m_stride	fifos/fifos-1/elf.h	/^  Elf64_Half m_stride;		\/* Stride info.  *\/$/;"	m	struct:__anon35
+m_stride	fifos/memos-2/elf.h	/^  Elf32_Half m_stride;		\/* Stride info.  *\/$/;"	m	struct:__anon76
+m_stride	fifos/memos-2/elf.h	/^  Elf64_Half m_stride;		\/* Stride info.  *\/$/;"	m	struct:__anon77
+m_value	fifos/fifos-1/elf.h	/^  Elf32_Xword m_value;		\/* Symbol value.  *\/$/;"	m	struct:__anon34
+m_value	fifos/fifos-1/elf.h	/^  Elf64_Xword m_value;		\/* Symbol value.  *\/$/;"	m	struct:__anon35
+m_value	fifos/memos-2/elf.h	/^  Elf32_Xword m_value;		\/* Symbol value.  *\/$/;"	m	struct:__anon76
+m_value	fifos/memos-2/elf.h	/^  Elf64_Xword m_value;		\/* Symbol value.  *\/$/;"	m	struct:__anon77
+main	fifos/fifos-1/coroutine.c	/^int main (int argc, char *argv[]) {$/;"	f
+main	primer/ioctl_test.c	/^int main( int argc, char *argv[]) {$/;"	f
+make_color	fifos/fifos-1/fifos.c	/^uint8_t make_color(enum vga_color fg, enum vga_color bg)$/;"	f
+make_color	fifos/fifos-1/init.c	/^uint8_t make_color(enum vga_color fg, enum vga_color bg)$/;"	f
+make_color	fifos/memos-2/init.c	/^uint8_t make_color(enum vga_color fg, enum vga_color bg)$/;"	f
+make_vgaentry	fifos/fifos-1/fifos.c	/^uint16_t make_vgaentry(char c, uint8_t color)$/;"	f
+make_vgaentry	fifos/fifos-1/init.c	/^uint16_t make_vgaentry(char c, uint8_t color)$/;"	f
+make_vgaentry	fifos/memos-2/init.c	/^uint16_t make_vgaentry(char c, uint8_t color)$/;"	f
+mem_lower	fifos/fifos-1/multiboot.h	/^    unsigned long mem_lower;$/;"	m	struct:_multiboot
+mem_lower	fifos/memos-2/multiboot.h	/^    unsigned long mem_lower;$/;"	m	struct:_multiboot
+mem_upper	fifos/fifos-1/multiboot.h	/^    unsigned long mem_upper;$/;"	m	struct:_multiboot
+mem_upper	fifos/memos-2/multiboot.h	/^    unsigned long mem_upper;$/;"	m	struct:_multiboot
+memory_map	fifos/fifos-1/multiboot.h	/^typedef struct memory_map {$/;"	s
+memory_map	fifos/memos-2/multiboot.h	/^typedef struct memory_map {$/;"	s
+memory_map_t	fifos/fifos-1/multiboot.h	/^} memory_map_t;$/;"	t	typeref:struct:memory_map
+memory_map_t	fifos/memos-2/multiboot.h	/^} memory_map_t;$/;"	t	typeref:struct:memory_map
+mmap_addr	fifos/fifos-1/multiboot.h	/^    unsigned long mmap_addr;$/;"	m	struct:_multiboot
+mmap_addr	fifos/memos-2/multiboot.h	/^    unsigned long mmap_addr;$/;"	m	struct:_multiboot
+mmap_length	fifos/fifos-1/multiboot.h	/^    unsigned long mmap_length;$/;"	m	struct:_multiboot
+mmap_length	fifos/memos-2/multiboot.h	/^    unsigned long mmap_length;$/;"	m	struct:_multiboot
+mod_end	fifos/fifos-1/multiboot.h	/^    void *mod_end;$/;"	m	struct:_multiboot_module
+mod_end	fifos/memos-2/multiboot.h	/^    void *mod_end;$/;"	m	struct:_multiboot_module
+mods_addr	fifos/fifos-1/multiboot.h	/^    multiboot_module *mods_addr;$/;"	m	struct:_multiboot
+mods_addr	fifos/memos-2/multiboot.h	/^    multiboot_module *mods_addr;$/;"	m	struct:_multiboot
+mods_count	fifos/fifos-1/multiboot.h	/^    unsigned long mods_count;$/;"	m	struct:_multiboot
+mods_count	fifos/memos-2/multiboot.h	/^    unsigned long mods_count;$/;"	m	struct:_multiboot
+multiboot	fifos/fifos-1/multiboot.h	/^} multiboot;$/;"	t	typeref:struct:_multiboot
+multiboot	fifos/memos-2/multiboot.h	/^} multiboot;$/;"	t	typeref:struct:_multiboot
+multiboot_module	fifos/fifos-1/multiboot.h	/^} multiboot_module;$/;"	t	typeref:struct:_multiboot_module
+multiboot_module	fifos/memos-2/multiboot.h	/^} multiboot_module;$/;"	t	typeref:struct:_multiboot_module
+my_printk	primer/ioctl_module.c	/^void my_printk(char *string) {$/;"	f
+n_descsz	fifos/fifos-1/elf.h	/^  Elf32_Word n_descsz;			\/* Length of the note's descriptor.  *\/$/;"	m	struct:__anon32
+n_descsz	fifos/fifos-1/elf.h	/^  Elf64_Word n_descsz;			\/* Length of the note's descriptor.  *\/$/;"	m	struct:__anon33
+n_descsz	fifos/memos-2/elf.h	/^  Elf32_Word n_descsz;			\/* Length of the note's descriptor.  *\/$/;"	m	struct:__anon74
+n_descsz	fifos/memos-2/elf.h	/^  Elf64_Word n_descsz;			\/* Length of the note's descriptor.  *\/$/;"	m	struct:__anon75
+n_namesz	fifos/fifos-1/elf.h	/^  Elf32_Word n_namesz;			\/* Length of the note's name.  *\/$/;"	m	struct:__anon32
+n_namesz	fifos/fifos-1/elf.h	/^  Elf64_Word n_namesz;			\/* Length of the note's name.  *\/$/;"	m	struct:__anon33
+n_namesz	fifos/memos-2/elf.h	/^  Elf32_Word n_namesz;			\/* Length of the note's name.  *\/$/;"	m	struct:__anon74
+n_namesz	fifos/memos-2/elf.h	/^  Elf64_Word n_namesz;			\/* Length of the note's name.  *\/$/;"	m	struct:__anon75
+n_type	fifos/fifos-1/elf.h	/^  Elf32_Word n_type;			\/* Type of the note.  *\/$/;"	m	struct:__anon32
+n_type	fifos/fifos-1/elf.h	/^  Elf64_Word n_type;			\/* Type of the note.  *\/$/;"	m	struct:__anon33
+n_type	fifos/memos-2/elf.h	/^  Elf32_Word n_type;			\/* Type of the note.  *\/$/;"	m	struct:__anon74
+n_type	fifos/memos-2/elf.h	/^  Elf64_Word n_type;			\/* Type of the note.  *\/$/;"	m	struct:__anon75
+next	fifos/fifos-1/coroutine.c	/^  struct runqueue *next;$/;"	m	struct:runqueue	typeref:struct:runqueue::runqueue	file:
+next	fifos/fifos-1/fifos.c	/^	struct tcb *next;$/;"	m	struct:tcb	typeref:struct:tcb::tcb	file:
+next	fifos/fifos-1/thread.c	/^	struct PCB * next; \/\/ pointer to next process control block$/;"	m	struct:_PCB	typeref:struct:_PCB::PCB	file:
+p_align	fifos/fifos-1/elf.h	/^  Elf32_Word	p_align;		\/* Segment alignment *\/$/;"	m	struct:__anon14
+p_align	fifos/fifos-1/elf.h	/^  Elf64_Xword	p_align;		\/* Segment alignment *\/$/;"	m	struct:__anon15
+p_align	fifos/memos-2/elf.h	/^  Elf32_Word	p_align;		\/* Segment alignment *\/$/;"	m	struct:__anon56
+p_align	fifos/memos-2/elf.h	/^  Elf64_Xword	p_align;		\/* Segment alignment *\/$/;"	m	struct:__anon57
+p_filesz	fifos/fifos-1/elf.h	/^  Elf32_Word	p_filesz;		\/* Segment size in file *\/$/;"	m	struct:__anon14
+p_filesz	fifos/fifos-1/elf.h	/^  Elf64_Xword	p_filesz;		\/* Segment size in file *\/$/;"	m	struct:__anon15
+p_filesz	fifos/memos-2/elf.h	/^  Elf32_Word	p_filesz;		\/* Segment size in file *\/$/;"	m	struct:__anon56
+p_filesz	fifos/memos-2/elf.h	/^  Elf64_Xword	p_filesz;		\/* Segment size in file *\/$/;"	m	struct:__anon57
+p_flags	fifos/fifos-1/elf.h	/^  Elf32_Word	p_flags;		\/* Segment flags *\/$/;"	m	struct:__anon14
+p_flags	fifos/fifos-1/elf.h	/^  Elf64_Word	p_flags;		\/* Segment flags *\/$/;"	m	struct:__anon15
+p_flags	fifos/memos-2/elf.h	/^  Elf32_Word	p_flags;		\/* Segment flags *\/$/;"	m	struct:__anon56
+p_flags	fifos/memos-2/elf.h	/^  Elf64_Word	p_flags;		\/* Segment flags *\/$/;"	m	struct:__anon57
+p_memsz	fifos/fifos-1/elf.h	/^  Elf32_Word	p_memsz;		\/* Segment size in memory *\/$/;"	m	struct:__anon14
+p_memsz	fifos/fifos-1/elf.h	/^  Elf64_Xword	p_memsz;		\/* Segment size in memory *\/$/;"	m	struct:__anon15
+p_memsz	fifos/memos-2/elf.h	/^  Elf32_Word	p_memsz;		\/* Segment size in memory *\/$/;"	m	struct:__anon56
+p_memsz	fifos/memos-2/elf.h	/^  Elf64_Xword	p_memsz;		\/* Segment size in memory *\/$/;"	m	struct:__anon57
+p_offset	fifos/fifos-1/elf.h	/^  Elf32_Off	p_offset;		\/* Segment file offset *\/$/;"	m	struct:__anon14
+p_offset	fifos/fifos-1/elf.h	/^  Elf64_Off	p_offset;		\/* Segment file offset *\/$/;"	m	struct:__anon15
+p_offset	fifos/memos-2/elf.h	/^  Elf32_Off	p_offset;		\/* Segment file offset *\/$/;"	m	struct:__anon56
+p_offset	fifos/memos-2/elf.h	/^  Elf64_Off	p_offset;		\/* Segment file offset *\/$/;"	m	struct:__anon57
+p_paddr	fifos/fifos-1/elf.h	/^  Elf32_Addr	p_paddr;		\/* Segment physical address *\/$/;"	m	struct:__anon14
+p_paddr	fifos/fifos-1/elf.h	/^  Elf64_Addr	p_paddr;		\/* Segment physical address *\/$/;"	m	struct:__anon15
+p_paddr	fifos/memos-2/elf.h	/^  Elf32_Addr	p_paddr;		\/* Segment physical address *\/$/;"	m	struct:__anon56
+p_paddr	fifos/memos-2/elf.h	/^  Elf64_Addr	p_paddr;		\/* Segment physical address *\/$/;"	m	struct:__anon57
+p_type	fifos/fifos-1/elf.h	/^  Elf32_Word	p_type;			\/* Segment type *\/$/;"	m	struct:__anon14
+p_type	fifos/fifos-1/elf.h	/^  Elf64_Word	p_type;			\/* Segment type *\/$/;"	m	struct:__anon15
+p_type	fifos/memos-2/elf.h	/^  Elf32_Word	p_type;			\/* Segment type *\/$/;"	m	struct:__anon56
+p_type	fifos/memos-2/elf.h	/^  Elf64_Word	p_type;			\/* Segment type *\/$/;"	m	struct:__anon57
+p_vaddr	fifos/fifos-1/elf.h	/^  Elf32_Addr	p_vaddr;		\/* Segment virtual address *\/$/;"	m	struct:__anon14
+p_vaddr	fifos/fifos-1/elf.h	/^  Elf64_Addr	p_vaddr;		\/* Segment virtual address *\/$/;"	m	struct:__anon15
+p_vaddr	fifos/memos-2/elf.h	/^  Elf32_Addr	p_vaddr;		\/* Segment virtual address *\/$/;"	m	struct:__anon56
+p_vaddr	fifos/memos-2/elf.h	/^  Elf64_Addr	p_vaddr;		\/* Segment virtual address *\/$/;"	m	struct:__anon57
+pe	fifos/fifos-1/multiboot.h	/^    Elf32_Ehdr *pe;$/;"	m	struct:_multiboot_module
+pe	fifos/memos-2/multiboot.h	/^    Elf32_Ehdr *pe;$/;"	m	struct:_multiboot_module
+pool	fifos/fifos-1/fifos.c	/^static tcb* pool[MAX_THREADS];$/;"	v	file:
+pool_init	fifos/fifos-1/fifos.c	/^void pool_init() {$/;"	f
+prev	fifos/fifos-1/coroutine.c	/^  struct runqueue *prev;$/;"	m	struct:runqueue	typeref:struct:runqueue::runqueue	file:
+prev	fifos/fifos-1/fifos.c	/^	struct tcb *prev;$/;"	m	struct:tcb	typeref:struct:tcb::tcb	file:
+print	memos/vga16.s	/^print:	pushw %dx$/;"	l
+proc_entry	primer/ioctl_module.c	/^static struct proc_dir_entry *proc_entry;$/;"	v	typeref:struct:proc_dir_entry	file:
+pseudo_dev_proc_operations	primer/ioctl_module.c	/^static struct file_operations pseudo_dev_proc_operations;$/;"	v	typeref:struct:file_operations	file:
+pseudo_device_ioctl	primer/ioctl_module.c	/^static int pseudo_device_ioctl(struct inode *inode, struct file *file,$/;"	f	file:
+r_addend	fifos/fifos-1/elf.h	/^  Elf32_Sword	r_addend;		\/* Addend *\/$/;"	m	struct:__anon12
+r_addend	fifos/fifos-1/elf.h	/^  Elf64_Sxword	r_addend;		\/* Addend *\/$/;"	m	struct:__anon13
+r_addend	fifos/memos-2/elf.h	/^  Elf32_Sword	r_addend;		\/* Addend *\/$/;"	m	struct:__anon54
+r_addend	fifos/memos-2/elf.h	/^  Elf64_Sxword	r_addend;		\/* Addend *\/$/;"	m	struct:__anon55
+r_info	fifos/fifos-1/elf.h	/^  Elf32_Word	r_info;			\/* Relocation type and symbol index *\/$/;"	m	struct:__anon10
+r_info	fifos/fifos-1/elf.h	/^  Elf32_Word	r_info;			\/* Relocation type and symbol index *\/$/;"	m	struct:__anon12
+r_info	fifos/fifos-1/elf.h	/^  Elf64_Xword	r_info;			\/* Relocation type and symbol index *\/$/;"	m	struct:__anon11
+r_info	fifos/fifos-1/elf.h	/^  Elf64_Xword	r_info;			\/* Relocation type and symbol index *\/$/;"	m	struct:__anon13
+r_info	fifos/memos-2/elf.h	/^  Elf32_Word	r_info;			\/* Relocation type and symbol index *\/$/;"	m	struct:__anon52
+r_info	fifos/memos-2/elf.h	/^  Elf32_Word	r_info;			\/* Relocation type and symbol index *\/$/;"	m	struct:__anon54
+r_info	fifos/memos-2/elf.h	/^  Elf64_Xword	r_info;			\/* Relocation type and symbol index *\/$/;"	m	struct:__anon53
+r_info	fifos/memos-2/elf.h	/^  Elf64_Xword	r_info;			\/* Relocation type and symbol index *\/$/;"	m	struct:__anon55
+r_offset	fifos/fifos-1/elf.h	/^  Elf32_Addr	r_offset;		\/* Address *\/$/;"	m	struct:__anon10
+r_offset	fifos/fifos-1/elf.h	/^  Elf32_Addr	r_offset;		\/* Address *\/$/;"	m	struct:__anon12
+r_offset	fifos/fifos-1/elf.h	/^  Elf64_Addr	r_offset;		\/* Address *\/$/;"	m	struct:__anon11
+r_offset	fifos/fifos-1/elf.h	/^  Elf64_Addr	r_offset;		\/* Address *\/$/;"	m	struct:__anon13
+r_offset	fifos/memos-2/elf.h	/^  Elf32_Addr	r_offset;		\/* Address *\/$/;"	m	struct:__anon52
+r_offset	fifos/memos-2/elf.h	/^  Elf32_Addr	r_offset;		\/* Address *\/$/;"	m	struct:__anon54
+r_offset	fifos/memos-2/elf.h	/^  Elf64_Addr	r_offset;		\/* Address *\/$/;"	m	struct:__anon53
+r_offset	fifos/memos-2/elf.h	/^  Elf64_Addr	r_offset;		\/* Address *\/$/;"	m	struct:__anon55
+real_start	fifos/fifos-1/boot.S	/^real_start:$/;"	l
+real_start	fifos/memos-2/boot.S	/^real_start:$/;"	l
+real_start	memos/vga16.s	/^real_start:$/;"	l
+reserved	fifos/fifos-1/multiboot.h	/^    unsigned long reserved;$/;"	m	struct:_multiboot_module
+reserved	fifos/memos-2/multiboot.h	/^    unsigned long reserved;$/;"	m	struct:_multiboot_module
+ri_cprmask	fifos/fifos-1/elf.h	/^  Elf32_Word	ri_cprmask[4];		\/* Coprocessor registers used *\/$/;"	m	struct:__anon39
+ri_cprmask	fifos/memos-2/elf.h	/^  Elf32_Word	ri_cprmask[4];		\/* Coprocessor registers used *\/$/;"	m	struct:__anon81
+ri_gp_value	fifos/fifos-1/elf.h	/^  Elf32_Sword	ri_gp_value;		\/* $gp register value *\/$/;"	m	struct:__anon39
+ri_gp_value	fifos/memos-2/elf.h	/^  Elf32_Sword	ri_gp_value;		\/* $gp register value *\/$/;"	m	struct:__anon81
+ri_gprmask	fifos/fifos-1/elf.h	/^  Elf32_Word	ri_gprmask;		\/* General registers used *\/$/;"	m	struct:__anon39
+ri_gprmask	fifos/memos-2/elf.h	/^  Elf32_Word	ri_gprmask;		\/* General registers used *\/$/;"	m	struct:__anon81
+rq	fifos/fifos-1/coroutine.c	/^} rq;$/;"	t	typeref:struct:runqueue	file:
+runqueue	fifos/fifos-1/coroutine.c	/^typedef struct runqueue {$/;"	s	file:
+s	memos/Makefile	/^	dd bs=1 if=memos1 of=memos1_test skip=4096 count=512$/;"	m
+s	memos/Makefile	/^	dd bs=1 if=vga16 of=vga16_test skip=4096 count=512$/;"	m
+s16	fifos/fifos-1/types.h	/^typedef signed short int sint16, s16;$/;"	t
+s16	fifos/memos-2/types.h	/^typedef signed short int sint16, s16;$/;"	t
+s32	fifos/fifos-1/types.h	/^typedef signed long int sint32, s32;$/;"	t
+s32	fifos/memos-2/types.h	/^typedef signed long int sint32, s32;$/;"	t
+s64	fifos/fifos-1/types.h	/^typedef signed long long int sint64, s64;$/;"	t
+s64	fifos/memos-2/types.h	/^typedef signed long long int sint64, s64;$/;"	t
+s8	fifos/fifos-1/types.h	/^typedef signed char sint8, s8;$/;"	t
+s8	fifos/memos-2/types.h	/^typedef signed char sint8, s8;$/;"	t
+schedule	fifos/fifos-1/coroutine.c	/^void schedule (void) {$/;"	f
+schedule	fifos/fifos-1/init.c	/^void schedule(void) {$/;"	f
+schedule	fifos/memos-2/init.c	/^void schedule(void) {$/;"	f
+section	fifos/fifos-1/elf.h	/^  Elf32_Section section;	\/* Section header index of section affected,$/;"	m	struct:__anon40
+section	fifos/memos-2/elf.h	/^  Elf32_Section section;	\/* Section header index of section affected,$/;"	m	struct:__anon82
+sh_addr	fifos/fifos-1/elf.h	/^  Elf32_Addr	sh_addr;		\/* Section virtual addr at execution *\/$/;"	m	struct:__anon4
+sh_addr	fifos/fifos-1/elf.h	/^  Elf64_Addr	sh_addr;		\/* Section virtual addr at execution *\/$/;"	m	struct:__anon5
+sh_addr	fifos/memos-2/elf.h	/^  Elf32_Addr	sh_addr;		\/* Section virtual addr at execution *\/$/;"	m	struct:__anon46
+sh_addr	fifos/memos-2/elf.h	/^  Elf64_Addr	sh_addr;		\/* Section virtual addr at execution *\/$/;"	m	struct:__anon47
+sh_addralign	fifos/fifos-1/elf.h	/^  Elf32_Word	sh_addralign;		\/* Section alignment *\/$/;"	m	struct:__anon4
+sh_addralign	fifos/fifos-1/elf.h	/^  Elf64_Xword	sh_addralign;		\/* Section alignment *\/$/;"	m	struct:__anon5
+sh_addralign	fifos/memos-2/elf.h	/^  Elf32_Word	sh_addralign;		\/* Section alignment *\/$/;"	m	struct:__anon46
+sh_addralign	fifos/memos-2/elf.h	/^  Elf64_Xword	sh_addralign;		\/* Section alignment *\/$/;"	m	struct:__anon47
+sh_entsize	fifos/fifos-1/elf.h	/^  Elf32_Word	sh_entsize;		\/* Entry size if section holds table *\/$/;"	m	struct:__anon4
+sh_entsize	fifos/fifos-1/elf.h	/^  Elf64_Xword	sh_entsize;		\/* Entry size if section holds table *\/$/;"	m	struct:__anon5
+sh_entsize	fifos/memos-2/elf.h	/^  Elf32_Word	sh_entsize;		\/* Entry size if section holds table *\/$/;"	m	struct:__anon46
+sh_entsize	fifos/memos-2/elf.h	/^  Elf64_Xword	sh_entsize;		\/* Entry size if section holds table *\/$/;"	m	struct:__anon47
+sh_flags	fifos/fifos-1/elf.h	/^  Elf32_Word	sh_flags;		\/* Section flags *\/$/;"	m	struct:__anon4
+sh_flags	fifos/fifos-1/elf.h	/^  Elf64_Xword	sh_flags;		\/* Section flags *\/$/;"	m	struct:__anon5
+sh_flags	fifos/memos-2/elf.h	/^  Elf32_Word	sh_flags;		\/* Section flags *\/$/;"	m	struct:__anon46
+sh_flags	fifos/memos-2/elf.h	/^  Elf64_Xword	sh_flags;		\/* Section flags *\/$/;"	m	struct:__anon47
+sh_info	fifos/fifos-1/elf.h	/^  Elf32_Word	sh_info;		\/* Additional section information *\/$/;"	m	struct:__anon4
+sh_info	fifos/fifos-1/elf.h	/^  Elf64_Word	sh_info;		\/* Additional section information *\/$/;"	m	struct:__anon5
+sh_info	fifos/memos-2/elf.h	/^  Elf32_Word	sh_info;		\/* Additional section information *\/$/;"	m	struct:__anon46
+sh_info	fifos/memos-2/elf.h	/^  Elf64_Word	sh_info;		\/* Additional section information *\/$/;"	m	struct:__anon47
+sh_link	fifos/fifos-1/elf.h	/^  Elf32_Word	sh_link;		\/* Link to another section *\/$/;"	m	struct:__anon4
+sh_link	fifos/fifos-1/elf.h	/^  Elf64_Word	sh_link;		\/* Link to another section *\/$/;"	m	struct:__anon5
+sh_link	fifos/memos-2/elf.h	/^  Elf32_Word	sh_link;		\/* Link to another section *\/$/;"	m	struct:__anon46
+sh_link	fifos/memos-2/elf.h	/^  Elf64_Word	sh_link;		\/* Link to another section *\/$/;"	m	struct:__anon47
+sh_name	fifos/fifos-1/elf.h	/^  Elf32_Word	sh_name;		\/* Section name (string tbl index) *\/$/;"	m	struct:__anon4
+sh_name	fifos/fifos-1/elf.h	/^  Elf64_Word	sh_name;		\/* Section name (string tbl index) *\/$/;"	m	struct:__anon5
+sh_name	fifos/memos-2/elf.h	/^  Elf32_Word	sh_name;		\/* Section name (string tbl index) *\/$/;"	m	struct:__anon46
+sh_name	fifos/memos-2/elf.h	/^  Elf64_Word	sh_name;		\/* Section name (string tbl index) *\/$/;"	m	struct:__anon47
+sh_offset	fifos/fifos-1/elf.h	/^  Elf32_Off	sh_offset;		\/* Section file offset *\/$/;"	m	struct:__anon4
+sh_offset	fifos/fifos-1/elf.h	/^  Elf64_Off	sh_offset;		\/* Section file offset *\/$/;"	m	struct:__anon5
+sh_offset	fifos/memos-2/elf.h	/^  Elf32_Off	sh_offset;		\/* Section file offset *\/$/;"	m	struct:__anon46
+sh_offset	fifos/memos-2/elf.h	/^  Elf64_Off	sh_offset;		\/* Section file offset *\/$/;"	m	struct:__anon47
+sh_size	fifos/fifos-1/elf.h	/^  Elf32_Word	sh_size;		\/* Section size in bytes *\/$/;"	m	struct:__anon4
+sh_size	fifos/fifos-1/elf.h	/^  Elf64_Xword	sh_size;		\/* Section size in bytes *\/$/;"	m	struct:__anon5
+sh_size	fifos/memos-2/elf.h	/^  Elf32_Word	sh_size;		\/* Section size in bytes *\/$/;"	m	struct:__anon46
+sh_size	fifos/memos-2/elf.h	/^  Elf64_Xword	sh_size;		\/* Section size in bytes *\/$/;"	m	struct:__anon47
+sh_type	fifos/fifos-1/elf.h	/^  Elf32_Word	sh_type;		\/* Section type *\/$/;"	m	struct:__anon4
+sh_type	fifos/fifos-1/elf.h	/^  Elf64_Word	sh_type;		\/* Section type *\/$/;"	m	struct:__anon5
+sh_type	fifos/memos-2/elf.h	/^  Elf32_Word	sh_type;		\/* Section type *\/$/;"	m	struct:__anon46
+sh_type	fifos/memos-2/elf.h	/^  Elf64_Word	sh_type;		\/* Section type *\/$/;"	m	struct:__anon47
+si_boundto	fifos/fifos-1/elf.h	/^  Elf32_Half si_boundto;		\/* Direct bindings, symbol bound to *\/$/;"	m	struct:__anon8
+si_boundto	fifos/fifos-1/elf.h	/^  Elf64_Half si_boundto;		\/* Direct bindings, symbol bound to *\/$/;"	m	struct:__anon9
+si_boundto	fifos/memos-2/elf.h	/^  Elf32_Half si_boundto;		\/* Direct bindings, symbol bound to *\/$/;"	m	struct:__anon50
+si_boundto	fifos/memos-2/elf.h	/^  Elf64_Half si_boundto;		\/* Direct bindings, symbol bound to *\/$/;"	m	struct:__anon51
+si_flags	fifos/fifos-1/elf.h	/^  Elf32_Half si_flags;			\/* Per symbol flags *\/$/;"	m	struct:__anon8
+si_flags	fifos/fifos-1/elf.h	/^  Elf64_Half si_flags;			\/* Per symbol flags *\/$/;"	m	struct:__anon9
+si_flags	fifos/memos-2/elf.h	/^  Elf32_Half si_flags;			\/* Per symbol flags *\/$/;"	m	struct:__anon50
+si_flags	fifos/memos-2/elf.h	/^  Elf64_Half si_flags;			\/* Per symbol flags *\/$/;"	m	struct:__anon51
+sint	fifos/fifos-1/types.h	/^typedef signed long sint;$/;"	t
+sint	fifos/memos-2/types.h	/^typedef signed long sint;$/;"	t
+sint16	fifos/fifos-1/types.h	/^typedef signed short int sint16, s16;$/;"	t
+sint16	fifos/memos-2/types.h	/^typedef signed short int sint16, s16;$/;"	t
+sint32	fifos/fifos-1/types.h	/^typedef signed long int sint32, s32;$/;"	t
+sint32	fifos/memos-2/types.h	/^typedef signed long int sint32, s32;$/;"	t
+sint64	fifos/fifos-1/types.h	/^typedef signed long long int sint64, s64;$/;"	t
+sint64	fifos/memos-2/types.h	/^typedef signed long long int sint64, s64;$/;"	t
+sint8	fifos/fifos-1/types.h	/^typedef signed char sint8, s8;$/;"	t
+sint8	fifos/memos-2/types.h	/^typedef signed char sint8, s8;$/;"	t
+size	fifos/fifos-1/elf.h	/^  unsigned char size;		\/* Size of descriptor, including header.  *\/$/;"	m	struct:__anon40
+size	fifos/fifos-1/multiboot.h	/^    unsigned long size;$/;"	m	struct:memory_map
+size	fifos/memos-2/elf.h	/^  unsigned char size;		\/* Size of descriptor, including header.  *\/$/;"	m	struct:__anon82
+size	fifos/memos-2/multiboot.h	/^    unsigned long size;$/;"	m	struct:memory_map
+size_t	fifos/fifos-1/types.h	/^typedef int size_t;$/;"	t
+size_t	fifos/memos-2/types.h	/^typedef int size_t;$/;"	t
+sp	fifos/fifos-1/fifos.c	/^	void* sp;$/;"	m	struct:tcb	file:
+sp	fifos/fifos-1/init.c	/^	void *sp;$/;"	m	struct:tcb	file:
+sp	fifos/fifos-1/thread.c	/^	uint32_t sp; \/\/ stack pointer $/;"	m	struct:_PCB	file:
+sp	fifos/memos-2/init.c	/^	void *sp;$/;"	m	struct:tcb	file:
+st_info	fifos/fifos-1/elf.h	/^  unsigned char	st_info;		\/* Symbol type and binding *\/$/;"	m	struct:__anon6
+st_info	fifos/fifos-1/elf.h	/^  unsigned char	st_info;		\/* Symbol type and binding *\/$/;"	m	struct:__anon7
+st_info	fifos/memos-2/elf.h	/^  unsigned char	st_info;		\/* Symbol type and binding *\/$/;"	m	struct:__anon48
+st_info	fifos/memos-2/elf.h	/^  unsigned char	st_info;		\/* Symbol type and binding *\/$/;"	m	struct:__anon49
+st_name	fifos/fifos-1/elf.h	/^  Elf32_Word	st_name;		\/* Symbol name (string tbl index) *\/$/;"	m	struct:__anon6
+st_name	fifos/fifos-1/elf.h	/^  Elf64_Word	st_name;		\/* Symbol name (string tbl index) *\/$/;"	m	struct:__anon7
+st_name	fifos/memos-2/elf.h	/^  Elf32_Word	st_name;		\/* Symbol name (string tbl index) *\/$/;"	m	struct:__anon48
+st_name	fifos/memos-2/elf.h	/^  Elf64_Word	st_name;		\/* Symbol name (string tbl index) *\/$/;"	m	struct:__anon49
+st_other	fifos/fifos-1/elf.h	/^  unsigned char	st_other;		\/* Symbol visibility *\/$/;"	m	struct:__anon6
+st_other	fifos/fifos-1/elf.h	/^  unsigned char st_other;		\/* Symbol visibility *\/$/;"	m	struct:__anon7
+st_other	fifos/memos-2/elf.h	/^  unsigned char	st_other;		\/* Symbol visibility *\/$/;"	m	struct:__anon48
+st_other	fifos/memos-2/elf.h	/^  unsigned char st_other;		\/* Symbol visibility *\/$/;"	m	struct:__anon49
+st_shndx	fifos/fifos-1/elf.h	/^  Elf32_Section	st_shndx;		\/* Section index *\/$/;"	m	struct:__anon6
+st_shndx	fifos/fifos-1/elf.h	/^  Elf64_Section	st_shndx;		\/* Section index *\/$/;"	m	struct:__anon7
+st_shndx	fifos/memos-2/elf.h	/^  Elf32_Section	st_shndx;		\/* Section index *\/$/;"	m	struct:__anon48
+st_shndx	fifos/memos-2/elf.h	/^  Elf64_Section	st_shndx;		\/* Section index *\/$/;"	m	struct:__anon49
+st_size	fifos/fifos-1/elf.h	/^  Elf32_Word	st_size;		\/* Symbol size *\/$/;"	m	struct:__anon6
+st_size	fifos/fifos-1/elf.h	/^  Elf64_Xword	st_size;		\/* Symbol size *\/$/;"	m	struct:__anon7
+st_size	fifos/memos-2/elf.h	/^  Elf32_Word	st_size;		\/* Symbol size *\/$/;"	m	struct:__anon48
+st_size	fifos/memos-2/elf.h	/^  Elf64_Xword	st_size;		\/* Symbol size *\/$/;"	m	struct:__anon49
+st_value	fifos/fifos-1/elf.h	/^  Elf32_Addr	st_value;		\/* Symbol value *\/$/;"	m	struct:__anon6
+st_value	fifos/fifos-1/elf.h	/^  Elf64_Addr	st_value;		\/* Symbol value *\/$/;"	m	struct:__anon7
+st_value	fifos/memos-2/elf.h	/^  Elf32_Addr	st_value;		\/* Symbol value *\/$/;"	m	struct:__anon48
+st_value	fifos/memos-2/elf.h	/^  Elf64_Addr	st_value;		\/* Symbol value *\/$/;"	m	struct:__anon49
+stack	fifos/fifos-1/fifos.c	/^	void* stack[1024];$/;"	m	struct:tcb	file:
+state	fifos/fifos-1/init.c	/^	int state;$/;"	m	struct:thread	file:
+state	fifos/memos-2/init.c	/^	int state;$/;"	m	struct:thread	file:
+string	fifos/fifos-1/multiboot.h	/^    char *string;$/;"	m	struct:_multiboot_module
+string	fifos/memos-2/multiboot.h	/^    char *string;$/;"	m	struct:_multiboot_module
+string	primer/ioctl_module.c	/^	char *string;$/;"	m	struct:ioctl_test_t	file:
+strlen	fifos/fifos-1/fifos.c	/^size_t strlen(const char* str)$/;"	f
+strlen	fifos/fifos-1/init.c	/^size_t strlen(const char* str)$/;"	f
+strlen	fifos/memos-2/init.c	/^size_t strlen(const char* str)$/;"	f
+tail	fifos/fifos-1/fifos.c	/^static tcb  *tail; \/* queue tail *\/$/;"	v	file:
+task	fifos/fifos-1/coroutine.c	/^  int (*task)();$/;"	m	struct:runqueue	file:
+tcb	fifos/fifos-1/fifos.c	/^typedef struct tcb {$/;"	s	file:
+tcb	fifos/fifos-1/fifos.c	/^} tcb;$/;"	t	typeref:struct:tcb	file:
+tcb	fifos/fifos-1/init.c	/^typedef struct tcb {$/;"	s	file:
+tcb	fifos/fifos-1/init.c	/^} tcb;$/;"	t	typeref:struct:tcb	file:
+tcb	fifos/memos-2/init.c	/^typedef struct tcb {$/;"	s	file:
+tcb	fifos/memos-2/init.c	/^} tcb;$/;"	t	typeref:struct:tcb	file:
+terminal_buffer	fifos/fifos-1/fifos.c	/^uint16_t* terminal_buffer;$/;"	v
+terminal_buffer	fifos/fifos-1/init.c	/^uint16_t* terminal_buffer;$/;"	v
+terminal_buffer	fifos/memos-2/init.c	/^uint16_t* terminal_buffer;$/;"	v
+terminal_color	fifos/fifos-1/fifos.c	/^uint8_t terminal_color;$/;"	v
+terminal_color	fifos/fifos-1/init.c	/^uint8_t terminal_color;$/;"	v
+terminal_color	fifos/memos-2/init.c	/^uint8_t terminal_color;$/;"	v
+terminal_column	fifos/fifos-1/fifos.c	/^size_t terminal_column;$/;"	v
+terminal_column	fifos/fifos-1/init.c	/^size_t terminal_column;$/;"	v
+terminal_column	fifos/memos-2/init.c	/^size_t terminal_column;$/;"	v
+terminal_initialize	fifos/fifos-1/fifos.c	/^void terminal_initialize()$/;"	f
+terminal_initialize	fifos/fifos-1/init.c	/^void terminal_initialize()$/;"	f
+terminal_initialize	fifos/memos-2/init.c	/^void terminal_initialize()$/;"	f
+terminal_putchar	fifos/fifos-1/fifos.c	/^void terminal_putchar(char c)$/;"	f
+terminal_putchar	fifos/fifos-1/init.c	/^void terminal_putchar(char c)$/;"	f
+terminal_putchar	fifos/memos-2/init.c	/^void terminal_putchar(char c)$/;"	f
+terminal_putentryat	fifos/fifos-1/fifos.c	/^void terminal_putentryat(char c, uint8_t color, size_t x, size_t y)$/;"	f
+terminal_putentryat	fifos/fifos-1/init.c	/^void terminal_putentryat(char c, uint8_t color, size_t x, size_t y)$/;"	f
+terminal_putentryat	fifos/memos-2/init.c	/^void terminal_putentryat(char c, uint8_t color, size_t x, size_t y)$/;"	f
+terminal_row	fifos/fifos-1/fifos.c	/^size_t terminal_row;$/;"	v
+terminal_row	fifos/fifos-1/init.c	/^size_t terminal_row;$/;"	v
+terminal_row	fifos/memos-2/init.c	/^size_t terminal_row;$/;"	v
+terminal_setcolor	fifos/fifos-1/fifos.c	/^void terminal_setcolor(uint8_t color)$/;"	f
+terminal_setcolor	fifos/fifos-1/init.c	/^void terminal_setcolor(uint8_t color)$/;"	f
+terminal_setcolor	fifos/memos-2/init.c	/^void terminal_setcolor(uint8_t color)$/;"	f
+terminal_writestring	fifos/fifos-1/fifos.c	/^void terminal_writestring(const char* data)$/;"	f
+terminal_writestring	fifos/fifos-1/init.c	/^void terminal_writestring(const char* data)$/;"	f
+terminal_writestring	fifos/memos-2/init.c	/^void terminal_writestring(const char* data)$/;"	f
+thread	fifos/fifos-1/init.c	/^typedef struct thread {$/;"	s	file:
+thread	fifos/fifos-1/init.c	/^} thread;$/;"	t	typeref:struct:thread	file:
+thread	fifos/memos-2/init.c	/^typedef struct thread {$/;"	s	file:
+thread	fifos/memos-2/init.c	/^} thread;$/;"	t	typeref:struct:thread	file:
+thread1	fifos/fifos-1/coroutine.c	/^int thread1 (void) {$/;"	f
+thread1	fifos/fifos-1/init.c	/^void thread1 (void) {$/;"	f
+thread1	fifos/memos-2/init.c	/^int thread1 (void) {$/;"	f
+thread2	fifos/fifos-1/coroutine.c	/^int thread2 (void) {$/;"	f
+thread2	fifos/fifos-1/init.c	/^void thread2 (void) {$/;"	f
+thread2	fifos/memos-2/init.c	/^int thread2 (void) {$/;"	f
+thread3	fifos/fifos-1/init.c	/^void thread3 (void) {$/;"	f
+thread3	fifos/memos-2/init.c	/^int thread3 (void) {$/;"	f
+threadDone	fifos/fifos-1/fifos.c	17;"	d	file:
+threadDone	fifos/fifos-1/init.c	27;"	d	file:
+threadDone	fifos/memos-2/init.c	27;"	d	file:
+threadPrint	fifos/fifos-1/fifos.c	13;"	d	file:
+threadPrint	fifos/fifos-1/init.c	23;"	d	file:
+threadPrint	fifos/memos-2/init.c	23;"	d	file:
+thread_create	fifos/fifos-1/fifos.c	/^int thread_create(void *stack, void *func) {$/;"	f
+thread_create	fifos/fifos-1/init.c	/^int thread_create(void *stack, void (*func) ()) {    $/;"	f
+thread_create	fifos/memos-2/init.c	/^int thread_create() {$/;"	f
+thread_func	fifos/fifos-1/fifos.c	/^void thread_func(int tid) {$/;"	f
+thread_init	fifos/fifos-1/fifos.c	/^void thread_init() {$/;"	f
+thread_schedule	fifos/fifos-1/fifos.c	/^void thread_schedule() {$/;"	f
+threads	fifos/fifos-1/init.c	/^static thread threads[MAX_THREADS];$/;"	v	file:
+threads	fifos/memos-2/init.c	/^static thread threads[MAX_THREADS];$/;"	v	file:
+tid	fifos/fifos-1/coroutine.c	/^  int tid; \/\/ thread ID$/;"	m	struct:runqueue	file:
+tid	fifos/fifos-1/fifos.c	/^	int tid;$/;"	m	struct:tcb	file:
+tid	fifos/fifos-1/init.c	/^	int tid;$/;"	m	struct:tcb	file:
+tid	fifos/fifos-1/thread.c	/^	uint32_t tid; \/\/ thread id$/;"	m	struct:_PCB	file:
+tid	fifos/memos-2/init.c	/^	int tid;$/;"	m	struct:tcb	file:
+timer	fifos/fifos-1/boot.S	/^timer:$/;"	l
+timer_handler	fifos/fifos-1/fifos.c	/^void timer_handler() {}$/;"	f
+type	fifos/fifos-1/multiboot.h	/^    unsigned long type;$/;"	m	struct:memory_map
+type	fifos/memos-2/multiboot.h	/^    unsigned long type;$/;"	m	struct:memory_map
+uint	fifos/fifos-1/types.h	/^typedef unsigned long uint;$/;"	t
+uint	fifos/memos-2/types.h	/^typedef unsigned long uint;$/;"	t
+uint16	fifos/fifos-1/types.h	/^typedef unsigned short int uint16;$/;"	t
+uint16	fifos/memos-2/types.h	/^typedef unsigned short int uint16;$/;"	t
+uint16_t	fifos/fifos-1/types.h	/^typedef uint16 uint16_t;$/;"	t
+uint16_t	fifos/memos-2/types.h	/^typedef uint16 uint16_t;$/;"	t
+uint32	fifos/fifos-1/types.h	/^typedef unsigned long int uint32;$/;"	t
+uint32	fifos/memos-2/types.h	/^typedef unsigned long int uint32;$/;"	t
+uint32_t	fifos/fifos-1/types.h	/^typedef uint32 uint32_t;$/;"	t
+uint32_t	fifos/memos-2/types.h	/^typedef uint32 uint32_t;$/;"	t
+uint64	fifos/fifos-1/types.h	/^typedef unsigned long long int uint64;$/;"	t
+uint64	fifos/memos-2/types.h	/^typedef unsigned long long int uint64;$/;"	t
+uint64_t	fifos/fifos-1/types.h	/^typedef uint64 uint64_t;$/;"	t
+uint64_t	fifos/memos-2/types.h	/^typedef uint64 uint64_t;$/;"	t
+uint8	fifos/fifos-1/types.h	/^typedef unsigned char uint8;$/;"	t
+uint8	fifos/memos-2/types.h	/^typedef unsigned char uint8;$/;"	t
+uint8_t	fifos/fifos-1/types.h	/^typedef uint8 uint8_t;$/;"	t
+uint8_t	fifos/memos-2/types.h	/^typedef uint8 uint8_t;$/;"	t
+vd_aux	fifos/fifos-1/elf.h	/^  Elf32_Word	vd_aux;			\/* Offset in bytes to verdaux array *\/$/;"	m	struct:__anon20
+vd_aux	fifos/fifos-1/elf.h	/^  Elf64_Word	vd_aux;			\/* Offset in bytes to verdaux array *\/$/;"	m	struct:__anon21
+vd_aux	fifos/memos-2/elf.h	/^  Elf32_Word	vd_aux;			\/* Offset in bytes to verdaux array *\/$/;"	m	struct:__anon62
+vd_aux	fifos/memos-2/elf.h	/^  Elf64_Word	vd_aux;			\/* Offset in bytes to verdaux array *\/$/;"	m	struct:__anon63
+vd_cnt	fifos/fifos-1/elf.h	/^  Elf32_Half	vd_cnt;			\/* Number of associated aux entries *\/$/;"	m	struct:__anon20
+vd_cnt	fifos/fifos-1/elf.h	/^  Elf64_Half	vd_cnt;			\/* Number of associated aux entries *\/$/;"	m	struct:__anon21
+vd_cnt	fifos/memos-2/elf.h	/^  Elf32_Half	vd_cnt;			\/* Number of associated aux entries *\/$/;"	m	struct:__anon62
+vd_cnt	fifos/memos-2/elf.h	/^  Elf64_Half	vd_cnt;			\/* Number of associated aux entries *\/$/;"	m	struct:__anon63
+vd_flags	fifos/fifos-1/elf.h	/^  Elf32_Half	vd_flags;		\/* Version information *\/$/;"	m	struct:__anon20
+vd_flags	fifos/fifos-1/elf.h	/^  Elf64_Half	vd_flags;		\/* Version information *\/$/;"	m	struct:__anon21
+vd_flags	fifos/memos-2/elf.h	/^  Elf32_Half	vd_flags;		\/* Version information *\/$/;"	m	struct:__anon62
+vd_flags	fifos/memos-2/elf.h	/^  Elf64_Half	vd_flags;		\/* Version information *\/$/;"	m	struct:__anon63
+vd_hash	fifos/fifos-1/elf.h	/^  Elf32_Word	vd_hash;		\/* Version name hash value *\/$/;"	m	struct:__anon20
+vd_hash	fifos/fifos-1/elf.h	/^  Elf64_Word	vd_hash;		\/* Version name hash value *\/$/;"	m	struct:__anon21
+vd_hash	fifos/memos-2/elf.h	/^  Elf32_Word	vd_hash;		\/* Version name hash value *\/$/;"	m	struct:__anon62
+vd_hash	fifos/memos-2/elf.h	/^  Elf64_Word	vd_hash;		\/* Version name hash value *\/$/;"	m	struct:__anon63
+vd_ndx	fifos/fifos-1/elf.h	/^  Elf32_Half	vd_ndx;			\/* Version Index *\/$/;"	m	struct:__anon20
+vd_ndx	fifos/fifos-1/elf.h	/^  Elf64_Half	vd_ndx;			\/* Version Index *\/$/;"	m	struct:__anon21
+vd_ndx	fifos/memos-2/elf.h	/^  Elf32_Half	vd_ndx;			\/* Version Index *\/$/;"	m	struct:__anon62
+vd_ndx	fifos/memos-2/elf.h	/^  Elf64_Half	vd_ndx;			\/* Version Index *\/$/;"	m	struct:__anon63
+vd_next	fifos/fifos-1/elf.h	/^  Elf32_Word	vd_next;		\/* Offset in bytes to next verdef$/;"	m	struct:__anon20
+vd_next	fifos/fifos-1/elf.h	/^  Elf64_Word	vd_next;		\/* Offset in bytes to next verdef$/;"	m	struct:__anon21
+vd_next	fifos/memos-2/elf.h	/^  Elf32_Word	vd_next;		\/* Offset in bytes to next verdef$/;"	m	struct:__anon62
+vd_next	fifos/memos-2/elf.h	/^  Elf64_Word	vd_next;		\/* Offset in bytes to next verdef$/;"	m	struct:__anon63
+vd_version	fifos/fifos-1/elf.h	/^  Elf32_Half	vd_version;		\/* Version revision *\/$/;"	m	struct:__anon20
+vd_version	fifos/fifos-1/elf.h	/^  Elf64_Half	vd_version;		\/* Version revision *\/$/;"	m	struct:__anon21
+vd_version	fifos/memos-2/elf.h	/^  Elf32_Half	vd_version;		\/* Version revision *\/$/;"	m	struct:__anon62
+vd_version	fifos/memos-2/elf.h	/^  Elf64_Half	vd_version;		\/* Version revision *\/$/;"	m	struct:__anon63
+vda_name	fifos/fifos-1/elf.h	/^  Elf32_Word	vda_name;		\/* Version or dependency names *\/$/;"	m	struct:__anon22
+vda_name	fifos/fifos-1/elf.h	/^  Elf64_Word	vda_name;		\/* Version or dependency names *\/$/;"	m	struct:__anon23
+vda_name	fifos/memos-2/elf.h	/^  Elf32_Word	vda_name;		\/* Version or dependency names *\/$/;"	m	struct:__anon64
+vda_name	fifos/memos-2/elf.h	/^  Elf64_Word	vda_name;		\/* Version or dependency names *\/$/;"	m	struct:__anon65
+vda_next	fifos/fifos-1/elf.h	/^  Elf32_Word	vda_next;		\/* Offset in bytes to next verdaux$/;"	m	struct:__anon22
+vda_next	fifos/fifos-1/elf.h	/^  Elf64_Word	vda_next;		\/* Offset in bytes to next verdaux$/;"	m	struct:__anon23
+vda_next	fifos/memos-2/elf.h	/^  Elf32_Word	vda_next;		\/* Offset in bytes to next verdaux$/;"	m	struct:__anon64
+vda_next	fifos/memos-2/elf.h	/^  Elf64_Word	vda_next;		\/* Offset in bytes to next verdaux$/;"	m	struct:__anon65
+vga_color	fifos/fifos-1/fifos.c	/^enum vga_color$/;"	g	file:
+vga_color	fifos/fifos-1/init.c	/^enum vga_color$/;"	g	file:
+vga_color	fifos/memos-2/init.c	/^enum vga_color$/;"	g	file:
+vn_aux	fifos/fifos-1/elf.h	/^  Elf32_Word	vn_aux;			\/* Offset in bytes to vernaux array *\/$/;"	m	struct:__anon24
+vn_aux	fifos/fifos-1/elf.h	/^  Elf64_Word	vn_aux;			\/* Offset in bytes to vernaux array *\/$/;"	m	struct:__anon25
+vn_aux	fifos/memos-2/elf.h	/^  Elf32_Word	vn_aux;			\/* Offset in bytes to vernaux array *\/$/;"	m	struct:__anon66
+vn_aux	fifos/memos-2/elf.h	/^  Elf64_Word	vn_aux;			\/* Offset in bytes to vernaux array *\/$/;"	m	struct:__anon67
+vn_cnt	fifos/fifos-1/elf.h	/^  Elf32_Half	vn_cnt;			\/* Number of associated aux entries *\/$/;"	m	struct:__anon24
+vn_cnt	fifos/fifos-1/elf.h	/^  Elf64_Half	vn_cnt;			\/* Number of associated aux entries *\/$/;"	m	struct:__anon25
+vn_cnt	fifos/memos-2/elf.h	/^  Elf32_Half	vn_cnt;			\/* Number of associated aux entries *\/$/;"	m	struct:__anon66
+vn_cnt	fifos/memos-2/elf.h	/^  Elf64_Half	vn_cnt;			\/* Number of associated aux entries *\/$/;"	m	struct:__anon67
+vn_file	fifos/fifos-1/elf.h	/^  Elf32_Word	vn_file;		\/* Offset of filename for this$/;"	m	struct:__anon24
+vn_file	fifos/fifos-1/elf.h	/^  Elf64_Word	vn_file;		\/* Offset of filename for this$/;"	m	struct:__anon25
+vn_file	fifos/memos-2/elf.h	/^  Elf32_Word	vn_file;		\/* Offset of filename for this$/;"	m	struct:__anon66
+vn_file	fifos/memos-2/elf.h	/^  Elf64_Word	vn_file;		\/* Offset of filename for this$/;"	m	struct:__anon67
+vn_next	fifos/fifos-1/elf.h	/^  Elf32_Word	vn_next;		\/* Offset in bytes to next verneed$/;"	m	struct:__anon24
+vn_next	fifos/fifos-1/elf.h	/^  Elf64_Word	vn_next;		\/* Offset in bytes to next verneed$/;"	m	struct:__anon25
+vn_next	fifos/memos-2/elf.h	/^  Elf32_Word	vn_next;		\/* Offset in bytes to next verneed$/;"	m	struct:__anon66
+vn_next	fifos/memos-2/elf.h	/^  Elf64_Word	vn_next;		\/* Offset in bytes to next verneed$/;"	m	struct:__anon67
+vn_version	fifos/fifos-1/elf.h	/^  Elf32_Half	vn_version;		\/* Version of structure *\/$/;"	m	struct:__anon24
+vn_version	fifos/fifos-1/elf.h	/^  Elf64_Half	vn_version;		\/* Version of structure *\/$/;"	m	struct:__anon25
+vn_version	fifos/memos-2/elf.h	/^  Elf32_Half	vn_version;		\/* Version of structure *\/$/;"	m	struct:__anon66
+vn_version	fifos/memos-2/elf.h	/^  Elf64_Half	vn_version;		\/* Version of structure *\/$/;"	m	struct:__anon67
+vna_flags	fifos/fifos-1/elf.h	/^  Elf32_Half	vna_flags;		\/* Dependency specific information *\/$/;"	m	struct:__anon26
+vna_flags	fifos/fifos-1/elf.h	/^  Elf64_Half	vna_flags;		\/* Dependency specific information *\/$/;"	m	struct:__anon27
+vna_flags	fifos/memos-2/elf.h	/^  Elf32_Half	vna_flags;		\/* Dependency specific information *\/$/;"	m	struct:__anon68
+vna_flags	fifos/memos-2/elf.h	/^  Elf64_Half	vna_flags;		\/* Dependency specific information *\/$/;"	m	struct:__anon69
+vna_hash	fifos/fifos-1/elf.h	/^  Elf32_Word	vna_hash;		\/* Hash value of dependency name *\/$/;"	m	struct:__anon26
+vna_hash	fifos/fifos-1/elf.h	/^  Elf64_Word	vna_hash;		\/* Hash value of dependency name *\/$/;"	m	struct:__anon27
+vna_hash	fifos/memos-2/elf.h	/^  Elf32_Word	vna_hash;		\/* Hash value of dependency name *\/$/;"	m	struct:__anon68
+vna_hash	fifos/memos-2/elf.h	/^  Elf64_Word	vna_hash;		\/* Hash value of dependency name *\/$/;"	m	struct:__anon69
+vna_name	fifos/fifos-1/elf.h	/^  Elf32_Word	vna_name;		\/* Dependency name string offset *\/$/;"	m	struct:__anon26
+vna_name	fifos/fifos-1/elf.h	/^  Elf64_Word	vna_name;		\/* Dependency name string offset *\/$/;"	m	struct:__anon27
+vna_name	fifos/memos-2/elf.h	/^  Elf32_Word	vna_name;		\/* Dependency name string offset *\/$/;"	m	struct:__anon68
+vna_name	fifos/memos-2/elf.h	/^  Elf64_Word	vna_name;		\/* Dependency name string offset *\/$/;"	m	struct:__anon69
+vna_next	fifos/fifos-1/elf.h	/^  Elf32_Word	vna_next;		\/* Offset in bytes to next vernaux$/;"	m	struct:__anon26
+vna_next	fifos/fifos-1/elf.h	/^  Elf64_Word	vna_next;		\/* Offset in bytes to next vernaux$/;"	m	struct:__anon27
+vna_next	fifos/memos-2/elf.h	/^  Elf32_Word	vna_next;		\/* Offset in bytes to next vernaux$/;"	m	struct:__anon68
+vna_next	fifos/memos-2/elf.h	/^  Elf64_Word	vna_next;		\/* Offset in bytes to next vernaux$/;"	m	struct:__anon69
+vna_other	fifos/fifos-1/elf.h	/^  Elf32_Half	vna_other;		\/* Unused *\/$/;"	m	struct:__anon26
+vna_other	fifos/fifos-1/elf.h	/^  Elf64_Half	vna_other;		\/* Unused *\/$/;"	m	struct:__anon27
+vna_other	fifos/memos-2/elf.h	/^  Elf32_Half	vna_other;		\/* Unused *\/$/;"	m	struct:__anon68
+vna_other	fifos/memos-2/elf.h	/^  Elf64_Half	vna_other;		\/* Unused *\/$/;"	m	struct:__anon69
+welcome	memos/memos-1.s	/^      welcome: .asciz "Hello, World\\n\\r"  #here we define the string$/;"	l
