@@ -12,9 +12,9 @@
 #define READDIR 8
 
 typedef struct inode {
-	char[] type;
+	char[4] type;
 	int size;
-	int location;
+	char[40] location;
 } inode_t;
 
 #endif /* ifndef _DISCOS_H_ */
