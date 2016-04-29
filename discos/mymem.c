@@ -1,5 +1,7 @@
 #include "memstruct.h"
 #include <stdio.h>
+#include <stdlib.h>
+
 int rd_creat(char *pathname){
   return 0;
 } 
@@ -34,11 +36,22 @@ return 0;
 
 int scan_bitmap(){
   //Finds next available block.
+  
+  //Scan for a non zero byte
+  int i, j;
+  for(i=0;i< 1024; i++){
+    //Scan for first non-zero bit
+    for(j=0;j< 7; j++){
+
+    } 
+  }
   return -1;
 }
 
 int main() {
   struct fs myfs;
+  memset(&mfs, 0, 2097152);
+
   printf("size fs = %lu \n", sizeof(myfs));
   return 0;
 }
