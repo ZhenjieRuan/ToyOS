@@ -1,5 +1,5 @@
 //Reference for mem layout. 
-
+//Compile with -m32 flag.
 #include <stdio.h>
 
 struct block{
