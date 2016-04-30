@@ -18,7 +18,6 @@ int next_zero_bitmap(unsigned char *ch, int len){
   int i, bit;
   bit = 0;
   for(i=0; i<len; i++){
-    printf("ch[%d] = %u \n", i, ch[i]);
     if(ch[i] == 255){
       bit += 8;
     }else {
@@ -32,7 +31,7 @@ void print_byte(unsigned char ch){
   //Printing 
   int i;
   for(i=0; i<8; i++) {
-    int bit = (ch << i) & 1;
+    int bit = (ch & (1 << (7 - i))) != 0;
     printf("%d", bit );
   }
   printf("\n");
@@ -52,21 +51,38 @@ int set_bit_of_bitmap(unsigned char *ch, int len){
 }
 
 
-int main() {
-  unsigned char ch = 1;
-  print_byte(ch);
+unsigned char unset_bit_of_byte(unsigned char *ch, int len){
+  unsigned char set_byte = 255;
+  set_byte = set_byte & ();
+  *ch = *ch | (1 << len);
+  return *ch;
+}
 
-  /*  
-unsigned char arr[3] = { 0 , 0, 0 };
- 
-  set_bit_at(arr, 5);
-  unset_bit_at(arr, );
+int unset_bit_of_bitmap(unsigned char *ch, int len){
+  int byte = len / 8;
+  int bit = len % 8;
+  ch[byte] = set_bit_of_byte(&ch[byte], bit);
   
+  return 1;
+}
+
+
+int main() {
+  unsigned char arr[3] = { 255 , 255, 2 };
+ 
   int i;
   for(i=0; i<3; i++){
     printf("arr[%d] = %u \n", i, arr[i]);
   }
-*/
+
+  printf("next free bit at %u \n", next_zero_bitmap(arr, 3));
+  printf("set that bit\n");
+  set_bit_of_bitmap(arr, next_zero_bitmap(arr, 3));
+  printf("next free bit at %u \n", next_zero_bitmap(arr, 3));
+
+  printf("unset bit 4 \n",);
+  unset_bit_of_bitmap(arr, 4);
+
   return 0;
 }
 
