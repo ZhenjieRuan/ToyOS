@@ -11,26 +11,31 @@
 #define UNLINK		7
 #define READDIR 	8
 
+/* magic number used for ioctl */
+#define MAGIC_NUM 0
+
+#define RD_CREATE _IOR(MAGIC_NUM, 0, char *)
+
 //Reference for mem layout. 
 typedef struct block{
   char data[256];
 } block_t;
 
-typedef struct inode{ 
-  char type[4];
-  int size;
-  block_t *direct[8];
-  block_t *indirect;
-  block_t *double_indirect;
-  //Allocate this properly. 
-  char other[16];
-} inode_t;
+//typedef struct inode{ 
+  //char type[4];
+  //int size;
+  //block_t *direct[8];
+  //block_t *indirect;
+  //block_t *double_indirect;
+  ////Allocate this properly. 
+  //char other[16];
+//} inode_t;
 
 typedef struct fs{
   //256
   block_t superblock;
   //256^2 = 64*1024
-  inode_t inodes[1024];
+  //inode_t inodes[1024];
   //256*4 
   char bitmap[1024];
   //2^21 -66816 =  2^13 -261
