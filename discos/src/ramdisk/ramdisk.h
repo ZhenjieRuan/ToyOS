@@ -61,10 +61,11 @@ typedef struct double_indirect {
 typedef struct my_inode { 
 	char type[4];
 	int size;
-	block_t *direct_blks[NUM_DIRCT_BLK];
+	int num;
+	block_t *direct_blks[NUM_DIRECT_BLK];
 	single_indirect_t *single_indirect;
 	double_indirect_t *double_indirect;
-	char unused[16];
+	char unused[12];
 } inode_t;
 
 typedef struct superblock {
@@ -93,10 +94,14 @@ void set_bit_of_bitmap(unsigned char*, int); /* assert bit at offset len */
 void unset_bit_of_bitmap(unsigned char *, int); /* deassert bit at offset len */
 
 /* util functions */
-int get_parent_inode(fs_t*, char *);
-uint16_t find_entry_in_block(block_t*, char *);
-uint16_t find_entry_in_single_indirect(single_indirect_t *, char *);
-uint16_t find_entry_in_double_indirect(double_indirect_t *, char *);
+inode_t* get_free_inode(fs_t* fs);
+int get_inode_num(fs_t*, char *);
+void get_prefix_and_filename(char* pathname, char* prefix, char* filename, int len);
+dir_entry_t* get_free_entry(fs_t* fs, inode_t*);
+
+/* printing functions for debugging */
+void print_dir_block(block_t *);
+void print_inode_info(inode_t *);
 
 /* filesystem operations */
 int init_fs(uint32_t);

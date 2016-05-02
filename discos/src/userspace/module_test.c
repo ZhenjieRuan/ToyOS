@@ -35,7 +35,7 @@ int main() {
 
 	test_init(fd, args);
 
-	test_create(fd, args);
+	/*test_create(fd, args);*/
 	
 	close(fd);
 	return 0;

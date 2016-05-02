@@ -16,7 +16,7 @@ static struct proc_dir_entry *proc_entry;
 static int ramdisk_ioctl(struct inode *inode, struct file *file,
 															 unsigned int cmd, unsigned long arg)
 {
-	int fd, ret = 0;
+	int ret = 0;
 	int size;
 	char* pathname;
 	ioctl_args_t* args = (ioctl_args_t *)kmalloc(sizeof(ioctl_args_t), GFP_KERNEL);

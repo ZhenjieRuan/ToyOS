@@ -345,7 +345,7 @@ int main () {
   /* ****TEST 5: 2 process test**** */
   
   if((retval = fork())) {
-
+		/* parent process */
     if(retval == -1) {
       fprintf(stderr, "Failed to fork\n");
       exit(EXIT_FAILURE);
@@ -368,6 +368,7 @@ int main () {
     
   }
   else {
+		/* child process */
     /* Generate 300 regular files */
     for (i = 0; i < 300; i++) { 
       sprintf (pathname, PATH_PREFIX "/file_c_%d", i);

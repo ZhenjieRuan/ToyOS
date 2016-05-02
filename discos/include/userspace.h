@@ -18,8 +18,8 @@
 #define MAGIC_NUM 17
 
 /* macros for ioctl calls  */
-#define RD_INIT   _IOR(MAGIC_NUM, 0, int)
-#define RD_CREATE _IOR(MAGIC_NUM, 1, char *)
+#define RD_INIT   _IOR(MAGIC_NUM, 0, ioctl_args_t*)
+#define RD_CREATE _IOR(MAGIC_NUM, 1, ioctl_args_t*)
 
 typedef struct ioctl_args {
 	int num_blks;
