@@ -1,21 +1,9 @@
 /*
- *  DISCOS
+ *  RAMDISK
  */
-#include <linux/module.h>
-#include <linux/init.h>
-#include <linux/errno.h>
-#include <linux/proc_fs.h>
-#include <asm/uaccess.h>
-#include <linux/sched.h>
-#include <linux/wait.h>
-#include <linux/vmalloc.h>
-#include "discos.h"
+#include "ramdisk.h"
 
 MODULE_LICENSE("GPL");
-
-/* 2MB of free memory */
-block_t* disc;
-
 
 static int ramdisk_ioctl(struct inode *inode, struct file *file,
 			       unsigned int cmd, unsigned long arg);
@@ -28,14 +16,25 @@ static struct proc_dir_entry *proc_entry;
 static int ramdisk_ioctl(struct inode *inode, struct file *file,
 															 unsigned int cmd, unsigned long arg)
 {
-	unsigned int size;
-	char *pathname;
+	int fd, ret = 0;
+	int size;
+	char* pathname;
+	ioctl_args_t* args = (ioctl_args_t *)kmalloc(sizeof(ioctl_args_t), GFP_KERNEL);
+	if(copy_from_user(args, (ioctl_args_t *)arg, sizeof(ioctl_args_t))) {
+		printk("<1> Error copy from user\n");
+	}
 	switch (cmd) {
+		case RD_INIT:
+			printk("<1> num_blocks:%d\n", args->num_blks);
+			return init_fs(args->num_blks);
 		case RD_CREATE:
-			size = strnlen_user((char *)arg, 100);
+			size = strnlen_user(args->pathname, 14);
 			pathname = (char *)kmalloc(size, GFP_KERNEL);
-			copy_from_user(pathname, (char *)arg, size);
-			printk("Got user path %s\n", pathname);
+			copy_from_user(pathname, args->pathname, size);
+			printk("Got user path %s\n", args->pathname);
+			ret = create(pathname);
+			kfree(pathname);
+			return ret;
 			break;
 		default:
 			return -EINVAL;
@@ -49,13 +48,10 @@ static int __init initialization_routine(void)
 {
 	printk("<1> Loading Module\n");
 
-	/* Getting memory for disc*/
-	disc = (block_t *)vmalloc(sizeof(block_t)*8192);
-
 	ramdisk_proc_operations.ioctl = ramdisk_ioctl;
 
 	/* create proc entry */
-	proc_entry = create_proc_entry("ioctl_dicos_test", 0444, NULL);
+	proc_entry = create_proc_entry("ioctl_ramdisk_test", 0444, NULL);
 	if (!proc_entry)
 	{
 		printk("<1> Error creating /proc entry\n");
@@ -70,8 +66,8 @@ static int __init initialization_routine(void)
 static void __exit cleanup_routine(void)
 {
 	printk("<1> Dumping module\n");
-	remove_proc_entry("ioctl_discos_test", NULL);
-	vfree(disc);
+	remove_proc_entry("ioctl_ramdisk_test", NULL);
+	cleanup_fs();
 	return;
 }
 
