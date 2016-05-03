@@ -9,7 +9,6 @@ pid_fd_entry_t pid_fd_table[NUM_PID];
 int init_fs(uint32_t num_blocks) {
 	/* Getting memory for disc*/
 	/*int i;*/
-	int test;
 	fs = (fs_t *)vmalloc(BLK_SIZE*num_blocks);
 	memset(fs, 0, BLK_SIZE*num_blocks);
 	printk("<1> sizeof superblock %d\n", sizeof(fs->superblock));
@@ -266,7 +265,9 @@ fd_table_t *get_fd_table(int pid) {
 // zero out fd_table
 void init_fd_table() {
 	memset(&pid_fd_table, 0, sizeof(pid_fd_table));
-	int create(char* pathname) {
+}
+
+int create(char* pathname) {
 	/*int test;*/
 	/*block_t *p1, *p2;*/
 	/*p1 = &fs->blocks[10];*/
@@ -275,7 +276,6 @@ void init_fd_table() {
 	/*test = p1 - p2;*/
 	/*printk("<1> Distance: %d\n", test);*/
 	return create_file("reg\0", pathname);
-
 }
 
 int mkdir(char* pathname) {

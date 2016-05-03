@@ -42,6 +42,12 @@ static int ramdisk_ioctl(struct inode *inode, struct file *file,
 		case RD_CLOSE:
 			printk("<1> Switch case close\n");
 			return close(args->pid, args->fd_num);
+		case RD_READ:
+			return -1; 
+//			return read();
+		case RD_WRITE:
+			return -1;
+//			return write();
 		case RD_CREATE:
 			ret = create(pathname);
 			kfree(pathname);

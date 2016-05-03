@@ -23,14 +23,18 @@
 #define RD_CREATE _IOR(MAGIC_NUM, 1, ioctl_args_t*)
 #define RD_MKDIR  _IOR(MAGIC_NUM, 2, ioctl_args_t*)
 #define RD_OPEN   _IOR(MAGIC_NUM, 3, ioctl_args_t*)
-#define RD_CLOSE   _IOR(MAGIC_NUM, 4, ioctl_args_t*)
+#define RD_CLOSE  _IOR(MAGIC_NUM, 4, ioctl_args_t*)
+#define RD_READ   _IOR(MAGIC_NUM, 5, ioctl_args_t*)
+#define RD_WRITE  _IOR(MAGIC_NUM, 6, ioctl_args_t*)
 
 
 #define RD_UNLINK _IOR(MAGIC_NUM, 8, ioctl_args_t*)
 
 typedef struct ioctl_args {
-	int num_blks;
-	int pid;
+	int num_blks;   
+	int num_bytes;  //size of read
+	char *r_buffer; //read buffer
+	int pid;		//caller pid
 	int fd_num;
 	char* pathname;
 } ioctl_args_t;

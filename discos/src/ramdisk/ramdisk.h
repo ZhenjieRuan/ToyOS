@@ -20,10 +20,14 @@
 #define RD_INIT   _IOR(MAGIC_NUM, 0, int)
 #define RD_CREATE _IOR(MAGIC_NUM, 1, char *)
 #define RD_MKDIR  _IOR(MAGIC_NUM, 2, ioctl_args_t*)
+#define RD_OPEN   _IOR(MAGIC_NUM, 3, char *)
+#define RD_CLOSE  _IOR(MAGIC_NUM, 4, char *)
+#define RD_READ   _IOR(MAGIC_NUM, 5, ioctl_args_t*)
+#define RD_WRITE  _IOR(MAGIC_NUM, 6, ioctl_args_t*)
+
+
 #define RD_UNLINK _IOR(MAGIC_NUM, 8, ioctl_args_t*)
 
-#define RD_OPEN _IOR(MAGIC_NUM, 3, char *)
-#define RD_CLOSE _IOR(MAGIC_NUM, 4, char *)
 
 typedef struct ioctl_args {
 	int num_blks;

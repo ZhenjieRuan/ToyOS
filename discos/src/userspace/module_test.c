@@ -47,6 +47,29 @@ int test_close(int fd, ioctl_args_t* args, int fd_num) {
 	args->pid = (int)getpid();
 	return ioctl(fd, RD_CLOSE, args);
 }
+//int rd_read(int fd, char *address, int num_bytes)-- read up to num_bytes from a regular file identified by file descriptor, fd, 
+//into a process' location at address. You should return the number of bytes actually read, else -1 if there is an error. An 
+//error occurs if the value of fd refers either to a non-existent file or a directory file.
+
+
+
+int test_read(int fd, ioctl_args_t* args, char *address, int num_bytes, int fd_num) {
+	args->fd_num = fd_num; 
+	args->r_buffer = address;
+	args->num_bytes = num_bytes;
+	args->pid = (int)getpid();
+	return ioctl(fd, RD_READ, args);
+}
+
+
+// int rd_write(int fd, char *address, int num_bytes) -- write up to num_bytes from the specified address in the calling process 
+// to a regular file identified by file descriptor, fd. You should return the actual number of bytes written, or -1 if there is an
+//  error. An error occurs if the value of fd refers either to a non-existent file or a directory file.
+int test_write(int fd, ioctl_args_t* args, char *address, int num_bytes, int fd_num) {
+	args->fd_num = fd_num;
+	args->pid = (int)getpid();
+	return ioctl(fd, RD_WRITE, args);
+}
 
 int main() {
 	int ret;
