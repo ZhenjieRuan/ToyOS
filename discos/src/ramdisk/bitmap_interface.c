@@ -3,7 +3,7 @@
    a bit addressable data structure. 
 */
 
-#include "discos.h"
+#include "discos_kernel.h"
 #include <stdio.h>
 
 int next_zero_bit(unsigned char ch){
