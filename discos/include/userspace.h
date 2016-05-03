@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <fcntl.h>
 #include <sys/ioctl.h>
+#include <sys/types.h>
 #include <stdint.h>
 #include <errno.h>
 #include <string.h>
@@ -20,9 +21,11 @@
 /* macros for ioctl calls  */
 #define RD_INIT   _IOR(MAGIC_NUM, 0, ioctl_args_t*)
 #define RD_CREATE _IOR(MAGIC_NUM, 1, ioctl_args_t*)
+#define RD_OPEN   _IOR(MAGIC_NUM, 3, ioctl_args_t*)
 
 typedef struct ioctl_args {
 	int num_blks;
+	int pid;
 	char* pathname;
 } ioctl_args_t;
 

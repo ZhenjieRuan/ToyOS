@@ -32,7 +32,6 @@ typedef struct ioctl_args {
 #define NUM_DIRECT_BLK 8
 #define NUM_INODES 1024
 
-
 typedef struct dir_entry {
 	char name[14];
 	uint16_t inode_num;
@@ -86,7 +85,35 @@ typedef struct fs {
   block_t blocks[NUM_BLOCKS];
 } fs_t;
 
+/* ======================= FD table stuff ======================= */
 
+#define NUM_PID 5
+
+// current position
+// inode pointer
+typedef struct fd_object {
+	int current_pos;
+	int fd_num;
+	int used = 0;
+	inode_t *inode;
+} fd_object_t;
+
+// table contains fd objects
+typedef struct fd_table {
+	fd_object_t fd_object[1024];
+} fd_table_t;
+
+typedef struct pid_fd_entry {
+	int pid;
+	fd_table_t fd_table;
+} pid_fd_entry_t;
+
+// Contains the PID -> fd_table mapping
+typedef struct pid_to_fd_table {
+	pid_fd_entry_t pid_fd_entry[NUM_PID];
+} pid_to_fd_table_t;
+
+/* ============================================================= */
 
 /* bitmap interfaces */
 int next_zero_bitmap(unsigned char*, int); /* find next unset bit in bitmap */

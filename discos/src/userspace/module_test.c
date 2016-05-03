@@ -24,6 +24,16 @@ void test_create(int fd, ioctl_args_t* args) {
 	return;
 }
 
+int test_open(int fd, ioctl_args_t* args) {
+
+	args->pathname = "/file1";
+
+	args->pid = (int)getpid();
+
+	return ioctl(fd, RD_OPEN, args);
+}
+
+
 int main() {
 	int fd = open("/proc/ioctl_ramdisk_test", O_RDWR);
 
@@ -36,6 +46,10 @@ int main() {
 	test_init(fd, args);
 
 	/*test_create(fd, args);*/
+
+	int filedesc = test_open(fd, args);
+
+	printf("fd num = %d\n", filedesc);
 	
 	close(fd);
 	return 0;
