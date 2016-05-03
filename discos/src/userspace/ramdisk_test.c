@@ -73,7 +73,7 @@ int my_readdir(int fd, char* str)
 #define TEST_DOUBLE_INDIRECT
 
 
-#define MAX_FILES 524
+#define MAX_FILES 1023
 #define BLK_SZ 256		/* Block size */
 #define DIRECT 8		/* Direct pointers in location attribute */
 #define PTR_SZ 4		/* 32-bit [relative] addressing */
@@ -318,30 +318,30 @@ int main () {
   }
 
 #ifdef USE_RAMDISK
-	retval =  OPEN (PATH_PREFIX "/dir1"); /* Open directory file to read its entries */
+	/*retval =  OPEN (PATH_PREFIX "/dir1"); [> Open directory file to read its entries <]*/
 	
-	if (retval < 0) {
-		fprintf (stderr, "open: Directory open error! status: %d\n",
-			 retval);
+	/*if (retval < 0) {*/
+		/*fprintf (stderr, "open: Directory open error! status: %d\n",*/
+			 /*retval);*/
 
-		exit(EXIT_FAILURE);
-	}
+		/*exit(EXIT_FAILURE);*/
+	/*}*/
 
-	fd = retval;			/* Assign valid fd */
+	/*fd = retval;			[> Assign valid fd <]*/
 
-	memset (addr, 0, sizeof(addr)); /* Clear scratchpad memory */
+	/*memset (addr, 0, sizeof(addr)); [> Clear scratchpad memory <]*/
 
-	while ((retval = READDIR (fd, addr))) { /* 0 indicates end-of-file */
+	/*while ((retval = READDIR (fd, addr))) { [> 0 indicates end-of-file <]*/
 
-		if (retval < 0) {
-			fprintf (stderr, "readdir: Directory read error! status: %d\n",
-				 retval);
-			exit(EXIT_FAILURE);
-		}
+		/*if (retval < 0) {*/
+			/*fprintf (stderr, "readdir: Directory read error! status: %d\n",*/
+				 /*retval);*/
+			/*exit(EXIT_FAILURE);*/
+		/*}*/
 
-		index_node_number = atoi(&addr[14]);
-		printf ("Contents at addr: [%s,%d]\n", addr, index_node_number);
-	}
+		/*index_node_number = atoi(&addr[14]);*/
+		/*printf ("Contents at addr: [%s,%d]\n", addr, index_node_number);*/
+	/*}*/
 #endif // USE_RAMDISK
 #endif // TEST4
 
