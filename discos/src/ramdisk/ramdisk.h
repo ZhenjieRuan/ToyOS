@@ -20,8 +20,11 @@
 #define RD_INIT   _IOR(MAGIC_NUM, 0, int)
 #define RD_CREATE _IOR(MAGIC_NUM, 1, char *)
 
+#define RD_OPEN _IOR(MAGIC_NUM, 3, char *)
+
 typedef struct ioctl_args {
 	int num_blks;
+	int pid;
 	char* pathname;
 } ioctl_args_t;
 
