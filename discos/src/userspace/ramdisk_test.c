@@ -25,17 +25,17 @@
 
 #define USE_RAMDISK
 #define TEST1
-#define TEST2
-#define TEST3
+/*#define TEST2*/
+/*#define TEST3*/
 #define TEST4
-#define TEST5
+/*#define TEST5*/
 
 // Insert a string for the pathname prefix here. For the ramdisk, it should be
 // NULL
 #define PATH_PREFIX ""
 
 #ifdef USE_RAMDISK
-#define CREAT   rd_creat
+#define CREAT   rd_create
 #define OPEN    rd_open
 #define WRITE   rd_write
 #define READ    rd_read
@@ -97,6 +97,8 @@ int main () {
   memset (data2, '2', sizeof (data2));
   memset (data3, '3', sizeof (data3));
 
+	rd_init();	
+
 
 #ifdef TEST1
 
@@ -118,7 +120,9 @@ int main () {
     }
     
     memset (pathname, 0, 80);
-  }   
+  }
+
+	printf("Created %d files!\n", MAX_FILES);
 
   /* Delete all the files created */
   for (i = 0; i < MAX_FILES; i++) { 
@@ -314,30 +318,30 @@ int main () {
   }
 
 #ifdef USE_RAMDISK
-  retval =  OPEN (PATH_PREFIX "/dir1"); /* Open directory file to read its entries */
-  
-  if (retval < 0) {
-    fprintf (stderr, "open: Directory open error! status: %d\n",
-	     retval);
+	retval =  OPEN (PATH_PREFIX "/dir1"); /* Open directory file to read its entries */
+	
+	if (retval < 0) {
+		fprintf (stderr, "open: Directory open error! status: %d\n",
+			 retval);
 
-    exit(EXIT_FAILURE);
-  }
+		exit(EXIT_FAILURE);
+	}
 
-  fd = retval;			/* Assign valid fd */
+	fd = retval;			/* Assign valid fd */
 
-  memset (addr, 0, sizeof(addr)); /* Clear scratchpad memory */
+	memset (addr, 0, sizeof(addr)); /* Clear scratchpad memory */
 
-  while ((retval = READDIR (fd, addr))) { /* 0 indicates end-of-file */
+	while ((retval = READDIR (fd, addr))) { /* 0 indicates end-of-file */
 
-    if (retval < 0) {
-      fprintf (stderr, "readdir: Directory read error! status: %d\n",
-	       retval);
-      exit(EXIT_FAILURE);
-    }
+		if (retval < 0) {
+			fprintf (stderr, "readdir: Directory read error! status: %d\n",
+				 retval);
+			exit(EXIT_FAILURE);
+		}
 
-    index_node_number = atoi(&addr[14]);
-    printf ("Contents at addr: [%s,%d]\n", addr, index_node_number);
-  }
+		index_node_number = atoi(&addr[14]);
+		printf ("Contents at addr: [%s,%d]\n", addr, index_node_number);
+	}
 #endif // USE_RAMDISK
 #endif // TEST4
 

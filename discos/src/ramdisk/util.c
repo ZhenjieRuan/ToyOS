@@ -422,8 +422,8 @@ void clear_inode_content(fs_t* fs, inode_t* inode) {
 	}
 }
 
-/*block_t* get_block_by_num(inode_t* inode, int block_num) {*/
-/*}*/
+block_t* get_block_by_num(inode_t* inode, int block_num) {
+}
 
 
 
