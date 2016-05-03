@@ -5,12 +5,6 @@
  */
 #include "ramdisk.h"
 
-dir_entry_t* find_entry_in_block(block_t*, char *);
-dir_entry_t* find_entry_in_single_indirect(single_indirect_t *, char *);
-dir_entry_t* find_entry_in_double_indirect(double_indirect_t *, char *);
-dir_entry_t* get_free_entry_direct_block(block_t*);
-dir_entry_t* get_free_entry_single_indirect(fs_t*, single_indirect_t*, int);
-dir_entry_t* get_free_entry_double_indirect(fs_t*, double_indirect_t*, int);
 
 /* bitmap interface */
 int next_zero_bit(unsigned char ch){
@@ -121,10 +115,11 @@ int get_inode_num(fs_t* fs, char* pathname) {
 				return -1;
 			}
 
+			printk("<1> Searching in inode %d\n", current_inode->num);
 			/* walk through the direct blocks */
 			for (i = 0; i < NUM_DIRECT_BLK; ++i) {
 				current_blk = current_inode->direct_blks[i];
-				print_dir_block(current_blk);
+				/*print_dir_block(current_blk);*/
 				if (current_blk != NULL) {
 					if ((entry = find_entry_in_block(current_blk, token)) != NULL) {
 						found = entry->inode_num;
@@ -133,20 +128,24 @@ int get_inode_num(fs_t* fs, char* pathname) {
 				}
 			}
 
+			if (current_inode->single_indirect == NULL) {
+				printk("<1> NULL single indirect!\n");
+			}
+
 			/* walk through single-indirect blocks */
 			if (found == 0 && current_inode->single_indirect != NULL) {
+				printk("<1> Search %s in single indirect\n", token);
 				if ((entry = find_entry_in_single_indirect(current_inode->single_indirect, token)) != NULL) {
 					found = entry->inode_num;
 				}
-				/*found = find_entry_in_single_indirect(current_inode->single_indirect, pathname);*/
 			}
 
 			/* walk through double-indirect blocks */
 			if (found == 0 && current_inode->double_indirect != NULL) {
+				printk("<1> Search %s in double indirect\n", token);
 				if ((entry = find_entry_in_double_indirect(current_inode->double_indirect, token)) != NULL) {
 					found = entry->inode_num;
 				}
-				/*found = find_entry_in_double_indirect(current_inode->double_indirect, pathname);*/
 			}
 
 			/* walked all block of current inode, file not found */
@@ -244,10 +243,10 @@ dir_entry_t* get_free_entry(fs_t* fs, inode_t* parent) {
 		}
 	} else if (region < 72) {
 		/* free spot in single indirect */
-		return get_free_entry_single_indirect(fs,parent->single_indirect, region - 8);
+		return get_free_entry_single_indirect(fs,parent, region - 8);
 	} else if (region < 4168) {
 		/* free spot in double indirect */
-		return get_free_entry_double_indirect(fs,parent->double_indirect, region - 72);
+		return get_free_entry_double_indirect(fs,parent, region - 72);
 	}
 	return NULL;
 }
@@ -263,13 +262,15 @@ dir_entry_t* get_free_entry_direct_block(block_t* block) {
 	return NULL;
 }
 
-dir_entry_t* get_free_entry_single_indirect(fs_t* fs, single_indirect_t* si_blk, int region) {
+dir_entry_t* get_free_entry_single_indirect(fs_t* fs, inode_t* parent, int region) {
 	block_t* current_blk;
+	single_indirect_t* si_blk = parent->single_indirect;
 	if (si_blk == NULL) {
 		if ((si_blk = (single_indirect_t *)get_free_block(fs)) == NULL) {
 			printk("<1> No more free blocks\n");
 			return NULL;
 		}
+		parent->single_indirect = si_blk;
 	}
 	current_blk = si_blk->blocks[region];	
 	if (current_blk == NULL) {
@@ -282,16 +283,18 @@ dir_entry_t* get_free_entry_single_indirect(fs_t* fs, single_indirect_t* si_blk,
 	return get_free_entry_direct_block(current_blk);
 }
 
-dir_entry_t* get_free_entry_double_indirect(fs_t* fs, double_indirect_t* di_blk, int region) {
+dir_entry_t* get_free_entry_double_indirect(fs_t* fs, inode_t* parent , int region) {
 	single_indirect_t* si_blk;
+	double_indirect_t* di_blk = parent->double_indirect;
 	if (di_blk == NULL) {
 		if ((di_blk = (double_indirect_t *)get_free_block(fs)) == NULL) {
 			printk("<1> No more free blocks\n");
 			return NULL;
 		}
+		parent->double_indirect = di_blk;
 	}
 	si_blk = di_blk->blocks[region/64];
-	return get_free_entry_single_indirect(fs, si_blk, region%64);
+	return get_free_entry_single_indirect(fs, parent, region%64);
 }
 
 /* get free inode */
@@ -373,11 +376,15 @@ void clear_single_indirect(fs_t* fs, single_indirect_t* si_blk) {
 	int i;
 	block_t* start = &fs->blocks[0];
 	for (i = 0; i < BLK_SIZE/4; ++i) {
-		unset_bit_of_bitmap(fs->bitmap, si_blk->blocks[i] - start);
-		memset(si_blk->blocks[i], 0, BLK_SIZE);
+		if (si_blk->blocks[i] != NULL) {
+			unset_bit_of_bitmap(fs->bitmap, si_blk->blocks[i] - start);
+			memset(si_blk->blocks[i], 0, BLK_SIZE);
+			fs->superblock.freeblocks++;
+		}
 	}
 	unset_bit_of_bitmap(fs->bitmap, (block_t*)si_blk - start);
 	memset(si_blk, 0, BLK_SIZE);
+	fs->superblock.freeblocks++;
 }
 
 /* clear the content of a double indirect block */
@@ -391,16 +398,21 @@ void clear_double_indirect(fs_t* fs, double_indirect_t* di_blk) {
 	}
 	unset_bit_of_bitmap(fs->bitmap, (block_t*)di_blk - start);
 	memset(di_blk, 0, BLK_SIZE);
+	fs->superblock.freeblocks++;
 }
 
 /* clear the content of a inode */
 void clear_inode_content(fs_t* fs, inode_t* inode) {
 	int i;
-	block_t *start;
+	block_t *start, *current_blk;
 	start = &fs->blocks[0];
 	for (i = 0; i < NUM_DIRECT_BLK; ++i) {
-		unset_bit_of_bitmap(fs->bitmap, inode->direct_blks[i] - start);
-		memset(inode->direct_blks[i], 0, BLK_SIZE);
+		current_blk = inode->direct_blks[i];
+		if (current_blk != NULL) {
+			unset_bit_of_bitmap(fs->bitmap, inode->direct_blks[i] - start);
+			memset(inode->direct_blks[i], 0, BLK_SIZE);
+			fs->superblock.freeblocks++;
+		}
 	}
 	if (inode->single_indirect != NULL) {
 		clear_single_indirect(fs,inode->single_indirect);
@@ -410,7 +422,23 @@ void clear_inode_content(fs_t* fs, inode_t* inode) {
 	}
 }
 
-
+block_t* get_block_by_num(inode_t* inode, int block_num) {
+	block_t* block;
+	if (block_num < 8) {
+		return inode->direct_blks[block_num];
+	} else if (block_num < 72) {
+		if (inode->single_indirect != NULL) {
+			return inode->single_indirect->blocks[block_num - 72];
+		}
+	} else if (block_num < 4168) {
+		if (inode->double_indirect != NULL) {
+			if (inode->double_indirect->blocks[(block_num - 72)/64] != NULL) {
+				return inode->double_indirect->blocks[(block_num - 72)/64]->blocks[(block_num - 72)%64];
+			}
+		}
+	}
+	return NULL;
+}
 
 
 

@@ -93,11 +93,40 @@ int create_file(char* type, char* pathname) {
 
 	strcpy(file_inode->type, type);
 
+	/*print_dir_block(get_block_by_num(parent_inode, 0));*/
 
 	kfree(prefix);
 	kfree(filename);
 	return 0;
 }
+
+int create(char* pathname) {
+	return create_file("reg\0", pathname);
+}
+
+int mkdir(char* pathname) {
+	inode_t* inode;
+	block_t* block;
+
+	/* creating root dir */
+	if (strcmp(pathname, "/") == 0) {
+		inode = &fs->inodes[0];
+		block = &fs->blocks[0];
+		strcpy(inode->type, "dir\0");
+		inode->size = 0;
+		inode->num = 0;
+		inode->direct_blks[0] = block;
+		set_bit_of_bitmap(fs->bitmap, 0);
+		fs->superblock.freeblocks--;
+		fs->superblock.freeindex--;
+	} else {
+		return create_file("dir\0", pathname);
+	}
+
+
+	return 0;
+}
+
 
 int close(int pid, int fd_num) {
 	fd_table_t *fd_table;
@@ -206,16 +235,6 @@ void init_fd_table() {
 	memset(&pid_fd_table, 0, sizeof(pid_fd_table));
 }
 
-int create(char* pathname) {
-	/*int test;*/
-	/*block_t *p1, *p2;*/
-	/*p1 = &fs->blocks[10];*/
-	/*p2 = &fs->blocks[0];*/
-
-	/*test = p1 - p2;*/
-	/*printk("<1> Distance: %d\n", test);*/
-	return create_file("reg\0", pathname);
-}
 //Read from cursor -> < cursor+num_bytes
 int read(int fd, char *r_buffer, int num_bytes, int pid) {
 	int i, current_pos, bytes_left, cont_flag, offset;
@@ -341,7 +360,8 @@ int mkdir(char* pathname) {
 
 int unlink(char* pathname) {
 	inode_t *file_inode, *parent_inode;
-	int inode_num, len = strlen(pathname);
+	dir_entry_t* entry_in_parent = NULL;
+	int i, inode_num, len = strlen(pathname);
 	char *prefix = kmalloc(len, GFP_KERNEL);
 	char *filename = kmalloc(len, GFP_KERNEL);
 	memset(prefix,0,len);
@@ -357,7 +377,7 @@ int unlink(char* pathname) {
 
 	/* get parent inode num */
 	if ((inode_num = get_inode_num(fs,prefix)) == -1) {
-		printk("<1> Unlink: Error the file doesn't exist\n");	
+		printk("<1> Unlink: Error the parent of file doesn't exist\n");	
 		return -1;
 	}
 
@@ -382,8 +402,42 @@ int unlink(char* pathname) {
 
 	/* clear all blks belongs to this inode, set bitmap */
 	clear_inode_content(fs, file_inode);
-	/* delete the entry in parent */
-	/* clear the inode entry */
+
+	/* find the entry of this file in parent */
+	for (i = 0; i < NUM_DIRECT_BLK; ++i) {
+		if (parent_inode->direct_blks[i] != NULL) {
+			if ((entry_in_parent = find_entry_in_block(parent_inode->direct_blks[i], filename)) != NULL) {
+				break;
+			}
+		}
+	}
+
+	if (entry_in_parent == NULL && parent_inode->single_indirect != NULL) {
+		entry_in_parent = find_entry_in_single_indirect(parent_inode->single_indirect, filename);
+	}
+
+	if (entry_in_parent == NULL && parent_inode->double_indirect != NULL) {
+		entry_in_parent = find_entry_in_double_indirect(parent_inode->double_indirect, filename);
+	}
+
+	if (entry_in_parent == NULL) {
+		printk("<1> Unlink: Error entry not found in parent\n");
+	}
+
+	/* clear the file info in parent */
+	memset(entry_in_parent,0,16);
+	parent_inode->size -= 16;
+	/* clear the inode */
+	memset(file_inode,0,64);
+	fs->superblock.freeindex++;
+
+	/*for (i = 0; i < 8; ++i) {*/
+		/*if (parent_inode->direct_blks[i] != NULL) {*/
+			/*printk("<1> Block %d:\n", i);*/
+			/*print_dir_block(parent_inode->direct_blks[i]);*/
+			/*printk("<1>=================\n");*/
+		/*}*/
+	/*}*/
 
 	kfree(prefix);
 	kfree(filename);

@@ -26,7 +26,7 @@ static int ramdisk_ioctl(struct inode *inode, struct file *file,
 	size = strnlen_user(args->pathname, 14);
 	pathname = (char *)kmalloc(size, GFP_KERNEL);
 	copy_from_user(pathname, args->pathname, size);
-	printk("Got user path %s\n", args->pathname);
+	/*printk("Got user path %s\n", args->pathname);*/
 	switch (cmd) {
 		case RD_INIT:
 			printk("<1> num_blocks:%d\n", args->num_blks);
@@ -50,6 +50,7 @@ static int ramdisk_ioctl(struct inode *inode, struct file *file,
 			return ret;
 			break;
 		case RD_MKDIR:
+			printk("<1> Mkdir %s\n", pathname);
 			ret = mkdir(pathname);
 			kfree(pathname);
 			return ret;
