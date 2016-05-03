@@ -24,6 +24,7 @@ void test_create(int fd, ioctl_args_t* args) {
 	return;
 }
 
+
 int test_open(int fd, ioctl_args_t* args) {
 
 	args->pathname = "/file1";
@@ -47,9 +48,11 @@ int main() {
 
 	/*test_create(fd, args);*/
 
+
 	int filedesc = test_open(fd, args);
 
 	printf("fd num = %d\n", filedesc);
+
 	
 	close(fd);
 	return 0;

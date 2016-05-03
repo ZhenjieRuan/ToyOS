@@ -12,9 +12,11 @@ int rd_create(char* pathname) {
 	return 0;
 }
 
+
 int rd_open(char* pathname) {
 	return ioctl(fd, RD_OPEN, (int)getpid(), pathname);
 }
+
 
 int main() {
 

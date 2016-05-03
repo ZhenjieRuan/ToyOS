@@ -12,6 +12,8 @@ static struct file_operations ramdisk_proc_operations;
 
 static struct proc_dir_entry *proc_entry;
 
+static struct pid_to_fd_table_t pid_fd_table;
+
 /* ioctl entry point */
 static int ramdisk_ioctl(struct inode *inode, struct file *file,
 															 unsigned int cmd, unsigned long arg)
@@ -26,7 +28,12 @@ static int ramdisk_ioctl(struct inode *inode, struct file *file,
 	switch (cmd) {
 		case RD_INIT:
 			printk("<1> num_blocks:%d\n", args->num_blks);
+			init_fd_table();		
 			return init_fs(args->num_blks);
+		case RD_OPEN:
+			int fd = open(args->pid, args->pathname);
+			// Send fd back to user space
+			return fd;
 		case RD_CREATE:
 			size = strnlen_user(args->pathname, 14);
 			pathname = (char *)kmalloc(size, GFP_KERNEL);

@@ -153,7 +153,6 @@ void init_fd_table() {
 	memset(&pid_fd_table, NULL, sizeof(pid_fd_table));
 }
 
-
 int mkdir(char* pathname) {
 	inode_t* inode;
 	block_t* block;
