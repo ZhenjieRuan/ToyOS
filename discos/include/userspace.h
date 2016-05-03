@@ -26,8 +26,6 @@
 #define RD_CLOSE  _IOR(MAGIC_NUM, 4, ioctl_args_t*)
 #define RD_READ   _IOR(MAGIC_NUM, 5, ioctl_args_t*)
 #define RD_WRITE  _IOR(MAGIC_NUM, 6, ioctl_args_t*)
-
-
 #define RD_UNLINK _IOR(MAGIC_NUM, 8, ioctl_args_t*)
 
 typedef struct ioctl_args {

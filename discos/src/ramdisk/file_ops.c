@@ -9,6 +9,7 @@ pid_fd_entry_t pid_fd_table[NUM_PID];
 int init_fs(uint32_t num_blocks) {
 	/* Getting memory for disc*/
 	/*int i;*/
+	//int test;
 	fs = (fs_t *)vmalloc(BLK_SIZE*num_blocks);
 	memset(fs, 0, BLK_SIZE*num_blocks);
 	printk("<1> sizeof superblock %d\n", sizeof(fs->superblock));
@@ -159,6 +160,10 @@ int create_file(char* type, char* pathname) {
 	return 0;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> discos-sean
 int close(int pid, int fd_num) {
 	fd_table_t *fd_table;
 	//Use pid to find fd table

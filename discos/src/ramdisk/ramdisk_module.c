@@ -32,13 +32,10 @@ static int ramdisk_ioctl(struct inode *inode, struct file *file,
 			printk("<1> num_blocks:%d\n", args->num_blks);
 			init_fd_table();		
 			return init_fs(args->num_blks);
-		case RD_OPEN: 
-			// http://stackoverflow.com/questions/18496282/why-do-i-get-a-label-can-only-be-part-of-a-statement-and-a-declaration-is-not-a
-			; //don't delete 
-			int fd;
-			fd = open(args->pid, args->pathname);
+		case RD_OPEN:
+			printk("<1> Opening %s\n", args->pathname);
 			// Send fd back to user space
-			return fd;
+			return open(args->pid, args->pathname);
 		case RD_CLOSE:
 			printk("<1> Switch case close\n");
 			return close(args->pid, args->fd_num);

@@ -114,13 +114,19 @@ int get_inode_num(fs_t* fs, char* pathname) {
 		current_inode = &fs->inodes[0];
 
 		while ((token = strsep(&string,"/")) != NULL) {
-			/*printk("Locating: %s\n", token);*/
+			printk("Locating: %s\n", token);
+			/* regular file can't be used as parent dir */
+			if (strcmp(current_inode->type, "reg") == 0) {
+				printk("<1> Error get inode num: Treat reg file as dir file\n");
+				return -1;
+			}
 
 			/* walk through the direct blocks */
 			for (i = 0; i < NUM_DIRECT_BLK; ++i) {
 				current_blk = current_inode->direct_blks[i];
+				print_dir_block(current_blk);
 				if (current_blk != NULL) {
-					if ((entry = find_entry_in_block(current_blk, pathname)) != NULL) {
+					if ((entry = find_entry_in_block(current_blk, token)) != NULL) {
 						found = entry->inode_num;
 						break;
 					}
@@ -128,32 +134,27 @@ int get_inode_num(fs_t* fs, char* pathname) {
 			}
 
 			/* walk through single-indirect blocks */
-			if (!found && current_inode->single_indirect != NULL) {
-				if ((entry = find_entry_in_single_indirect(current_inode->single_indirect, pathname)) != NULL) {
+			if (found == 0 && current_inode->single_indirect != NULL) {
+				if ((entry = find_entry_in_single_indirect(current_inode->single_indirect, token)) != NULL) {
 					found = entry->inode_num;
 				}
 				/*found = find_entry_in_single_indirect(current_inode->single_indirect, pathname);*/
 			}
 
 			/* walk through double-indirect blocks */
-			if (!found && current_inode->double_indirect != NULL) {
-				if ((entry = find_entry_in_double_indirect(current_inode->double_indirect, pathname)) != NULL) {
+			if (found == 0 && current_inode->double_indirect != NULL) {
+				if ((entry = find_entry_in_double_indirect(current_inode->double_indirect, token)) != NULL) {
 					found = entry->inode_num;
 				}
 				/*found = find_entry_in_double_indirect(current_inode->double_indirect, pathname);*/
 			}
 
 			/* walked all block of current inode, file not found */
-			if (!found) {
+			if (found == 0) {
 				return -1;
 			}
 
 			current_inode = &fs->inodes[found];
-
-			/* regular file can't be used as parent dir */
-			if (strcmp(current_inode->type, "reg\0") == 0) {
-				return -1;
-			}
 		}
 	}
 

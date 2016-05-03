@@ -83,8 +83,6 @@ int main() {
 
 	test_init(fd, args);
 
-
-
 	test_create(fd, args);
 
 	int filedesc;
@@ -97,7 +95,7 @@ int main() {
 
 	printf("attempt to close file with madeup fd=77\n");
 	ret = test_close(fd, args, 77);
-	printf("closing %d returns: %d \n", filedesc, ret);
+	printf("closing %d returns: %d \n", 77, ret);
 	close(fd);
 
 	
