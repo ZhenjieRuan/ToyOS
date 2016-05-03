@@ -37,6 +37,27 @@ int rd_create(char* pathname) {
 	return ret;
 }
 
+int rd_lseek(int fd_num, int offset) {
+
+	int ret;
+	ioctl_args_t* args = malloc(sizeof(ioctl_args_t));
+
+	args->offset = offset;
+
+	args->pid = (int)getpid();
+
+	// fd for ramdisk and not for ioctl
+	args->fd_num = fd_num;
+
+	ret = ioctl(fd, RD_LSEEK, args);
+
+	printf("Lseek got kernel ret: %d\n", ret);
+
+	memset(args, 0, sizeof(ioctl_args_t));
+
+	return ret;
+}
+
 int rd_mkdir(char* pathname) {
 	int ret;
 	ioctl_args_t* args = malloc(sizeof(ioctl_args_t));

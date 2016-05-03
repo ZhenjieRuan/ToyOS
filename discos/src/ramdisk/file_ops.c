@@ -228,6 +228,82 @@ int lseek(int pid, int fd, int offset) {
 	return fd_object[fd].current_pos;
 }
 
+int readdir(int pid, int fd, char *address) {
+
+	int block_num;
+	fd_table_t *fd_table;
+	fd_object_t *fd_object;
+	inode_t *inode;
+	block_t *block;
+	dir_entry_t *dir_entry;
+
+	if((fd_table = get_fd_table(pid)) == NULL) {
+		printk("<1> Filled up pid_fd_table, allocate more space\n");
+		return -1;
+	}
+
+	fd_object = (fd_object_t*) fd_table;
+
+	if (fd_object[fd].used != 1) {
+		printk("<1> Could not find fd = %d in fd_table.\n", fd);
+		return -1;
+	}
+
+	// Get pointer to inode
+	inode = fd_object[fd].inode;
+
+	if (strcmp(inode->type, "reg\0") == 0) {
+		printk("<1> Can't call readdir on the regular file.\n", );
+		return -1;
+	}
+
+	// Check if size greater than offset
+	if (inode->size <= fd_object[fd].offset) {
+		printk("<1> Read all entries.\n");
+		return 0;
+	}
+
+	// offset -> block_num
+	block_num = (fd_object[fd].offset / 256);
+
+	// block_num -> block
+	if ((block = get_block_by_num(inode, block_num)) == NULL) {
+		printk("<1> Could not get block_num = %d for offset = %d\n", block_num, offset);
+		return -1;
+	}
+
+	// Typecast as a dir entry
+	dir_entry = (dir_entry_t) block;
+
+	// Test if there's any more directory entries
+	if (dir_entry == NULL || dir_entry->name == NULL || dir_entry->inode_num == NULL) {
+		printk("<1> dir_entry is null.\n");
+		return -1;
+	}
+
+	// Print out to test...
+	printk("<1> Directory entry %s -- %d\n", dir_entry->name, dir_entry->inode_num);
+
+	// Advance current_pos
+	if (fd_object[fd].offset + 16 >= inode->size) {
+		fd_object[fd].offset = inode->size;
+	}
+	else {
+		fd_object[fd].offset += 16;
+	}
+
+	// Copy to userspace
+	if(copy_to_user(address, dir_entry->name, strlen(dir_entry->name)) != 0) {
+		printk("<1> Error Copying bytes to the user.\n");
+		return -1;
+	}
+
+	return 1;
+
+
+}
+
+
 
 fd_object_t *create_fd(int pid) {
 	// Create it

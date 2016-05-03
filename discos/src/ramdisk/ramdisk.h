@@ -24,6 +24,7 @@
 #define RD_CLOSE  _IOR(MAGIC_NUM, 4, char *)
 #define RD_LSEEK  _IOR(MAGIC_NUM, 7, char *)
 #define RD_UNLINK _IOR(MAGIC_NUM, 8, ioctl_args_t*)
+#define RD_READDIR _IOR(MAGIC_NUM, 9, ioctl_args_t*)
 
 typedef struct ioctl_args {
 	int num_blks;
