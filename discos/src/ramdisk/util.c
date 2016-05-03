@@ -5,9 +5,9 @@
  */
 #include "ramdisk.h"
 
-uint16_t find_entry_in_block(block_t*, char *);
-uint16_t find_entry_in_single_indirect(single_indirect_t *, char *);
-uint16_t find_entry_in_double_indirect(double_indirect_t *, char *);
+dir_entry_t* find_entry_in_block(block_t*, char *);
+dir_entry_t* find_entry_in_single_indirect(single_indirect_t *, char *);
+dir_entry_t* find_entry_in_double_indirect(double_indirect_t *, char *);
 dir_entry_t* get_free_entry_direct_block(block_t*);
 dir_entry_t* get_free_entry_single_indirect(fs_t*, single_indirect_t*, int);
 dir_entry_t* get_free_entry_double_indirect(fs_t*, double_indirect_t*, int);
@@ -99,6 +99,7 @@ int get_inode_num(fs_t* fs, char* pathname) {
 	char *token, *string, *tofree;
 	block_t* current_blk;
 	inode_t* current_inode;
+	dir_entry_t* entry;
 	tofree = string = kstrdup(pathname, GFP_KERNEL);
 	if (string != NULL) {
 
@@ -114,97 +115,95 @@ int get_inode_num(fs_t* fs, char* pathname) {
 
 		while ((token = strsep(&string,"/")) != NULL) {
 			printk("Locating: %s\n", token);
+			/* regular file can't be used as parent dir */
+			if (strcmp(current_inode->type, "reg") == 0) {
+				printk("<1> Error get inode num: Treat reg file as dir file\n");
+				return -1;
+			}
 
 			/* walk through the direct blocks */
 			for (i = 0; i < NUM_DIRECT_BLK; ++i) {
 				current_blk = current_inode->direct_blks[i];
+				print_dir_block(current_blk);
 				if (current_blk != NULL) {
-					if ((found = find_entry_in_block(current_blk, pathname)) != 0) {
+					if ((entry = find_entry_in_block(current_blk, token)) != NULL) {
+						found = entry->inode_num;
 						break;
 					}
 				}
 			}
 
 			/* walk through single-indirect blocks */
-			if (!found && current_inode->single_indirect != NULL) {
-				found = find_entry_in_single_indirect(current_inode->single_indirect, pathname);
+			if (found == 0 && current_inode->single_indirect != NULL) {
+				if ((entry = find_entry_in_single_indirect(current_inode->single_indirect, token)) != NULL) {
+					found = entry->inode_num;
+				}
+				/*found = find_entry_in_single_indirect(current_inode->single_indirect, pathname);*/
 			}
 
 			/* walk through double-indirect blocks */
-			if (!found && current_inode->double_indirect != NULL) {
-				found = find_entry_in_double_indirect(current_inode->double_indirect, pathname);
+			if (found == 0 && current_inode->double_indirect != NULL) {
+				if ((entry = find_entry_in_double_indirect(current_inode->double_indirect, token)) != NULL) {
+					found = entry->inode_num;
+				}
+				/*found = find_entry_in_double_indirect(current_inode->double_indirect, pathname);*/
 			}
 
 			/* walked all block of current inode, file not found */
-			if (!found) {
+			if (found == 0) {
 				return -1;
 			}
 
 			current_inode = &fs->inodes[found];
-
 		}
 	}
 
-	return -1;
+	return found;
 }
 
 /* search dir block for certain dir, inode number if found, 0 if not found */
-uint16_t find_entry_in_block(block_t* block, char* pathname) {
+dir_entry_t* find_entry_in_block(block_t* block, char* pathname) {
 	dir_entry_t* entry;
 	int i;
 	for (i = 0; i < BLK_SIZE/16; ++i) {
 		entry = &block->entries[i];
 		if (entry != NULL && strcmp(entry->name, pathname) == 0) {
-			return entry->inode_num;
-		}
-	}
-	return 0;
-}
-
-uint16_t find_entry_in_single_indirect(single_indirect_t* si_blk, char* pathname) {
-	block_t* current_blk;
-	int i;
-	uint16_t found = 0;
-	for (i = 0; i < BLK_SIZE/4; ++i) {
-		current_blk = si_blk->blocks[i];
-		if (current_blk != NULL) {
-			if ((found = find_entry_in_block(current_blk,pathname)) != 0) {
-				return found;
-			}
-		}
-	}
-	return 0;
-}
-
-uint16_t find_entry_in_double_indirect(double_indirect_t* di_blk, char* pathname) {
-	single_indirect_t* current_si_blk;
-	int i;
-	uint16_t found = 0;
-	for (i = 0; i < BLK_SIZE/4; ++i) {
-		current_si_blk = di_blk->blocks[i];
-		if (current_si_blk != NULL) {
-			if ((found = find_entry_in_single_indirect(current_si_blk, pathname)) != 0) {
-				return found;
-			}
-		}
-	}
-	return 0;
-}
-
-/* find free inode */
-inode_t* get_free_inode(fs_t* fs) {
-	inode_t* inode;
-	int i;
-	for (i = 0; i < NUM_INODES; ++i) {
-		if (strcmp(fs->inodes[i].type, "") == 0) {
-			/* this inode is not yet used */
-			inode = &fs->inodes[i];
-			inode->num = i;
-			return inode;
+			return entry;
 		}
 	}
 	return NULL;
 }
+
+dir_entry_t* find_entry_in_single_indirect(single_indirect_t* si_blk, char* pathname) {
+	block_t* current_blk;
+	int i;
+	dir_entry_t* entry;
+	for (i = 0; i < BLK_SIZE/4; ++i) {
+		current_blk = si_blk->blocks[i];
+		if (current_blk != NULL) {
+			if ((entry = find_entry_in_block(current_blk,pathname)) != NULL) {
+				return entry;
+			}
+		}
+	}
+	return NULL;
+}
+
+dir_entry_t* find_entry_in_double_indirect(double_indirect_t* di_blk, char* pathname) {
+	single_indirect_t* current_si_blk;
+	int i;
+	dir_entry_t* entry;
+	for (i = 0; i < BLK_SIZE/4; ++i) {
+		current_si_blk = di_blk->blocks[i];
+		if (current_si_blk != NULL) {
+			if ((entry = find_entry_in_single_indirect(current_si_blk, pathname)) != NULL) {
+				return entry;
+			}
+		}
+	}
+	return NULL;
+}
+
 
 /* seperate prefix and filename */
 void get_prefix_and_filename(char* pathname, char* prefix, char* filename, int len) {
@@ -295,13 +294,130 @@ dir_entry_t* get_free_entry_double_indirect(fs_t* fs, double_indirect_t* di_blk,
 	return get_free_entry_single_indirect(fs, si_blk, region%64);
 }
 
+/* get free inode */
+inode_t* get_free_inode(fs_t* fs) {
+	inode_t* inode;
+	int i;
+	for (i = 0; i < NUM_INODES; ++i) {
+		if (strcmp(fs->inodes[i].type, "") == 0) {
+			/* this inode is not yet used */
+			inode = &fs->inodes[i];
+			inode->num = i;
+			fs->superblock.freeindex--;
+			return inode;
+		}
+	}
+	return NULL;
+}
+
 /* get free block */
 block_t* get_free_block(fs_t* fs) {
 	int block_index = next_zero_bitmap(fs->bitmap, 4*BLK_SIZE);
 	if (block_index < NUM_BLOCKS && fs->superblock.freeblocks > 0) {
 		fs->superblock.freeblocks--;
 		set_bit_of_bitmap(fs->bitmap, block_index);
+		memset(&fs->blocks[block_index],0,BLK_SIZE);
 		return &fs->blocks[block_index];
 	}
 	return NULL;
 }
+
+int check_empty_block(block_t* block) {
+	int i;
+	for (i = 0; i < BLK_SIZE; ++i) {
+		if (block->data[i] != 0)
+			return -1;
+	}
+	return 0;
+}
+
+int check_empty_single_indirect(single_indirect_t* si_blk) {
+	int i;
+	for (i = 0; i < BLK_SIZE/4; ++i) {
+		if (si_blk->blocks[i] != NULL) {
+			if (check_empty_block(si_blk->blocks[i]) != 0)
+				return -1;
+		}
+	}
+	return 0;
+}
+
+int check_empty_double_indirect(double_indirect_t* di_blk) {
+	int i;
+	for (i = 0; i < BLK_SIZE/4; ++i) {
+		if (di_blk->blocks[i] != NULL) {
+			if (check_empty_single_indirect(di_blk->blocks[i]) != 0)
+				return -1;
+		}
+	}
+	return 0;
+}
+
+
+/* check if all block of inode is empty, 0 if empty, -1 otherwise */
+int check_empty(inode_t* inode) {
+	int i = 0;
+	for (i = 0; i < NUM_DIRECT_BLK; ++i) {
+		if (inode->direct_blks[i] != NULL && check_empty_block(inode->direct_blks[i]) != 0)
+			return -1;
+	}
+	if (inode->single_indirect != NULL && check_empty_single_indirect(inode->single_indirect) != 0)
+		return -1;
+	if (inode->double_indirect != NULL && check_empty_double_indirect(inode->double_indirect) != 0)
+		return -1;
+	return 0;
+}
+
+/* clear the content of a single indirect block */
+void clear_single_indirect(fs_t* fs, single_indirect_t* si_blk) {
+	int i;
+	block_t* start = &fs->blocks[0];
+	for (i = 0; i < BLK_SIZE/4; ++i) {
+		unset_bit_of_bitmap(fs->bitmap, si_blk->blocks[i] - start);
+		memset(si_blk->blocks[i], 0, BLK_SIZE);
+	}
+	unset_bit_of_bitmap(fs->bitmap, (block_t*)si_blk - start);
+	memset(si_blk, 0, BLK_SIZE);
+}
+
+/* clear the content of a double indirect block */
+void clear_double_indirect(fs_t* fs, double_indirect_t* di_blk) {
+	int i;
+	block_t* start = &fs->blocks[0];
+	for (i = 0; i < BLK_SIZE/4; ++i) {
+		if (di_blk->blocks[i] != NULL) {
+			clear_single_indirect(fs,di_blk->blocks[i]);
+		}
+	}
+	unset_bit_of_bitmap(fs->bitmap, (block_t*)di_blk - start);
+	memset(di_blk, 0, BLK_SIZE);
+}
+
+/* clear the content of a inode */
+void clear_inode_content(fs_t* fs, inode_t* inode) {
+	int i;
+	block_t *start;
+	start = &fs->blocks[0];
+	for (i = 0; i < NUM_DIRECT_BLK; ++i) {
+		unset_bit_of_bitmap(fs->bitmap, inode->direct_blks[i] - start);
+		memset(inode->direct_blks[i], 0, BLK_SIZE);
+	}
+	if (inode->single_indirect != NULL) {
+		clear_single_indirect(fs,inode->single_indirect);
+	}
+	if (inode->double_indirect != NULL) {
+		clear_double_indirect(fs,inode->double_indirect);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

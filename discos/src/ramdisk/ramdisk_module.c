@@ -23,27 +23,34 @@ static int ramdisk_ioctl(struct inode *inode, struct file *file,
 	if(copy_from_user(args, (ioctl_args_t *)arg, sizeof(ioctl_args_t))) {
 		printk("<1> Error copy from user\n");
 	}
+	size = strnlen_user(args->pathname, 14);
+	pathname = (char *)kmalloc(size, GFP_KERNEL);
+	copy_from_user(pathname, args->pathname, size);
+	printk("Got user path %s\n", args->pathname);
 	switch (cmd) {
 		case RD_INIT:
 			printk("<1> num_blocks:%d\n", args->num_blks);
 			init_fd_table();		
 			return init_fs(args->num_blks);
-		case RD_OPEN: 
-			// http://stackoverflow.com/questions/18496282/why-do-i-get-a-label-can-only-be-part-of-a-statement-and-a-declaration-is-not-a
-			; //don't delete 
-			int fd;
-			fd = open(args->pid, args->pathname);
+		case RD_OPEN:
+			printk("<1> Opening %s\n", args->pathname);
 			// Send fd back to user space
-			return fd;
+			return open(args->pid, args->pathname);
 		case RD_CLOSE:
 			printk("<1> Switch case close\n");
 			return close(args->pid, args->fd_num);
 		case RD_CREATE:
-			size = strnlen_user(args->pathname, 14);
-			pathname = (char *)kmalloc(size, GFP_KERNEL);
-			copy_from_user(pathname, args->pathname, size);
-			printk("Got user path %s\n", args->pathname);
 			ret = create(pathname);
+			kfree(pathname);
+			return ret;
+			break;
+		case RD_MKDIR:
+			ret = mkdir(pathname);
+			kfree(pathname);
+			return ret;
+			break;
+		case RD_UNLINK:
+			ret = unlink(pathname);
 			kfree(pathname);
 			return ret;
 			break;
