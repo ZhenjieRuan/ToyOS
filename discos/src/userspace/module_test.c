@@ -54,8 +54,6 @@ int main() {
 
 	test_init(fd, args);
 
-
-
 	test_create(fd, args);
 
 	int filedesc = test_open(fd, args);

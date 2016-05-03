@@ -104,7 +104,6 @@ int open(int pid, char* pathname) {
 	//set position to zero
 
 	uint16_t inode_num = 0;
-	inode_t *file_inode;
 	
 	/* get parent inode num */
 	if ((inode_num = get_inode_num(fs,pathname)) == -1) {
@@ -162,7 +161,7 @@ fd_table_t *get_fd_table(int pid) {
 
 	int i;
 	for (i = 0; i < NUM_PID; i++) {
-		if (pid == NULL) {
+		if (pid_fd_table[i].pid == NULL) {
 			pid_fd_table[i].pid = pid;
 			return &pid_fd_table[i].fd_table;
 		}
@@ -176,7 +175,7 @@ fd_table_t *get_fd_table(int pid) {
 }
 
 // zero out fd_table
-void init_fd_table() {
+void init_fd_table(void) {
 	memset(&pid_fd_table, NULL, sizeof(pid_fd_table));
 }
 
