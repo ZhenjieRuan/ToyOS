@@ -23,6 +23,7 @@
 // #define's to control what tests are performed,
 // comment out a test if you do not wish to perform it
 
+#define USE_RAMDISK
 #define TEST1
 #define TEST2
 #define TEST3

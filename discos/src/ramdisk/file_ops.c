@@ -23,17 +23,27 @@ int init_fs(uint32_t num_blocks) {
 	mkdir("/");
 	print_inode_info(&fs->inodes[0]);
 
+	if (strcmp(fs->inodes[10].type, "") == 0) {
+		printk("Empty inode!!!\n");
+	}
+
+	if (fs->blocks[1].entries[1].inode_num == 0) {
+		printk("Empty dir entry!\n");
+	}
+
 	return 0;
 }
 
 
 int create(char* pathname) {
 	int len = strlen(pathname);
-	uint16_t parent = 0;
+	int parent = 0, i = 0;
 	inode_t *parent_inode, *file_inode;
 	dir_entry_t* free_entry_in_parent;
 	char *prefix = kmalloc(len, GFP_KERNEL);
 	char *filename = kmalloc(len, GFP_KERNEL);
+	memset(prefix,0,len);
+	memset(filename,0,len);
 	/* no more free blocks */
 	if (fs->superblock.freeblocks <= 0 || fs->superblock.freeindex <= 0) {
 		return -1;
@@ -41,6 +51,7 @@ int create(char* pathname) {
 
 	/* get prefix and filename */
 	get_prefix_and_filename(pathname, prefix, filename, len);
+	printk("prefix: %s filename: %s\n", prefix, filename);
 
 	/* get parent inode num */
 	if ((parent = get_inode_num(fs,prefix)) == -1) {
@@ -54,7 +65,14 @@ int create(char* pathname) {
 
 	/* get free spot in parent blocks to fill entry */
 	if ((free_entry_in_parent = get_free_entry(fs, parent_inode)) == NULL) {
-		printk("<1> Error getting free entry spot in parent\n");
+		printk("<1> Error getting free entry spot in parent, parent size:%d\n", parent_inode->size);
+		for (i = 0; i < 8; ++i) {
+			if (parent_inode->direct_blks[i] != NULL) {
+				printk("<1> Block %d:\n", i);
+				print_dir_block(parent_inode->direct_blks[i]);
+				printk("<1>=================\n");
+			}
+		}
 		return -1;
 	}
 
@@ -62,9 +80,14 @@ int create(char* pathname) {
 		printk("<1> Error getting free inode\n");
 		return -1;
 	}
+	printk("<1> Free inode: %d\n", file_inode->num);
 
 	strcpy(free_entry_in_parent->name, filename);
 	free_entry_in_parent->inode_num = file_inode->num;
+
+	parent_inode->size += 16;
+
+	strcpy(file_inode->type, "reg\0");
 
 
 	kfree(prefix);

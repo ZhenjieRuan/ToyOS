@@ -98,6 +98,7 @@ inode_t* get_free_inode(fs_t* fs);
 int get_inode_num(fs_t*, char *);
 void get_prefix_and_filename(char* pathname, char* prefix, char* filename, int len);
 dir_entry_t* get_free_entry(fs_t* fs, inode_t*);
+block_t* get_free_block(fs_t*);
 
 /* printing functions for debugging */
 void print_dir_block(block_t *);

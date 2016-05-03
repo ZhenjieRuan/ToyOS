@@ -9,8 +9,8 @@ uint16_t find_entry_in_block(block_t*, char *);
 uint16_t find_entry_in_single_indirect(single_indirect_t *, char *);
 uint16_t find_entry_in_double_indirect(double_indirect_t *, char *);
 dir_entry_t* get_free_entry_direct_block(block_t*);
-/*dir_entry_t* get_free_spot_single_indirect(single_indirect_t*);*/
-/*dir_entry_t* get_free_spot_double_indirect(double_indirect_t*);*/
+dir_entry_t* get_free_entry_single_indirect(fs_t*, single_indirect_t*, int);
+dir_entry_t* get_free_entry_double_indirect(fs_t*, double_indirect_t*, int);
 
 /* bitmap interface */
 int next_zero_bit(unsigned char ch){
@@ -91,8 +91,7 @@ void print_inode_info(inode_t* inode) {
 
 /* return parent inode number if pathname is valid, -1 on error
  * Error Condition:
- * 1. Pathname prefix refers to a non-existent directory
- * 2. Try to create existing file
+ * Pathname prefix refers to a non-existent directory
  */
 int get_inode_num(fs_t* fs, char* pathname) {
 	int i;
@@ -114,6 +113,7 @@ int get_inode_num(fs_t* fs, char* pathname) {
 		current_inode = &fs->inodes[0];
 
 		while ((token = strsep(&string,"/")) != NULL) {
+			printk("Locating: %s\n", token);
 
 			/* walk through the direct blocks */
 			for (i = 0; i < NUM_DIRECT_BLK; ++i) {
@@ -126,12 +126,12 @@ int get_inode_num(fs_t* fs, char* pathname) {
 			}
 
 			/* walk through single-indirect blocks */
-			if (!found) {
+			if (!found && current_inode->single_indirect != NULL) {
 				found = find_entry_in_single_indirect(current_inode->single_indirect, pathname);
 			}
 
 			/* walk through double-indirect blocks */
-			if (!found) {
+			if (!found && current_inode->double_indirect != NULL) {
 				found = find_entry_in_double_indirect(current_inode->double_indirect, pathname);
 			}
 
@@ -145,7 +145,7 @@ int get_inode_num(fs_t* fs, char* pathname) {
 		}
 	}
 
-	return found;
+	return -1;
 }
 
 /* search dir block for certain dir, inode number if found, 0 if not found */
@@ -154,10 +154,7 @@ uint16_t find_entry_in_block(block_t* block, char* pathname) {
 	int i;
 	for (i = 0; i < BLK_SIZE/16; ++i) {
 		entry = &block->entries[i];
-		if (entry == NULL) {
-			break;
-		}
-		if (strcmp(entry->name, pathname) == 0) {
+		if (entry != NULL && strcmp(entry->name, pathname) == 0) {
 			return entry->inode_num;
 		}
 	}
@@ -170,11 +167,13 @@ uint16_t find_entry_in_single_indirect(single_indirect_t* si_blk, char* pathname
 	uint16_t found = 0;
 	for (i = 0; i < BLK_SIZE/4; ++i) {
 		current_blk = si_blk->blocks[i];
-		if ((found = find_entry_in_block(current_blk,pathname)) != 0) {
-			return found;
+		if (current_blk != NULL) {
+			if ((found = find_entry_in_block(current_blk,pathname)) != 0) {
+				return found;
+			}
 		}
 	}
-	return found;
+	return 0;
 }
 
 uint16_t find_entry_in_double_indirect(double_indirect_t* di_blk, char* pathname) {
@@ -183,11 +182,13 @@ uint16_t find_entry_in_double_indirect(double_indirect_t* di_blk, char* pathname
 	uint16_t found = 0;
 	for (i = 0; i < BLK_SIZE/4; ++i) {
 		current_si_blk = di_blk->blocks[i];
-		if ((found = find_entry_in_single_indirect(current_si_blk, pathname)) != 0) {
-			return found;
+		if (current_si_blk != NULL) {
+			if ((found = find_entry_in_single_indirect(current_si_blk, pathname)) != 0) {
+				return found;
+			}
 		}
 	}
-	return found;
+	return 0;
 }
 
 /* find free inode */
@@ -195,9 +196,9 @@ inode_t* get_free_inode(fs_t* fs) {
 	inode_t* inode;
 	int i;
 	for (i = 0; i < NUM_INODES; ++i) {
-		inode = &fs->inodes[i];
-		if (strcmp(inode->type, "") == 0) {
+		if (strcmp(fs->inodes[i].type, "") == 0) {
 			/* this inode is not yet used */
+			inode = &fs->inodes[i];
 			inode->num = i;
 			return inode;
 		}
@@ -214,7 +215,11 @@ void get_prefix_and_filename(char* pathname, char* prefix, char* filename, int l
 			break;
 		}
 	}
-	strncpy(prefix, pathname, cutoff);
+	if (cutoff == 0) {
+		strcpy(prefix,"/\0");
+	} else {
+		strncpy(prefix, pathname, cutoff);
+	}
 	strcpy(filename, &pathname[cutoff+1]);
 }
 
@@ -222,29 +227,28 @@ void get_prefix_and_filename(char* pathname, char* prefix, char* filename, int l
 dir_entry_t* get_free_entry(fs_t* fs, inode_t* parent) {
 	int i, region = parent->size / BLK_SIZE;
 	block_t* current_blk;
-	/*dir_entry_t* free_entry;*/
+	dir_entry_t* free_entry;
 	if (region < 8) {
 		/* there is still space in direct blocks */
-		for (i = 0; i < NUM_DIRECT_BLK; ++i) {	
+		for (i = region; i < NUM_DIRECT_BLK; ++i) {	
 			if (parent->direct_blks[i] == NULL) {
-				/* prev block is filled, get a new block */
+				/* getting a new block */
 				if ((parent->direct_blks[i] = get_free_block(fs)) == NULL) {
 					printk("<1> No more free blocks\n");
 					return NULL;
 				}
+				return &parent->direct_blks[i]->entries[0];
 			}
 			current_blk = parent->direct_blks[i];
-			return get_free_spot_direct_block(current_blk);
+			free_entry = get_free_entry_direct_block(current_blk);
+			if (free_entry != NULL) return free_entry;
 		}
 	} else if (region < 72) {
 		/* free spot in single indirect */
-		current_blk = parent->single_indirect->blocks[region - 8];	
-		return get_free_spot_direct_block(current_blk);
+		return get_free_entry_single_indirect(fs,parent->single_indirect, region - 8);
 	} else if (region < 4168) {
 		/* free spot in double indirect */
-		region = region - 72;
-		current_blk = parent->double_indirect->blocks[region/64]->blocks[region%64];
-		return get_free_spot_direct_block(current_blk);
+		return get_free_entry_double_indirect(fs,parent->double_indirect, region - 72);
 	}
 	return NULL;
 }
@@ -253,18 +257,50 @@ dir_entry_t* get_free_entry_direct_block(block_t* block) {
 	int i;
 	/*dir_entry_t* current_entry;*/
 	for (i = 0; i < BLK_SIZE/16; ++i) {
-		if (block->entries[i] == NULL) {
+		if (block->entries[i].inode_num == 0) {
 			return &block->entries[i];
 		}
 	}
 	return NULL;
 }
 
+dir_entry_t* get_free_entry_single_indirect(fs_t* fs, single_indirect_t* si_blk, int region) {
+	block_t* current_blk;
+	if (si_blk == NULL) {
+		if ((si_blk = (single_indirect_t *)get_free_block(fs)) == NULL) {
+			printk("<1> No more free blocks\n");
+			return NULL;
+		}
+	}
+	current_blk = si_blk->blocks[region];	
+	if (current_blk == NULL) {
+		if ((si_blk->blocks[region] = get_free_block(fs)) == NULL) {
+				printk("<1> No more free blocks\n");
+				return NULL;
+		}
+		return &si_blk->blocks[region]->entries[0];
+	}
+	return get_free_entry_direct_block(current_blk);
+}
+
+dir_entry_t* get_free_entry_double_indirect(fs_t* fs, double_indirect_t* di_blk, int region) {
+	single_indirect_t* si_blk;
+	if (di_blk == NULL) {
+		if ((di_blk = (double_indirect_t *)get_free_block(fs)) == NULL) {
+			printk("<1> No more free blocks\n");
+			return NULL;
+		}
+	}
+	si_blk = di_blk->blocks[region/64];
+	return get_free_entry_single_indirect(fs, si_blk, region%64);
+}
+
 /* get free block */
 block_t* get_free_block(fs_t* fs) {
 	int block_index = next_zero_bitmap(fs->bitmap, 4*BLK_SIZE);
-	if (block_index < NUM_BLOCKS) {
+	if (block_index < NUM_BLOCKS && fs->superblock.freeblocks > 0) {
 		fs->superblock.freeblocks--;
+		set_bit_of_bitmap(fs->bitmap, block_index);
 		return &fs->blocks[block_index];
 	}
 	return NULL;

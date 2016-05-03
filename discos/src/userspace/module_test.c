@@ -1,5 +1,7 @@
 #include "userspace.h"
 
+#define MAX_FILES 524
+
 void test_init(int fd, ioctl_args_t* args) {
 	int ret;
 
@@ -13,13 +15,19 @@ void test_init(int fd, ioctl_args_t* args) {
 }
 
 void test_create(int fd, ioctl_args_t* args) {
-	int ret;
+	static char pathname[80];
+	int ret, i;
 
-	args->pathname = "/file1";
-
-	ret = ioctl(fd, RD_CREATE, args);
-
-	printf("Got kernel ret: %d\n", ret);
+  for (i = 0; i < 1025; i++) { // go beyond the limit
+    sprintf (pathname, "/file%d", i);
+		args->pathname = pathname;
+		ret = ioctl(fd, RD_CREATE, args);
+		if (ret == -1) {
+			printf("File creationg failed, created %d files\n", i);
+			break;
+		}
+    memset (pathname, 0, 80);
+	}
 	
 	return;
 }
@@ -35,7 +43,7 @@ int main() {
 
 	test_init(fd, args);
 
-	/*test_create(fd, args);*/
+	test_create(fd, args);
 	
 	close(fd);
 	return 0;
