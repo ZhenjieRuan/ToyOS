@@ -93,7 +93,7 @@ int create_file(char* type, char* pathname) {
 
 	strcpy(file_inode->type, type);
 
-	print_dir_block(fs->inodes[0].direct_blks[0]);
+	/*print_dir_block(get_block_by_num(parent_inode, 0));*/
 
 	kfree(prefix);
 	kfree(filename);

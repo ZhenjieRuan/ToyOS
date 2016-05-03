@@ -423,6 +423,21 @@ void clear_inode_content(fs_t* fs, inode_t* inode) {
 }
 
 block_t* get_block_by_num(inode_t* inode, int block_num) {
+	block_t* block;
+	if (block_num < 8) {
+		return inode->direct_blks[block_num];
+	} else if (block_num < 72) {
+		if (inode->single_indirect != NULL) {
+			return inode->single_indirect->blocks[block_num - 72];
+		}
+	} else if (block_num < 4168) {
+		if (inode->double_indirect != NULL) {
+			if (inode->double_indirect->blocks[(block_num - 72)/64] != NULL) {
+				return inode->double_indirect->blocks[(block_num - 72)/64]->blocks[(block_num - 72)%64];
+			}
+		}
+	}
+	return NULL;
 }
 
 

@@ -131,6 +131,7 @@ block_t* get_free_block(fs_t*);
 int get_inode_num(fs_t*, char *);
 void get_prefix_and_filename(char* pathname, char* prefix, char* filename, int len);
 block_t* get_free_block(fs_t*);
+block_t* get_block_by_num(inode_t*,int);
 int check_empty(inode_t*);
 void clear_inode_content(fs_t*, inode_t*);
 dir_entry_t* find_entry_in_block(block_t*, char *);
@@ -140,6 +141,7 @@ dir_entry_t* get_free_entry(fs_t* fs, inode_t*);
 dir_entry_t* get_free_entry_direct_block(block_t*);
 dir_entry_t* get_free_entry_single_indirect(fs_t*, inode_t*, int);
 dir_entry_t* get_free_entry_double_indirect(fs_t*, inode_t*, int);
+
 
 
 /* printing functions for debugging */
