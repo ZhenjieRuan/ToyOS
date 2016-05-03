@@ -23,12 +23,14 @@
 #define RD_CREATE _IOR(MAGIC_NUM, 1, ioctl_args_t*)
 #define RD_MKDIR  _IOR(MAGIC_NUM, 2, ioctl_args_t*)
 #define RD_OPEN   _IOR(MAGIC_NUM, 3, ioctl_args_t*)
-#define RD_CLOSE   _IOR(MAGIC_NUM, 4, ioctl_args_t*)
+#define RD_CLOSE  _IOR(MAGIC_NUM, 4, ioctl_args_t*)
+#define RD_LSEEK  _IOR(MAGIC_NUM, 7, ioctl_args_t*)
 #define RD_UNLINK _IOR(MAGIC_NUM, 8, ioctl_args_t*)
 
 typedef struct ioctl_args {
 	int num_blks;
 	int pid;
+	int offset;
 	int fd_num;
 	char* pathname;
 } ioctl_args_t;

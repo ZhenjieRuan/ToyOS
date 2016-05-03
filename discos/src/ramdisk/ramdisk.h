@@ -20,14 +20,15 @@
 #define RD_INIT   _IOR(MAGIC_NUM, 0, int)
 #define RD_CREATE _IOR(MAGIC_NUM, 1, char *)
 #define RD_MKDIR  _IOR(MAGIC_NUM, 2, ioctl_args_t*)
+#define RD_OPEN   _IOR(MAGIC_NUM, 3, char *)
+#define RD_CLOSE  _IOR(MAGIC_NUM, 4, char *)
+#define RD_LSEEK  _IOR(MAGIC_NUM, 7, char *)
 #define RD_UNLINK _IOR(MAGIC_NUM, 8, ioctl_args_t*)
-
-#define RD_OPEN _IOR(MAGIC_NUM, 3, char *)
-#define RD_CLOSE _IOR(MAGIC_NUM, 4, char *)
 
 typedef struct ioctl_args {
 	int num_blks;
 	int pid;
+	int offset;
 	int fd_num;
 	char* pathname;
 } ioctl_args_t;
@@ -38,6 +39,7 @@ typedef struct ioctl_args {
 #define NUM_BLOCKS 7931
 #define NUM_DIRECT_BLK 8
 #define NUM_INODES 1024
+#define NUM_BYTES_IN_INODE 1067008
 
 typedef struct dir_entry {
 	char name[14];
@@ -115,11 +117,6 @@ typedef struct pid_fd_entry {
 	fd_table_t fd_table;
 } pid_fd_entry_t;
 
-// Contains the PID -> fd_table mapping
-// typedef struct pid_to_fd_table {
-// 	pid_fd_entry_t pid_fd_entry[NUM_PID];
-// } pid_to_fd_table_t;
-
 /* ============================================================= */
 
 /* bitmap interfaces */
@@ -157,5 +154,6 @@ int open(int pid, char* pathname);
 fd_table_t *get_fd_table(int pid);
 void init_fd_table(void);
 int close(int pid, int fd_num);
+int lseek(int pid, int fd, int offset);
 
 #endif /* ifndef _RAMDISK_H_ */

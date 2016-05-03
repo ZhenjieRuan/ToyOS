@@ -42,6 +42,21 @@ int test_open(int fd, ioctl_args_t* args) {
 	return ioctl(fd, RD_OPEN, args);
 }
 
+int test_lseek(int fd, int fd_num, ioctl_args_t* args) {
+
+	args->pathname = "/file1";
+
+	args->pid = (int)getpid();
+
+	args->offset = 10;
+
+	args->fd_num = fd_num;
+
+	return ioctl(fd, RD_LSEEK, args);
+
+}
+
+
 int test_close(int fd, ioctl_args_t* args, int fd_num) {
 	args->fd_num = fd_num;
 	args->pid = (int)getpid();
@@ -62,11 +77,16 @@ int main() {
 
 	test_create(fd, args);
 
+	// Testing open
 	int filedesc;
 	filedesc = test_open(fd, args);
 	printf("fd num = %d\n", filedesc);
 
+	// Testing lseek
+	int lseek = test_lseek(fd, filedesc, args);
+	printf("Seeked to 10 in a empty file should be 0 = %d\n", lseek);
 	
+	// Testing close
 	ret = test_close(fd, args, filedesc);
 	printf("closing %d returns: %d \n", filedesc, ret);
 

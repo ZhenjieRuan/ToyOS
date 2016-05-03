@@ -215,8 +215,52 @@ int open(int pid, char* pathname) {
 	fd_object->inode = &fs->inodes[inode_num];
 
 	return fd_object->fd_num;
-
 }
+
+// set current_pos to the new offset
+int lseek(int pid, int fd, int offset) {
+
+	fd_table_t *fd_table;
+	fd_object_t *fd_object;
+	inode_t *inode;
+
+	if (offset < 0 || offset > NUM_BYTES_IN_INODE) {
+		printk("<1> Invalid offset %d\n", offset);
+		return -1;
+	}
+
+	if((fd_table = get_fd_table(pid)) == NULL) {
+		printk("<1> Filled up pid_fd_table, allocate more space\n");
+		return -1;
+	}
+
+
+	fd_object = (fd_object_t*) fd_table;
+
+	if (fd_object[fd].used != 1) {
+		printk("<1> Could not find fd = %d in fd_table.\n", fd);
+		return -1;
+	}
+
+	// Get pointer to inode
+	inode = fd_object[fd].inode;
+
+	if (strcmp(inode->type, "dir\0") == 0) {
+		printk("<1> Can't seek a directory file.\n");
+		return -1;
+	}
+
+	// Check if size greater than offset
+	if (inode->size <= offset) {
+		fd_object[fd].current_pos = inode->size;
+		return fd_object[fd].current_pos;
+	}
+
+	// Set file position and return file position
+	fd_object[fd].current_pos = offset;
+	return fd_object[fd].current_pos;
+}
+
 
 fd_object_t *create_fd(int pid) {
 	// Create it
