@@ -40,8 +40,7 @@ static int ramdisk_ioctl(struct inode *inode, struct file *file,
 			printk("<1> Switch case close\n");
 			return close(args->pid, args->fd_num);
 		case RD_READ:
-			return -1; 
-//			return read();
+			return read(args->fd, args->r_buffer, args->num_bytes, args->pid);
 		case RD_WRITE:
 			return -1;
 //			return write();

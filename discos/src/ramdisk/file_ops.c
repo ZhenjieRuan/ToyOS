@@ -39,67 +39,6 @@ int init_fs(uint32_t num_blocks) {
 	return 0;
 }
 
-
-/*int create(char* pathname) {*/
-	/*int len = strlen(pathname);*/
-	/*int parent = 0, i = 0;*/
-	/*inode_t *parent_inode, *file_inode;*/
-	/*dir_entry_t* free_entry_in_parent;*/
-	/*char *prefix = kmalloc(len, GFP_KERNEL);*/
-	/*char *filename = kmalloc(len, GFP_KERNEL);*/
-	/*memset(prefix,0,len);*/
-	/*memset(filename,0,len);*/
-	/*[> no more free blocks <]*/
-	/*if (fs->superblock.freeblocks <= 0 || fs->superblock.freeindex <= 0) {*/
-		/*return -1;*/
-	/*}*/
-
-	/*[> get prefix and filename <]*/
-	/*get_prefix_and_filename(pathname, prefix, filename, len);*/
-	/*printk("prefix: %s filename: %s\n", prefix, filename);*/
-
-	/*[> get parent inode num <]*/
-	/*if ((parent = get_inode_num(fs,prefix)) == -1) {*/
-		/*printk("<1> The pathname is invalid\n");	*/
-		/*return -1;*/
-	/*}*/
-
-	/*printk("<1> Parent inode number: %d\n", parent);*/
-	
-	/*parent_inode = &fs->inodes[parent];*/
-
-	/*[> get free spot in parent blocks to fill entry <]*/
-	/*if ((free_entry_in_parent = get_free_entry(fs, parent_inode)) == NULL) {*/
-		/*printk("<1> Error getting free entry spot in parent, parent size:%d\n", parent_inode->size);*/
-		/*for (i = 0; i < 8; ++i) {*/
-			/*if (parent_inode->direct_blks[i] != NULL) {*/
-				/*printk("<1> Block %d:\n", i);*/
-				/*print_dir_block(parent_inode->direct_blks[i]);*/
-				/*printk("<1>=================\n");*/
-			/*}*/
-		/*}*/
-		/*return -1;*/
-	/*}*/
-
-	/*if ((file_inode = get_free_inode(fs)) == NULL) {*/
-		/*printk("<1> Error getting free inode\n");*/
-		/*return -1;*/
-	/*}*/
-	/*printk("<1> Free inode: %d\n", file_inode->num);*/
-
-	/*strcpy(free_entry_in_parent->name, filename);*/
-	/*free_entry_in_parent->inode_num = file_inode->num;*/
-
-	/*parent_inode->size += 16;*/
-
-	/*strcpy(file_inode->type, "reg\0");*/
-
-
-	/*kfree(prefix);*/
-	/*kfree(filename);*/
-	/*return 0;*/
-/*}*/
-
 int create_file(char* type, char* pathname) {
 	int len = strlen(pathname);
 	int parent = 0, i = 0;
@@ -160,10 +99,6 @@ int create_file(char* type, char* pathname) {
 	return 0;
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> discos-sean
 int close(int pid, int fd_num) {
 	fd_table_t *fd_table;
 	//Use pid to find fd table
@@ -173,8 +108,6 @@ int close(int pid, int fd_num) {
 		printk("<1> could not find pid in pid_fd_table\n");
 		return -1;
 	}
-
-// pid_fd_entry_t pid_fd_table[NUM_PID];
 
 	if(	fd_table->fd_object[fd_num].used == 1 ){ //It's being used
 		fd_table->fd_object[fd_num].used = 0;
@@ -267,6 +200,7 @@ fd_table_t *get_fd_table(int pid) {
 	return NULL; //Table full & no corresponding entry.
 }
 
+
 // zero out fd_table
 void init_fd_table() {
 	memset(&pid_fd_table, 0, sizeof(pid_fd_table));
@@ -282,6 +216,106 @@ int create(char* pathname) {
 	/*printk("<1> Distance: %d\n", test);*/
 	return create_file("reg\0", pathname);
 }
+//Read from cursor -> < cursor+num_bytes
+int read(int fd, char *r_buffer, int num_bytes, int pid) {
+	int i, current_pos, bytes_left, cont_flag, offset;
+	fd_table_t *fd_table;   //table 
+	fd_object_t *fd_object; //object
+	inode_t *inode;         //inode
+	block_t *block;
+
+
+	bytes_left = num_bytes;
+	fd_table = get_fd_table(pid);
+	fd_object = &fd_table->fd_object[fd_num];
+	inode = fd_object->inode;
+	current_pos = fd_object->current_pos;
+	//Gives pointer to ith block of data for inode
+
+
+	//Create kernel buffer
+	char *kern_buff;
+	kern_buff = vmalloc( num_bytes );
+	
+	//Write data into kern buff.
+	//args->num_bytes better be positive
+
+	//BLK_SIZE = 256
+	offset = 0;
+	cont_flag = 1; //Do we continue? 
+	while(cont_flag){
+		//Get the block corresponding to cursor
+		block = get_block_by_num(inode, current_pos / BLK_SIZE);
+
+		//Loop at most 256 times.
+		for(i=0; i<BLK_SIZE; i++){ //get rid of magic nums
+			kern_buff[offset] = block->data[current_pos % BLK_SIZE];
+			offset +=1;
+			bytes_left -= 1;
+			current_pos += 1;
+
+			if(bytes_left == 0){
+				cont_flag = 0; //Done reading
+				break;
+			}
+			if( (current_pos % BLK_SIZE) == 256)
+				break; //Past end of block, need to get ptr to next
+		}
+	}
+	return -1;
+}
+
+int write(int fd, char *r_buffer, int num_bytes, int pid) {
+	int i, current_pos, bytes_left, cont_flag, offset;
+	fd_table_t *fd_table;   //table 
+	fd_object_t *fd_object; //object
+	inode_t *inode;         //inode
+	block_t *block;
+
+
+	bytes_left = num_bytes;
+	fd_table = get_fd_table(pid);
+	fd_object = &fd_table->fd_object[fd_num];
+	inode = fd_object->inode;
+	current_pos = fd_object->current_pos;
+	//Gives pointer to ith block of data for inode
+
+
+	//Create kernel buffer
+	char *kern_buff;
+	kern_buff = vmalloc( num_bytes );
+	
+	//Write data into kern buff.
+	//args->num_bytes better be positive
+
+	//BLK_SIZE = 256
+	offset = 0;
+	cont_flag = 1; //Do we continue? 
+	while(cont_flag){
+		//Get the block corresponding to cursor
+		block = get_block_by_num(inode, current_pos / BLK_SIZE);
+
+		//Loop at most 256 times.
+		for(i=0; i<BLK_SIZE; i++){ //get rid of magic nums
+//			kern_buff[offset] = block->data[current_pos % BLK_SIZE];
+//write here
+			offset +=1;
+			bytes_left -= 1;
+			current_pos += 1;
+
+			if(bytes_left == 0){
+				cont_flag = 0; //Done reading
+				break;
+			}
+			if( (current_pos % BLK_SIZE) == 256)
+				break; //Past end of block, need to get ptr to next
+		}
+	}
+	return -1;
+}
+
+
+
 
 int mkdir(char* pathname) {
 	inode_t* inode;

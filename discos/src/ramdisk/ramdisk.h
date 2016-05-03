@@ -161,5 +161,6 @@ int open(int pid, char* pathname);
 fd_table_t *get_fd_table(int pid);
 void init_fd_table(void);
 int close(int pid, int fd_num);
+int read(int fd_num, char *r_buffer, int num_bytes, int pid);
 
 #endif /* ifndef _RAMDISK_H_ */
