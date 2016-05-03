@@ -94,7 +94,7 @@ typedef struct fs {
 typedef struct fd_object {
 	int current_pos;
 	int fd_num;
-	int used = 0;
+	int used;
 	inode_t *inode;
 } fd_object_t;
 
@@ -109,9 +109,9 @@ typedef struct pid_fd_entry {
 } pid_fd_entry_t;
 
 // Contains the PID -> fd_table mapping
-typedef struct pid_to_fd_table {
-	pid_fd_entry_t pid_fd_entry[NUM_PID];
-} pid_to_fd_table_t;
+// typedef struct pid_to_fd_table {
+// 	pid_fd_entry_t pid_fd_entry[NUM_PID];
+// } pid_to_fd_table_t;
 
 /* ============================================================= */
 
@@ -125,7 +125,9 @@ inode_t* get_free_inode(fs_t* fs);
 int get_inode_num(fs_t*, char *);
 void get_prefix_and_filename(char* pathname, char* prefix, char* filename, int len);
 dir_entry_t* get_free_entry(fs_t* fs, inode_t*);
+
 block_t* get_free_block(fs_t*);
+
 
 /* printing functions for debugging */
 void print_dir_block(block_t *);
@@ -136,5 +138,11 @@ int init_fs(uint32_t);
 int create(char *);
 int mkdir(char *);
 void cleanup_fs(void);
+
+/* fd operations */
+fd_object_t *create_fd(int pid);
+int open(int pid, char* pathname);
+fd_table_t *get_fd_table(int pid);
+void init_fd_table();
 
 #endif /* ifndef _RAMDISK_H_ */

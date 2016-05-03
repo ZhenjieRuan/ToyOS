@@ -3,6 +3,9 @@
 /* filesystem instance */
 fs_t* fs;
 
+/* fd table head */
+pid_fd_entry_t pid_fd_table[NUM_PID];
+
 int init_fs(uint32_t num_blocks) {
 	/* Getting memory for disc*/
 	/*int i;*/
@@ -125,7 +128,7 @@ int open(int pid, char* pathname) {
 
 }
 
-fd_object *create_fd(int pid) {
+fd_object_t *create_fd(int pid) {
 
 	// Create it
 	// return current fd
@@ -133,7 +136,7 @@ fd_object *create_fd(int pid) {
 	// Find current pid entry
 	
 	fd_table_t *fd_table;
-	if((fd_table = get_fd_table()) == -1) {
+	if((fd_table = get_fd_table(pid)) == -1) {
 		printk("<1> Filled up pid_fd_table, allocate more space\n");
 		return -1;
 	}
@@ -153,10 +156,11 @@ fd_object *create_fd(int pid) {
 }
 
 // returns fd_table corresponding to PID of process
+
+
 fd_table_t *get_fd_table(int pid) {
 
 	int i;
-	fd_table_t *fd_table;
 	for (i = 0; i < NUM_PID; i++) {
 		if (pid == NULL) {
 			pid_fd_table[i].pid = pid;

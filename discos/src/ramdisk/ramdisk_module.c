@@ -12,8 +12,6 @@ static struct file_operations ramdisk_proc_operations;
 
 static struct proc_dir_entry *proc_entry;
 
-static struct pid_to_fd_table_t pid_fd_table;
-
 /* ioctl entry point */
 static int ramdisk_ioctl(struct inode *inode, struct file *file,
 															 unsigned int cmd, unsigned long arg)
