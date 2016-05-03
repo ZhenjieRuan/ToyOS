@@ -23,6 +23,10 @@ static int ramdisk_ioctl(struct inode *inode, struct file *file,
 	if(copy_from_user(args, (ioctl_args_t *)arg, sizeof(ioctl_args_t))) {
 		printk("<1> Error copy from user\n");
 	}
+	size = strnlen_user(args->pathname, 14);
+	pathname = (char *)kmalloc(size, GFP_KERNEL);
+	copy_from_user(pathname, args->pathname, size);
+	printk("Got user path %s\n", args->pathname);
 	switch (cmd) {
 		case RD_INIT:
 			printk("<1> num_blocks:%d\n", args->num_blks);
@@ -39,11 +43,17 @@ static int ramdisk_ioctl(struct inode *inode, struct file *file,
 			printk("<1> Switch case close\n");
 			return close(args->pid, args->fd_num);
 		case RD_CREATE:
-			size = strnlen_user(args->pathname, 14);
-			pathname = (char *)kmalloc(size, GFP_KERNEL);
-			copy_from_user(pathname, args->pathname, size);
-			printk("Got user path %s\n", args->pathname);
 			ret = create(pathname);
+			kfree(pathname);
+			return ret;
+			break;
+		case RD_MKDIR:
+			ret = mkdir(pathname);
+			kfree(pathname);
+			return ret;
+			break;
+		case RD_UNLINK:
+			ret = unlink(pathname);
 			kfree(pathname);
 			return ret;
 			break;
