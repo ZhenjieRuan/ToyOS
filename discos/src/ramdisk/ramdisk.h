@@ -21,10 +21,12 @@
 #define RD_CREATE _IOR(MAGIC_NUM, 1, char *)
 
 #define RD_OPEN _IOR(MAGIC_NUM, 3, char *)
+#define RD_CLOSE _IOR(MAGIC_NUM, 4, char *)
 
 typedef struct ioctl_args {
 	int num_blks;
 	int pid;
+	int fd_num;
 	char* pathname;
 } ioctl_args_t;
 
@@ -147,5 +149,6 @@ fd_object_t *create_fd(int pid);
 int open(int pid, char* pathname);
 fd_table_t *get_fd_table(int pid);
 void init_fd_table(void);
+int close(int pid, int fd_num);
 
 #endif /* ifndef _RAMDISK_H_ */

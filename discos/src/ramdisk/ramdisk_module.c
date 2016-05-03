@@ -31,9 +31,13 @@ static int ramdisk_ioctl(struct inode *inode, struct file *file,
 		case RD_OPEN: 
 			// http://stackoverflow.com/questions/18496282/why-do-i-get-a-label-can-only-be-part-of-a-statement-and-a-declaration-is-not-a
 			; //don't delete 
-			int fd = open(args->pid, args->pathname);
+			int fd;
+			fd = open(args->pid, args->pathname);
 			// Send fd back to user space
 			return fd;
+		case RD_CLOSE:
+			printk("<1> Switch case close\n");
+			return close(args->pid, args->fd_num);
 		case RD_CREATE:
 			size = strnlen_user(args->pathname, 14);
 			pathname = (char *)kmalloc(size, GFP_KERNEL);
@@ -44,6 +48,7 @@ static int ramdisk_ioctl(struct inode *inode, struct file *file,
 			return ret;
 			break;
 		default:
+			printk("<1> hitting default case \n");
 			return -EINVAL;
 			break;			
 	}

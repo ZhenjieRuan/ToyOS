@@ -42,8 +42,14 @@ int test_open(int fd, ioctl_args_t* args) {
 	return ioctl(fd, RD_OPEN, args);
 }
 
+int test_close(int fd, ioctl_args_t* args, int fd_num) {
+	args->fd_num = fd_num;
+	args->pid = (int)getpid();
+	return ioctl(fd, RD_CLOSE, args);
+}
 
 int main() {
+	int ret;
 	int fd = open("/proc/ioctl_ramdisk_test", O_RDWR);
 
 	if (fd == -1) {
@@ -56,11 +62,19 @@ int main() {
 
 	test_create(fd, args);
 
-	int filedesc = test_open(fd, args);
-
+	int filedesc;
+	filedesc = test_open(fd, args);
 	printf("fd num = %d\n", filedesc);
 
 	
+	ret = test_close(fd, args, filedesc);
+	printf("closing %d returns: %d \n", filedesc, ret);
+
+	printf("attempt to close file with madeup fd=77\n");
+	ret = test_close(fd, args, 77);
+	printf("closing %d returns: %d \n", filedesc, ret);
 	close(fd);
+
+	
 	return 0;
 }
