@@ -98,14 +98,39 @@ int create(char* pathname) {
 	return 0;
 }
 
+int close(int pid, int fd_num) {
+	fd_table_t *fd_table;
+	//Use pid to find fd table
+	fd_table = get_fd_table(pid);
+
+	if(fd_table == NULL){
+		printk("<1> could not find pid in pid_fd_table\n");
+		return -1;
+	}
+
+// pid_fd_entry_t pid_fd_table[NUM_PID];
+
+	if(	fd_table->fd_object[fd_num].used == 1 ){ //It's being used
+		fd_table->fd_object[fd_num].used = 0;
+		//This is overkill but keeps state clean.
+		fd_table->fd_object[fd_num].current_pos = 0;
+		fd_table->fd_object[fd_num].inode = NULL;
+		fd_table->fd_object[fd_num].fd_num = 0;
+		return 0; //Success
+	}
+
+	printk("<1> that fd_num was unused\n");
+	return -1; //success
+}
+
 int open(int pid, char* pathname) {
 	//Check if it exists
 	//create fd need pid and inode
 	//set position to zero
 
 	uint16_t inode_num = 0;
-	inode_t *file_inode;
-	
+	fd_object_t *fd_object;
+
 	/* get parent inode num */
 	if ((inode_num = get_inode_num(fs,pathname)) == -1) {
 		printk("<1> The pathname is invalid\n");	
@@ -114,36 +139,40 @@ int open(int pid, char* pathname) {
 
 	printk("<1> File inode number: %d\n", inode_num);
 	
-	fd_object_t *fd_object;
-	if ((fd_object = create_fd(pid)) == -1) {
+
+	fd_object = create_fd(pid);
+	if ( fd_object == NULL) {
 		printk("<1> Filled up fd_table.\n");
 		return -1;
 	}
 
 	// Add inode and set current position to zero
 	fd_object->current_pos = 0;
-	fd_object->inode = inode_num;
+	//fd_object->inode = inode_num;
+	fd_object->inode = &fs->inodes[inode_num];
 
 	return fd_object->fd_num;
 
 }
 
 fd_object_t *create_fd(int pid) {
-
 	// Create it
 	// return current fd
-
 	// Find current pid entry
 	
 	fd_table_t *fd_table;
-	if((fd_table = get_fd_table(pid)) == -1) {
+	fd_object_t *fd_object;
+	int i;
+
+	fd_table = get_fd_table(pid);
+	if(fd_table == NULL) {
 		printk("<1> Filled up pid_fd_table, allocate more space\n");
-		return -1;
+		return NULL;
 	}
 
 	// Scan through fd table and find next availible 
-	fd_object_t *fd_object = fd_table;
-	int i;
+	fd_object = (fd_object_t*) fd_table;
+
 	for (i = 0; i < 1024; i++) {
 		if (fd_object[i].used == 0) {
 			fd_object[i].fd_num = i;
@@ -151,33 +180,30 @@ fd_object_t *create_fd(int pid) {
 			return &fd_object[i];
 		}
 	}
-
-	return -1;
+	return NULL;
 }
 
-// returns fd_table corresponding to PID of process
-
-
+ 
+//Search pid_fd_table for pid corresponding to caller
+//If pid field is 0, we don't have that pid's entry, need 
+//To add it. Returns ptr to fd_table corresponding to PID of process
 fd_table_t *get_fd_table(int pid) {
-
 	int i;
 	for (i = 0; i < NUM_PID; i++) {
-		if (pid == NULL) {
+		if (pid_fd_table[i].pid == 0) { //Found next empty entry.
 			pid_fd_table[i].pid = pid;
 			return &pid_fd_table[i].fd_table;
 		}
-		else if (pid_fd_table[i].pid == pid) {
+		else if (pid_fd_table[i].pid == pid) { //Found correct entry.
 			return &pid_fd_table[i].fd_table;
 		}
 	}
-
-
-	return -1;
+	return NULL; //Table full & no corresponding entry.
 }
 
 // zero out fd_table
 void init_fd_table() {
-	memset(&pid_fd_table, NULL, sizeof(pid_fd_table));
+	memset(&pid_fd_table, 0, sizeof(pid_fd_table));
 }
 
 int mkdir(char* pathname) {

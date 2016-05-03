@@ -22,10 +22,11 @@
 #define RD_INIT   _IOR(MAGIC_NUM, 0, ioctl_args_t*)
 #define RD_CREATE _IOR(MAGIC_NUM, 1, ioctl_args_t*)
 #define RD_OPEN   _IOR(MAGIC_NUM, 3, ioctl_args_t*)
-
+#define RD_CLOSE   _IOR(MAGIC_NUM, 4, ioctl_args_t*)
 typedef struct ioctl_args {
 	int num_blks;
 	int pid;
+	int fd_num;
 	char* pathname;
 } ioctl_args_t;
 
