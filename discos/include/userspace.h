@@ -20,6 +20,8 @@
 /* macros for ioctl calls  */
 #define RD_INIT   _IOR(MAGIC_NUM, 0, ioctl_args_t*)
 #define RD_CREATE _IOR(MAGIC_NUM, 1, ioctl_args_t*)
+#define RD_MKDIR  _IOR(MAGIC_NUM, 2, ioctl_args_t*)
+#define RD_UNLINK _IOR(MAGIC_NUM, 8, ioctl_args_t*)
 
 typedef struct ioctl_args {
 	int num_blks;

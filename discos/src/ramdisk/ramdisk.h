@@ -19,6 +19,8 @@
 /* macros for ioctl calls  */
 #define RD_INIT   _IOR(MAGIC_NUM, 0, int)
 #define RD_CREATE _IOR(MAGIC_NUM, 1, char *)
+#define RD_MKDIR  _IOR(MAGIC_NUM, 2, ioctl_args_t*)
+#define RD_UNLINK _IOR(MAGIC_NUM, 8, ioctl_args_t*)
 
 typedef struct ioctl_args {
 	int num_blks;
@@ -117,11 +119,14 @@ void set_bit_of_bitmap(unsigned char*, int); /* assert bit at offset len */
 void unset_bit_of_bitmap(unsigned char *, int); /* deassert bit at offset len */
 
 /* util functions */
-inode_t* get_free_inode(fs_t* fs);
+inode_t* get_free_inode(fs_t*);
+block_t* get_free_block(fs_t*);
 int get_inode_num(fs_t*, char *);
 void get_prefix_and_filename(char* pathname, char* prefix, char* filename, int len);
 dir_entry_t* get_free_entry(fs_t* fs, inode_t*);
 block_t* get_free_block(fs_t*);
+int check_empty(inode_t*);
+void clear_inode_content(fs_t*, inode_t*);
 
 /* printing functions for debugging */
 void print_dir_block(block_t *);
@@ -129,8 +134,10 @@ void print_inode_info(inode_t *);
 
 /* filesystem operations */
 int init_fs(uint32_t);
+int create_file(char* type, char* pathname);
 int create(char *);
 int mkdir(char *);
+int unlink(char *);
 void cleanup_fs(void);
 
 #endif /* ifndef _RAMDISK_H_ */
