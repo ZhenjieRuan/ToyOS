@@ -128,7 +128,7 @@ int open(int pid, char* pathname) {
 	//create fd need pid and inode
 	//set position to zero
 
-	uint16_t inode_num = 0;
+	int inode_num = 0;
 	fd_object_t *fd_object;
 
 	/* get parent inode num */
