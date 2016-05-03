@@ -5,7 +5,7 @@
 all: clean userspace_compile run
 
 ramdisktest:
-	$(CC) -m32 -Wall -I../../include -o ramdisk_test ramdisk_test.c
+	$(CC) -m32 -Wall -I../../include -o ramdisk_test ramdisk_test.c syscalls.c
 	./ramdisk_test
 
 test: userspace_compile run

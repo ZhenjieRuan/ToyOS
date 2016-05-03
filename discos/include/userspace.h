@@ -12,7 +12,7 @@
 #include <string.h>
 #include <unistd.h>
 
-/* ramdisk size in bytes */
+/* ramdisk num blocks */
 #define NUM_BLKS 8192
 
 /* magic number used for ioctl */
@@ -34,8 +34,10 @@ typedef struct ioctl_args {
 } ioctl_args_t;
 
 /* fs operations */
-int rd_creat(char *);
+int rd_init();
+int rd_create(char *);
 int rd_mkdir(char *);
+int rd_open(char *);
 int rd_close(int );
 int rd_read(int, char *, int );
 int rd_write(int, char *, int);
