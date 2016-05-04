@@ -57,6 +57,8 @@ static int ramdisk_ioctl(struct inode *inode, struct file *file,
 			kfree(pathname);
 			return ret;
 			break;
+		case RD_READDIR:
+			return readdir(args->pid, args->fd_num, args->address);
 		default:
 			printk("<1> hitting default case \n");
 			return -EINVAL;

@@ -31,6 +31,7 @@ typedef struct ioctl_args {
 	int pid;
 	int offset;
 	int fd_num;
+	char *address;
 	char* pathname;
 } ioctl_args_t;
 
@@ -163,5 +164,6 @@ fd_table_t *get_fd_table(int pid);
 void init_fd_table(void);
 int close(int pid, int fd_num);
 int lseek(int pid, int fd, int offset);
+int readdir(int pid, int fd, char *address);
 
 #endif /* ifndef _RAMDISK_H_ */

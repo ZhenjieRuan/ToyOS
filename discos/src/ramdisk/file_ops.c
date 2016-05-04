@@ -253,30 +253,31 @@ int readdir(int pid, int fd, char *address) {
 	inode = fd_object[fd].inode;
 
 	if (strcmp(inode->type, "reg\0") == 0) {
-		printk("<1> Can't call readdir on the regular file.\n", );
+		printk("<1> Can't call readdir on the regular file.\n");
 		return -1;
 	}
 
 	// Check if size greater than offset
-	if (inode->size <= fd_object[fd].offset) {
+	if (inode->size <= fd_object[fd].current_pos) {
 		printk("<1> Read all entries.\n");
 		return 0;
 	}
 
 	// offset -> block_num
-	block_num = (fd_object[fd].offset / 256);
+	block_num = (fd_object[fd].current_pos / 256);
 
 	// block_num -> block
 	if ((block = get_block_by_num(inode, block_num)) == NULL) {
-		printk("<1> Could not get block_num = %d for offset = %d\n", block_num, offset);
+		printk("<1> Could not get block_num = %d for offset = %d\n", block_num, fd_object[fd].current_pos);
 		return -1;
 	}
 
 	// Typecast as a dir entry
-	dir_entry = (dir_entry_t) block;
+	dir_entry = (dir_entry_t *) block;
+	dir_entry += (fd_object[fd].current_pos % 256) / 16;
 
 	// Test if there's any more directory entries
-	if (dir_entry == NULL || dir_entry->name == NULL || dir_entry->inode_num == NULL) {
+	if (dir_entry == NULL || dir_entry->name == 0) {
 		printk("<1> dir_entry is null.\n");
 		return -1;
 	}
@@ -285,22 +286,20 @@ int readdir(int pid, int fd, char *address) {
 	printk("<1> Directory entry %s -- %d\n", dir_entry->name, dir_entry->inode_num);
 
 	// Advance current_pos
-	if (fd_object[fd].offset + 16 >= inode->size) {
-		fd_object[fd].offset = inode->size;
+	if (fd_object[fd].current_pos + 16 >= inode->size) {
+		fd_object[fd].current_pos = inode->size;
 	}
 	else {
-		fd_object[fd].offset += 16;
+		fd_object[fd].current_pos += 16;
 	}
 
-	// Copy to userspace
-	if(copy_to_user(address, dir_entry->name, strlen(dir_entry->name)) != 0) {
+	// Copy to userspace -- Copies both name and inode number
+	if (copy_to_user(address, dir_entry, 16) != 0) {
 		printk("<1> Error Copying bytes to the user.\n");
 		return -1;
 	}
 
 	return 1;
-
-
 }
 
 
