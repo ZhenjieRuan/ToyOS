@@ -19,6 +19,7 @@ static int ramdisk_ioctl(struct inode *inode, struct file *file,
 	int ret = 0;
 	int size;
 	char* pathname;
+	char* data;
 	ioctl_args_t* args = (ioctl_args_t *)kmalloc(sizeof(ioctl_args_t), GFP_KERNEL);
 	if(copy_from_user(args, (ioctl_args_t *)arg, sizeof(ioctl_args_t))) {
 		printk("<1> Error copy from user\n");
@@ -42,7 +43,12 @@ static int ramdisk_ioctl(struct inode *inode, struct file *file,
 		case RD_READ:
 			return read(args->fd_num, args->address, args->num_bytes, args->pid);
 		case RD_WRITE:
-			return write(args->fd_num, args->address, args->num_bytes, args->pid);
+			data = vmalloc(args->num_bytes);
+			copy_from_user(data, args->address, args->num_bytes);
+			printk("<1> Got write data from user: %s\n",data);
+			ret = write(args->fd_num, data, args->num_bytes, args->pid);
+			vfree(data);
+			return ret;
  		case RD_CREATE:
 			ret = create(pathname);
 			kfree(pathname);

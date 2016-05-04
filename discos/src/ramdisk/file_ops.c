@@ -386,9 +386,11 @@ int read(int fd_num, char *address, int num_bytes, int pid) {
 	}
 	copy_to_user(address, kern_buff, offset);
 	vfree(kern_buff);
+	lseek(pid, fd_num, fd_object->current_pos + offset);
 	return offset;
 }
 int write(int fd_num, char *address, int num_bytes, int pid) {
+
 	printk("<1> in write\n");
 	int i, current_pos, bytes_left, cont_flag, offset;
 	fd_table_t *fd_table;   //table 
@@ -403,12 +405,15 @@ int write(int fd_num, char *address, int num_bytes, int pid) {
 		return -1;
 	}
 
-	fd_object = &fd_table->fd_object[fd_num];
+	if ((fd_object = &fd_table->fd_object[fd_num]) == NULL) {
+		printk("<1> Error getting fd object for %d\n", fd_num);
+		return -1;
+	}
 	inode = fd_object->inode;
 	current_pos = fd_object->current_pos;
 	//Gives pointer to ith block of data for inode
 
-	printk("<1> about to enter write loop \n");
+	printk("<1> about to enter write loop, current_pos: %d\n", current_pos);
 	//Write data into kern buff.
 	//args->num_bytes better be positive
 
@@ -420,13 +425,22 @@ int write(int fd_num, char *address, int num_bytes, int pid) {
 		block = get_block_by_num(inode, current_pos / BLK_SIZE);
 		if(block == NULL){
 			printk("<1> got a null block \n");
-			block = set_block_by_num(fs, current_pos / BLK_SIZE);
-
+			block = set_block_by_num(fs, inode, current_pos / BLK_SIZE);
+			if (block == NULL) {
+				printk("<1> Error allocating free block!!!\n");
+				return -1;
+			}
 		}
 
 		//Loop at most 256 times.
 		for(i=0; i<BLK_SIZE; i++){ //get rid of magic nums
+			printk("<1> Here!!!\n");
+			if (block == NULL) {
+				printk("<1> Null block\n");
+				return -1;
+			}
 			block->data[current_pos % BLK_SIZE] = address[offset];
+			printk("<1> Here 1 !!!\n");
 			offset +=1;
 			bytes_left -= 1;
 			current_pos += 1;
@@ -437,9 +451,10 @@ int write(int fd_num, char *address, int num_bytes, int pid) {
 			}
 			if( (current_pos % BLK_SIZE) == 256)
 				break; //Past end of block, need to get ptr to next
-		}
+				}
 	}
 	printk("<1> about to return from write\n");
+	lseek(pid, fd_num, fd_object->current_pos + offset);
 	return offset;
 }
 

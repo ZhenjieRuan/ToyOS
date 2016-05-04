@@ -106,6 +106,8 @@ int test_read(int fd, ioctl_args_t* args, char *address, int num_bytes, int fd_n
 int test_write(int fd, ioctl_args_t* args, char *address, int num_bytes, int fd_num) {
 	args->fd_num = fd_num;
 	args->pid = (int)getpid();
+	args->address = address;
+	args->num_bytes = num_bytes;
 	return ioctl(fd, RD_WRITE, args);
 }
 
@@ -126,8 +128,8 @@ int main() {
 
 	// Testing open
 	int filedesc;
-	// filedesc = test_open(fd, "/file1", args);
-	// printf("fd num = %d\n", filedesc);
+	filedesc = test_open(fd, "/file1", args);
+	printf("fd num = %d\n", filedesc);
 
 
 	printf("about to write to fd %d \n", filedesc);
@@ -135,7 +137,9 @@ int main() {
 	printf("about to read from fd %d \n", filedesc);
 	test_read(fd, args, mydst, 12, filedesc);
 
+	printf("just read %s\n", mydst);
 
+	printf("done \n");
 	// // Testing lseek
 	// int lseek = test_lseek(fd, filedesc, args);
 	// printf("Seeked to 10 in a empty file should be 0 = %d\n", lseek);
@@ -151,9 +155,9 @@ int main() {
 	// close(fd);
 
 	// Test readdir
-	filedesc = test_open(fd, "/", args);
-	ret  = test_readdir(fd, filedesc, args);
-	printf("test_readdir returned %d\n", ret);
+	// filedesc = test_open(fd, "/", args);
+	// ret  = test_readdir(fd, filedesc, args);
+	// printf("test_readdir returned %d\ndmes", ret);
 
 
 	printf("attempt to close file with madeup fd=77\n");
