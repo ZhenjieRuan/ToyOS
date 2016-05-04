@@ -1,0 +1,14 @@
+*.swp
+*~
+tags
+module_test
+.file_ops.o.cmd
+.util.o.d
+file_ops.o
+*.o
+*.ko
+*.cmd
+*.symvers
+*.order
+.tmp_versions/
+ramdisk_moduleko.mod.c
