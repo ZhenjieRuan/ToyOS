@@ -340,6 +340,7 @@ int read(int fd_num, char *address, int num_bytes, int pid) {
 	fd_object_t *fd_object; //object
 	inode_t *inode;         //inode
 	block_t *block;
+	char *kern_buff;
 
 
 	bytes_left = num_bytes;
@@ -356,7 +357,6 @@ int read(int fd_num, char *address, int num_bytes, int pid) {
 
 
 	//Create kernel buffer
-	char *kern_buff;
 	kern_buff = vmalloc( num_bytes );
 	
 	//Write data into kern buff.
@@ -372,7 +372,7 @@ int read(int fd_num, char *address, int num_bytes, int pid) {
 		//Loop at most 256 times.
 		for(i=0; i<BLK_SIZE; i++){ //get rid of magic nums
 			kern_buff[offset] = block->data[current_pos % BLK_SIZE];
-			offset +=1;
+			offset++;
 			bytes_left -= 1;
 			current_pos += 1;
 
@@ -387,16 +387,20 @@ int read(int fd_num, char *address, int num_bytes, int pid) {
 	copy_to_user(address, kern_buff, offset);
 	vfree(kern_buff);
 	lseek(pid, fd_num, fd_object->current_pos + offset);
+	fd_object->current_pos += offset;
+	printk("<1> Read current seek %d\n", fd_object->current_pos);
 	return offset;
 }
 int write(int fd_num, char *address, int num_bytes, int pid) {
 
-	printk("<1> in write\n");
+	
 	int i, current_pos, bytes_left, cont_flag, offset;
 	fd_table_t *fd_table;   //table 
 	fd_object_t *fd_object; //object
 	inode_t *inode;         //inode
 	block_t *block;
+
+	printk("<1> in write\n");
 
 	bytes_left = num_bytes;
 	fd_table = get_fd_table(pid);
@@ -455,6 +459,8 @@ int write(int fd_num, char *address, int num_bytes, int pid) {
 	}
 	printk("<1> about to return from write\n");
 	lseek(pid, fd_num, fd_object->current_pos + offset);
+	fd_object->current_pos += offset;
+	printk("<1> Write current seek %d\n", fd_object->current_pos);
 	return offset;
 }
 

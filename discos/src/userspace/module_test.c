@@ -42,13 +42,11 @@ int test_open(int fd, char *path, ioctl_args_t* args) {
 	return ioctl(fd, RD_OPEN, args);
 }
 
-int test_lseek(int fd, int fd_num, ioctl_args_t* args) {
-
-	args->pathname = "/file1";
+int test_lseek(int fd, int fd_num, int offset, ioctl_args_t* args) {
 
 	args->pid = (int)getpid();
 
-	args->offset = 10;
+	args->offset = offset;
 
 	args->fd_num = fd_num;
 
@@ -60,7 +58,6 @@ int test_readdir(int fd, int fd_num, ioctl_args_t* args) {
 
 	static char name[16];
 	int ret;
-	int index_node_number;
 
 	memset(name, 0, 16);
 
@@ -112,7 +109,6 @@ int test_write(int fd, ioctl_args_t* args, char *address, int num_bytes, int fd_
 }
 
 int main() {
-	int ret;
 	int fd = open("/proc/ioctl_ramdisk_test", O_RDWR);
 	char mysrc[] = "hello world";
 	char mydst[12];
@@ -134,6 +130,9 @@ int main() {
 
 	printf("about to write to fd %d \n", filedesc);
 	test_write(fd, args, mysrc, 12, filedesc);
+
+	test_lseek(fd, filedesc, 0,args);
+
 	printf("about to read from fd %d \n", filedesc);
 	test_read(fd, args, mydst, 12, filedesc);
 
@@ -160,9 +159,9 @@ int main() {
 	// printf("test_readdir returned %d\ndmes", ret);
 
 
-	printf("attempt to close file with madeup fd=77\n");
-	ret = test_close(fd, args, 77);
-	printf("closing %d returns: %d \n", 77, ret);
+	// printf("attempt to close file with madeup fd=77\n");
+	// ret = test_close(fd, args, 77);
+	// printf("closing %d returns: %d \n", 77, ret);
 	
 
 
