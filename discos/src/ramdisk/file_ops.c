@@ -27,13 +27,13 @@ int init_fs(uint32_t num_blocks) {
 	mkdir("/");
 	print_inode_info(&fs->inodes[0]);
 
-	if (strcmp(fs->inodes[10].type, "") == 0) {
-		printk("<1> Empty inode!!!\n");
-	}
+	/*if (strcmp(fs->inodes[10].type, "") == 0) {*/
+		/*printk("<1> Empty inode!!!\n");*/
+	/*}*/
 
-	if (fs->blocks[1].entries[1].inode_num == 0) {
-		printk("<1> Empty dir entry!\n");
-	}
+	/*if (fs->blocks[1].entries[1].inode_num == 0) {*/
+		/*printk("<1> Empty dir entry!\n");*/
+	/*}*/
 
 
 	return 0;
@@ -146,11 +146,11 @@ int close(int pid, int fd_num) {
 		fd_table->fd_object[fd_num].current_pos = 0;
 		fd_table->fd_object[fd_num].inode = NULL;
 		fd_table->fd_object[fd_num].fd_num = 0;
-		return 0; //Success
+		return 0; // Success
 	}
 
 	printk("<1> that fd_num was unused\n");
-	return -1; //success
+	return -1; // Error
 }
 
 int open(int pid, char* pathname) {
