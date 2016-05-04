@@ -163,6 +163,7 @@ int open(int pid, char* pathname) {
 
 // set current_pos to the new offset
 int lseek(int pid, int fd, int offset) {
+	printk("<1> at top of lseek. seeking to %d\n",offset);
 
 	fd_table_t *fd_table;
 	fd_object_t *fd_object;
@@ -199,9 +200,10 @@ int lseek(int pid, int fd, int offset) {
 		fd_object[fd].current_pos = inode->size;
 		return fd_object[fd].current_pos;
 	}
-
+	printk("<1> current pos is %d\n", fd_object[fd].current_pos);
 	// Set file position and return file position
 	fd_object[fd].current_pos = offset;
+	printk("<1> changed pos to %d\n", fd_object[fd].current_pos);
 	return fd_object[fd].current_pos;
 }
 
@@ -452,8 +454,14 @@ int write(int fd_num, char *address, int num_bytes, int pid) {
 				break; //Past end of block, need to get ptr to next
 				}
 	}
+
+	int new_position = fd_object->current_pos + offset;
+	if(new_position > inode->size){
+		inode->size = new_position;
+	}
 	printk("<1> about to return from write\n");
-	lseek(pid, fd_num, fd_object->current_pos + offset);
+	lseek(pid, fd_num, new_position);
+
 	return offset;
 }
 
