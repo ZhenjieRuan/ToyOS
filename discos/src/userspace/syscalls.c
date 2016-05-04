@@ -139,3 +139,32 @@ int rd_unlink(char* pathname) {
 	free(args);
 	return ret;
 }
+
+int rd_readdir(int fd_num, char *address) {
+
+	int ret;
+
+	int index_node_number;
+
+	static char name[16];
+
+	ioctl_args_t* args = malloc(sizeof(ioctl_args_t));
+
+	memset(name, 0, 16);
+
+	args->pid = (int)getpid();
+
+	args->fd_num = fd_num;
+
+	args->address = name;
+
+	ret = ioctl(fd, RD_READDIR, args);
+
+	printf("readdir got kernel ret: %d\n", ret);
+
+	memset(args, 0, sizeof(ioctl_args_t));
+
+	free(args);
+	
+	return ret;
+}
