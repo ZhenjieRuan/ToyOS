@@ -70,13 +70,13 @@ int create_file(char* type, char* pathname) {
 	/* get free spot in parent blocks to fill entry */
 	if ((free_entry_in_parent = get_free_entry(fs, parent_inode)) == NULL) {
 		printk("<1> Error getting free entry spot in parent, parent size:%d, inode_left: %d\n", parent_inode->size, fs->superblock.freeindex);
-		for (i = 0; i < 8; ++i) {
-			if (parent_inode->direct_blks[i] != NULL) {
-				printk("<1> Block %d:\n", i);
-				print_dir_block(parent_inode->direct_blks[i]);
-				printk("<1>=================\n");
-			}
-		}
+		/*for (i = 0; i < 8; ++i) {*/
+			/*if (parent_inode->direct_blks[i] != NULL) {*/
+				/*printk("<1> Block %d:\n", i);*/
+				/*print_dir_block(parent_inode->direct_blks[i]);*/
+				/*printk("<1>=================\n");*/
+			/*}*/
+		/*}*/
 		return -1;
 	}
 

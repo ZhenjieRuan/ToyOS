@@ -146,8 +146,8 @@ dir_entry_t* find_entry_in_single_indirect(single_indirect_t *, char *);
 dir_entry_t* find_entry_in_double_indirect(double_indirect_t *, char *);
 dir_entry_t* get_free_entry(fs_t* fs, inode_t*);
 dir_entry_t* get_free_entry_direct_block(block_t*);
-dir_entry_t* get_free_entry_single_indirect(fs_t*, inode_t*, int);
-dir_entry_t* get_free_entry_double_indirect(fs_t*, inode_t*, int);
+dir_entry_t* get_free_entry_single_indirect(fs_t*, single_indirect_t*, int);
+dir_entry_t* get_free_entry_double_indirect(fs_t*, double_indirect_t*, int);
 
 
 

@@ -125,7 +125,7 @@ int main () {
 	printf("Created %d files!\n", MAX_FILES);
 
   /* Delete all the files created */
-  for (i = 0; i < MAX_FILES; i++) { 
+  for (i = 0; i < MAX_FILES + 1; i++) { 
     sprintf (pathname, PATH_PREFIX "/file%d", i);
     
     retval = UNLINK (pathname);
@@ -260,7 +260,7 @@ int main () {
     exit(EXIT_FAILURE);
   }
   /* Should be all 3s here... */
-  printf ("Data at addr: %s\n", addr);
+	printf ("Data at addr: %s\n", addr);
 
 #endif // TEST_DOUBLE_INDIRECT
 
