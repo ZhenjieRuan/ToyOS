@@ -423,6 +423,9 @@ void clear_inode_content(fs_t* fs, inode_t* inode) {
 }
 
 block_t* get_block_by_num(inode_t* inode, int block_num) {
+	if (inode == NULL) {
+		return NULL;
+	}
 	if (block_num < 8) {
 		return inode->direct_blks[block_num];
 	} else if (block_num < 72) {
@@ -441,6 +444,9 @@ block_t* get_block_by_num(inode_t* inode, int block_num) {
 
 block_t* set_block_by_num(fs_t* fs, inode_t* inode, int block_num) {
 	block_t* new_blk;
+	if (inode == NULL) {
+		return NULL;
+	}
 	if ((new_blk = get_free_block(fs)) == NULL) {
 		printk("<1> No more free blocks\n");
 		return NULL;
