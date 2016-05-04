@@ -33,14 +33,52 @@ void test_create(int fd, ioctl_args_t* args) {
 }
 
 
-int test_open(int fd, ioctl_args_t* args) {
+int test_open(int fd, char *path, ioctl_args_t* args) {
 
-	args->pathname = "/file1";
+	args->pathname = path;
 
 	args->pid = (int)getpid();
 
 	return ioctl(fd, RD_OPEN, args);
 }
+
+int test_lseek(int fd, int fd_num, ioctl_args_t* args) {
+
+	args->pathname = "/file1";
+
+	args->pid = (int)getpid();
+
+	args->offset = 10;
+
+	args->fd_num = fd_num;
+
+	return ioctl(fd, RD_LSEEK, args);
+
+}
+
+int test_readdir(int fd, int fd_num, ioctl_args_t* args) {
+
+	static char name[16];
+	int ret;
+	int index_node_number;
+
+	memset(name, 0, 16);
+
+	args->pid = (int)getpid();
+
+	args->fd_num = fd_num;
+
+	args->address = name;
+
+	while ((ret = ioctl(fd, RD_READDIR, args)) > 0) {
+		printf("ret = %d, filename = %s, inode_num = %u\n", ret, name, *(uint16_t *)(name + 14));
+	}
+
+	return ret;
+
+}
+
+
 
 int test_close(int fd, ioctl_args_t* args, int fd_num) {
 	args->fd_num = fd_num;
@@ -86,18 +124,37 @@ int main() {
 
 	test_create(fd, args);
 
+	// Testing open
 	int filedesc;
-	filedesc = test_open(fd, args);
-	printf("fd num = %d\n", filedesc);
+	// filedesc = test_open(fd, "/file1", args);
+	// printf("fd num = %d\n", filedesc);
+
 
 	printf("about to write to fd %d \n", filedesc);
 	test_write(fd, args, mysrc, 12, filedesc);
 	printf("about to read from fd %d \n", filedesc);
 	test_read(fd, args, mydst, 12, filedesc);
 
+
+	// // Testing lseek
+	// int lseek = test_lseek(fd, filedesc, args);
+	// printf("Seeked to 10 in a empty file should be 0 = %d\n", lseek);
+
 	
-	ret = test_close(fd, args, filedesc);
-	printf("closing %d returns: %d \n", filedesc, ret);
+	// // Testing close
+	// ret = test_close(fd, args, filedesc);
+	// printf("closing %d returns: %d \n", filedesc, ret);
+
+	// printf("attempt to close file with madeup fd=77\n");
+	// ret = test_close(fd, args, 77);
+	// printf("closing %d returns: %d \n", 77, ret);
+	// close(fd);
+
+	// Test readdir
+	filedesc = test_open(fd, "/", args);
+	ret  = test_readdir(fd, filedesc, args);
+	printf("test_readdir returned %d\n", ret);
+
 
 	printf("attempt to close file with madeup fd=77\n");
 	ret = test_close(fd, args, 77);
@@ -109,6 +166,5 @@ int main() {
 
 	close(fd);
 
-	
 	return 0;
 }

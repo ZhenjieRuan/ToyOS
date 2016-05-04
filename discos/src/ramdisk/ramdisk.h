@@ -22,6 +22,7 @@
 #define RD_MKDIR  _IOR(MAGIC_NUM, 2, ioctl_args_t*)
 #define RD_OPEN   _IOR(MAGIC_NUM, 3, char *)
 #define RD_CLOSE  _IOR(MAGIC_NUM, 4, char *)
+<<<<<<< HEAD
 #define RD_READ   _IOR(MAGIC_NUM, 5, ioctl_args_t*)
 #define RD_WRITE  _IOR(MAGIC_NUM, 6, ioctl_args_t*)
 
@@ -33,7 +34,18 @@ typedef struct ioctl_args {
 	int num_bytes;  //size of read
 	char *address; //read buffer
 	int pid;		//caller pid
+=======
+#define RD_LSEEK  _IOR(MAGIC_NUM, 7, char *)
+#define RD_UNLINK _IOR(MAGIC_NUM, 8, ioctl_args_t*)
+#define RD_READDIR _IOR(MAGIC_NUM, 9, ioctl_args_t*)
+
+typedef struct ioctl_args {
+	int num_blks;
+	int pid;
+	int offset;
+>>>>>>> discos-sean
 	int fd_num;
+	char *address;
 	char* pathname;
 } ioctl_args_t;
 
@@ -44,6 +56,7 @@ typedef struct ioctl_args {
 #define NUM_BLOCKS 7931
 #define NUM_DIRECT_BLK 8
 #define NUM_INODES 1024
+#define NUM_BYTES_IN_INODE 1067008
 
 typedef struct dir_entry {
 	char name[14];
@@ -67,7 +80,7 @@ typedef struct double_indirect {
 
 
 /**
- * should name the struct to inode otherwise will conflict with
+ * shouldn't name the struct to inode otherwise will conflict with
  * linux/fs definition
  */
 typedef struct my_inode { 
@@ -121,11 +134,6 @@ typedef struct pid_fd_entry {
 	fd_table_t fd_table;
 } pid_fd_entry_t;
 
-// Contains the PID -> fd_table mapping
-// typedef struct pid_to_fd_table {
-// 	pid_fd_entry_t pid_fd_entry[NUM_PID];
-// } pid_to_fd_table_t;
-
 /* ============================================================= */
 
 /* bitmap interfaces */
@@ -172,4 +180,8 @@ void init_fd_table(void);
 int close(int pid, int fd_num);
 int read(int fd_num, char *address, int num_bytes, int pid);
 int write(int fd_num, char *address, int num_bytes, int pid);
+int lseek(int pid, int fd, int offset);
+int readdir(int pid, int fd, char *address);
+
+
 #endif /* ifndef _RAMDISK_H_ */

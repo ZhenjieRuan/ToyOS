@@ -48,6 +48,8 @@ static int ramdisk_ioctl(struct inode *inode, struct file *file,
 			kfree(pathname);
 			return ret;
 			break;
+		case RD_LSEEK:
+			return lseek(args->pid, args->fd_num, args->offset);
 		case RD_MKDIR:
 			printk("<1> Mkdir %s\n", pathname);
 			ret = mkdir(pathname);
@@ -59,6 +61,8 @@ static int ramdisk_ioctl(struct inode *inode, struct file *file,
 			kfree(pathname);
 			return ret;
 			break;
+		case RD_READDIR:
+			return readdir(args->pid, args->fd_num, args->address);
 		default:
 			printk("<1> hitting default case \n");
 			return -EINVAL;
