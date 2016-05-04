@@ -25,10 +25,10 @@
 
 #define USE_RAMDISK
 #define TEST1
-/*#define TEST2*/
-/*#define TEST3*/
+#define TEST2
+#define TEST3
 #define TEST4
-#define TEST5
+/*#define TEST5*/
 
 // Insert a string for the pathname prefix here. For the ramdisk, it should be
 // NULL

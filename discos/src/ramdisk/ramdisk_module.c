@@ -23,34 +23,45 @@ static int ramdisk_ioctl(struct inode *inode, struct file *file,
 	int size;
 	char* pathname;
 	char* data;
-	ioctl_args_t* args = (ioctl_args_t *)kmalloc(sizeof(ioctl_args_t), GFP_KERNEL);
+	ioctl_args_t* args = (ioctl_args_t *)vmalloc(sizeof(ioctl_args_t));
 	if(copy_from_user(args, (ioctl_args_t *)arg, sizeof(ioctl_args_t))) {
 		printk("<1> Error copy from user\n");
 	}
-	size = strnlen_user(args->pathname, 14);
-	pathname = (char *)kmalloc(size, GFP_KERNEL);
-	copy_from_user(pathname, args->pathname, size);
+	if (args->pathname != NULL) {
+		size = strnlen_user(args->pathname, 14);
+		pathname = (char *)kmalloc(size, GFP_KERNEL);
+		copy_from_user(pathname, args->pathname, size);
+	}
 	/*printk("Got user path %s\n", args->pathname);*/
 	switch (cmd) {
 		case RD_INIT:
 			printk("<1> num_blocks:%d\n", args->num_blks);
 			init_fd_table();		
+			ret = init_fs(args->num_blks);
+			vfree(args);
 			spin_unlock(&my_lock);
-			return init_fs(args->num_blks);
+			return ret;
 		case RD_OPEN:
 			printk("<1> Opening %s\n", args->pathname);
 			// Send fd back to user space
+			ret = open(args->pid, args->pathname);
+			vfree(args);
 			spin_unlock(&my_lock);
-			return open(args->pid, args->pathname);
+			return ret;
 		case RD_CLOSE:
 			printk("<1> Switch case close\n");
+			ret = close(args->pid, args->fd_num);
+			vfree(args);
 			spin_unlock(&my_lock);
-			return close(args->pid, args->fd_num);
+			return ret;
 		case RD_READ:
+			ret = read(args->fd_num, args->address, args->num_bytes, args->pid);
+			vfree(args);
 			spin_unlock(&my_lock);
-			return read(args->fd_num, args->address, args->num_bytes, args->pid);
+			return ret;
 		case RD_WRITE:
 			data = vmalloc(args->num_bytes);
+			printk("<1> Here!\n");
 			copy_from_user(data, args->address, args->num_bytes);
 			printk("<1> Got write data from user: %s\n",data);
 			ret = write(args->fd_num, data, args->num_bytes, args->pid);
@@ -60,30 +71,38 @@ static int ramdisk_ioctl(struct inode *inode, struct file *file,
  		case RD_CREATE:
 			ret = create(pathname);
 			kfree(pathname);
+			vfree(args);
 			spin_unlock(&my_lock);
 			return ret;
 			break;
 		case RD_LSEEK:
+			ret = lseek(args->pid, args->fd_num, args->offset);
+			vfree(args);
 			spin_unlock(&my_lock);
-			return lseek(args->pid, args->fd_num, args->offset);
+			return ret;
 		case RD_MKDIR:
 			printk("<1> Mkdir %s\n", pathname);
 			ret = mkdir(pathname);
 			kfree(pathname);
+			vfree(args);
 			spin_unlock(&my_lock);
 			return ret;
 			break;
 		case RD_UNLINK:
 			ret = unlink(pathname);
 			kfree(pathname);
+			vfree(args);
 			spin_unlock(&my_lock);
 			return ret;
 			break;
 		case RD_READDIR:
+			ret = readdir(args->pid, args->fd_num, args->address);
+			vfree(args);
 			spin_unlock(&my_lock);
-			return readdir(args->pid, args->fd_num, args->address);
+			return ret;
 		default:
 			printk("<1> hitting default case \n");
+			vfree(args);
 			spin_unlock(&my_lock);
 			return -EINVAL;
 			break;			
