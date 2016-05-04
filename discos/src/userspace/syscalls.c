@@ -17,7 +17,7 @@ int rd_init() {
 
 	ret = ioctl(fd, RD_INIT, args);
 
-	printf("Init got kernel ret: %d\n", ret);
+	/*printf("Init got kernel ret: %d\n", ret);*/
 
 
 	free(args);
@@ -33,7 +33,7 @@ int rd_create(char* pathname) {
 
 	ret = ioctl(fd, RD_CREATE, args);
 
-	printf("Create got kernel ret: %d\n", ret);
+	/*printf("Create got kernel ret: %d\n", ret);*/
 
 
 	free(args);
@@ -49,7 +49,7 @@ int rd_mkdir(char* pathname) {
 
 	ret = ioctl(fd, RD_MKDIR, args);
 
-	printf("Mkdir got kernel ret: %d\n", ret);
+	/*printf("Mkdir got kernel ret: %d\n", ret);*/
 
 	free(args);
 	return ret;
@@ -65,7 +65,7 @@ int rd_open(char* pathname) {
 	args->pid = (int)getpid();
 
 	ret = ioctl(fd, RD_OPEN, args);
-	printf("Open got kernel ret: %d\n", ret);
+	/*printf("Open got kernel ret: %d\n", ret);*/
 
 	free(args);
 	return ret;
@@ -81,7 +81,7 @@ int rd_close(int fd_num) {
 	args->pid = (int)getpid();
 
 	ret = ioctl(fd, RD_CLOSE, args);
-	printf("Close got kernel ret: %d\n", ret);
+	/*printf("Close got kernel ret: %d\n", ret);*/
 
 	free(args);
 	return ret;
@@ -98,7 +98,7 @@ int rd_read(int fd_num, char* address, int num_bytes) {
 	args->num_bytes = num_bytes;
 
 	ret = ioctl(fd, RD_READ, args);
-	printf("Read got kernel ret: %d\n", ret);
+	/*printf("Read got kernel ret: %d\n", ret);*/
 
 	free(args);
 	return ret;
@@ -115,7 +115,7 @@ int rd_write(int fd_num, char* address, int num_bytes) {
 	args->num_bytes = num_bytes;
 
 	ret = ioctl(fd, RD_WRITE, args);
-	printf("Write got kernel ret: %d\n", ret);
+	/*printf("Write got kernel ret: %d\n", ret);*/
 
 	free(args);
 	return ret;
@@ -131,7 +131,7 @@ int rd_lseek(int fd_num, int offset) {
 	args->fd_num = fd_num;	
 
 	ret = ioctl(fd, RD_LSEEK, args);
-	printf("Lseek got kernel ret: %d\n", ret);
+	/*printf("Lseek got kernel ret: %d\n", ret);*/
 
 	free(args);
 	return ret;
@@ -145,7 +145,7 @@ int rd_unlink(char* pathname) {
 
 	ret = ioctl(fd, RD_UNLINK, args);
 
-	printf("Unlink got kernel ret: %d\n", ret);
+	/*printf("Unlink got kernel ret: %d\n", ret);*/
 
 	memset(args, 0, sizeof(ioctl_args_t));
 
@@ -167,7 +167,7 @@ int rd_readdir(int fd_num, char *address) {
 
 	ret = ioctl(fd, RD_READDIR, args);
 
-	printf("readdir got kernel ret: %d\n", ret);
+	/*printf("readdir got kernel ret: %d\n", ret);*/
 
 	memset(args, 0, sizeof(ioctl_args_t));
 

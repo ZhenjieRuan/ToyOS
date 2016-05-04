@@ -41,7 +41,7 @@ int init_fs(uint32_t num_blocks) {
 
 int create_file(char* type, char* pathname) {
 	int len = strlen(pathname);
-	int parent = 0, i = 0;
+	int parent = 0;
 	inode_t *parent_inode, *file_inode;
 	dir_entry_t* free_entry_in_parent;
 	char *prefix = kmalloc(len, GFP_KERNEL);
@@ -87,11 +87,14 @@ int create_file(char* type, char* pathname) {
 	/*printk("<1> Free inode: %d\n", file_inode->num);*/
 
 	strcpy(free_entry_in_parent->name, filename);
+	/*printk("here 1\n");*/
 	free_entry_in_parent->inode_num = file_inode->num;
+	/*printk("here 2\n");*/
 
 	parent_inode->size += 16;
 
 	strcpy(file_inode->type, type);
+	/*printk("here 3\n");*/
 
 	/*print_dir_block(get_block_by_num(parent_inode, 0));*/
 
