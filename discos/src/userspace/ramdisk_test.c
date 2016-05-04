@@ -28,7 +28,7 @@
 #define TEST2
 #define TEST3
 #define TEST4
-/*#define TEST5*/
+#define TEST5
 
 // Insert a string for the pathname prefix here. For the ramdisk, it should be
 // NULL
@@ -372,7 +372,7 @@ int main () {
     
       memset (pathname, 0, 80);
     }  
-    
+		printf("(Parent) Finished!\n");
   }
   else {
 		/* child process */
@@ -391,6 +391,7 @@ int main () {
       
       memset (pathname, 0, 80);
     }
+		printf("(Child) Finished!\n");
   }
 
 #endif // TEST5

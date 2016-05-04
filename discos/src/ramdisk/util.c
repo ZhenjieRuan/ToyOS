@@ -437,6 +437,8 @@ block_t* get_block_by_num(inode_t* inode, int block_num) {
 			if (inode->double_indirect->blocks[(block_num - 72)/64] != NULL) {
 				return inode->double_indirect->blocks[(block_num - 72)/64]->blocks[(block_num - 72)%64];
 			}
+		} else {
+			printk("<1> Null double indirect block!!!\n");
 		}
 	}
 	return NULL;
@@ -457,12 +459,38 @@ block_t* set_block_by_num(fs_t* fs, inode_t* inode, int block_num) {
 	} else if (block_num < 72) {
 		if (inode->single_indirect != NULL) {
 			inode->single_indirect->blocks[block_num - 8] = new_blk;
+		} else {
+			inode->single_indirect = (single_indirect_t*)new_blk;
+			if ((new_blk = get_free_block(fs)) == NULL) {
+				printk("<1> No more free blocks\n");
+				return NULL;
+			}
+			inode->single_indirect->blocks[0] = new_blk;
 		}
 	} else if (block_num < 4168) {
 		if (inode->double_indirect != NULL) {
 			if (inode->double_indirect->blocks[(block_num - 72)/64] != NULL) {
 				inode->double_indirect->blocks[(block_num - 72)/64]->blocks[(block_num - 72)%64] = new_blk;
+			} else {
+				inode->double_indirect->blocks[(block_num - 72)/64] = new_blk;
+				if ((new_blk = get_free_block(fs)) == NULL) {
+					printk("<1> No more free blocks\n");
+					return NULL;
+				}
+				inode->double_indirect->blocks[(block_num - 72)/64]->blocks[0] = new_blk;
 			}
+		} else {
+			inode->double_indirect = (double_indirect_t*)new_blk;
+			if ((new_blk = get_free_block(fs)) == NULL) {
+				printk("<1> No more free blocks\n");
+				return NULL;
+			}
+			inode->double_indirect->blocks[0] = new_blk;
+			if ((new_blk = get_free_block(fs)) == NULL) {
+				printk("<1> No more free blocks\n");
+				return NULL;
+			}
+			inode->double_indirect->blocks[0]->blocks[0] = new_blk;
 		}
 	}
 	return new_blk;

@@ -20,9 +20,8 @@ static int ramdisk_ioctl(struct inode *inode, struct file *file,
 {
 	spin_lock(&my_lock);
 	int ret = 0;
-	int size;
-	char* pathname;
-	char* data;
+	int size, left, flag;
+	char *pathname, *data, *from;
 	ioctl_args_t* args = (ioctl_args_t *)vmalloc(sizeof(ioctl_args_t));
 	if(copy_from_user(args, (ioctl_args_t *)arg, sizeof(ioctl_args_t))) {
 		printk("<1> Error copy from user\n");
@@ -61,10 +60,27 @@ static int ramdisk_ioctl(struct inode *inode, struct file *file,
 			return ret;
 		case RD_WRITE:
 			data = vmalloc(args->num_bytes);
+			flag = 1;
+			left = args->num_bytes;
+			from = args->address;
+			while (flag) {
+				if (left > 4096) {
+					ret = copy_from_user(data, from, 4096);
+					left -= 4096;
+					data += 4096;
+					from += 4096;
+					printk("<1> ret: %d left:%d\n", ret, left);
+				} else {
+					ret = copy_from_user(data, from, left);
+					data += left;
+					printk("<1> ret: %d left:%d\n", ret, left);
+					flag = 0;
+				}
+			}
 			printk("<1> Here!\n");
-			copy_from_user(data, args->address, args->num_bytes);
-			printk("<1> Got write data from user: %s\n",data);
-			ret = write(args->fd_num, data, args->num_bytes, args->pid);
+			/*copy_from_user(data, args->address, args->num_bytes);*/
+			/*printk("<1> Got write data from user: %s\n",data);*/
+			ret = write(args->fd_num, data - args->num_bytes, args->num_bytes, args->pid);
 			vfree(data);
 			spin_unlock(&my_lock);
 			return ret;

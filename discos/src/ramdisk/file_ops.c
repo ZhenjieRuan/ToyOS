@@ -69,7 +69,7 @@ int create_file(char* type, char* pathname) {
 
 	/* get free spot in parent blocks to fill entry */
 	if ((free_entry_in_parent = get_free_entry(fs, parent_inode)) == NULL) {
-		printk("<1> Error getting free entry spot in parent, parent size:%d\n", parent_inode->size);
+		printk("<1> Error getting free entry spot in parent, parent size:%d, inode_left: %d\n", parent_inode->size, fs->superblock.freeindex);
 		for (i = 0; i < 8; ++i) {
 			if (parent_inode->direct_blks[i] != NULL) {
 				printk("<1> Block %d:\n", i);
@@ -337,7 +337,9 @@ void init_fd_table() {
 
 //Read from cursor -> < cursor+num_bytes
 int read(int fd_num, char *address, int num_bytes, int pid) {
-	int i, current_pos, bytes_left, cont_flag, offset;
+	int i, current_pos, bytes_left, cont_flag, offset, ret;
+	int left = num_bytes, flag = 1;
+	char *from, *to;
 	fd_table_t *fd_table;   //table 
 	fd_object_t *fd_object; //object
 	inode_t *inode;         //inode
@@ -369,7 +371,11 @@ int read(int fd_num, char *address, int num_bytes, int pid) {
 	cont_flag = 1; //Do we continue? 
 	while(cont_flag){
 		//Get the block corresponding to cursor
+		printk("<1> In read loop, current pos: %d should get block: %d\n", current_pos, current_pos/BLK_SIZE);
 		block = get_block_by_num(inode, current_pos / BLK_SIZE);
+		if (block == NULL) {
+			return -1;
+		}
 
 		//Loop at most 256 times.
 		for(i=0; i<BLK_SIZE; i++){ //get rid of magic nums
@@ -382,11 +388,29 @@ int read(int fd_num, char *address, int num_bytes, int pid) {
 				cont_flag = 0; //Done reading
 				break;
 			}
-			if( (current_pos % BLK_SIZE) == 256)
+			if( (current_pos % BLK_SIZE) == 0)
 				break; //Past end of block, need to get ptr to next
 		}
 	}
-	copy_to_user(address, kern_buff, offset);
+
+	from = kern_buff;
+	to = address;
+
+	while (flag) {
+		if (left > 4096) {
+			ret = copy_to_user(to, from, 4096);
+			left -= 4096;
+			to += 4096;
+			from += 4096;
+			printk("<1> ret: %d left:%d\n", ret, left);
+		} else {
+			ret = copy_to_user(to, from, left);
+			printk("<1> ret: %d left:%d\n", ret, left);
+			flag = 0;
+		}
+	}
+
+	/*copy_to_user(address, kern_buff, offset);*/
 	vfree(kern_buff);
 	lseek(pid, fd_num, fd_object->current_pos + offset);
 	return offset;
@@ -424,6 +448,7 @@ int write(int fd_num, char *address, int num_bytes, int pid) {
 	offset = 0;
 	cont_flag = 1; //Do we continue? 
 	while(cont_flag){
+		printk("<1> In write loop, current_pos: %d\n", current_pos);
 		//Get the block corresponding to cursor
 		block = get_block_by_num(inode, current_pos / BLK_SIZE);
 		if(block == NULL){
@@ -450,7 +475,7 @@ int write(int fd_num, char *address, int num_bytes, int pid) {
 				cont_flag = 0; //Done reading
 				break;
 			}
-			if((current_pos % BLK_SIZE) == 256)
+			if((current_pos % BLK_SIZE) == 0)
 				break; //Past end of block, need to get ptr to next
 				}
 	}
