@@ -125,7 +125,7 @@ int main () {
 	printf("Created %d files!\n", MAX_FILES);
 
   /* Delete all the files created */
-  for (i = 0; i < MAX_FILES + 1; i++) { 
+  for (i = 0; i < MAX_FILES; i++) { 
     sprintf (pathname, PATH_PREFIX "/file%d", i);
     
     retval = UNLINK (pathname);
@@ -343,6 +343,7 @@ int main () {
 
 		/*index_node_number = atoi(&addr[14]);*/
 		printf ("Contents at addr: [%s,%d]\n", addr, *(uint16_t *)(addr + 14));
+		/*printf ("Contents at addr: [%s,%d]\n", addr, index_node_number);*/
 	}
 #endif // USE_RAMDISK
 #endif // TEST4

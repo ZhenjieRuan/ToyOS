@@ -242,7 +242,9 @@ dir_entry_t* get_free_entry(fs_t* fs, inode_t* parent) {
 			free_entry = get_free_entry_direct_block(current_blk);
 			if (free_entry != NULL) return free_entry;
 		}
-	} else if (region < 72) {
+		region = 8;
+	}
+	if (region > 7 && region < 72) {
 		/* free spot in single indirect */
 		if (parent->single_indirect == NULL) {
 			printk("<1> Null si blk\n");
@@ -252,8 +254,12 @@ dir_entry_t* get_free_entry(fs_t* fs, inode_t* parent) {
 			}
 			/*parent->single_indirect = new_blk;*/
 		}
-		return get_free_entry_single_indirect(fs,parent->single_indirect, region - 8);
-	} else if (region < 4168) {
+		if ((free_entry = get_free_entry_single_indirect(fs,parent->single_indirect, region - 8)) != NULL) {
+			return free_entry;
+		}
+		region = 72;
+	}
+	if (region > 71 && region < 4168) {
 		/* free spot in double indirect */
 		if (parent->double_indirect == NULL) {
 			if ((parent->double_indirect = (double_indirect_t *)get_free_block(fs)) == NULL) {
