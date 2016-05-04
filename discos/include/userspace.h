@@ -31,7 +31,7 @@
 typedef struct ioctl_args {
 	int num_blks;   
 	int num_bytes;  //size of read
-	char *r_buffer; //read buffer
+	char *address;  //read/write buffer
 	int pid;		//caller pid
 	int fd_num;
 	char* pathname;

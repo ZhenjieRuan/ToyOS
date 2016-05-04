@@ -28,13 +28,15 @@
 
 #define RD_UNLINK _IOR(MAGIC_NUM, 8, ioctl_args_t*)
 
-
 typedef struct ioctl_args {
-	int num_blks;
-	int pid;
+	int num_blks;   
+	int num_bytes;  //size of read
+	char *address; //read buffer
+	int pid;		//caller pid
 	int fd_num;
 	char* pathname;
 } ioctl_args_t;
+
 
 /* fs constants */
 #define BLK_SIZE 256
@@ -168,6 +170,6 @@ int open(int pid, char* pathname);
 fd_table_t *get_fd_table(int pid);
 void init_fd_table(void);
 int close(int pid, int fd_num);
-int read(int fd_num, char *r_buffer, int num_bytes, int pid);
-
+int read(int fd_num, char *address, int num_bytes, int pid);
+int write(int fd_num, char *address, int num_bytes, int pid);
 #endif /* ifndef _RAMDISK_H_ */

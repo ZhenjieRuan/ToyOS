@@ -104,28 +104,7 @@ int create(char* pathname) {
 	return create_file("reg\0", pathname);
 }
 
-int mkdir(char* pathname) {
-	inode_t* inode;
-	block_t* block;
 
-	/* creating root dir */
-	if (strcmp(pathname, "/") == 0) {
-		inode = &fs->inodes[0];
-		block = &fs->blocks[0];
-		strcpy(inode->type, "dir\0");
-		inode->size = 0;
-		inode->num = 0;
-		inode->direct_blks[0] = block;
-		set_bit_of_bitmap(fs->bitmap, 0);
-		fs->superblock.freeblocks--;
-		fs->superblock.freeindex--;
-	} else {
-		return create_file("dir\0", pathname);
-	}
-
-
-	return 0;
-}
 
 
 int close(int pid, int fd_num) {
@@ -236,7 +215,7 @@ void init_fd_table() {
 }
 
 //Read from cursor -> < cursor+num_bytes
-int read(int fd, char *r_buffer, int num_bytes, int pid) {
+int read(int fd_num, char *address, int num_bytes, int pid) {
 	int i, current_pos, bytes_left, cont_flag, offset;
 	fd_table_t *fd_table;   //table 
 	fd_object_t *fd_object; //object
@@ -246,6 +225,11 @@ int read(int fd, char *r_buffer, int num_bytes, int pid) {
 
 	bytes_left = num_bytes;
 	fd_table = get_fd_table(pid);
+	if(fd_table == NULL){
+		printk("<1> could not find pid in pid_fd_table\n");
+		return -1;
+	}
+
 	fd_object = &fd_table->fd_object[fd_num];
 	inode = fd_object->inode;
 	current_pos = fd_object->current_pos;
@@ -281,29 +265,31 @@ int read(int fd, char *r_buffer, int num_bytes, int pid) {
 				break; //Past end of block, need to get ptr to next
 		}
 	}
-	return -1;
+	copy_to_user(address, kern_buff, offset);
+	vfree(kern_buff);
+	return offset;
 }
-
-int write(int fd, char *r_buffer, int num_bytes, int pid) {
+int write(int fd_num, char *address, int num_bytes, int pid) {
+	printk("<1> in write\n");
 	int i, current_pos, bytes_left, cont_flag, offset;
 	fd_table_t *fd_table;   //table 
 	fd_object_t *fd_object; //object
 	inode_t *inode;         //inode
 	block_t *block;
 
-
 	bytes_left = num_bytes;
 	fd_table = get_fd_table(pid);
+	if(fd_table == NULL){
+		printk("<1> could not find pid in pid_fd_table\n");
+		return -1;
+	}
+
 	fd_object = &fd_table->fd_object[fd_num];
 	inode = fd_object->inode;
 	current_pos = fd_object->current_pos;
 	//Gives pointer to ith block of data for inode
 
-
-	//Create kernel buffer
-	char *kern_buff;
-	kern_buff = vmalloc( num_bytes );
-	
+	printk("<1> about to enter write loop \n");
 	//Write data into kern buff.
 	//args->num_bytes better be positive
 
@@ -313,11 +299,15 @@ int write(int fd, char *r_buffer, int num_bytes, int pid) {
 	while(cont_flag){
 		//Get the block corresponding to cursor
 		block = get_block_by_num(inode, current_pos / BLK_SIZE);
+		if(block == NULL){
+			printk("<1> got a null block \n");
+			block = set_block_by_num(fs, current_pos / BLK_SIZE);
+
+		}
 
 		//Loop at most 256 times.
 		for(i=0; i<BLK_SIZE; i++){ //get rid of magic nums
-//			kern_buff[offset] = block->data[current_pos % BLK_SIZE];
-//write here
+			block->data[current_pos % BLK_SIZE] = address[offset];
 			offset +=1;
 			bytes_left -= 1;
 			current_pos += 1;
@@ -330,10 +320,9 @@ int write(int fd, char *r_buffer, int num_bytes, int pid) {
 				break; //Past end of block, need to get ptr to next
 		}
 	}
-	return -1;
+	printk("<1> about to return from write\n");
+	return offset;
 }
-
-
 
 
 int mkdir(char* pathname) {
