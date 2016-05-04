@@ -339,8 +339,8 @@ int main () {
 			exit(EXIT_FAILURE);
 		}
 
-		index_node_number = atoi(&addr[14]);
-		printf ("Contents at addr: [%s,%d]\n", addr, index_node_number);
+		/*index_node_number = atoi(&addr[14]);*/
+		printf ("Contents at addr: [%s,%d]\n", addr, *(uint16_t *)(addr + 14));
 	}
 #endif // USE_RAMDISK
 #endif // TEST4
