@@ -130,8 +130,8 @@ int main() {
 
 	printf("about to write to fd %d \n", filedesc);
 	test_write(fd, args, mysrc, 12, filedesc);
-
-	test_lseek(fd, filedesc, 0,args);
+	
+	test_lseek(fd, filedesc, 10,args);
 
 	printf("about to read from fd %d \n", filedesc);
 	test_read(fd, args, mydst, 12, filedesc);

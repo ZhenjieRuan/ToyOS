@@ -69,7 +69,7 @@ int create_file(char* type, char* pathname) {
 
 	/* get free spot in parent blocks to fill entry */
 	if ((free_entry_in_parent = get_free_entry(fs, parent_inode)) == NULL) {
-		printk("<1> Error getting free entry spot in parent, parent size:%d\n", parent_inode->size);
+		printk("<1> Error getting free entry spot in parent, parent size:%d, inode_left: %d\n", parent_inode->size, fs->superblock.freeindex);
 		for (i = 0; i < 8; ++i) {
 			if (parent_inode->direct_blks[i] != NULL) {
 				printk("<1> Block %d:\n", i);
@@ -163,6 +163,7 @@ int open(int pid, char* pathname) {
 
 // set current_pos to the new offset
 int lseek(int pid, int fd, int offset) {
+	printk("<1> at top of lseek. seeking to %d\n",offset);
 
 	fd_table_t *fd_table;
 	fd_object_t *fd_object;
@@ -199,9 +200,10 @@ int lseek(int pid, int fd, int offset) {
 		fd_object[fd].current_pos = inode->size;
 		return fd_object[fd].current_pos;
 	}
-
+	printk("<1> current pos is %d\n", fd_object[fd].current_pos);
 	// Set file position and return file position
 	fd_object[fd].current_pos = offset;
+	printk("<1> changed pos to %d\n", fd_object[fd].current_pos);
 	return fd_object[fd].current_pos;
 }
 
@@ -335,7 +337,9 @@ void init_fd_table() {
 
 //Read from cursor -> < cursor+num_bytes
 int read(int fd_num, char *address, int num_bytes, int pid) {
-	int i, current_pos, bytes_left, cont_flag, offset;
+	int i, current_pos, bytes_left, cont_flag, offset, ret;
+	int left = num_bytes, flag = 1;
+	char *from, *to;
 	fd_table_t *fd_table;   //table 
 	fd_object_t *fd_object; //object
 	inode_t *inode;         //inode
@@ -367,7 +371,11 @@ int read(int fd_num, char *address, int num_bytes, int pid) {
 	cont_flag = 1; //Do we continue? 
 	while(cont_flag){
 		//Get the block corresponding to cursor
+		printk("<1> In read loop, current pos: %d should get block: %d\n", current_pos, current_pos/BLK_SIZE);
 		block = get_block_by_num(inode, current_pos / BLK_SIZE);
+		if (block == NULL) {
+			return -1;
+		}
 
 		//Loop at most 256 times.
 		for(i=0; i<BLK_SIZE; i++){ //get rid of magic nums
@@ -380,17 +388,36 @@ int read(int fd_num, char *address, int num_bytes, int pid) {
 				cont_flag = 0; //Done reading
 				break;
 			}
-			if( (current_pos % BLK_SIZE) == 256)
+			if( (current_pos % BLK_SIZE) == 0)
 				break; //Past end of block, need to get ptr to next
 		}
 	}
-	copy_to_user(address, kern_buff, offset);
+
+	from = kern_buff;
+	to = address;
+
+	while (flag) {
+		if (left > 4096) {
+			ret = copy_to_user(to, from, 4096);
+			left -= 4096;
+			to += 4096;
+			from += 4096;
+			printk("<1> ret: %d left:%d\n", ret, left);
+		} else {
+			ret = copy_to_user(to, from, left);
+			printk("<1> ret: %d left:%d\n", ret, left);
+			flag = 0;
+		}
+	}
+
+	/*copy_to_user(address, kern_buff, offset);*/
 	vfree(kern_buff);
 	lseek(pid, fd_num, fd_object->current_pos + offset);
 	fd_object->current_pos += offset;
 	printk("<1> Read current seek %d\n", fd_object->current_pos);
 	return offset;
 }
+
 int write(int fd_num, char *address, int num_bytes, int pid) {
 
 	
@@ -425,6 +452,7 @@ int write(int fd_num, char *address, int num_bytes, int pid) {
 	offset = 0;
 	cont_flag = 1; //Do we continue? 
 	while(cont_flag){
+		printk("<1> In write loop, current_pos: %d\n", current_pos);
 		//Get the block corresponding to cursor
 		block = get_block_by_num(inode, current_pos / BLK_SIZE);
 		if(block == NULL){
@@ -438,13 +466,11 @@ int write(int fd_num, char *address, int num_bytes, int pid) {
 
 		//Loop at most 256 times.
 		for(i=0; i<BLK_SIZE; i++){ //get rid of magic nums
-			printk("<1> Here!!!\n");
 			if (block == NULL) {
 				printk("<1> Null block\n");
 				return -1;
 			}
 			block->data[current_pos % BLK_SIZE] = address[offset];
-			printk("<1> Here 1 !!!\n");
 			offset +=1;
 			bytes_left -= 1;
 			current_pos += 1;
@@ -453,14 +479,19 @@ int write(int fd_num, char *address, int num_bytes, int pid) {
 				cont_flag = 0; //Done reading
 				break;
 			}
-			if( (current_pos % BLK_SIZE) == 256)
+			if((current_pos % BLK_SIZE) == 0)
 				break; //Past end of block, need to get ptr to next
 				}
 	}
+
+	int new_position = fd_object->current_pos + offset;
+	if(new_position > inode->size){
+		inode->size = new_position;
+	}
 	printk("<1> about to return from write\n");
-	lseek(pid, fd_num, fd_object->current_pos + offset);
-	fd_object->current_pos += offset;
-	printk("<1> Write current seek %d\n", fd_object->current_pos);
+
+	lseek(pid, fd_num, new_position);
+
 	return offset;
 }
 
