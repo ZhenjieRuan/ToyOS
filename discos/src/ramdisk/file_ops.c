@@ -104,28 +104,7 @@ int create(char* pathname) {
 	return create_file("reg\0", pathname);
 }
 
-int mkdir(char* pathname) {
-	inode_t* inode;
-	block_t* block;
 
-	/* creating root dir */
-	if (strcmp(pathname, "/") == 0) {
-		inode = &fs->inodes[0];
-		block = &fs->blocks[0];
-		strcpy(inode->type, "dir\0");
-		inode->size = 0;
-		inode->num = 0;
-		inode->direct_blks[0] = block;
-		set_bit_of_bitmap(fs->bitmap, 0);
-		fs->superblock.freeblocks--;
-		fs->superblock.freeindex--;
-	} else {
-		return create_file("dir\0", pathname);
-	}
-
-
-	return 0;
-}
 
 
 int close(int pid, int fd_num) {
@@ -137,8 +116,6 @@ int close(int pid, int fd_num) {
 		printk("<1> could not find pid in pid_fd_table\n");
 		return -1;
 	}
-
-// pid_fd_entry_t pid_fd_table[NUM_PID];
 
 	if(	fd_table->fd_object[fd_num].used == 1 ){ //It's being used
 		fd_table->fd_object[fd_num].used = 0;
@@ -350,11 +327,159 @@ fd_table_t *get_fd_table(int pid) {
 	return NULL; //Table full & no corresponding entry.
 }
 
+
 // zero out fd_table
 void init_fd_table() {
 	memset(&pid_fd_table, 0, sizeof(pid_fd_table));
 }
 
+//Read from cursor -> < cursor+num_bytes
+int read(int fd_num, char *address, int num_bytes, int pid) {
+	int i, current_pos, bytes_left, cont_flag, offset;
+	fd_table_t *fd_table;   //table 
+	fd_object_t *fd_object; //object
+	inode_t *inode;         //inode
+	block_t *block;
+
+
+	bytes_left = num_bytes;
+	fd_table = get_fd_table(pid);
+	if(fd_table == NULL){
+		printk("<1> could not find pid in pid_fd_table\n");
+		return -1;
+	}
+
+	fd_object = &fd_table->fd_object[fd_num];
+	inode = fd_object->inode;
+	current_pos = fd_object->current_pos;
+	//Gives pointer to ith block of data for inode
+
+
+	//Create kernel buffer
+	char *kern_buff;
+	kern_buff = vmalloc( num_bytes );
+	
+	//Write data into kern buff.
+	//args->num_bytes better be positive
+
+	//BLK_SIZE = 256
+	offset = 0;
+	cont_flag = 1; //Do we continue? 
+	while(cont_flag){
+		//Get the block corresponding to cursor
+		block = get_block_by_num(inode, current_pos / BLK_SIZE);
+
+		//Loop at most 256 times.
+		for(i=0; i<BLK_SIZE; i++){ //get rid of magic nums
+			kern_buff[offset] = block->data[current_pos % BLK_SIZE];
+			offset +=1;
+			bytes_left -= 1;
+			current_pos += 1;
+
+			if(bytes_left == 0){
+				cont_flag = 0; //Done reading
+				break;
+			}
+			if( (current_pos % BLK_SIZE) == 256)
+				break; //Past end of block, need to get ptr to next
+		}
+	}
+	copy_to_user(address, kern_buff, offset);
+	vfree(kern_buff);
+	lseek(pid, fd_num, fd_object->current_pos + offset);
+	return offset;
+}
+int write(int fd_num, char *address, int num_bytes, int pid) {
+
+	printk("<1> in write\n");
+	int i, current_pos, bytes_left, cont_flag, offset;
+	fd_table_t *fd_table;   //table 
+	fd_object_t *fd_object; //object
+	inode_t *inode;         //inode
+	block_t *block;
+
+	bytes_left = num_bytes;
+	fd_table = get_fd_table(pid);
+	if(fd_table == NULL){
+		printk("<1> could not find pid in pid_fd_table\n");
+		return -1;
+	}
+
+	if ((fd_object = &fd_table->fd_object[fd_num]) == NULL) {
+		printk("<1> Error getting fd object for %d\n", fd_num);
+		return -1;
+	}
+	inode = fd_object->inode;
+	current_pos = fd_object->current_pos;
+	//Gives pointer to ith block of data for inode
+
+	printk("<1> about to enter write loop, current_pos: %d\n", current_pos);
+	//Write data into kern buff.
+	//args->num_bytes better be positive
+
+	//BLK_SIZE = 256
+	offset = 0;
+	cont_flag = 1; //Do we continue? 
+	while(cont_flag){
+		//Get the block corresponding to cursor
+		block = get_block_by_num(inode, current_pos / BLK_SIZE);
+		if(block == NULL){
+			printk("<1> got a null block \n");
+			block = set_block_by_num(fs, inode, current_pos / BLK_SIZE);
+			if (block == NULL) {
+				printk("<1> Error allocating free block!!!\n");
+				return -1;
+			}
+		}
+
+		//Loop at most 256 times.
+		for(i=0; i<BLK_SIZE; i++){ //get rid of magic nums
+			printk("<1> Here!!!\n");
+			if (block == NULL) {
+				printk("<1> Null block\n");
+				return -1;
+			}
+			block->data[current_pos % BLK_SIZE] = address[offset];
+			printk("<1> Here 1 !!!\n");
+			offset +=1;
+			bytes_left -= 1;
+			current_pos += 1;
+
+			if(bytes_left == 0){
+				cont_flag = 0; //Done reading
+				break;
+			}
+			if( (current_pos % BLK_SIZE) == 256)
+				break; //Past end of block, need to get ptr to next
+				}
+	}
+	printk("<1> about to return from write\n");
+	lseek(pid, fd_num, fd_object->current_pos + offset);
+	return offset;
+}
+
+
+int mkdir(char* pathname) {
+	inode_t* inode;
+	block_t* block;
+
+	/* creating root dir */
+	if (strcmp(pathname, "/") == 0) {
+		inode = &fs->inodes[0];
+		block = &fs->blocks[0];
+		strcpy(inode->type, "dir\0");
+		inode->size = 0;
+		inode->num = 0;
+		inode->direct_blks[0] = block;
+		set_bit_of_bitmap(fs->bitmap, 0);
+		fs->superblock.freeblocks--;
+		fs->superblock.freeindex--;
+	} else {
+		return create_file("dir\0", pathname);
+	}
+
+	return 0;
+}
 
 int unlink(char* pathname) {
 	inode_t *file_inode, *parent_inode;

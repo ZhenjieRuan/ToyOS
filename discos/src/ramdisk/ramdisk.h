@@ -22,11 +22,14 @@
 #define RD_MKDIR  _IOR(MAGIC_NUM, 2, ioctl_args_t*)
 #define RD_OPEN   _IOR(MAGIC_NUM, 3, char *)
 #define RD_CLOSE  _IOR(MAGIC_NUM, 4, char *)
+#define RD_READ   _IOR(MAGIC_NUM, 5, ioctl_args_t*)
+#define RD_WRITE  _IOR(MAGIC_NUM, 6, ioctl_args_t*)
 #define RD_LSEEK  _IOR(MAGIC_NUM, 7, char *)
 #define RD_UNLINK _IOR(MAGIC_NUM, 8, ioctl_args_t*)
 #define RD_READDIR _IOR(MAGIC_NUM, 9, ioctl_args_t*)
 
 typedef struct ioctl_args {
+	int num_bytes;  //size of read
 	int num_blks;
 	int pid;
 	int offset;
@@ -34,6 +37,7 @@ typedef struct ioctl_args {
 	char *address;
 	char* pathname;
 } ioctl_args_t;
+
 
 /* fs constants */
 #define BLK_SIZE 256
@@ -164,7 +168,10 @@ int open(int pid, char* pathname);
 fd_table_t *get_fd_table(int pid);
 void init_fd_table(void);
 int close(int pid, int fd_num);
+int read(int fd_num, char *address, int num_bytes, int pid);
+int write(int fd_num, char *address, int num_bytes, int pid);
 int lseek(int pid, int fd, int offset);
 int readdir(int pid, int fd, char *address);
+
 
 #endif /* ifndef _RAMDISK_H_ */

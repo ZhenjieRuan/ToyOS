@@ -85,11 +85,37 @@ int test_close(int fd, ioctl_args_t* args, int fd_num) {
 	args->pid = (int)getpid();
 	return ioctl(fd, RD_CLOSE, args);
 }
+//int rd_read(int fd, char *address, int num_bytes)-- read up to num_bytes from a regular file identified by file descriptor, fd, 
+//into a process' location at address. You should return the number of bytes actually read, else -1 if there is an error. An 
+//error occurs if the value of fd refers either to a non-existent file or a directory file.
+
+
+
+int test_read(int fd, ioctl_args_t* args, char *address, int num_bytes, int fd_num) {
+	args->fd_num = fd_num; 
+	args->address = address;
+	args->num_bytes = num_bytes;
+	args->pid = (int)getpid();
+	return ioctl(fd, RD_READ, args);
+}
+
+
+// int rd_write(int fd, char *address, int num_bytes) -- write up to num_bytes from the specified address in the calling process 
+// to a regular file identified by file descriptor, fd. You should return the actual number of bytes written, or -1 if there is an
+//  error. An error occurs if the value of fd refers either to a non-existent file or a directory file.
+int test_write(int fd, ioctl_args_t* args, char *address, int num_bytes, int fd_num) {
+	args->fd_num = fd_num;
+	args->pid = (int)getpid();
+	args->address = address;
+	args->num_bytes = num_bytes;
+	return ioctl(fd, RD_WRITE, args);
+}
 
 int main() {
 	int ret;
 	int fd = open("/proc/ioctl_ramdisk_test", O_RDWR);
-
+	char mysrc[] = "hello world";
+	char mydst[12];
 	if (fd == -1) {
 		printf("Error open proc entry: %s\n", strerror(errno));
 	}
@@ -102,12 +128,22 @@ int main() {
 
 	// Testing open
 	int filedesc;
-	// filedesc = test_open(fd, "/file1", args);
-	// printf("fd num = %d\n", filedesc);
+	filedesc = test_open(fd, "/file1", args);
+	printf("fd num = %d\n", filedesc);
 
+
+	printf("about to write to fd %d \n", filedesc);
+	test_write(fd, args, mysrc, 12, filedesc);
+	printf("about to read from fd %d \n", filedesc);
+	test_read(fd, args, mydst, 12, filedesc);
+
+	printf("just read %s\n", mydst);
+
+	printf("done \n");
 	// // Testing lseek
 	// int lseek = test_lseek(fd, filedesc, args);
 	// printf("Seeked to 10 in a empty file should be 0 = %d\n", lseek);
+
 	
 	// // Testing close
 	// ret = test_close(fd, args, filedesc);
@@ -119,10 +155,20 @@ int main() {
 	// close(fd);
 
 	// Test readdir
-	filedesc = test_open(fd, "/", args);
-	ret  = test_readdir(fd, filedesc, args);
-	printf("test_readdir returned %d\n", ret);
+	// filedesc = test_open(fd, "/", args);
+	// ret  = test_readdir(fd, filedesc, args);
+	// printf("test_readdir returned %d\ndmes", ret);
 
+
+	printf("attempt to close file with madeup fd=77\n");
+	ret = test_close(fd, args, 77);
+	printf("closing %d returns: %d \n", 77, ret);
+	
+
+
+
+
+	close(fd);
 
 	return 0;
 }
