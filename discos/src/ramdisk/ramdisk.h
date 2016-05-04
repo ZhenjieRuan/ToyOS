@@ -65,7 +65,7 @@ typedef struct double_indirect {
 
 
 /**
- * should name the struct to inode otherwise will conflict with
+ * shouldn't name the struct to inode otherwise will conflict with
  * linux/fs definition
  */
 typedef struct my_inode { 
