@@ -133,6 +133,7 @@ int get_inode_num(fs_t*, char *);
 void get_prefix_and_filename(char* pathname, char* prefix, char* filename, int len);
 block_t* get_free_block(fs_t*);
 block_t* get_block_by_num(inode_t*,int);
+block_t* set_block_by_num(fs_t*, inode_t*,int);
 int check_empty(inode_t*);
 void clear_inode_content(fs_t*, inode_t*);
 dir_entry_t* find_entry_in_block(block_t*, char *);
