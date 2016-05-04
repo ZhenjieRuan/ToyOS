@@ -28,7 +28,7 @@
 /*#define TEST2*/
 /*#define TEST3*/
 #define TEST4
-/*#define TEST5*/
+#define TEST5
 
 // Insert a string for the pathname prefix here. For the ramdisk, it should be
 // NULL
@@ -177,6 +177,8 @@ int main () {
 
     exit(EXIT_FAILURE);
   }
+
+	printf("write: File write STAGE1 finished\n");
 
 #ifdef TEST_SINGLE_INDIRECT
   

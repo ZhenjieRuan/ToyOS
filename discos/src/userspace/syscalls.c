@@ -40,27 +40,6 @@ int rd_create(char* pathname) {
 	return ret;
 }
 
-/*int rd_lseek(int fd_num, int offset) {*/
-
-	/*int ret;*/
-	/*ioctl_args_t* args = malloc(sizeof(ioctl_args_t));*/
-
-	/*args->offset = offset;*/
-
-	/*args->pid = (int)getpid();*/
-
-	/*// fd for ramdisk and not for ioctl*/
-	/*args->fd_num = fd_num;*/
-
-	/*ret = ioctl(fd, RD_LSEEK, args);*/
-
-	/*printf("Lseek got kernel ret: %d\n", ret);*/
-
-	/*memset(args, 0, sizeof(ioctl_args_t));*/
-
-	/*return ret;*/
-/*}*/
-
 int rd_mkdir(char* pathname) {
 	int ret;
 	ioctl_args_t* args = malloc(sizeof(ioctl_args_t));
@@ -108,6 +87,40 @@ int rd_close(int fd_num) {
 	return ret;
 }
 
+int rd_read(int fd_num, char* address, int num_bytes) {
+	int ret;
+	ioctl_args_t* args = malloc(sizeof(ioctl_args_t));
+	memset(args, 0, sizeof(ioctl_args_t));
+
+	args->fd_num = fd_num;	
+	args->pid = (int)getpid();
+	args->address = address;
+	args->num_bytes = num_bytes;
+
+	ret = ioctl(fd, RD_READ, args);
+	printf("Read got kernel ret: %d\n", ret);
+
+	free(args);
+	return ret;
+}
+
+int rd_write(int fd_num, char* address, int num_bytes) {
+	int ret;
+	ioctl_args_t* args = malloc(sizeof(ioctl_args_t));
+	memset(args, 0, sizeof(ioctl_args_t));
+
+	args->fd_num = fd_num;	
+	args->pid = (int)getpid();
+	args->address = address;
+	args->num_bytes = num_bytes;
+
+	ret = ioctl(fd, RD_WRITE, args);
+	printf("Write got kernel ret: %d\n", ret);
+
+	free(args);
+	return ret;
+}
+
 int rd_lseek(int fd_num, int offset) {
 	int ret;
 	ioctl_args_t* args = malloc(sizeof(ioctl_args_t));
@@ -144,13 +157,7 @@ int rd_readdir(int fd_num, char *address) {
 
 	int ret;
 
-	/*int index_node_number;*/
-
-	/*static char name[16];*/
-
 	ioctl_args_t* args = malloc(sizeof(ioctl_args_t));
-
-	/*memset(name, 0, 16);*/
 
 	args->pid = (int)getpid();
 

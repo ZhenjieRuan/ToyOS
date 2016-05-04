@@ -389,6 +389,7 @@ int read(int fd_num, char *address, int num_bytes, int pid) {
 	lseek(pid, fd_num, fd_object->current_pos + offset);
 	return offset;
 }
+
 int write(int fd_num, char *address, int num_bytes, int pid) {
 
 	printk("<1> in write\n");
@@ -434,13 +435,11 @@ int write(int fd_num, char *address, int num_bytes, int pid) {
 
 		//Loop at most 256 times.
 		for(i=0; i<BLK_SIZE; i++){ //get rid of magic nums
-			printk("<1> Here!!!\n");
 			if (block == NULL) {
 				printk("<1> Null block\n");
 				return -1;
 			}
 			block->data[current_pos % BLK_SIZE] = address[offset];
-			printk("<1> Here 1 !!!\n");
 			offset +=1;
 			bytes_left -= 1;
 			current_pos += 1;
@@ -449,7 +448,7 @@ int write(int fd_num, char *address, int num_bytes, int pid) {
 				cont_flag = 0; //Done reading
 				break;
 			}
-			if( (current_pos % BLK_SIZE) == 256)
+			if((current_pos % BLK_SIZE) == 256)
 				break; //Past end of block, need to get ptr to next
 				}
 	}

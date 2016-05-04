@@ -12,10 +12,13 @@ static struct file_operations ramdisk_proc_operations;
 
 static struct proc_dir_entry *proc_entry;
 
+static spinlock_t my_lock = SPIN_LOCK_UNLOCKED;
+
 /* ioctl entry point */
 static int ramdisk_ioctl(struct inode *inode, struct file *file,
 															 unsigned int cmd, unsigned long arg)
 {
+	spin_lock(&my_lock);
 	int ret = 0;
 	int size;
 	char* pathname;
@@ -32,15 +35,19 @@ static int ramdisk_ioctl(struct inode *inode, struct file *file,
 		case RD_INIT:
 			printk("<1> num_blocks:%d\n", args->num_blks);
 			init_fd_table();		
+			spin_unlock(&my_lock);
 			return init_fs(args->num_blks);
 		case RD_OPEN:
 			printk("<1> Opening %s\n", args->pathname);
 			// Send fd back to user space
+			spin_unlock(&my_lock);
 			return open(args->pid, args->pathname);
 		case RD_CLOSE:
 			printk("<1> Switch case close\n");
+			spin_unlock(&my_lock);
 			return close(args->pid, args->fd_num);
 		case RD_READ:
+			spin_unlock(&my_lock);
 			return read(args->fd_num, args->address, args->num_bytes, args->pid);
 		case RD_WRITE:
 			data = vmalloc(args->num_bytes);
@@ -48,33 +55,41 @@ static int ramdisk_ioctl(struct inode *inode, struct file *file,
 			printk("<1> Got write data from user: %s\n",data);
 			ret = write(args->fd_num, data, args->num_bytes, args->pid);
 			vfree(data);
+			spin_unlock(&my_lock);
 			return ret;
  		case RD_CREATE:
 			ret = create(pathname);
 			kfree(pathname);
+			spin_unlock(&my_lock);
 			return ret;
 			break;
 		case RD_LSEEK:
+			spin_unlock(&my_lock);
 			return lseek(args->pid, args->fd_num, args->offset);
 		case RD_MKDIR:
 			printk("<1> Mkdir %s\n", pathname);
 			ret = mkdir(pathname);
 			kfree(pathname);
+			spin_unlock(&my_lock);
 			return ret;
 			break;
 		case RD_UNLINK:
 			ret = unlink(pathname);
 			kfree(pathname);
+			spin_unlock(&my_lock);
 			return ret;
 			break;
 		case RD_READDIR:
+			spin_unlock(&my_lock);
 			return readdir(args->pid, args->fd_num, args->address);
 		default:
 			printk("<1> hitting default case \n");
+			spin_unlock(&my_lock);
 			return -EINVAL;
 			break;			
 	}
 
+	spin_unlock(&my_lock);
 	return 0;
 }
 
@@ -93,6 +108,8 @@ static int __init initialization_routine(void)
 	}
 
 	proc_entry->proc_fops = &ramdisk_proc_operations;
+
+	/*spin_lock_init(&my_lock);*/
 
 	return 0;
 }
