@@ -1,5 +1,5 @@
 # Operating-System
-#### Class projects from CS552 Intro to Operating System Class at Boston University
+#### A Toy OS from a upper-level university class.
 
 ## Primer
 A Linux module that serves as a simple keyboard driver. The userspace program will echo every key you pressed.
